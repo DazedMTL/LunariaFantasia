@@ -1,0 +1,435 @@
+--- !ruby/object:RPG::Map
+parallax_name: ''
+height: 21
+events:
+  1: !ruby/object:RPG::Event
+    id: 1
+    name: 01:ルナリア自動実行
+    x: 18
+    y: 7
+    pages:
+    - !ruby/object:RPG::Event::Page
+      condition: !ruby/object:RPG::Event::Page::Condition
+        switch1_valid: false
+        switch2_valid: false
+        variable_valid: false
+        self_switch_valid: false
+        item_valid: false
+        actor_valid: false
+        switch1_id: 1
+        switch2_id: 1
+        variable_id: 4
+        variable_value: 50
+        self_switch_ch: A
+        item_id: 1
+        actor_id: 1
+      graphic: !ruby/object:RPG::Event::Page::Graphic
+        tile_id: 0
+        character_name: fr_main_cos10
+        character_index: 0
+        direction: 8
+        pattern: 1
+      move_type: 0
+      move_speed: 3
+      move_frequency: 3
+      move_route: !ruby/object:RPG::MoveRoute
+        repeat: true
+        skippable: false
+        wait: false
+        list:
+        - !ruby/object:RPG::MoveCommand {code: 45, parameters: ['@auto_balloon = 16']}
+        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      walk_anime: true
+      step_anime: false
+      direction_fix: false
+      through: true
+      priority_type: 1
+      trigger: 3
+      list:
+      - !ruby/object:RPG::EventCommand {i: 0, c: 122, p: [38, 38, 0, 0, 476]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 108, p: [※回想スイッチNoを変数に格納]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [12]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [84]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 111, p: [0, 87, 0]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 119, p: [スキップ]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 412, p: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 108, p: [※※※※※※※※※※※※※※]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 408, p: [ここから]}
+      - !ruby/object:RPG::EventCommand
+        i: 0
+        c: 205
+        p:
+        - -1
+        - !ruby/object:RPG::MoveRoute
+          repeat: false
+          skippable: false
+          wait: true
+          list:
+          - &1 !ruby/object:RPG::MoveCommand {code: 39, parameters: []}
+          - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*1]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 201, p: [0, 430, 13, 7, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 231, p: [1, sh_00_00, 0, 0, 0, 0, 100, 100, 255, 0]}
+      - !ruby/object:RPG::EventCommand
+        i: 0
+        c: 205
+        p:
+        - 1
+        - !ruby/object:RPG::MoveRoute
+          repeat: false
+          skippable: false
+          wait: false
+          list:
+          - &2 !ruby/object:RPG::MoveCommand {code: 4, parameters: []}
+          - &3 !ruby/object:RPG::MoveCommand {code: 4, parameters: []}
+          - &4 !ruby/object:RPG::MoveCommand {code: 4, parameters: []}
+          - &5 !ruby/object:RPG::MoveCommand {code: 15, parameters: [30]}
+          - &6 !ruby/object:RPG::MoveCommand {code: 18, parameters: []}
+          - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*3]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*4]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*5]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*6]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 222, p: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[m33]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「む……\|そこのお嬢さん、ちょいと待たれよ」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 213, p: [1, 2, true]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: [stand_left]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!n01_00', 1, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「何か用ですか？」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &7 ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [ガラディの街中を歩いていると老年の男性に呼び止められる。]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['何事かと思い男の方を向く\nt[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [すると男は人差し指をまっすぐに構え、狙いをつけるように]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\nt[1]の前で上下に動かし始める']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!n01_04', 7, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「……\|あの？」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *7}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['不信に思った\nt[1]が声をかけた次の瞬間――']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *7}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[m33]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「えいっ！」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!n01_04', 7, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「え―――？\|\>\stnd[n,1,40]　きゃぁっ！」']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 241, p: [!ruby/object:RPG::BGM {name: moon04_11_エッチな感じ, volume: 100, pitch: 100}]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: [stand_erase]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 122, p: [45, 45, 0, 0, 24]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [91]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &8 ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['男は掛け声と共に\nt[1]の両方の乳房を水着越しに']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [指で思い切り突き刺した]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face02, 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「や、んぅっ！\|　なに、するんですか!?」']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['男は両手の人差し指を\nt[1]の乳肉へグリグリと押し付ける。\!']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [突然の事に咄嗟に反応することが出来ず]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\nt[1]は男のなすがままにされる']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[m33]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ほほう、これは素晴らしいのう」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [柔らかな乳房は男の人差し指を飲み込み]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [水着越しにもその柔らかさを男へと伝えていた]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [しかしその柔らかさの中にコリコリとした感触が感じ取れる。\!]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [男の指は水着越しにも関わらずピタリと乳首の位置を]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [押しつぶしていたのだ]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[m33]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「むほ、このコリコリとした感触…たまらんのう」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face07, 1, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ひゃ、んぅっ\ht\|　や、あっ\ht」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['突然の事と性的な刺激により\nt[1]は正常な判断を']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [下すことが出来ず、男を振り払うという考えに中々至らなかった]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [その間にも、男は水着越しに乳首をほじる様に指を動かす。\!]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['敏感な部分を押し潰されるその刺激に\nt[1]の口からは']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [断続的に甘い声が漏れ始めていた]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face07, 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「んひ\ht\|　こんな、感じちゃっ…\ht」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['男の執拗な責めに\nt[1]の乳首は次第に硬くなっていき']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [水着越しでも分かるほどその先端が主張し始めた]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[m33]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「おぉ、どんどん硬くなってきおったぞっ…]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　これが気持ちいいんじゃろ？」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face07, 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「や、あっ…\ht\|　\face[27]もう、いい加減にっ――」']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [92]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 212, p: [2, 150, false]}
+      - !ruby/object:RPG::EventCommand
+        i: 0
+        c: 205
+        p:
+        - 1
+        - !ruby/object:RPG::MoveRoute
+          repeat: false
+          skippable: false
+          wait: false
+          list:
+          - &9 !ruby/object:RPG::MoveCommand {code: 29, parameters: [5]}
+          - &10 !ruby/object:RPG::MoveCommand {code: 13, parameters: []}
+          - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*9]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*10]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[m33]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ぬおっ…！」\|\.\.\^]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['男の無法な振る舞いについに我慢できなくなった\nt[1]は']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [ようやく男を振り払いそのまま距離をとった]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[m33]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「なんじゃ、もう終わりか…]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　もっとほじくってやりたかったのじゃが…\!残念じゃよっ！」]}
+      - !ruby/object:RPG::EventCommand
+        i: 0
+        c: 205
+        p:
+        - 2
+        - !ruby/object:RPG::MoveRoute
+          repeat: false
+          skippable: false
+          wait: false
+          list:
+          - &11 !ruby/object:RPG::MoveCommand {code: 44, parameters: [!ruby/object:RPG::SE {name: Move, pitch: 150, volume: 100}]}
+          - &12 !ruby/object:RPG::MoveCommand {code: 1, parameters: []}
+          - &13 !ruby/object:RPG::MoveCommand {code: 3, parameters: []}
+          - &14 !ruby/object:RPG::MoveCommand {code: 3, parameters: []}
+          - &15 !ruby/object:RPG::MoveCommand {code: 3, parameters: []}
+          - &16 !ruby/object:RPG::MoveCommand {code: 3, parameters: []}
+          - &17 !ruby/object:RPG::MoveCommand {code: 3, parameters: []}
+          - &18 !ruby/object:RPG::MoveCommand {code: 39, parameters: []}
+          - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*11]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*12]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*13]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*14]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*15]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*16]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*17]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*18]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: [stand_left]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!n01_05', 6, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「はぁ、はぁっ…\|\stnd[n,1,40]ちょ、\|待ちなさいっ」']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *8}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['男は\nt[1]が声をかけるよりも早く走り出し']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [そのまま何処かへと去ってしまった]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 213, p: [1, 7, true]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!n01_01', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「はぁ……\|なんだったのかしら…あのおじいさん」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 213, p: [1, 8, true]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!n01_05', 6, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\n[1]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「それにしても…\|…\.\.…\.\.\stnd[n,1,45]ちょっと落ち着いてからじゃないと']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　この場を移動できないわね……」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: ['b_icon(12,1,false)']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [水着の下から主張する二つのふくらみを見ながら]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\nt[1]は深い溜息をつくのだった']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 242, p: [5]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 221, p: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: [stand_erase]}
+      - !ruby/object:RPG::EventCommand
+        i: 0
+        c: 205
+        p:
+        - -1
+        - !ruby/object:RPG::MoveRoute
+          repeat: false
+          skippable: false
+          wait: true
+          list:
+          - &19 !ruby/object:RPG::MoveCommand {code: 40, parameters: []}
+          - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*19]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 108, p: [ここまで]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 408, p: [※※※※※※※※※※※※※※]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: [flag_write]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 118, p: [スキップ]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 111, p: [0, 93, 0]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 117, p: [14]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 411, p: []}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 121, p: [476, 476, 0]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: ['sex("h",1)']}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 122, p: [44, 44, 1, 0, 1]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 122, p: [6, 6, 0, 0, 10]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 122, p: [43, 43, 0, 0, 1]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 117, p: [6]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 117, p: [4]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 117, p: [13]}
+      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 412, p: []}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [86]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
+  2: !ruby/object:RPG::Event
+    id: 2
+    name: 02:老人
+    x: 19
+    y: 4
+    pages:
+    - !ruby/object:RPG::Event::Page
+      condition: !ruby/object:RPG::Event::Page::Condition
+        switch1_valid: false
+        switch2_valid: false
+        variable_valid: false
+        self_switch_valid: false
+        item_valid: false
+        actor_valid: false
+        switch1_id: 1
+        switch2_id: 1
+        variable_id: 4
+        variable_value: 50
+        self_switch_ch: A
+        item_id: 1
+        actor_id: 1
+      graphic: !ruby/object:RPG::Event::Page::Graphic
+        tile_id: 0
+        character_name: swim_m01
+        character_index: 6
+        direction: 4
+        pattern: 1
+      move_type: 0
+      move_speed: 5
+      move_frequency: 3
+      move_route: !ruby/object:RPG::MoveRoute
+        repeat: true
+        skippable: false
+        wait: false
+        list:
+        - !ruby/object:RPG::MoveCommand {code: 45, parameters: ['@auto_balloon = 16']}
+        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      walk_anime: true
+      step_anime: false
+      direction_fix: false
+      through: true
+      priority_type: 1
+      trigger: 0
+      list:
+      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
+parallax_sx: 0
+bgm: !ruby/object:RPG::BGM {name: moon03_09_30『ＢＥＡＣＨ』, volume: 100, pitch: 100}
+tileset_id: 17
+encounter_step: 30
+width: 25
+data: !ruby/object:Table
+  dim: 3
+  x: 25
+  y: 21
+  z: 4
+  data:
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 1a50 0616 0616 0e10 0e18 1a88 1a7c 1a7c 1a7c 1a86
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 1a50 0616 0616 0e10 0e18 1be3 1be2 1be2 1be2 1be6
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 1a59 1a55 0616 0e10 0e18 1be1 1be0 1be0 1be0 1be4
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 1bb3 1a50 0e22 0e01 0e18 1be9 1be8 1be8 1be8 1bec
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 1bb9 1a50 0e10 0e00 0e02 0e14 0e14 0e14 0e14 0e24
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0e2a 1a50 0e10 0e00 0e00 0e04 0e1c 0e1c 0e1c 0e1e
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0e2c 1a50 0e10 0e00 0e00 0e18 0eb2 0ea4 0ea4 0ea4
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 066b 1a50 0e10 0e00 0e00 0e18 0eb8 0eac 0eac 0eac
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0660 1a50 0e28 0e1c 0e1c 0e1e 0e21 0e16 0e14 0e14
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0660 1a59 1a51 1a51 1a51 1a51 1a55 0e10 0e00 0e00
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0660 1bb3 1bb2 1bb2 1bb2 1bb2 1a50 0e10 0e00 0e00
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0660 1bb9 1bb8 1bb8 1bb8 1bb8 1a5c 0e10 0e00 0e00
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0668 0669 0669 0669 0669 181b 1811 1811 1811 1811
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0670 0671 0671 0671 0671 1973 1972 1972 1972 1972
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0670 0671 0671 0671 0671 1979 1978 1978 1978 1978
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0678 0679 0679 0679 0679 0668 066b 0e22 0e24 0e40
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0e14 0e14 0e14 0e14 0e24 0670 0660 0e10 0e18 0e58
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0e00 0e00 0e00 0e00 0e18 0670 0660 0e28 0e0a 0e24
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0e08 0e00 0e00 0e00 0e18 0678 0668 066b 0e10 0e18
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0e28 0e08 0e00 0e00 0e02 0e24 0670 0660 0e10 0e18
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0a04 0e28 0e08 0e00 0e00 0e18 0670 0660 0e28 0e0a
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0ee2 0ed4 0ed4
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0ed0 0ec0 0ec0
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0ed0 0ec0 0ec0
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0024 0024 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 002c 002d 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 00b5 00b5 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 00ac 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 00b4 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 00ac 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 00b4 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0105 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0100 0100 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0105 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+bgs: !ruby/object:RPG::BGS {name: Sea, volume: 50, pitch: 100}
+parallax_loop_y: false
+autoplay_bgm: true
+encounter_list: []
+autoplay_bgs: true
+parallax_show: false
+scroll_type: 0
+parallax_loop_x: false
+disable_dashing: false
+parallax_sy: 0
+display_name: リゾート地ガラディ
+specify_battleback: false
+note: "<横階段>\r\n<時間トーン変更なし>"
+battleback1_name: ''
+battleback2_name: ''

@@ -1,0 +1,403 @@
+--- !ruby/object:RPG::Map
+parallax_name: ''
+height: 21
+events:
+  1: !ruby/object:RPG::Event
+    id: 1
+    name: EV001
+    x: 11
+    y: 18
+    pages:
+    - !ruby/object:RPG::Event::Page
+      condition: !ruby/object:RPG::Event::Page::Condition
+        switch1_valid: false
+        switch2_valid: false
+        variable_valid: false
+        self_switch_valid: false
+        item_valid: false
+        actor_valid: false
+        switch1_id: 1
+        switch2_id: 1
+        variable_id: 1
+        variable_value: 0
+        self_switch_ch: A
+        item_id: 1
+        actor_id: 1
+      graphic: !ruby/object:RPG::Event::Page::Graphic
+        tile_id: 0
+        character_name: ''
+        character_index: 0
+        direction: 2
+        pattern: 0
+      move_type: 0
+      move_speed: 3
+      move_frequency: 3
+      move_route: !ruby/object:RPG::MoveRoute
+        repeat: true
+        skippable: false
+        wait: false
+        list:
+        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      walk_anime: true
+      step_anime: false
+      direction_fix: false
+      through: false
+      priority_type: 0
+      trigger: 1
+      list:
+      - !ruby/object:RPG::EventCommand {i: 0, c: 250, p: [!ruby/object:RPG::SE {name: Move, pitch: 100, volume: 80}]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 201, p: [0, 325, 26, 26, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
+  2: !ruby/object:RPG::Event
+    id: 2
+    name: EV002
+    x: 12
+    y: 7
+    pages:
+    - !ruby/object:RPG::Event::Page
+      condition: !ruby/object:RPG::Event::Page::Condition
+        switch1_valid: false
+        switch2_valid: false
+        variable_valid: false
+        self_switch_valid: false
+        item_valid: false
+        actor_valid: false
+        switch1_id: 1
+        switch2_id: 1
+        variable_id: 1
+        variable_value: 0
+        self_switch_ch: A
+        item_id: 1
+        actor_id: 1
+      graphic: !ruby/object:RPG::Event::Page::Graphic
+        tile_id: 0
+        character_name: Actor2
+        character_index: 3
+        direction: 2
+        pattern: 1
+      move_type: 0
+      move_speed: 3
+      move_frequency: 3
+      move_route: !ruby/object:RPG::MoveRoute
+        repeat: true
+        skippable: false
+        wait: false
+        list:
+        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      walk_anime: true
+      step_anime: true
+      direction_fix: false
+      through: false
+      priority_type: 1
+      trigger: 0
+      list:
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\shop[it2]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「いらっしゃいませ。ウチでは様々な道具を販売してますよ」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 302, p: [0, 2, 0, 0, false]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 3, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 5, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 6, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 8, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 9, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 117, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 13, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 14, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 15, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 16, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 17, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 18, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 19, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 20, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 21, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 22, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 10, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 113, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 114, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 115, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 116, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 128, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 121, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 129, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 207, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\shop[it2]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「\db[i,116]と\db[i,128]は必ず複数個']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　持っておくようにすると安心ですよ」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
+  3: !ruby/object:RPG::Event
+    id: 3
+    name: EV003
+    x: 15
+    y: 9
+    pages:
+    - !ruby/object:RPG::Event::Page
+      condition: !ruby/object:RPG::Event::Page::Condition
+        switch1_valid: false
+        switch2_valid: false
+        variable_valid: false
+        self_switch_valid: false
+        item_valid: false
+        actor_valid: false
+        switch1_id: 1
+        switch2_id: 1
+        variable_id: 1
+        variable_value: 0
+        self_switch_ch: A
+        item_id: 1
+        actor_id: 1
+      graphic: !ruby/object:RPG::Event::Page::Graphic
+        tile_id: 0
+        character_name: Actor5
+        character_index: 0
+        direction: 8
+        pattern: 1
+      move_type: 0
+      move_speed: 3
+      move_frequency: 3
+      move_route: !ruby/object:RPG::MoveRoute
+        repeat: true
+        skippable: false
+        wait: false
+        list:
+        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      walk_anime: true
+      step_anime: true
+      direction_fix: false
+      through: false
+      priority_type: 1
+      trigger: 0
+      list:
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[ex]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「正直\db[i,20]って最強だと思わないかい？　だって味方全体の']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　全ての状態異常を回復する事が出来るんだよ？\!　これさえあれば]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　どんな状態異常攻撃をしてくる奴が相手でも怖くないよね」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
+  4: !ruby/object:RPG::Event
+    id: 4
+    name: EV004
+    x: 7
+    y: 12
+    pages:
+    - !ruby/object:RPG::Event::Page
+      condition: !ruby/object:RPG::Event::Page::Condition
+        switch1_valid: false
+        switch2_valid: false
+        variable_valid: false
+        self_switch_valid: false
+        item_valid: false
+        actor_valid: false
+        switch1_id: 1
+        switch2_id: 1
+        variable_id: 1
+        variable_value: 0
+        self_switch_ch: A
+        item_id: 1
+        actor_id: 1
+      graphic: !ruby/object:RPG::Event::Page::Graphic
+        tile_id: 0
+        character_name: Actor2
+        character_index: 5
+        direction: 2
+        pattern: 1
+      move_type: 0
+      move_speed: 3
+      move_frequency: 3
+      move_route: !ruby/object:RPG::MoveRoute
+        repeat: true
+        skippable: false
+        wait: false
+        list:
+        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      walk_anime: true
+      step_anime: true
+      direction_fix: false
+      through: false
+      priority_type: 1
+      trigger: 0
+      list:
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[p2_f]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「\imp簡易アイテム画面\c[0]は活用してる？　\kb[d]を押す事で']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　呼び出せるから活用しないと損よ」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\mob[p2_f]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「最初に表示するアイテムの種類もオプション画面であらかじめ]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　設定しておけるからよく使う種類…例えばボトルを設定しておくと]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['　\db[i,116]とかをすぐに使えてすごく便利よ」']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
+  5: !ruby/object:RPG::Event
+    id: 5
+    name: EV005
+    x: 10
+    y: 7
+    pages:
+    - !ruby/object:RPG::Event::Page
+      condition: !ruby/object:RPG::Event::Page::Condition
+        switch1_valid: false
+        switch2_valid: false
+        variable_valid: false
+        self_switch_valid: false
+        item_valid: false
+        actor_valid: false
+        switch1_id: 1
+        switch2_id: 1
+        variable_id: 1
+        variable_value: 0
+        self_switch_ch: A
+        item_id: 1
+        actor_id: 1
+      graphic: !ruby/object:RPG::Event::Page::Graphic
+        tile_id: 0
+        character_name: Actor5
+        character_index: 7
+        direction: 2
+        pattern: 1
+      move_type: 0
+      move_speed: 3
+      move_frequency: 3
+      move_route: !ruby/object:RPG::MoveRoute
+        repeat: true
+        skippable: false
+        wait: false
+        list:
+        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
+      walk_anime: true
+      step_anime: true
+      direction_fix: false
+      through: false
+      priority_type: 1
+      trigger: 0
+      list:
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\shop[it2]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「こっちでは便利なスクロールを販売してますわ」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 302, p: [0, 261, 0, 0, false]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 262, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 264, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 265, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 267, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 268, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 270, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 271, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 273, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 274, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 276, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 277, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 279, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 605, p: [0, 280, 0, 0]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\shop[it2]']}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「スクロールを持っておくと\mpが尽きた時に安心ですわよ」]}
+      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
+parallax_sx: 0
+bgm: !ruby/object:RPG::BGM {name: '', volume: 100, pitch: 100}
+tileset_id: 3
+encounter_step: 30
+width: 23
+data: !ruby/object:Table
+  dim: 3
+  x: 23
+  y: 21
+  z: 4
+  data:
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600
+  - 0600 0600 0600 0600 0600 0600 0600 0600 1d23 1d21 1d21 1d17 1d21 1d21 1d25 0600 0600 0600 0600 0600 0600 0600 0600
+  - 0600 0600 0600 0600 0600 0600 0600 0600 1d20 0640 0642 1d2c 1e82 1e82 1d20 0600 0600 0600 0600 0600 0600 0600 0600
+  - 0600 0600 0600 0600 0600 0600 0600 0600 1d20 0640 0642 1e87 1e88 1e88 1d20 0600 0600 0600 0600 0600 0600 0600 0600
+  - 0600 0600 1d23 1d21 1d21 1d21 1d21 1d21 1d1b 0640 0642 1e8d 0b52 0b54 1d13 1d21 1d21 1d21 1d21 1d21 1d25 0600 0600
+  - 0600 0600 1d20 1e82 1e82 1e82 1e82 1e82 1d2c 0b52 0b44 0b44 0b31 0b48 1d2c 1e82 1e82 1e82 1e82 1e82 1d20 0600 0600
+  - 0600 0600 1d20 1e88 1e88 1e88 1e88 1e88 1e87 0b40 0b30 0b30 0b30 0b48 1e87 1e88 1e88 1e88 1e88 1e88 1d20 0600 0600
+  - 0600 0600 1d20 0b52 0b44 0b44 0b44 0b54 1e8d 0b40 0b30 0b30 0b30 0b48 1e8d 0b52 0b44 0b44 0b44 0b54 1d20 0600 0600
+  - 0600 0600 1d20 0b40 0b30 0b30 0b30 0b32 0b44 0b31 0b30 0b30 0b30 0b32 0b44 0b31 0b30 0b30 0b30 0b48 1d20 0600 0600
+  - 0600 0600 1d20 0b40 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b48 1d20 0600 0600
+  - 0600 0600 1d20 0b40 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b48 1d20 0600 0600
+  - 0600 0600 1d20 0b40 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b48 1d20 0600 0600
+  - 0600 0600 1d20 0b40 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b48 1d20 0600 0600
+  - 0600 0600 1d20 0b40 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b30 0b48 1d20 0600 0600
+  - 0600 0600 1d20 0b58 0b4c 0b4c 0b4c 0b4c 0b4c 0b4c 0b4c 0b3c 0b4c 0b4c 0b4c 0b4c 0b4c 0b4c 0b4c 0b56 1d20 0600 0600
+  - 0600 0600 1d29 1d21 1d21 1d21 1d21 1d21 1d21 1d21 1d2d 0b50 1d2b 1d21 1d21 1d21 1d21 1d21 1d21 1d21 1d27 0600 0600
+  - 0600 0600 1e83 1e82 1e82 1e82 1e82 1e82 1e82 1e82 1e86 0b50 1e83 1e82 1e82 1e82 1e82 1e82 1e82 1e82 1e86 0600 0600
+  - 0600 0600 1e89 1e88 1e88 1e88 1e88 1e88 1e88 1e88 1e8c 0b5c 1e89 1e88 1e88 1e88 1e88 1e88 1e88 1e88 1e8c 0600 0600
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600
+  - 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600 0600
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0c7b 0c71 0c71 0c71 0c7d 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0c72 0c64 0c64 0c74 0000 0000 0000 0000 0000 0c72 0c64 0c64 0c74 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0c78 0c6c 0c6c 0c76 0000 0000 0000 0000 0000 0c78 0c6c 0c6c 0c76 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0010 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0018 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0042 0043 0044 0036 0037 0000 0000 0000 0000 0000 0000 0000 0044 0044 0042 0043 0044 0000 0000 0000
+  - 0000 0000 0000 004a 004b 004c 003e 003f 0000 0154 0000 0000 0000 015c 0000 004c 004c 004a 004b 004c 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0164 0166 0167 0162 0000 0000 0000 0000 0000 0000 0167 0166 0161 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 015c 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0158 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0005 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000 0000 0000 0000 0000 0000 0000 0000 0000 0005 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+bgs: !ruby/object:RPG::BGS {name: '', volume: 80, pitch: 100}
+parallax_loop_y: false
+autoplay_bgm: false
+encounter_list: []
+autoplay_bgs: false
+parallax_show: false
+scroll_type: 0
+parallax_loop_x: false
+disable_dashing: false
+parallax_sy: 0
+display_name: 道具屋
+specify_battleback: false
+note: ''
+battleback1_name: ''
+battleback2_name: ''
