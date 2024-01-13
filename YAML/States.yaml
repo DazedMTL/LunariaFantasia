@@ -1,2918 +1,2917 @@
----
-- 
-- !ruby/object:RPG::State
-  message2: を倒した！
-  name: 戦闘不能
-  priority: 100
-  icon_index: 17
-  message1: は倒れた！
-  message4: は立ち上がった！
-  restriction: 4
-  release_by_damage: false
-  message3: ''
-  note: ステート１番はＨＰが０になったときに自動的に付加されます。
-  id: 1
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 9
-    value: 0.0
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: は毒に冒された！
-  name: 毒
-  priority: 65
-  icon_index: 18
-  message1: は毒に冒された！
-  message4: の毒が消えた！
-  restriction: 0
-  release_by_damage: false
-  message3: ''
-  note: "<苦痛>\r\n"
-  id: 2
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 7
-    value: -0.1
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: を暗闇に閉ざした！
-  name: 暗闇
-  priority: 70
-  icon_index: 19
-  message1: は暗闇に閉ざされた！
-  message4: の暗闇が消えた！
-  restriction: 0
-  release_by_damage: false
-  message3: ''
-  note: ''
-  id: 3
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 0
-    value: -0.5
-  auto_removal_timing: 1
-  min_turns: 3
-  max_turns: 5
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: の術を封じ込めた！
-  name: 沈黙
-  priority: 75
-  icon_index: 20
-  message1: は術を封じ込まれた！
-  message4: の術封じが解けた！
-  restriction: 0
-  release_by_damage: false
-  message3: ''
-  note: ''
-  id: 4
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 42
-    data_id: 2
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 42
-    data_id: 5
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 42
-    data_id: 3
-    value: 0.0
-  auto_removal_timing: 1
-  min_turns: 3
-  max_turns: 5
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: を混乱させた！
-  name: 混乱
-  priority: 80
-  icon_index: 21
-  message1: は混乱してしまった！
-  message4: は我に返った！
-  restriction: 2
-  release_by_damage: false
-  message3: ''
-  note: ''
-  id: 5
-  features: []
-  auto_removal_timing: 1
-  min_turns: 2
-  max_turns: 4
-  chance_by_damage: 50
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: true
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: を眠らせた！
-  name: 睡眠
-  priority: 85
-  icon_index: 22
-  message1: は眠ってしまった！
-  message4: は目を覚ました！
-  restriction: 4
-  release_by_damage: true
-  message3: は眠っている……
-  note: ''
-  id: 6
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 1
-    value: -1.0
-  auto_removal_timing: 1
-  min_turns: 3
-  max_turns: 5
-  chance_by_damage: 80
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: true
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: を麻痺させた！
-  name: 麻痺
-  priority: 90
-  icon_index: 23
-  message1: はしびれて動けなくなった！
-  message4: の麻痺が解けた！
-  restriction: 4
-  release_by_damage: false
-  message3: は体がしびれて動けない！
-  note: "<苦痛>\r\n"
-  id: 7
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 1
-    value: -1.0
-  auto_removal_timing: 2
-  min_turns: 3
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: はバランスを崩した！
-  name: スタン
-  priority: 60
-  icon_index: 24
-  message1: はバランスを崩した！
-  message4: は体勢を立て直した！
-  restriction: 4
-  release_by_damage: false
-  message3: はバランスを崩している……
-  note: ''
-  id: 8
-  features: []
-  auto_removal_timing: 1
-  min_turns: 0
-  max_turns: 0
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: ''
-  name: 防御
-  priority: 0
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 9
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 62
-    data_id: 1
-    value: 0.0
-  auto_removal_timing: 2
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: true
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 不死身
-  priority: 0
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 10
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 14
-    data_id: 1
-    value: 0.0
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: かばう
-  priority: 0
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 11
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 62
-    data_id: 2
-    value: 0.0
-  auto_removal_timing: 2
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: true
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: おとり
-  priority: 50
-  icon_index: 25
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 12
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 0
-    value: 10.0
-  auto_removal_timing: 2
-  min_turns: 5
-  max_turns: 5
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 隠れる
-  priority: 50
-  icon_index: 28
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 13
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 0
-    value: 0.1
-  auto_removal_timing: 2
-  min_turns: 5
-  max_turns: 5
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: true
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: HP再生
-  priority: 50
-  icon_index: 26
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 14
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 7
-    value: 0.1
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: MP再生
-  priority: 50
-  icon_index: 26
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 15
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 8
-    value: 0.1
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: TP再生
-  priority: 50
-  icon_index: 26
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 16
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 9
-    value: 0.1
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: は物理攻撃に備えパーティの前に出た。
-  name: 要塞
-  priority: 50
-  icon_index: 510
-  message1: は物理攻撃に備えパーティの前に出た。
-  message4: は後ろに下がった。
-  restriction: 0
-  message3: ''
-  note: <身代わりフル>
-  id: 17
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 6
-    value: 0.25
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 62
-    data_id: 2
-    value: 0.0
-  auto_removal_timing: 2
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: true
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 反撃
-  priority: 50
-  icon_index: 27
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 18
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 6
-    value: 1.0
-  auto_removal_timing: 2
-  min_turns: 3
-  max_turns: 3
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: true
-  description: ''
-- !ruby/object:RPG::State
-  message2: を魔を飲み込む暗鏡が覆う。
-  name: 魔法回避
-  priority: 50
-  icon_index: 597
-  message1: を魔を飲み込む暗鏡が覆う。
-  message4: の暗鏡が消えた。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 19
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 4
-    value: 1.0
-  auto_removal_timing: 2
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: の周りに魔法反射の壁が現れた。
-  name: 魔法反射
-  priority: 50
-  icon_index: 31
-  message1: の周りに魔法反射の壁が現れた。
-  message4: の魔法反射の壁が消えた。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 20
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 5
-    value: 0.25
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: は炎の加護を得た。
-  name: 炎の加護
-  priority: 50
-  icon_index: 588
-  message1: は炎の加護を得た。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<炎属性倍率:10>\r\n"
-  id: 21
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 3
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 4
-    value: 1.2
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: は氷の加護を得た。
-  name: 氷の加護
-  priority: 50
-  icon_index: 590
-  message1: は氷の加護を得た。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: <氷属性倍率:10>
-  id: 22
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 4
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 4
-    value: 1.2
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: は雷の加護を得た。
-  name: 雷の加護
-  priority: 50
-  icon_index: 589
-  message1: は雷の加護を得た。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: <雷属性倍率:10>
-  id: 23
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 5
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 4
-    value: 1.2
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 結界
-  priority: 50
-  icon_index: 603
-  message1: はあらゆる状態異常に強くなった。
-  message4: の結界が解けた。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 24
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 2
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 3
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 4
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 5
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 6
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 7
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 8
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 1
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 26
-    value: 0.0
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 消費MP減
-  priority: 50
-  icon_index: 610
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 25
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 4
-    value: 0.25
-  auto_removal_timing: 2
-  min_turns: 5
-  max_turns: 5
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: は魅了された！
-  name: 魅了
-  priority: 50
-  icon_index: 561
-  message1: は魅了された！
-  message4: は正気に戻った！
-  restriction: 4
-  message3: は魅了されボーっとしている
-  note: 男専用ステート
-  id: 26
-  features: []
-  auto_removal_timing: 1
-  min_turns: 2
-  max_turns: 3
-  chance_by_damage: 25
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: true
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 行動＋
-  priority: 50
-  icon_index: 28
-  message1: の行動回数が増えた！
-  message4: の行動回数が元に戻った！
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 27
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 61
-    data_id: 0
-    value: 1.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 44
-    data_id: 2
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 44
-    data_id: 400
-    value: 0.0
-  auto_removal_timing: 1
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 28
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 魔力解放
-  priority: 100
-  icon_index: 607
-  message1: の秘められた力が目覚める。
-  message4: は元に戻った
-  restriction: 0
-  message3: ''
-  note: "<炎属性倍率:50>\r\n<氷属性倍率:50>\r\n<雷属性倍率:50>\r\n<光属性倍率:50>\r\n<闇属性倍率:50>\r\n<無属性倍率:50>"
-  id: 29
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 4
-    value: 2.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 4
-    value: 1.4
-  auto_removal_timing: 1
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 無敵
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 30
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 6
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 7
-    value: 0.0
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: の召喚を封じ込めた！
-  name: 閉門
-  priority: 75
-  icon_index: 528
-  message1: は召喚を封じ込まれた！
-  message4: の召喚封じが解けた！
-  restriction: 0
-  release_by_damage: false
-  message3: ''
-  note: ''
-  id: 31
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 42
-    data_id: 3
-    value: 0.0
-  auto_removal_timing: 0
-  min_turns: 3
-  max_turns: 5
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 32
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: は\mpが枯渇した！
-  name: 枯渇
-  priority: 95
-  icon_index: 560
-  message1: は\mpが枯渇した！
-  message4: は\mpを回復出来るようになった！
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 33
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 1
-    value: 0.0
-  auto_removal_timing: 2
-  min_turns: 6
-  max_turns: 6
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 雑魚避け
-  priority: 50
-  icon_index: 564
-  message1: ''
-  message4: \db[i,115]の効果が切れた
-  restriction: 0
-  message3: ''
-  note: "<雑魚避け>\r\n"
-  id: 34
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 1000
-  remove_by_walking: true
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 遭遇減
-  priority: 50
-  icon_index: 562
-  message1: ''
-  message4: \db[i,113]の効果が切れた
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 35
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 64
-    data_id: 0
-    value: 0.0
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 1000
-  remove_by_walking: true
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 回避＋
-  priority: 50
-  icon_index: 28
-  message1: の回避率が上がった！
-  message4: の回避率が元に戻った！
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 36
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 1
-    value: 0.15
-  auto_removal_timing: 1
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 反撃
-  priority: 50
-  icon_index: 27
-  message1: は相手の攻撃に備えた！
-  message4: は構えをといた！
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 37
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 6
-    value: 0.5
-  auto_removal_timing: 1
-  min_turns: 5
-  max_turns: 5
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 38
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 浮遊
-  priority: 50
-  icon_index: 566
-  message1: ''
-  message4: \db[i,116]の効果が切れた
-  restriction: 0
-  message3: ''
-  note: <床ダメージ無効>
-  id: 39
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 1000
-  remove_by_walking: true
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 敵よせ
-  priority: 50
-  icon_index: 565
-  message1: ''
-  message4: \db[i,114]の効果が切れた
-  restriction: 0
-  message3: ''
-  note: <エンカウント倍加>
-  id: 40
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 200
-  remove_by_walking: true
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: チャージ
-  priority: 50
-  icon_index: 30
-  message1: ''
-  message4: は元の状態に戻った
-  restriction: 0
-  message3: ''
-  note: "<物理与ダメージ率:250>\r\n<魔法与ダメージ率:250>\r\n"
-  id: 41
-  features: []
-  auto_removal_timing: 1
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 武神
-  priority: 50
-  icon_index: 30
-  message1: ''
-  message4: は元の状態に戻った
-  restriction: 0
-  message3: ''
-  note: "<物理与ダメージ率:150>\r\n<魔法与ダメージ率:50>"
-  id: 42
-  features: []
-  auto_removal_timing: 1
-  min_turns: 6
-  max_turns: 6
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 43
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: は炎・氷・雷の加護を得た。
-  name: 三属性の加護
-  priority: 50
-  icon_index: 591
-  message1: は炎・氷・雷の加護を得た。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<炎属性倍率:10>\r\n<氷属性倍率:10>\r\n<雷属性倍率:10>\r\n"
-  id: 44
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 3
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 4
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 5
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 4
-    value: 1.2
-  auto_removal_timing: 1
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 45
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 遭遇無
-  priority: 50
-  icon_index: 563
-  message1: ''
-  message4: \db[i,121]の効果が切れた
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 46
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 64
-    data_id: 1
-    value: 0.0
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 1000
-  remove_by_walking: true
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 47
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 倦怠
-  priority: 0
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: セックス直後の対象のステート変化
-  id: 48
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 0
-    value: 0.4
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 2
-    value: 0.7
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 3
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 4
-    value: 0.7
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 5
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 6
-    value: 0.7
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 7
-    value: 0.7
-  auto_removal_timing: 0
-  min_turns: 6
-  max_turns: 6
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 49
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ダミーステート
-  priority: 0
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ':ポップアップ非表示'
-  id: 50
-  features: []
-  auto_removal_timing: 1
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 蠱惑
-  priority: 0
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ':ポップアップ非表示'
-  id: 51
-  features: []
-  auto_removal_timing: 1
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 52
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 根性
-  priority: 99
-  icon_index: 581
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 53
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ド根性
-  priority: 99
-  icon_index: 580
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 54
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 55
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 魔法バリア
-  priority: 50
-  icon_index: 601
-  message1: はあらゆる魔法ダメージに強くなった！
-  message4: の魔法バリアが解けた！
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 56
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 7
-    value: 0.75
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 物理バリア
-  priority: 50
-  icon_index: 599
-  message1: はあらゆる物理ダメージに強くなった！
-  message4: の物理バリアが解けた！
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 57
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 6
-    value: 0.75
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: デフォルト反撃
-  priority: 50
-  icon_index: 27
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: バトルレディ等のデフォルト反撃ステート
-  id: 58
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 6
-    value: 0.5
-  auto_removal_timing: 0
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: の剣に炎が宿った。
-  name: 炎の剣
-  priority: 50
-  icon_index: 582
-  message1: の剣に炎が宿った。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<属性消去:1>\r\n"
-  id: 59
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 31
-    data_id: 3
-    value: 1.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 2
-    value: 1.2
-  auto_removal_timing: 1
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: の剣に冷気が宿った。
-  name: 氷の剣
-  priority: 50
-  icon_index: 583
-  message1: の剣に冷気が宿った。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<属性消去:1>\r\n"
-  id: 60
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 31
-    data_id: 4
-    value: 1.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 2
-    value: 1.2
-  auto_removal_timing: 1
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: の剣に雷が宿った。
-  name: 雷の剣
-  priority: 50
-  icon_index: 584
-  message1: の剣に雷が宿った。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<属性消去:1>\r\n"
-  id: 61
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 31
-    data_id: 5
-    value: 1.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 2
-    value: 1.2
-  auto_removal_timing: 1
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: の剣に光が宿った。
-  name: 光の剣
-  priority: 50
-  icon_index: 592
-  message1: の剣に光が宿った。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<属性消去:1>\r\n"
-  id: 62
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 31
-    data_id: 9
-    value: 1.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 2
-    value: 1.2
-  auto_removal_timing: 1
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: の剣に闇が宿った。
-  name: 闇の剣
-  priority: 50
-  icon_index: 593
-  message1: の剣に闇が宿った。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<属性消去:1>\r\n"
-  id: 63
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 31
-    data_id: 10
-    value: 1.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 2
-    value: 1.2
-  auto_removal_timing: 1
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: の剣に艶が宿った。
-  name: 艶の剣
-  priority: 50
-  icon_index: 615
-  message1: の剣に艶が宿った。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<属性消去:1>\r\n"
-  id: 64
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 31
-    data_id: 7
-    value: 1.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 21
-    data_id: 2
-    value: 1.2
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 32
-    data_id: 26
-    value: 0.05
-  auto_removal_timing: 1
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 行動回数＋(敵用)
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<敵用>\r\n:ポップアップ表示名 = \"行動＋\""
-  id: 65
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 61
-    data_id: 0
-    value: 1.0
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: デフォルト魔法反射
-  priority: 50
-  icon_index: 31
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: 雲外鏡等のデフォルト魔法反射ステート
-  id: 66
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 5
-    value: 0.5
-  auto_removal_timing: 0
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: はあらゆる魔法ダメージを半減するバリアを張った！
-  name: 魔法ダメージカット
-  priority: 50
-  icon_index: 601
-  message1: ''
-  message4: の魔法バリアが解けた！
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 67
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 7
-    value: 0.5
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: はあらゆる物理ダメージを半減するバリアを張った！
-  name: 物理ダメージカット
-  priority: 50
-  icon_index: 599
-  message1: ''
-  message4: の物理バリアが解けた！
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 68
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 6
-    value: 0.5
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 69
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: HP再生の加護
-  priority: 50
-  icon_index: 26
-  message1: は\hp再生の加護を得た。
-  message4: の\hp再生の加護が切れた。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 70
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 22
-    data_id: 7
-    value: 0.15
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・満腹
-  priority: 1
-  icon_index: 298
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: <開始後解除>
-  id: 71
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・攻撃
-  priority: 50
-  icon_index: 34
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:2,4>\r\n<開始後解除>"
-  id: 72
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・防御
-  priority: 50
-  icon_index: 35
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:3,4>\r\n<開始後解除>"
-  id: 73
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・魔力
-  priority: 50
-  icon_index: 36
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:4,4>\r\n<開始後解除>"
-  id: 74
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・法力
-  priority: 50
-  icon_index: 37
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:5,4>\r\n<開始後解除>"
-  id: 75
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・敏捷
-  priority: 50
-  icon_index: 38
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:6,4>\r\n<開始後解除>"
-  id: 76
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・心力
-  priority: 50
-  icon_index: 39
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:7,4>\r\n<開始後解除>"
-  id: 77
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 78
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 禁術詠唱
-  priority: 50
-  icon_index: 413
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: は禁術を詠唱している。
-  note: ''
-  id: 79
-  features: []
-  auto_removal_timing: 1
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 80
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 凍気解放
-  priority: 100
-  icon_index: 609
-  message1: の秘められた力が目覚める。
-  message4: は元に戻った
-  restriction: 0
-  message3: ''
-  note: "<氷属性倍率:100>\r\n<闇属性倍率:50>\r\n<艶属性倍率:50>\r\n<TP消費率:1.5>\r\n"
-  id: 81
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 4
-    value: 2.0
-  auto_removal_timing: 1
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 凍気解放(敵用)
-  priority: 100
-  icon_index: 609
-  message1: の秘められた力が目覚める。
-  message4: は元に戻った
-  restriction: 0
-  message3: ''
-  note: "<物理与ダメージ率:120>\r\n<魔法与ダメージ率:120>\r\n<TP消費率:2.0>\r\n:ポップアップ表示名 = \"凍気解放\""
-  id: 82
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 4
-    value: 2.0
-  auto_removal_timing: 1
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: は盾を構えパーティの前に出た。
-  name: 盾
-  priority: 50
-  icon_index: 509
-  message1: は盾を構えパーティの前に出た。
-  message4: は後ろに下がった。
-  restriction: 0
-  message3: ''
-  note: <身代わりフル>
-  id: 83
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 62
-    data_id: 1
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 62
-    data_id: 2
-    value: 0.0
-  auto_removal_timing: 2
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: true
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 九条結界
-  priority: 50
-  icon_index: 605
-  message1: はあらゆる状態異常と弱体に強くなった。
-  message4: の九条結界が解けた。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 84
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 2
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 3
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 4
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 5
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 6
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 7
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 8
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 1
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 13
-    data_id: 26
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 12
-    data_id: 2
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 12
-    data_id: 3
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 12
-    data_id: 4
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 12
-    data_id: 5
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 12
-    data_id: 6
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 12
-    data_id: 7
-    value: 0.0
-  auto_removal_timing: 2
-  min_turns: 8
-  max_turns: 8
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 85
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 視界補正
-  priority: 50
-  icon_index: 567
-  message1: ''
-  message4: \db[i,128]の効果が切れた
-  restriction: 0
-  message3: ''
-  note: <視界補正 384>
-  id: 86
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 1000
-  remove_by_walking: true
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 87
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 艶耐性
-  priority: 50
-  icon_index: 123
-  message1: の\db[el,7]耐性が上がった！
-  message4: の\db[el,7]耐性が元に戻った。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 88
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 7
-    value: 0.75
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・艶耐性
-  priority: 50
-  icon_index: 561
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物ステート:88>\r\n<開始後解除>"
-  id: 89
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 氷耐性
-  priority: 50
-  icon_index: 105
-  message1: の氷耐性が上がった！
-  message4: の氷耐性が元に戻った。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 90
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 4
-    value: 0.75
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・氷耐性
-  priority: 50
-  icon_index: 105
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物ステート:90>\r\n<開始後解除>"
-  id: 91
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 雷耐性
-  priority: 50
-  icon_index: 106
-  message1: の雷耐性が上がった！
-  message4: の雷耐性が元に戻った。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 92
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 5
-    value: 0.75
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・雷耐性
-  priority: 50
-  icon_index: 106
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物ステート:92>\r\n<開始後解除>"
-  id: 93
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 炎耐性
-  priority: 50
-  icon_index: 104
-  message1: の炎耐性が上がった！
-  message4: の炎耐性が元に戻った。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 94
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 3
-    value: 0.75
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・炎耐性
-  priority: 50
-  icon_index: 104
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物ステート:94>\r\n<開始後解除>"
-  id: 95
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 96
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 行動後防御
-  priority: 0
-  icon_index: 0
-  message1: は盾を構え防御の態勢をとった。
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 97
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 62
-    data_id: 1
-    value: 0.0
-  auto_removal_timing: 2
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: true
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 98
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 光耐性
-  priority: 50
-  icon_index: 110
-  message1: の光耐性が上がった！
-  message4: の光耐性が元に戻った。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 99
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 9
-    value: 0.75
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・光耐性
-  priority: 50
-  icon_index: 110
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物ステート:99>\r\n<開始後解除>"
-  id: 100
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 闇耐性
-  priority: 50
-  icon_index: 111
-  message1: の闇耐性が上がった！
-  message4: の闇耐性が元に戻った。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 101
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 11
-    data_id: 10
-    value: 0.75
-  auto_removal_timing: 2
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・闇耐性
-  priority: 50
-  icon_index: 111
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物ステート:101>\r\n<開始後解除>"
-  id: 102
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 103
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: をダメージ半減のバリアが守る。
-  name: 覇王之盾
-  priority: 50
-  icon_index: 510
-  message1: をダメージ半減のバリアが守る。
-  message4: のバリアが消えた。
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 104
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 6
-    value: 0.5
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 23
-    data_id: 7
-    value: 0.5
-  auto_removal_timing: 2
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: true
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 105
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・攻防
-  priority: 50
-  icon_index: 618
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:2,4>\r\n<食べ物強化:3,4>\r\n<開始後解除>"
-  id: 106
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・魔法
-  priority: 50
-  icon_index: 619
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:4,4>\r\n<食べ物強化:5,4>\r\n<開始後解除>"
-  id: 107
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 料理ステート・速心
-  priority: 50
-  icon_index: 613
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: "<食べ物強化:6,4>\r\n<食べ物強化:7,4>\r\n<開始後解除>"
-  id: 108
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 109
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: 凍気解放(イベント用ダミー)
-  priority: 0
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ':ポップアップ非表示'
-  id: 110
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 43
-    data_id: 174
-    value: 0.0
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 43
-    data_id: 53
-    value: 0.0
-  auto_removal_timing: 0
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: ''
-  priority: 50
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ''
-  id: 111
-  features: []
-  auto_removal_timing: 0
-  min_turns: 1
-  max_turns: 1
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: false
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
-- !ruby/object:RPG::State
-  message2: ''
-  name: イベント用行動＋
-  priority: 0
-  icon_index: 0
-  message1: ''
-  message4: ''
-  restriction: 0
-  message3: ''
-  note: ':ポップアップ非表示'
-  id: 112
-  features:
-  - !ruby/object:RPG::BaseItem::Feature
-    code: 61
-    data_id: 0
-    value: 1.0
-  auto_removal_timing: 0
-  min_turns: 4
-  max_turns: 4
-  chance_by_damage: 100
-  steps_to_remove: 100
-  remove_by_walking: false
-  remove_at_battle_end: true
-  remove_by_damage: false
-  remove_by_restriction: false
-  description: ''
+- !!null 'null'
+- !ruby/object:RPG::State
+  'message2': ' was defeated!'
+  'name': 'Incapacitated'
+  'priority': !!int '100'
+  'icon_index': !!int '17'
+  'message1': ' collapsed!'
+  'message4': ' stood up!'
+  'restriction': !!int '4'
+  'release_by_damage': !!bool 'false'
+  'message3': ''
+  'note': 'ステート１番はＨＰが０になったときに自動的に付加されます。'
+  'id': !!int '1'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '9'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': ' was afflicted with poison!'
+  'name': 'Poison'
+  'priority': !!int '65'
+  'icon_index': !!int '18'
+  'message1': ' was afflicted with poison!'
+  'message4': '''s poison has worn off!'
+  'restriction': !!int '0'
+  'release_by_damage': !!bool 'false'
+  'message3': ''
+  'note': "<苦痛>\r\n"
+  'id': !!int '2'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '7'
+    'value': !!float '-0.1'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': ' was sealed in the darkness!'
+  'name': 'Darkness'
+  'priority': !!int '70'
+  'icon_index': !!int '19'
+  'message1': ' was engulfed by darkness!'
+  'message4': '''s darkness disappeared!'
+  'restriction': !!int '0'
+  'release_by_damage': !!bool 'false'
+  'message3': ''
+  'note': ''
+  'id': !!int '3'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '0'
+    'value': !!float '-0.5'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '3'
+  'max_turns': !!int '5'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': '''s technique was sealed away!'
+  'name': 'Silence'
+  'priority': !!int '75'
+  'icon_index': !!int '20'
+  'message1': ' had his magic sealed away!'
+  'message4': '''s spell seal has been lifted!'
+  'restriction': !!int '0'
+  'release_by_damage': !!bool 'false'
+  'message3': ''
+  'note': ''
+  'id': !!int '4'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '42'
+    'data_id': !!int '2'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '42'
+    'data_id': !!int '5'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '42'
+    'data_id': !!int '3'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '3'
+  'max_turns': !!int '5'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': ' was confused!'
+  'name': 'Confusion'
+  'priority': !!int '80'
+  'icon_index': !!int '21'
+  'message1': ' became confused!'
+  'message4': ' came to his senses!'
+  'restriction': !!int '2'
+  'release_by_damage': !!bool 'false'
+  'message3': ''
+  'note': ''
+  'id': !!int '5'
+  'features': []
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '2'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '50'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'true'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': ' was put to sleep!'
+  'name': 'Sleep'
+  'priority': !!int '85'
+  'icon_index': !!int '22'
+  'message1': ' fell asleep!'
+  'message4': ' woke up!'
+  'restriction': !!int '4'
+  'release_by_damage': !!bool 'true'
+  'message3': ' is sleeping...'
+  'note': ''
+  'id': !!int '6'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '1'
+    'value': !!float '-1.0'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '3'
+  'max_turns': !!int '5'
+  'chance_by_damage': !!int '80'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'true'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': ' was paralyzed!'
+  'name': 'Paralysis'
+  'priority': !!int '90'
+  'icon_index': !!int '23'
+  'message1': ' was paralyzed and couldn''t move!'
+  'message4': '''s paralysis wore off!'
+  'restriction': !!int '4'
+  'release_by_damage': !!bool 'false'
+  'message3': ' can''t move because his body is numb!'
+  'note': "<苦痛>\r\n"
+  'id': !!int '7'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '1'
+    'value': !!float '-1.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '3'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': ' lost balance!'
+  'name': 'Stun'
+  'priority': !!int '60'
+  'icon_index': !!int '24'
+  'message1': ' lost balance!'
+  'message4': ' regained composure!'
+  'restriction': !!int '4'
+  'release_by_damage': !!bool 'false'
+  'message3': ' is losing balance...'
+  'note': ''
+  'id': !!int '8'
+  'features': []
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '0'
+  'max_turns': !!int '0'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Defense'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '9'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '62'
+    'data_id': !!int '1'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'true'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Immortal'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '10'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '14'
+    'data_id': !!int '1'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Protect'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '11'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '62'
+    'data_id': !!int '2'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'true'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Decoy'
+  'priority': !!int '50'
+  'icon_index': !!int '25'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '12'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '0'
+    'value': !!float '10.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '5'
+  'max_turns': !!int '5'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Hide'
+  'priority': !!int '50'
+  'icon_index': !!int '28'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '13'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '0'
+    'value': !!float '0.1'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '5'
+  'max_turns': !!int '5'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'true'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'HP Regeneration'
+  'priority': !!int '50'
+  'icon_index': !!int '26'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '14'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '7'
+    'value': !!float '0.1'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'MP Regeneration'
+  'priority': !!int '50'
+  'icon_index': !!int '26'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '15'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '8'
+    'value': !!float '0.1'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'TP Regeneration'
+  'priority': !!int '50'
+  'icon_index': !!int '26'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '16'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '9'
+    'value': !!float '0.1'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' stepped forward to prepare for the physical attack.'
+  'name': 'Fortress'
+  'priority': !!int '50'
+  'icon_index': !!int '510'
+  'message1': ' stepped forward to prepare for the physical attack, shielding the party.'
+  'message4': ' stepped back.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '<身代わりフル>'
+  'id': !!int '17'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '6'
+    'value': !!float '0.25'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '62'
+    'data_id': !!int '2'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'true'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Counterattack'
+  'priority': !!int '50'
+  'icon_index': !!int '27'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '18'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '6'
+    'value': !!float '1.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '3'
+  'max_turns': !!int '3'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'true'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' is engulfed by the Dark Mirror that consumes evil.'
+  'name': 'Magic Evasion'
+  'priority': !!int '50'
+  'icon_index': !!int '597'
+  'message1': ' is engulfed by the Dark Mirror that consumes evil.'
+  'message4': '''s dark mirror disappeared.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '19'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '4'
+    'value': !!float '1.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': 'A magical reflective wall appeared around .'
+  'name': 'Magic Reflection'
+  'priority': !!int '50'
+  'icon_index': !!int '31'
+  'message1': 'A magical reflective wall appeared around .'
+  'message4': '''s magic reflection barrier has disappeared.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '20'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '5'
+    'value': !!float '0.25'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' received the blessing of fire.'
+  'name': 'Flame''s Blessing'
+  'priority': !!int '50'
+  'icon_index': !!int '588'
+  'message1': ' received the blessing of fire.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<炎属性倍率:10>\r\n"
+  'id': !!int '21'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '3'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '4'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' received the blessing of ice.'
+  'name': 'Ice''s Blessing'
+  'priority': !!int '50'
+  'icon_index': !!int '590'
+  'message1': ' received the blessing of ice.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '<氷属性倍率:10>'
+  'id': !!int '22'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '4'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '4'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' received the blessing of lightning.'
+  'name': 'Blessing of Thunder'
+  'priority': !!int '50'
+  'icon_index': !!int '589'
+  'message1': ' received the blessing of lightning.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '<雷属性倍率:10>'
+  'id': !!int '23'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '5'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '4'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Barrier'
+  'priority': !!int '50'
+  'icon_index': !!int '603'
+  'message1': ' became resistant to all status ailments.'
+  'message4': '''s barrier was dispelled.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '24'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '2'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '3'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '4'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '5'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '6'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '7'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '8'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '1'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '26'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Reduced MP Consumption'
+  'priority': !!int '50'
+  'icon_index': !!int '610'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '25'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '4'
+    'value': !!float '0.25'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '5'
+  'max_turns': !!int '5'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' was charmed!'
+  'name': 'Charm'
+  'priority': !!int '50'
+  'icon_index': !!int '561'
+  'message1': ' was charmed!'
+  'message4': ' regained sanity!'
+  'restriction': !!int '4'
+  'message3': ' is charmed and spacing out.'
+  'note': '男専用ステート'
+  'id': !!int '26'
+  'features': []
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '2'
+  'max_turns': !!int '3'
+  'chance_by_damage': !!int '25'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'true'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Action Plus'
+  'priority': !!int '50'
+  'icon_index': !!int '28'
+  'message1': '''s number of actions has increased!'
+  'message4': '''s number of actions has been reset!'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '27'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '61'
+    'data_id': !!int '0'
+    'value': !!float '1.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '44'
+    'data_id': !!int '2'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '44'
+    'data_id': !!int '400'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '28'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Mana Release'
+  'priority': !!int '100'
+  'icon_index': !!int '607'
+  'message1': '''s hidden power awakens.'
+  'message4': ' returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<炎属性倍率:50>\r\n<氷属性倍率:50>\r\n<雷属性倍率:50>\r\n<光属性倍率:50>\r\n<闇属性倍率:50>\r\n<無属性倍率:50>"
+  'id': !!int '29'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '4'
+    'value': !!float '2.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '4'
+    'value': !!float '1.4'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Invincible'
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '30'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '6'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '7'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': '''s summoning was sealed away!'
+  'name': 'Gate Closure'
+  'priority': !!int '75'
+  'icon_index': !!int '528'
+  'message1': ' was sealed from summoning!'
+  'message4': '''s summoning seal has been lifted!'
+  'restriction': !!int '0'
+  'release_by_damage': !!bool 'false'
+  'message3': ''
+  'note': ''
+  'id': !!int '31'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '42'
+    'data_id': !!int '3'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '3'
+  'max_turns': !!int '5'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '32'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': '''s MP has been depleted!'
+  'name': 'Exhaustion'
+  'priority': !!int '95'
+  'icon_index': !!int '560'
+  'message1': '''s MP has been depleted!'
+  'message4': ' became able to recover MP!'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '33'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '1'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '6'
+  'max_turns': !!int '6'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Mob Avoidance'
+  'priority': !!int '50'
+  'icon_index': !!int '564'
+  'message1': ''
+  'message4': 'The effect of \db[i,115] has worn off.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<雑魚避け>\r\n"
+  'id': !!int '34'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '1000'
+  'remove_by_walking': !!bool 'true'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Encounter Reduction'
+  'priority': !!int '50'
+  'icon_index': !!int '562'
+  'message1': ''
+  'message4': 'The effect of \db[i,113] has worn off.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '35'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '64'
+    'data_id': !!int '0'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '1000'
+  'remove_by_walking': !!bool 'true'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Evasion Plus'
+  'priority': !!int '50'
+  'icon_index': !!int '28'
+  'message1': '''s evasion rate has increased!'
+  'message4': '''s evasion rate has returned to normal!'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '36'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '1'
+    'value': !!float '0.15'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Counterattack'
+  'priority': !!int '50'
+  'icon_index': !!int '27'
+  'message1': ' braced for the opponent''s attack!'
+  'message4': ' took a stance!'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '37'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '6'
+    'value': !!float '0.5'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '5'
+  'max_turns': !!int '5'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '38'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Levitation'
+  'priority': !!int '50'
+  'icon_index': !!int '566'
+  'message1': ''
+  'message4': 'The effect of \db[i,116] has worn off.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '<床ダメージ無効>'
+  'id': !!int '39'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '1000'
+  'remove_by_walking': !!bool 'true'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Enemy Lure'
+  'priority': !!int '50'
+  'icon_index': !!int '565'
+  'message1': ''
+  'message4': 'The effect of \db[i,114] has worn off.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '<エンカウント倍加>'
+  'id': !!int '40'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '200'
+  'remove_by_walking': !!bool 'true'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Charge'
+  'priority': !!int '50'
+  'icon_index': !!int '30'
+  'message1': ''
+  'message4': ' returned to their original state.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<物理与ダメージ率:250>\r\n<魔法与ダメージ率:250>\r\n"
+  'id': !!int '41'
+  'features': []
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Martial God'
+  'priority': !!int '50'
+  'icon_index': !!int '30'
+  'message1': ''
+  'message4': ' returned to their original state.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<物理与ダメージ率:150>\r\n<魔法与ダメージ率:50>"
+  'id': !!int '42'
+  'features': []
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '6'
+  'max_turns': !!int '6'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '43'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' received the blessings of fire, ice, and lightning.'
+  'name': 'Blessing of the Three Elements'
+  'priority': !!int '50'
+  'icon_index': !!int '591'
+  'message1': ' received the blessings of fire, ice, and lightning.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<炎属性倍率:10>\r\n<氷属性倍率:10>\r\n<雷属性倍率:10>\r\n"
+  'id': !!int '44'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '3'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '4'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '5'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '4'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '45'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Encounter None'
+  'priority': !!int '50'
+  'icon_index': !!int '563'
+  'message1': ''
+  'message4': 'The effect of \db[i,121] has worn off.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '46'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '64'
+    'data_id': !!int '1'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '1000'
+  'remove_by_walking': !!bool 'true'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '47'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Lethargy'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': 'セックス直後の対象のステート変化'
+  'id': !!int '48'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '0'
+    'value': !!float '0.4'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '2'
+    'value': !!float '0.7'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '3'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '4'
+    'value': !!float '0.7'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '5'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '6'
+    'value': !!float '0.7'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '7'
+    'value': !!float '0.7'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '6'
+  'max_turns': !!int '6'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '49'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Dummy State'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ':ポップアップ非表示'
+  'id': !!int '50'
+  'features': []
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Bewitching'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ':ポップアップ非表示'
+  'id': !!int '51'
+  'features': []
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '52'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Guts'
+  'priority': !!int '99'
+  'icon_index': !!int '581'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '53'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Guts'
+  'priority': !!int '99'
+  'icon_index': !!int '580'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '54'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '55'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Magic Barrier'
+  'priority': !!int '50'
+  'icon_index': !!int '601'
+  'message1': ' became resistant to all magic damage!'
+  'message4': '''s magic barrier has been dispelled!'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '56'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '7'
+    'value': !!float '0.75'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Physical Barrier'
+  'priority': !!int '50'
+  'icon_index': !!int '599'
+  'message1': ' became resistant to all physical damage!'
+  'message4': '''s physical barrier has been dispelled!'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '57'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '6'
+    'value': !!float '0.75'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Default Counter'
+  'priority': !!int '50'
+  'icon_index': !!int '27'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': 'バトルレディ等のデフォルト反撃ステート'
+  'id': !!int '58'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '6'
+    'value': !!float '0.5'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': '''s sword was imbued with flames.'
+  'name': 'Flame Sword'
+  'priority': !!int '50'
+  'icon_index': !!int '582'
+  'message1': '''s sword was imbued with flames.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<属性消去:1>\r\n"
+  'id': !!int '59'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '31'
+    'data_id': !!int '3'
+    'value': !!float '1.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '2'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': '''s sword was imbued with cold.'
+  'name': 'Ice Sword'
+  'priority': !!int '50'
+  'icon_index': !!int '583'
+  'message1': '''s sword was imbued with a chill.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<属性消去:1>\r\n"
+  'id': !!int '60'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '31'
+    'data_id': !!int '4'
+    'value': !!float '1.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '2'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': '''s sword was imbued with lightning.'
+  'name': 'Sword of Thunder'
+  'priority': !!int '50'
+  'icon_index': !!int '584'
+  'message1': '''s sword was imbued with lightning.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<属性消去:1>\r\n"
+  'id': !!int '61'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '31'
+    'data_id': !!int '5'
+    'value': !!float '1.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '2'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': '''s sword was imbued with light.'
+  'name': 'Sword of Light'
+  'priority': !!int '50'
+  'icon_index': !!int '592'
+  'message1': '''s sword was imbued with light.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<属性消去:1>\r\n"
+  'id': !!int '62'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '31'
+    'data_id': !!int '9'
+    'value': !!float '1.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '2'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': '''s sword became imbued with darkness.'
+  'name': 'Sword of Darkness'
+  'priority': !!int '50'
+  'icon_index': !!int '593'
+  'message1': '''s sword became imbued with darkness.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<属性消去:1>\r\n"
+  'id': !!int '63'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '31'
+    'data_id': !!int '10'
+    'value': !!float '1.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '2'
+    'value': !!float '1.2'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': '''s sword gained a luster.'
+  'name': 'Sword of Charm'
+  'priority': !!int '50'
+  'icon_index': !!int '615'
+  'message1': '''s sword gained a luster.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<属性消去:1>\r\n"
+  'id': !!int '64'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '31'
+    'data_id': !!int '7'
+    'value': !!float '1.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '21'
+    'data_id': !!int '2'
+    'value': !!float '1.2'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '32'
+    'data_id': !!int '26'
+    'value': !!float '0.05'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Action Count + (For Enemy)'
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<敵用>\r\n:ポップアップ表示名 = \"行動＋\""
+  'id': !!int '65'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '61'
+    'data_id': !!int '0'
+    'value': !!float '1.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Default Magic Reflection'
+  'priority': !!int '50'
+  'icon_index': !!int '31'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '雲外鏡等のデフォルト魔法反射ステート'
+  'id': !!int '66'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '5'
+    'value': !!float '0.5'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' cast a barrier that halves all magical damage!'
+  'name': 'Magic Damage Cut'
+  'priority': !!int '50'
+  'icon_index': !!int '601'
+  'message1': ''
+  'message4': '''s magic barrier has been dispelled!'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '67'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '7'
+    'value': !!float '0.5'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' cast a barrier that halves all physical damage!'
+  'name': 'Physical Damage Cut'
+  'priority': !!int '50'
+  'icon_index': !!int '599'
+  'message1': ''
+  'message4': '''s physical barrier has been dispelled!'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '68'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '6'
+    'value': !!float '0.5'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '69'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Blessing of HP Regeneration'
+  'priority': !!int '50'
+  'icon_index': !!int '26'
+  'message1': ' received the blessing of HP regeneration.'
+  'message4': '''s HP regeneration buff has expired.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '70'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '22'
+    'data_id': !!int '7'
+    'value': !!float '0.15'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Full Belly'
+  'priority': !!int '1'
+  'icon_index': !!int '298'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '<開始後解除>'
+  'id': !!int '71'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Attack'
+  'priority': !!int '50'
+  'icon_index': !!int '34'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:2,4>\r\n<開始後解除>"
+  'id': !!int '72'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Defense'
+  'priority': !!int '50'
+  'icon_index': !!int '35'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:3,4>\r\n<開始後解除>"
+  'id': !!int '73'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State: Magical Power'
+  'priority': !!int '50'
+  'icon_index': !!int '36'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:4,4>\r\n<開始後解除>"
+  'id': !!int '74'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Mana'
+  'priority': !!int '50'
+  'icon_index': !!int '37'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:5,4>\r\n<開始後解除>"
+  'id': !!int '75'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Agility'
+  'priority': !!int '50'
+  'icon_index': !!int '38'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:6,4>\r\n<開始後解除>"
+  'id': !!int '76'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Mental Power'
+  'priority': !!int '50'
+  'icon_index': !!int '39'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:7,4>\r\n<開始後解除>"
+  'id': !!int '77'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '78'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Forbidden Spell Chant'
+  'priority': !!int '50'
+  'icon_index': !!int '413'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ' is chanting a forbidden spell.'
+  'note': ''
+  'id': !!int '79'
+  'features': []
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '80'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Frost Release'
+  'priority': !!int '100'
+  'icon_index': !!int '609'
+  'message1': '''s hidden power awakens.'
+  'message4': ' returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<氷属性倍率:100>\r\n<闇属性倍率:50>\r\n<艶属性倍率:50>\r\n<TP消費率:1.5>\r\n"
+  'id': !!int '81'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '4'
+    'value': !!float '2.0'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Frost Release (Enemy Use)'
+  'priority': !!int '100'
+  'icon_index': !!int '609'
+  'message1': '''s hidden power awakens.'
+  'message4': ' returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<物理与ダメージ率:120>\r\n<魔法与ダメージ率:120>\r\n<TP消費率:2.0>\r\n:ポップアップ表示名 = \"凍気解放\""
+  'id': !!int '82'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '4'
+    'value': !!float '2.0'
+  'auto_removal_timing': !!int '1'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' readied their shield and stepped in front of the party.'
+  'name': 'Shield'
+  'priority': !!int '50'
+  'icon_index': !!int '509'
+  'message1': ' readied his shield and stepped in front of the party.'
+  'message4': ' stepped back.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '<身代わりフル>'
+  'id': !!int '83'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '62'
+    'data_id': !!int '1'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '62'
+    'data_id': !!int '2'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'true'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Ninefold Barrier'
+  'priority': !!int '50'
+  'icon_index': !!int '605'
+  'message1': ' became resistant to all status ailments and debuffs.'
+  'message4': '''s Nine Artifacts Barrier has been dispelled.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '84'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '2'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '3'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '4'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '5'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '6'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '7'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '8'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '1'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '13'
+    'data_id': !!int '26'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '12'
+    'data_id': !!int '2'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '12'
+    'data_id': !!int '3'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '12'
+    'data_id': !!int '4'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '12'
+    'data_id': !!int '5'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '12'
+    'data_id': !!int '6'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '12'
+    'data_id': !!int '7'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '8'
+  'max_turns': !!int '8'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '85'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Vision Correction'
+  'priority': !!int '50'
+  'icon_index': !!int '567'
+  'message1': ''
+  'message4': 'The effect of \db[i,128] has worn off.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': '<視界補正 384>'
+  'id': !!int '86'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '1000'
+  'remove_by_walking': !!bool 'true'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '87'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Gloss Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '123'
+  'message1': '''s resistance to \db[el,7] has increased!'
+  'message4': '''s pussy resistance has returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '88'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '7'
+    'value': !!float '0.75'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Gloss Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '561'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物ステート:88>\r\n<開始後解除>"
+  'id': !!int '89'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Ice Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '105'
+  'message1': '''s ice resistance has increased!'
+  'message4': '''s ice resistance has returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '90'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '4'
+    'value': !!float '0.75'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Ice Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '105'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物ステート:90>\r\n<開始後解除>"
+  'id': !!int '91'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Lightning Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '106'
+  'message1': '''s lightning resistance has increased!'
+  'message4': '''s lightning resistance has returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '92'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '5'
+    'value': !!float '0.75'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Lightning Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '106'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物ステート:92>\r\n<開始後解除>"
+  'id': !!int '93'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Flame Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '104'
+  'message1': '''s fire resistance has increased!'
+  'message4': '''s fire resistance has returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '94'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '3'
+    'value': !!float '0.75'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Flame Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '104'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物ステート:94>\r\n<開始後解除>"
+  'id': !!int '95'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '96'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Post-Action Defense'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ' took a defensive stance with his shield raised.'
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '97'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '62'
+    'data_id': !!int '1'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'true'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '98'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Light Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '110'
+  'message1': '''s light resistance has increased!'
+  'message4': '''s light resistance has returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '99'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '9'
+    'value': !!float '0.75'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Light Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '110'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物ステート:99>\r\n<開始後解除>"
+  'id': !!int '100'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Dark Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '111'
+  'message1': '''s dark resistance has increased!'
+  'message4': '''s dark resistance has returned to normal.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '101'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '11'
+    'data_id': !!int '10'
+    'value': !!float '0.75'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Dark Resistance'
+  'priority': !!int '50'
+  'icon_index': !!int '111'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物ステート:101>\r\n<開始後解除>"
+  'id': !!int '102'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '103'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ' is protected by a barrier that halves damage.'
+  'name': 'Tyrant''s Shield'
+  'priority': !!int '50'
+  'icon_index': !!int '510'
+  'message1': ' is protected by a barrier that halves damage.'
+  'message4': '''s barrier disappeared.'
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '104'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '6'
+    'value': !!float '0.5'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '23'
+    'data_id': !!int '7'
+    'value': !!float '0.5'
+  'auto_removal_timing': !!int '2'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'true'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '105'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State - Offense and Defense'
+  'priority': !!int '50'
+  'icon_index': !!int '618'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:2,4>\r\n<食べ物強化:3,4>\r\n<開始後解除>"
+  'id': !!int '106'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State: Magic'
+  'priority': !!int '50'
+  'icon_index': !!int '619'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:4,4>\r\n<食べ物強化:5,4>\r\n<開始後解除>"
+  'id': !!int '107'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Cooking State: Quick Mind'
+  'priority': !!int '50'
+  'icon_index': !!int '613'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': "<食べ物強化:6,4>\r\n<食べ物強化:7,4>\r\n<開始後解除>"
+  'id': !!int '108'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '109'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Frost Release (Event Dummy)'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ':ポップアップ非表示'
+  'id': !!int '110'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '43'
+    'data_id': !!int '174'
+    'value': !!float '0.0'
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '43'
+    'data_id': !!int '53'
+    'value': !!float '0.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': ''
+  'priority': !!int '50'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ''
+  'id': !!int '111'
+  'features': []
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '1'
+  'max_turns': !!int '1'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'false'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
+- !ruby/object:RPG::State
+  'message2': ''
+  'name': 'Event-Specific Action+'
+  'priority': !!int '0'
+  'icon_index': !!int '0'
+  'message1': ''
+  'message4': ''
+  'restriction': !!int '0'
+  'message3': ''
+  'note': ':ポップアップ非表示'
+  'id': !!int '112'
+  'features':
+  - !ruby/object:RPG::BaseItem::Feature
+    'code': !!int '61'
+    'data_id': !!int '0'
+    'value': !!float '1.0'
+  'auto_removal_timing': !!int '0'
+  'min_turns': !!int '4'
+  'max_turns': !!int '4'
+  'chance_by_damage': !!int '100'
+  'steps_to_remove': !!int '100'
+  'remove_by_walking': !!bool 'false'
+  'remove_at_battle_end': !!bool 'true'
+  'remove_by_damage': !!bool 'false'
+  'remove_by_restriction': !!bool 'false'
+  'description': ''
