@@ -46,9 +46,11 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[a4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ここから先は関係者以外立ち入り禁止ですので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　ご遠慮ください」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[a4]"Access beyond this point is restricted to
+
+            authorized personnel only, please refrain from
+
+            entering."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '2': !ruby/object:RPG::Event
     'id': !!int '2'
@@ -140,8 +142,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「いらっしゃいませ、何かお飲みになりますか？」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]"Welcome, would you like something to
+
+            drink?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
     - !ruby/object:RPG::Event::Page
       'condition': !ruby/object:RPG::Event::Page::Condition
@@ -189,55 +192,76 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '408', 'p': ['end']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['b_stop']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「いらっしゃいませ、何かお飲みになりますか？」\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['ここで働きたい', 'なんでもない'], !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]Welcome, would you like something to
+
+            drink?']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Can i work here?', 'Nothing for me, thanks'], !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', 'ここで働きたい']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '117', 'p': [!!int '25']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '117', 'p': [!!int '72']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「なるほど、ウチで働きたいと…\!ウチは性風俗も兼ねているので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　夜はお客様に性的な奉仕もしてもらう事になります」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]I see, you want to work here... Our
+
+            establishment also provides sexual services, so at
+
+            night you will be expected to serve our customers
+
+            sexually.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「ですがウチでは基本的に新人の研修などを行っていませんので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　同じ業種の店…最低でも酒場で働いた事のある方しかお雇い']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　できません。\!あなたはそういった店での経験はありますか？」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]However, we generally do not provide
+
+            training for newcomers, so we can only hire those
+
+            who have at least worked in a similar industry...
+
+            Have you had any experience working in such
+
+            places?']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「はい、酒場でのバイト経験と…ラグラスの娼館で']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　個室対応するぐらいまで働いたことがあります」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]Yes, I have experience working
+
+            part-time at a tavern and... I''ve worked up to
+
+            handling private rooms in a brothel in Raglas.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '213', 'p': [!!int '0', !!int '1', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「なるほど、ラグラスの娼館で…という事は\sbt[33]オーナーの']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　お眼鏡に適ったという事ですか…\!しかも個室対応まで']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　いったという事はそれなりに経験もおありのようだ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]I see, at a brothel in Raglas... So
+
+            you''ve met the standards of the \sbt[33]Owner, and
+
+            even handled private rooms. It seems you have a
+
+            fair amount of experience.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['（\sbt[33]さんってひょっとしてこの業界で結構有名なのかしら…？）']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0](Could it be that \sbt[33]san is
+
+            quite famous in this industry...?)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '45']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「わかりました、あなたをお雇いします。\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　それではシフトについて――」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]Understood, we will hire you. Now, about
+
+            your shifts--']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_change']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '45']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '222', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['（やっぱり、ダリアの王都だけあってここのお給料結構いいわね。\!\stnd[n,1,0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　それに客からのチップも全部もらっていいなんて…']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　少し働けば旅の資金に困る事はなさそうね）']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0](As expected of the royal
+
+            capital of Dalia, the pay here is quite good.
+
+            \stnd[n,1,0]And to think I get to keep all the
+
+            tips from customers... It looks like I won''t have
+
+            trouble funding my travels if I work here for a
+
+            bit.)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「では今晩 早速お願いします」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]Then please start working this evening.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「わかりました」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]Understood.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '242', 'p': [!!int '5']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '117', 'p': [!!int '88']}
@@ -297,9 +321,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「また働きたい時は言ってください。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　Lunariaさんなら歓迎しますよ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]"Please let us know when you want to work
+
+            again. We''d welcome Lunaria-san anytime."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
     - !ruby/object:RPG::Event::Page
       'condition': !ruby/object:RPG::Event::Page::Condition
@@ -342,17 +366,16 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['b_stop']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '25']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「こんにちはLunariaさん、また今晩も働いて行かれますか？」\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['はい', 'いいえ'], !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]"Hello Lunaria-san, are you going to work
+
+            again tonight?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Yes', 'No'], !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', 'はい']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['flag']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「では時間になったらお願いします」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]"Then, please come when it''s time."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「わかりました」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]"Understood."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['flag_end']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '242', 'p': [!!int '5']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
@@ -373,8 +396,9 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '1', 'いいえ']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「また働きたくなったらいつでもお訪ねください」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu]"If you ever want to work again, please
+
+            feel free to visit."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['b_start']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['flag_write']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '117', 'p': [!!int '26']}
@@ -419,9 +443,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「また働きたい時は言ってください。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　Lunariaさんなら歓迎しますよ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu]"Please let me know when you want to work
+
+            again. We''d welcome Lunaria-san anytime."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '4': !ruby/object:RPG::Event
     'id': !!int '4'
@@ -467,10 +491,13 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ウチは戦士三人っていうバランスの悪いパーティだから']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　魔術師が欲しいんだが…姉ちゃん俺らと組む気ない？\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　え、ない？　そうか…残念…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6]"Our party is poorly balanced with three
+
+            warriors, so we really need a mage... Hey, big
+
+            sis, you don''t feel like joining us? No? I see...
+
+            that''s too bad..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '5': !ruby/object:RPG::Event
     'id': !!int '5'
@@ -516,10 +543,15 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ここの酒場は夜からが本番と言っても過言ではない。\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　危険な魔物討伐で金を稼ぐのも全てはここでの']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　夜の遊興に使うためだからな」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6]"It''s no exaggeration to say that the real
+
+            show at this tavern starts at night. After all,
+
+            the money earned from slaying dangerous monsters
+
+            is all for the sake of enjoying the nightlife
+
+            here."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '6': !ruby/object:RPG::Event
     'id': !!int '6'
@@ -565,9 +597,11 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「全く…おっさん二人の酒の相手は疲れるよ。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　あぁ…女の子ばかりのパーティに入りたい…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6]"Seriously... Entertaining two old men
+
+            with drinks is exhausting. Ahh... I want to join a
+
+            party with just girls..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '7': !ruby/object:RPG::Event
     'id': !!int '7'
@@ -613,23 +647,37 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4b]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「\smは基本 ２つの種類に分けられるわ。\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　１つは剣士などの職業を具現化した“クラス\sm”。\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　もう一つは魔物を倒し手懐けた“モンスター\sm”」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4b]"Summoning magic is basically divided
+
+            into two types. One is the ''Class'' type, which
+
+            embodies professions like swordsmen. The other is
+
+            the ''Monster'' type, which involves defeating and
+
+            taming monsters."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4b]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「“クラス”は術者の意思等が容姿にある程度影響されるらしいわね。\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　“モンスター”は契約したモンスターそのものが出てくるから']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　容姿などに術者の影響は受けないわよ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4b]"The ''Class'' type seems to be somewhat
+
+            influenced by the caster''s will and such in terms
+
+            of appearance. ''Monsters'' are the actual
+
+            contracted monsters themselves, so their
+
+            appearance isn''t influenced by the caster."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_02', !!int '4', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['（\nt[12]等の守護者は魔物本人と契約した訳じゃなく']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　半分は宝玉の恩恵によるものだから魔物\sm…って']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　訳じゃないのよね…）']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]（\nt[12]Guardians like us aren''t
+
+            contracted with the actual monster itself; it''s
+
+            partly due to the grace of the jewel, so it''s not
+
+            exactly a monster... is it?）']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_02', !!int '4', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['（分類上はクラス\sm…になるのかしら？）']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]（I wonder if, categorically, it
+
+            would be considered a ''Class''...?）']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '8': !ruby/object:RPG::Event
@@ -676,18 +724,33 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「世界で人語を話す人型のモンスターを\smとして']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　使役した例は少ないらしいですね。\!話が通じる分']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　契約しやすそうに感じますが実際の所は全くの逆のようです」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4]"It seems there are few cases in the world
+
+            where humanoid monsters that can speak human
+
+            languages are employed as \sm. While it feels like
+
+            it would be easier to form a contract since we can
+
+            communicate, it appears to be quite the opposite
+
+            in reality."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「獣系なら力を示せば恭順の意思を示しますが、人語を話す人型の場合']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　会話が出来る分 力だけでは人を受け入れないようです」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4]"For beast-type monsters, showing strength
+
+            may lead them to express a willingness to submit,
+
+            but for humanoid ones that can speak, being able
+
+            to converse means that strength alone won''t make
+
+            them accept a person."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「最初から人に対して敵意を持っていないような個体なら別ですが…']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　そういうのは非常に稀ですしね」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p4]"Unless it''s an individual that doesn''t
+
+            hold any hostility towards humans from the
+
+            start... but such cases are extremely rare."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '9': !ruby/object:RPG::Event
     'id': !!int '9'
@@ -734,15 +797,19 @@
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', 'ss_check(425,44)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[m0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「へへ、姉ちゃんこの前はごっそさん。あの後 家であんたの']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　マンコの味を思い出しながら３発ぐらい出したぜ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[m0]Hehe, thanks for last time, Onee-san.
+
+            Afterwards, I remembered the taste of your pussy
+
+            and came about three times at home.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[m0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「お、姉ちゃん美人だな。\!どうだい、この店で夜に働いてみないか？']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　マスターに言えば雇ってもらえると思うぜ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[m0]Oh, Onee-san, you''re a beauty. How about
+
+            it, wanna work here at night? I think the master
+
+            would hire you if you asked.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -791,15 +858,17 @@
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '184', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[m0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「この間のスケベな姉ちゃんじゃねぇか。ヘヘ、また金貯めて']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　来店するからその時はよろしく頼むぜ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[m0]"Isn''t that the naughty Onee-san from the
+
+            other time? Hehe, I''ll save up some money and come
+
+            to the shop again, so I''m counting on you then."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[m0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「昼間だとバニーちゃんにセクハラ出来ないからな…']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　夜が待ち遠しいぜ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[m0]"I can''t sexually harass Bunny-chan during
+
+            the day... I can''t wait for night to come."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -847,9 +916,11 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「私一人で飲むのが好きなの。\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　だから隣の人からの『話しかけたいオーラ』が凄くウザいわ…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]“I like drinking alone. So the ''I-want-to-
+
+            talk'' vibe from the person next to me is really
+
+            annoying...”']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '12': !ruby/object:RPG::Event
     'id': !!int '12'
@@ -895,8 +966,11 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[m1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「と、隣の女性一人みたいだし…声かけてみようかな…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[m1]"Hmm, it looks like there''s a woman
+
+            sitting alone next to me... Maybe I should try
+
+            talking to her..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '13': !ruby/object:RPG::Event
     'id': !!int '13'
@@ -942,8 +1016,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[rk1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「こんな格好だが今日は非番だ。さぼっているわけではないぞ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[rk1]"I may be dressed like this, but I''m off
+
+            duty today. It''s not like I''m slacking off."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '14': !ruby/object:RPG::Event
     'id': !!int '14'
@@ -1055,9 +1130,11 @@
           - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*2]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[a4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ここから先は関係者以外立ち入り禁止ですので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　ご遠慮ください」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[a4]"Access beyond this point is restricted to
+
+            authorized personnel only, please refrain from
+
+            entering."']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '0'
         'c': !!int '205'
@@ -1134,18 +1211,23 @@
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '21', !!int '0', !!int '74', !!int '1']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「淫魔に支配されてた時はタダマンされちゃって散々でしたよ。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　まぁ気持ちよかったからいいと言えばいいんですが…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]"When I was under the control of the
+
+            succubus, I was screwed for free and it was quite
+
+            a mess. Well, I guess it''s fine since it felt
+
+            good..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「でも、やっぱりお金の為にエッチしてるわけですし']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　そこの線引きはしっかりしないと」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]"But still, since I''m doing it for
+
+            money, I have to draw a clear line."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「昼間は普通のお客が多いから真面目にやらないと…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]"During the day, there are many regular
+
+            customers, so I have to be serious..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -1210,8 +1292,9 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*6]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*7]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「んっ…\ht\|　やだ、前の精液が垂れてきちゃった\ht」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]"Ugh... No, the cum from before is
+
+            starting to drip down..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '213', 'p': [!!int '-1', !!int '6', !!bool 'false']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
@@ -1231,8 +1314,9 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*8]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*9]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「んっ…\ht\|　夜が待ち遠しくてアソコが疼いちゃう\ht」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]"Mmm... I can''t wait for night to come;
+
+            my pussy is throbbing..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '213', 'p': [!!int '-1', !!int '6', !!bool 'false']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
@@ -1282,18 +1366,22 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ウチは夜が稼ぎ時なのよ\ht　この商売で稼げる事を知っちゃったら']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　もう命の危険のある冒険者時代には戻れないわ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu4]"Our peak earning time is at night. Once
+
+            you know how much you can make in this business,
+
+            you can''t go back to the life-threatening days of
+
+            being an adventurer."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '182', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「あなたもこの前働いてみてそう思ったでしょ？」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]"You tried working the other day, you
+
+            must have felt the same, right?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「あなたも一緒に働いてみない？」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[pu4]"Why don''t you work with us too?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -1341,12 +1429,10 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「こちらで料理をテイクアウトできますよ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu4]"You can take out food from here."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '103']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ありがとうございました」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[pu4]"Thank you very much."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
 'parallax_sx': !!int '0'
 'bgm': !ruby/object:RPG::BGM {'name': 'AlgG_location_大人の社交場', 'volume': !!int '100', 'pitch': !!int '100'}

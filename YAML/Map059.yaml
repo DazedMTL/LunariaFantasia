@@ -271,10 +271,14 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime1', 'pitch': !!int '100', 'volume': !!int '80'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '30']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['この先へ進むとSoniaと別れる事になります。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['先へ進みますか？']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['（Soniaは離脱時、装飾品のみ自動的に外されます）\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['進む', '戻る'], !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['If you proceed from here, you will part ways with
+
+            Sonia. Do you wish to continue? (When Sonia
+
+            leaves, only her accessories will be automatically
+
+            removed.)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Move forward', 'Go back'], !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', '進む']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['flag']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
@@ -347,8 +351,9 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*12]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_left(2)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n02_02', !!int '2', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「ダリア地方への道は\|\.\.\stnd[n,2,0]こっちみたいね」\|']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]: "The path to the Dalia region
+
+            seems to be this way."']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '1'
         'c': !!int '205'
@@ -386,31 +391,31 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*18]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*19]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「山頂は…\.\.こっちか…\|\stnd[n,1,34]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　ここでお別れみたいですね」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "The summit is... this way...
+
+            It looks like this is where we say goodbye."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '241', 'p': [!ruby/object:RPG::BGM {'name': '傭兵の名は', 'volume': !!int '100', 'pitch': !!int '100'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '30']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n02_02', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「短い間だったけどあなたとの旅、楽しかったわ。\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　縁があったらまた一緒に旅をしましょう」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]: "It was a short time, but I
+
+            enjoyed traveling with you. If fate allows, let''s
+
+            travel together again."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '2', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「はい、是非」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Yes, by all means."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「旅先で旦那さんを見かけたら']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　Soniaさんが捜していたとお伝えしますから」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "If I come across your husband
+
+            on my travels, I''ll let him know that Sonia-san is
+
+            looking for him."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n02_00', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「ええ、ありがとうLunaria」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]: "Yes, thank you, Lunaria."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n02_00', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「それじゃあね」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]: "Well then, see you."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「はい、それでは」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Yes, take care."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase(2)']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '1'
@@ -466,7 +471,7 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '242', 'p': [!!int '5']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Soniaと別れた\|']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Parted ways with Sonia.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '319', 'p': [!!int '2', !!int '4', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '129', 'p': [!!int '2', !!int '1', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '121', 'p': [!!int '29', !!int '29', !!int '1']}
@@ -487,8 +492,9 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '222', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['bgm_play']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「それじゃあ山頂のフリゼニア神殿へ向かいましょう」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Now, let''s head to the
+
+            Frizenia Temple at the summit."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['story_add("02-05")']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '123', 'p': ['A', !!int '0']}
@@ -757,9 +763,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['↑フリゼニア神殿']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['←ダリア・サジタリーズ間の関所']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['↓サジタリーズ方面']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['↑Furizenia Temple ←Dahlia Checkpoint between
+
+            Sagitarius↓Direction of Sagitarius']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '9': !ruby/object:RPG::Event
     'id': !!int '9'

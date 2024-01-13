@@ -46,8 +46,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '7', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[15]この先、関係者以外立ち入り禁止']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[15]Beyond this point, no unauthorized persons
+
+            allowed']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
     - !ruby/object:RPG::Event::Page
       'condition': !ruby/object:RPG::Event::Page::Condition
@@ -90,8 +91,7 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['b_stop']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '25']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '7', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[15]この先、関係者以外立ち入り禁止']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[15]Authorized Personnel Only Beyond This Point']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '0'
         'c': !!int '205'
@@ -139,13 +139,14 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*11]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*12]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p2_f]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「その先の通路は男湯と繋がってるのよ。\|と言っても鍵が']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　かかってるから、男性が覗きに来たりできないから安心して」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p2_f]"The passage ahead connects to the men''s
+
+            bath. But don''t worry, it''s locked, so no men can
+
+            come peeping."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['event_wait(4,32,11)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「そうなんですか…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Is that so..."']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '0'
         'c': !!int '205'
@@ -189,12 +190,15 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*21]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*22]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['（この先が男湯と……）']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0] (So beyond here is the men''s
+
+            bath...)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_04', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['（確かここで拾った鍵があったわね…']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　それがあれば男湯に行く事も……\!\stnd[n,1,47]なんてね…）']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0] (I''m sure I picked up a key
+
+            around here... With that, I could even go to the
+
+            men''s bath...\stnd[n,1,47] Just kidding...)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['flag_write']}
@@ -244,14 +248,15 @@
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['b_stop']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '7', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[15]この先、関係者以外立ち入り禁止']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[15]Authorized personnel only beyond this point']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', 'man_and_woman']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '12', 'cos_check(0)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['!n01_03', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['（裸で男湯に乱入したら、どうなるのかしら…？']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['　少し興味あるわ\ht）\!']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]（I wonder what would happen if I
+
+            barged into the men''s bath naked...? I''m a bit
+
+            curious\ht）']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '104', 'p': [!!int '11']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '111', 'p': [!!int '1', !!int '11', !!int '0', !!int '298', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '355', 'p': ['stand_erase']}
@@ -309,8 +314,9 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['!n01_01', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['（まずは服を脱ぎましょうか）']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]（First, I should take off my
+
+            clothes）']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '412', 'p': []}
@@ -357,8 +363,9 @@
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '!cos_check(0)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_01', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「まずは服を脱がないと…ね\ht」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "First, we need to take off
+
+            our clothes... right\ht"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '115', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
@@ -449,15 +456,16 @@
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', 'cos_check(0) && $game_party.members.size == 1']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_02', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「……わざわざ脱ぐ必要ないわね。着てないんだし」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "...There''s no need to bother
+
+            undressing. I''m not wearing anything after all."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '115', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['服を脱ぎますか？\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['はい', 'いいえ'], !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Do you want to take off your clothes?']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Yes', 'No'], !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', 'はい']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Equip3', 'pitch': !!int '100', 'volume': !!int '80'}]}
@@ -522,8 +530,8 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['服を着ますか？\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['はい', 'いいえ'], !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Shall I put on some clothes?']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Yes', 'No'], !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', 'はい']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Equip2', 'pitch': !!int '100', 'volume': !!int '80'}]}
@@ -605,27 +613,31 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*37]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '4', !!int '2', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['!n02_03', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['「ちょ、ちょっと…！　この格好で出ていく気!?」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Sonia\C[0]: "Hey, wait a minute...! You''re
+
+            planning to go out dressed like that!?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '355', 'p': ['stand_erase(2)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '111', 'p': [!!int '4', !!int '3', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '101', 'p': ['!n03_02', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['「……Lunariaさんの露出趣味に私を付き合わせないで下さい…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "...Please don''t make me partake
+
+            in Lunaria-san''s exhibitionist hobbies..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '355', 'p': ['stand_erase(3)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '111', 'p': [!!int '1', !!int '4', !!int '0', !!int '75', !!int '1']}
       - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '101', 'p': ['!n01_00', !!int '7', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['「出るなら着替えてからにしましょう」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "If we''re going out, let''s
+
+            change clothes first."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '101', 'p': ['!n01_05', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['「こんな格好じゃあ外に出られないわ…！」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "We can''t go outside dressed
+
+            like this...!"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '355', 'p': ['stand_erase']}
@@ -728,14 +740,18 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[a4b]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「精油按摩の施術をお受けになりたい方は']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　まずそちらに張られている注意事項をお読みください」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[a4b]"If you would like to receive the
+
+            aromatherapy massage, please first read the notice
+
+            posted over there."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '415', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['（気持ちよかったけど…一回受ければ十分かもね。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　何より記憶が飛んでるのが少し怖いし…）']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0] (It felt good... but once might
+
+            be enough. What''s more, the fact that I lost some
+
+            memory is a bit scary...)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
@@ -798,8 +814,9 @@
           - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*38]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「まずはそこの脱衣所で服を脱がないと…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "First, we need to undress in
+
+            that changing room over there..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
@@ -966,8 +983,9 @@
           - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*39]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「まずはそこの脱衣所で服を脱がないと…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "First, we need to undress in
+
+            that changing room..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
@@ -1062,8 +1080,7 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '222', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '213', 'p': [!!int '-1', !!int '3', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_02', !!int '7', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ふぅ………\|気持ちいいわね」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Phew... that feels good."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['stand_talk(1)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Heal3', 'pitch': !!int '100', 'volume': !!int '80'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '4', !!int '2', !!int '0']}
@@ -1079,11 +1096,15 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['inn']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '$game_party.members.size == 1']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Lunariaと\smの\HP・\MP・\TPが全回復した！']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Lunaria and \sm''s HP, MP, TP have been fully
+
+            restored!']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['パーティと\smの\HP・\MP・\TPが全回復した！']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['The party and \sm''s HP, MP, TP have been fully
+
+            restored!']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '4', !!int '2', !!int '0']}
@@ -1095,8 +1116,9 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_00', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「さて、そろそろ上がりましょうか」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Well, shall we get going
+
+            soon?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '123', 'p': ['A', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['stand_erase']}
@@ -1192,11 +1214,15 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['inn']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '$game_party.members.size == 1']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Lunariaと\smの\HP・\MP・\TPが全回復した！']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Lunaria and the party''s HP, MP, TP have been fully
+
+            restored!']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['パーティと\smの\HP・\MP・\TPが全回復した！']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['The party and \sm''s HP, MP, TP have been fully
+
+            restored!']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '221', 'p': []}
@@ -1289,15 +1315,19 @@
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '261', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[p2_f]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「銭湯が無事でよかったわ。ここは私達の憩いの場所だもの」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[p2_f]"Thank goodness the public bath is safe.
+
+            This place is our sanctuary, after all."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[p2_f]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「そこの扉はどうやら男湯の方と繋がってるみたいよ。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　まぁでも当然鍵がかかってるし、鍵は店の人しか持ってないから']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　そこから誰かが侵入してくるって事はないんだけど」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\mob[p2_f]"It seems that door connects to the
+
+            men''s bath. But of course, it''s locked, and only
+
+            the staff have the keys, so there''s no way someone
+
+            could sneak in from there."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -1383,8 +1413,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f5]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ようやく銭湯が再開してくれてよかったですよ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f5]"Finally, the public bath has reopened,
+
+            thank goodness."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '13': !ruby/object:RPG::Event
     'id': !!int '13'
@@ -1436,8 +1467,7 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f3]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「わーい、おっきいお風呂だぁ！」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f3]Yay, such a big bath!']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '14': !ruby/object:RPG::Event
     'id': !!int '14'
@@ -1483,9 +1513,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f4]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「こら！　銭湯で走り回らないの！']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　他の人の迷惑になるでしょ！」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f4]Hey! Don''t run around in the bathhouse!
+
+            You''re bothering other people!']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '15': !ruby/object:RPG::Event
     'id': !!int '15'
@@ -1531,9 +1561,9 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f2]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「若い男性に身体を揉んでもらうとなんだかこっちも']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　若返った気分になるねぇ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f2]"Having a young man massage my body
+
+            somehow makes me feel rejuvenated too."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '16': !ruby/object:RPG::Event
     'id': !!int '16'
@@ -1579,12 +1609,15 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ここの銭湯は若い男前の男性に按摩してもらえるっていうので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　特に年配の女性に大人気なの」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]"This public bath is especially popular
+
+            among older women because you can get a massage
+
+            from a young, handsome man."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「まぁ運が悪いと中年の男性に当たっちゃうんだけどね」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]"Well, if you''re unlucky, you might end up
+
+            with a middle-aged man, though."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '17': !ruby/object:RPG::Event
     'id': !!int '17'
@@ -1630,14 +1663,21 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ここの按摩担当の三助は一人を除いて男前が揃ってるのよ。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　按摩っていうのは大陸でいうところのマッサージの事ね」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]"The masseurs here, except for one, are
+
+            all handsome. ''Masseur'' is what you''d call a
+
+            ''massage therapist'' on the continent."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「え？　三助を知らない？\!　まぁ、大陸じゃあ馴染みのない']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　言葉だから知らなくても無理ないわよね。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　三助っていうのは風呂屋で働く男性の事よ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]"Eh? You don''t know what a masseur is?
+
+            Well, it''s a term not commonly used on the
+
+            continent, so it''s understandable you wouldn''t
+
+            know. A masseur is a man who works at a
+
+            bathhouse."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '18': !ruby/object:RPG::Event
     'id': !!int '18'
@@ -1683,20 +1723,29 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6_f]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ここのマッサージ師の三助？　とかいう人は何人かいるみたいだけど']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　一人太めのおじさんが混じってるのよね。後はだいたい']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　若いお兄さんなんだけど」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6_f]"It seems like there are several
+
+            masseurs named Sansuke? here, but one of them is a
+
+            plump old man. The rest are mostly young guys."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6_f]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「でもその太めのおじさんのオイルマッサージが中々']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　気持ちいいのよ。\!最初はおじさんに身体触られるのはちょっと…']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　って思ってたんだけど今じゃ気にならなくなったわ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6_f]"But that plump old man''s oil massage
+
+            feels pretty good. At first, I was a bit...
+
+            hesitant about an old man touching my body, but
+
+            now it doesn''t bother me anymore."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6_f]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ただ、いつも\imp途中からボ～っとしちゃって最後の方の施術を']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　覚えてない\c[0]のよね。\!でも、凄く気持ちいい事だけは覚えてるから']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　マッサージが上手なのは間違いないわよ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p6_f]"However, I always end up zoning out
+
+            halfway through and can''t remember the treatment
+
+            towards the end\c[0]. But I do remember that it
+
+            feels really good, so there''s no doubt that he''s
+
+            skilled at massage."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '19': !ruby/object:RPG::Event
     'id': !!int '19'
@@ -1743,10 +1792,15 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「お風呂に入ると心も体もリフレッシュ出来るわ。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　特にこの銭湯はお湯を温泉から引いてきてるから体力回復だけでなく']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　状態異常にも効くのよ」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]"Taking a bath refreshes both the mind and
+
+            body. Especially this public bath, since they draw
+
+            the water from a hot spring, it''s not only good
+
+            for recovering physical strength but also
+
+            effective against status ailments."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '20': !ruby/object:RPG::Event
     'id': !!int '20'
@@ -1792,10 +1846,13 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p1_f]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「たまには鎧を脱いで日頃の汗を流すのも悪くないわ…\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　剣士とはいえ女性ですもの…やっぱり身だしなみには']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　気を遣わないとね」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[p1_f]"It''s not bad to take off the armor once
+
+            in a while and wash away the sweat of daily
+
+            practice... Even as a swordswoman, I am a woman
+
+            after all... I must pay attention to my grooming."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '21': !ruby/object:RPG::Event
     'id': !!int '21'
@@ -1841,9 +1898,11 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「はぁ～……生き返るわぁ…']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　わざわざナワテまで足を伸ばした甲斐があるわね……」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f1]"Ahh... I feel so revived... It was
+
+            definitely worth the trip all the way to
+
+            Nawate..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '22': !ruby/object:RPG::Event
     'id': !!int '22'
@@ -1889,10 +1948,15 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f2]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「こないだ精油按摩をしてもらったら運悪く中年の男に']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　あたっちゃってね…。\!でも他の人が言うような途中ボ～ッと']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　しちゃうってのはあたしゃ無かったんだけど…なんでかね？」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f2]"The other day, I got an aromatherapy
+
+            massage, and unfortunately, I ended up with a
+
+            middle-aged man... But I didn''t experience that
+
+            zoning out thing that other people talk about... I
+
+            wonder why?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '23': !ruby/object:RPG::Event
     'id': !!int '23'
@@ -1938,9 +2002,13 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f2]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「トキワじゃ子供だったら男でも女湯に入れるって暗黙の了解が']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　あるんだよ。大陸から来た人は最初皆ビックリするんだけどね」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\mob[f2]"In Tokiwa, there''s an unspoken agreement
+
+            that even boys can enter the women''s bath if
+
+            they''re children. People from the continent are
+
+            all surprised at first, though."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '24': !ruby/object:RPG::Event
     'id': !!int '24'
@@ -2156,29 +2224,46 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['b_stop']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '25']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[29]精油按摩を受けたい方は個室前の女性従業員にお申し付け下さい']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[14]順番が来たらお呼びしますので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[30]その際は中で施術着に着替え、そのまま奥の施術室へお進み下さい']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[29]If you would like to receive an
+
+            aromatherapy massage, please inform the female
+
+            staff in front of the private room.\ca[14]We will
+
+            call you when it''s your turn, so\ca[30] at that
+
+            time, please change into the treatment clothes
+
+            inside and proceed to the treatment room in the
+
+            back.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[4]※注意※']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[27,2]施術するのは三助(男性)なので抵抗のある方はご遠慮ください']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[4]※Attention※\ca[27,2]The masseur is a male
+
+            named Sanosuke, so if you are uncomfortable with
+
+            that, please refrain from requesting a massage.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[24]また、施術上どうしても胸などを触る事になります。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[23]施術を受けられる場合はその事に同意頂いたものと']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[14]みなしますのでご了承ください']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[24]Furthermore, during the massage, it is
+
+            inevitable that areas such as the chest will be
+
+            touched.\ca[23]By receiving a massage, you are
+
+            agreeing to this,\ca[14] so please be aware.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_04', !!int '2', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「……う～ん…施術士は男性なのね…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "...Hmm... The masseur is a
+
+            man..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', 'hypno_oil']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['flag']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_05', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「でもここの精油按摩は凄く気持ち良いらしいから']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　一回受けてもいいかもしれないわね。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　どうしようかしら…？」\!']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '102', 'p': [['按摩を受ける', 'やめておく'], !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "But I''ve heard that the
+
+            aromatherapy massages here are really nice, so
+
+            maybe I should try it once. What should I do...?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '102', 'p': [['Receive a massage', 'I''ll pass'], !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '402', 'p': [!!int '0', '按摩を受ける']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '355', 'p': ['flag(2)']}
@@ -2199,12 +2284,15 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '505', 'p': [*44]}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '222', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['!n01_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['「すいません、精油按摩をしてもらいたいんですけど…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Excuse me, I would like to
+
+            have an aromatherapy massage..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\mob[a4b]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['「はい、精油按摩の施術をご希望ですね。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['　それでは中に入って施術着にお着替えください」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\mob[a4b]"Yes, you would like an aromatherapy
+
+            massage. Please go inside and change into the
+
+            treatment clothes."']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '2'
         'c': !!int '205'
@@ -2258,9 +2346,11 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '505', 'p': [*52]}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '230', 'p': [!!int '30']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\mob[a4b]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['「今現在は３号室が空いていますので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['　着替えた後はそのまま３号室へお進み下さい」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\mob[a4b]"Currently, room number 3 is available,
+
+            so after changing, please proceed directly to room
+
+            number 3."']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '2'
         'c': !!int '205'
@@ -2301,16 +2391,18 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '402', 'p': [!!int '1', 'やめておく']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '355', 'p': ['flag(3)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['!n01_04', !!int '2', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['「今はそんな気分でもないし、やめておきましょう」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I''m not really in the mood
+
+            for it now, so let''s skip it."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '404', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['flag_end']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「男性に触れられるのは抵抗あるからやめておきましょう」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I''m hesitant about being
+
+            touched by a man, so let''s not do it."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['b_start']}
@@ -2357,18 +2449,31 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[28]精油按摩を受けたい方は個室前の女性店員にお申し付け下さい']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[14]順番が来たらお呼びしますので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[30]その際は中で施術着に着替え、そのまま奥の施術室へお進み下さい']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[28]If you would like to receive an
+
+            aromatherapy massage, please inform the female
+
+            staff in front of the private rooms.\ca[14]We will
+
+            call you when it''s your turn, so\ca[30]please
+
+            change into the treatment clothes inside and
+
+            proceed to the treatment room at the back.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[4]※注意※']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[27,2]施術するのは三助(男性)なので抵抗のある方はご遠慮ください']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[4]※Attention※\ca[27,2]The masseur is a male
+
+            assistant, so if you are uncomfortable with that,
+
+            please refrain from receiving the massage.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[24]また、施術上どうしても胸などを触る事になります。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[23]施術を受けられる場合はその事に同意頂いたものと']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[14]みなしますのでご了承ください']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[24]Furthermore, during the treatment, it will
+
+            be necessary to touch areas such as the chest.
+
+            \ca[23]By agreeing to receive the treatment, you
+
+            are consenting to this,\ca[14]so please be aware.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
     - !ruby/object:RPG::Event::Page
       'condition': !ruby/object:RPG::Event::Page::Condition
@@ -2409,18 +2514,33 @@
       'trigger': !!int '0'
       'list':
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[28]精油按摩を受けたい方は個室前の女性店員にお申し付け下さい']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[14]順番が来たらお呼びしますので']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[30]その際は中で施術着に着替え、そのまま奥の施術室へお進み下さい']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[28]If you would like to receive an
+
+            aromatherapy massage, please inform the female
+
+            staff in front of the private room.\ca[14] We will
+
+            call you when it''s your turn, so\ca[30] please
+
+            change into the treatment clothes inside and
+
+            proceed to the treatment room at the back.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[4]※注意※']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[27,2]施術するのは三助(男性)なので抵抗のある方はご遠慮ください']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[4]※Attention※\ca[27,2]The masseur is a male
+
+            assistant named Sansuke, so if you are
+
+            uncomfortable with this, please refrain from
+
+            requesting a massage.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '1']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[24]また、施術上どうしても胸などを触る事になります。']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[23]施術を受けられる場合はその事に同意頂いたものと']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ca[14]みなしますのでご了承ください']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\ca[24]Furthermore, the treatment will inevitably
+
+            involve touching areas such as the chest.\ca[23]
+
+            By agreeing to receive the treatment, you are
+
+            consenting to this,\ca[14] so please be aware.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   !!int '26': !ruby/object:RPG::Event
     'id': !!int '26'
@@ -2468,8 +2588,7 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '121', 'p': [!!int '85', !!int '85', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '25']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「あら…これって…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Oh... Could this be..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['type = 0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '655', 'p': ['id   = 298']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '655', 'p': ['text = "入手！"']}
@@ -2493,8 +2612,7 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*60]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '213', 'p': [!!int '-1', !!int '8', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_04', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「まさか……」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "No way..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '221', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '121', 'p': [!!int '85', !!int '85', !!int '1']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['flag_write']}

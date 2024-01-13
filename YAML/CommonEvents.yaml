@@ -16,7 +16,9 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '224', 'p': [!ruby/object:Color {'r': !!float '255.0', 'g': !!float '255.0', 'b': !!float '255.0', 'a': !!float '255.0'}, !!int '30', !!bool 'false']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Saint4', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「\tmap[\v[11]]」を転移先として登録した']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"\tmap[\v[11]]" has been registered as the
+
+        transfer destination']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '7']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   'id': !!int '1'
@@ -92,16 +94,15 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Absorb2', 'pitch': !!int '100', 'volume': !!int '100'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '43', !!int '0', !!int '1', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\kw[0] \V[5]%アップ']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\APを\V[6]獲得']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['現在の\kw[0] \V[7]%']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\kw[2]が\v[43]上昇\.\.']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\kw[0] \V[5]% up AP acquired, current \kw[0]
+
+        \V[7]%\kw[2] has increased by \v[43]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\kw[0] \V[5]%アップ']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\APを\V[6]獲得']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['現在の\kw[0] \V[7]%\.\.']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\kw[0] \V[5]% up AP acquired, current \kw[0]
+
+        \V[7]%']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '8', !!int '0', !!int '1', !!int '1']}
@@ -109,7 +110,6 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['item = $data_items[$game_variables[8]]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '655', 'p': ['$game_party.gain_item(item,1) if item']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\>\dbi[i,\v[8]]を獲得']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\id[i,\v[8]]\|']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
@@ -122,14 +122,14 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '$game_variables[11] < $game_variables[1]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime2', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['サーヴァントの召喚可能数が\V[1]体になりました']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\dbi[i,{Var_4}] acquired \id[i,{Var_4}]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '$game_variables[12] < SummonSystem::LIBERATE_S_LV[0]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '12', '$game_variables[7] >= SummonSystem::LIBERATE_S_LV[0]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '117', 'p': [!!int '68']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['サーヴァントのスキルレベルが上がった！\|']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['Servant''s summonable count has become \V[1] bodies']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '119', 'p': ['分岐終了']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '412', 'p': []}
@@ -139,7 +139,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '12', '$game_variables[7] >= SummonSystem::LIBERATE_S_LV[1]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '117', 'p': [!!int '68']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['サーヴァントのスキルレベルが上がった！\|']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['Servant''s skill level has increased!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '119', 'p': ['分岐終了']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '412', 'p': []}
@@ -150,7 +150,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '1', !!int '7', !!int '0', !!int '100', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '249', 'p': [!ruby/object:RPG::ME {'name': 'SSL_Fantasy_A', 'pitch': !!int '100', 'volume': !!int '100'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\kw[0]が100%になった事によりサーヴァントが個別ボーナスを獲得！\|']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['Servant''s skill level has increased!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
@@ -205,18 +205,22 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['澄んでてきれいな水だ']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['The water is clear and beautiful']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '224', 'p': [!ruby/object:Color {'r': !!float '255.0', 'g': !!float '255.0', 'b': !!float '255.0', 'a': !!float '255.0'}, !!int '30', !!bool 'false']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '212', 'p': [!!int '-1', !!int '155', !!bool 'false']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '30']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['inn']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '$game_party.members.size == 1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Lunariaと\smの\HP・\MP・\TPが全回復した！']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Lunaria and the party''s HP, MP, TP have been fully
+
+        restored!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['パーティと\smの\HP・\MP・\TPが全回復した！']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['The party and the party''s HP, MP, TP have been
+
+        fully restored!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -250,28 +254,28 @@
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '122', 'p': [!!int '12', !!int '12', !!int '0', !!int '3', !!int '7', !!int '2', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[in\v[13]]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「一泊 \v[11]\G です。お泊まりですか？」\!\$']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['泊まる', 'やめる'], !!int '2']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[in{Var_1}]"One night will be \v[11]\G. Will
+
+        you be staying?"$']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['I''ll stay', 'Cancel'], !!int '2']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', '泊まる']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '1', !!int '12', !!int '1', !!int '11', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '125', 'p': [!!int '1', !!int '1', !!int '11']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '117', 'p': [!!int '10']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\shop[in\v[13]]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['「それでは、いってらっしゃいませ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\shop[in{Var_1}]"Then, please have a safe trip."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\shop[in\v[13]]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['「お金が足りないみたいですね」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\shop[in{Var_1}]"It seems you don''t have enough
+
+        money."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '1', 'やめる']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in\v[13]]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「またお越しください」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in{Var_1}]"Please come again."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '404', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '7']}
@@ -291,8 +295,10 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '111', 'p': [!!int '1', !!int '40', !!int '0', !!int '2', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['このシーンは登録済みです。このイベントを見ますか？\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '102', 'p': [['見る', '飛ばす'], !!int '0']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['This scene has already been registered. Would you
+
+        like to view this event?']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '102', 'p': [['View it', 'Skip'], !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '402', 'p': [!!int '0', '見る']}
   - !ruby/object:RPG::EventCommand {'i': !!int '5', 'c': !!int '121', 'p': [!!int '87', !!int '87', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '5', 'c': !!int '0', 'p': []}
@@ -482,7 +488,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '4', !!int '1', !!int '3', !!int '94']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '111', 'p': [!!int '1', !!int '9', !!int '0', !!int '1', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['誰の着替えを行いますか？\!']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['Whose clothes shall we change?']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '102', 'p': [['\p[1]', 'Anemone'], !!int '5']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '402', 'p': [!!int '0', '\p[1]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '355', 'p': ['a = $game_party.members[0]']}
@@ -500,7 +506,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '111', 'p': [!!int '1', !!int '9', !!int '0', !!int '2', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['誰の着替えを行いますか？\!']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['Whose clothes shall we change?']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '102', 'p': [['\p[1]', '\p[2]', 'Anemone'], !!int '5']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '402', 'p': [!!int '0', '\p[1]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '355', 'p': ['a = $game_party.members[0]']}
@@ -522,7 +528,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '111', 'p': [!!int '1', !!int '9', !!int '0', !!int '3', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['誰の着替えを行いますか？\!']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['Whose clothes shall we change?']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '102', 'p': [['\p[1]', '\p[2]', '\p[3]', 'Anemone'], !!int '5']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '402', 'p': [!!int '0', '\p[1]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '355', 'p': ['a = $game_party.members[0]']}
@@ -555,7 +561,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '111', 'p': [!!int '1', !!int '9', !!int '0', !!int '2', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['誰の着替えを行いますか？\!']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['Whose clothes shall we change?']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '102', 'p': [['\p[1]', '\p[2]'], !!int '5']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '402', 'p': [!!int '0', '\p[1]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '355', 'p': ['a = $game_party.members[0]']}
@@ -573,7 +579,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '111', 'p': [!!int '1', !!int '9', !!int '0', !!int '3', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['誰の着替えを行いますか？\!']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['Whose clothes shall we change?']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '102', 'p': [['\p[1]', '\p[2]', '\p[3]'], !!int '5']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '402', 'p': [!!int '0', '\p[1]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '355', 'p': ['a = $game_party.members[0]']}
@@ -602,7 +608,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Buzzer1', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '10']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['今は着替えられない']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['We can''t change clothes right now']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -653,18 +659,22 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['癒しのクリスタルだ']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['It''s a healing crystal.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '224', 'p': [!ruby/object:Color {'r': !!float '255.0', 'g': !!float '255.0', 'b': !!float '255.0', 'a': !!float '255.0'}, !!int '30', !!bool 'false']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '212', 'p': [!!int '-1', !!int '155', !!bool 'false']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '30']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['inn']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '$game_party.members.size == 1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Lunariaと\smの\HP・\MP・\TPが全回復した！']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Lunaria and the party''s HP, MP, TP have been fully
+
+        restored!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['パーティと\smの\HP・\MP・\TPが全回復した！']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['The party and \sm''s HP, MP, TP have been fully
+
+        restored!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -688,9 +698,10 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '655', 'p': ['  $game_variables[n] = 2']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '655', 'p': ['end']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\qt[\v[11]]を受けますか？']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['報酬 \qr[\v[11]] \!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['はい', 'いいえ'], !!int '2']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Will you accept the \qt[\v[11]]? The reward is
+
+        \qr[\v[11]]']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Yes', 'No'], !!int '2']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', 'はい']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '249', 'p': [!ruby/object:RPG::ME {'name': 'SSL_Honobono_A', 'pitch': !!int '100', 'volume': !!int '100'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['quest_on($game_variables[11])']}
@@ -716,12 +727,10 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '108', 'p': ['※事前に変数１１番にクエストナンバーを格納して置く']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '249', 'p': [!ruby/object:RPG::ME {'name': 'SSL_Honobono_B', 'pitch': !!int '100', 'volume': !!int '100'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\qt[\v[11]]をクリア！']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['報酬 \qr[\v[11]] ゲット！\|']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Cleared \qt[\v[11]]! Reward \qr[\v[11]] acquired!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '8', !!int '0', !!int '0', !!int '5']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime2', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\>\dbi[i,\v[8]]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\id[i,\v[8]]\|']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '122', 'p': [!!int '8', !!int '8', !!int '0', !!int '0', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
@@ -791,110 +800,193 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '119', 'p': ['万魔の塔']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '118', 'p': ['炎帝の遺跡']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「最初の目的地はサジタリーズから\imp南に行った所\c[0]にある']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　リゼルの森最奥部に位置する\imp炎帝の遺跡\c[0]よ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Our first destination is the
+
+        Flame Emperor''s Ruins, located deep within the
+
+        Rizel Forest to the \c[0]south of Sagittarius."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '3', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「リゼルの森は南北に分かれてて、遺跡があるのは南側の奥地ね。\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　森の北エリアと南エリアのちょうど中間あたりにロベという村が']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　あるから途中立ち寄って休憩して行くといいわ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Rizel Forest is divided into
+
+        north and south, and the ruins are in the deep
+
+        south. There''s a village called Robe about halfway
+
+        between the north and south areas of the forest,
+
+        so it''s a good idea to stop there for a break on
+
+        the way."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '4', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ちなみにリゼルの森は炎に弱い魔物が多く棲息しているから']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　\imp炎魔術のスキルレベルを上げておくと楽\c[0]なんじゃないかしら？」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "By the way, since many of the
+
+        monsters inhabiting Rizel Forest are weak to fire,
+
+        it might be easier if you raise your \c[0]Flame
+
+        Magic skill level."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '6', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「逆に炎帝の遺跡は、その名の通り\imp炎属性の魔物が多く棲息\c[0]している']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　だろうから\imp氷魔術のスキルレベルを上げておく\c[0]と']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　楽かもしれないわね」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Conversely, as the Flame
+
+        Emperor''s Ruins suggest, it''s likely inhabited by
+
+        fire attribute monsters, so raising your \c[0]Ice
+
+        Magic skill level might make things easier."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '119', 'p': ['目的地終了']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '118', 'p': ['フリゼニア神殿']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「新たに判明した宝玉の１つは\impティモル山の山頂\c[0]にある']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　\impフリゼニア神殿\c[0]にあるわ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "One of the newly discovered
+
+        jewels is at the \c[0]Frizenia Temple, located at
+
+        the summit of Mount Timor."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '3', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「フリゼニア神殿へ行くにはまず王国南西のグレア洞窟を']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　抜ける必要があるわ。\!洞窟を抜けた先にはラグラスという町が']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　あるから、途中そこへ寄って休憩するといいわよ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "To get to Frizenia Temple,
+
+        you first need to pass through Grea Cave to the
+
+        southwest of the kingdom. There''s a town called
+
+        Ragras beyond the cave, so it''s a good idea to
+
+        stop there for a rest on your way."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '3', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ラグラスから西へ行くとティモル山があってそこの山頂に']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　フリゼニア神殿があるわ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "From Ragras, head west to
+
+        find Mount Timor, and at its summit is Frizenia
+
+        Temple."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '4', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「ちなみにフリゼニア神殿に棲息してる魔物の大半は氷属性だから']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　リゼルの森同様\imp炎魔術のスキルレベルを上げておくと楽\c[0]に進めるはずよ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Incidentally, most of the
+
+        monsters inhabiting Frizenia Temple have ice
+
+        attributes, so like Rizel Forest, it should be
+
+        easier to progress if you raise your \c[0]Flame
+
+        Magic skill level."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '6', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「余裕があれば\imp氷耐性を持つ装備\c[0]を買ったりしておくといいわね」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "If you can afford it, it
+
+        might be a good idea to buy some \c[0]ice-
+
+        resistant equipment as well."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '119', 'p': ['目的地終了']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '118', 'p': ['九条迷宮']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「雷を司る宝玉は\imp東方の島国トキワ\c[0]の\imp九条迷宮\c[0]にあるわ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "The jewel that governs
+
+        lightning is in the \c[0]Kujo Labyrinth on the
+
+        eastern island nation of Tokiwa."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '3', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「トキワへは\impラグラスの東\c[0]にある\imp港町セネシオ\c[0]から行けるわよ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "You can get to Tokiwa from
+
+        \c[0]Senesio Port, located to the east of Ragras."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '3', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「九条迷宮の詳しい場所は文献に載っていなかったからトキワで情報を']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　集めてもらえると助かるわ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "The exact location of Kujo
+
+        Labyrinth wasn''t in the documents, so it would be
+
+        helpful if you could gather information in
+
+        Tokiwa."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '5', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「そうそう、トキワに出る魔物は妖怪と言って大陸の魔物とは']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　一味違うからあまり油断しないようにね」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Oh yes, the monsters that
+
+        appear in Tokiwa are called yokai and are quite
+
+        different from those on the continent, so don''t
+
+        let your guard down."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '119', 'p': ['目的地終了']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '118', 'p': ['フォリア遺跡']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「光を司る宝玉は\imp隣国 ダリア王国\c[0]の\impフォリア遺跡\c[0]に封印されているわ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "The jewel that governs light
+
+        is sealed within the \c[0]Folia Ruins in our
+
+        neighboring country, Daria Kingdom."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '3', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「フォリア遺跡へはまず\impティモル山の途中の岐路を西に進んで\c[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　下山した後、関所を抜けてダリア王国へ入るの」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "To get to Folia Ruins, first
+
+        head west at the fork in Mount Timor and descend.
+
+        After passing through the checkpoint, you''ll enter
+
+        Daria Kingdom."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '3', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「その後、道なりに北上して湿原を抜けるとダリアの王都カクタスに']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　着くわ。そこから北西へ進んだ先にフォリア遺跡があるハズよ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Then head north along the
+
+        road, pass through the wetlands, and you''ll reach
+
+        Daria''s royal capital, Cactus. From there, head
+
+        northwest and you should find Folia Ruins."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_01', !!int '1', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「遺跡内の魔物に関しては恐らく光か闇の属性を持った奴が多く']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　出る可能性が高いわ。\!光属性相手には闇、闇属性相手には光の']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　攻撃をすれば効率がいいでしょうけど…」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "As for the monsters inside
+
+        the ruins, they''re likely to have either light or
+
+        dark attributes. Attacks with dark against light
+
+        and light against dark would be efficient..."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_01', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「Lunariaは闇魔術が使えないんだったわね。\!確か\impラグラスと']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　セネシオの中間地点\c[0]に闇魔術師が住んでいる館があったハズだから']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　そこを訪ねてみるのも悪くないかもね」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Lunaria can''t use dark magic,
+
+        right? If I remember correctly, there''s a mansion
+
+        inhabited by a dark magician at the midpoint
+
+        between \c[0]Ragras and Senesio. It might not be a
+
+        bad idea to pay a visit there."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '6', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「そうそう、遺跡へ寄る前に王都で砂漠へ入る為の許可証を']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　発行してもらうのを忘れないでね」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Oh yes, don''t forget to get a
+
+        permit issued at the royal capital for entering
+
+        the desert before you head to the ruins."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '119', 'p': ['目的地終了']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '118', 'p': ['万魔の塔']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「最後の宝玉は\imp隣国 ダリア王国\c[0]の\imp万魔の塔\c[0]に封印されているわ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "The last jewel is sealed
+
+        within the \c[0]Tower of All Demons in our
+
+        neighboring country, Daria Kingdom."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '3', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「万魔の塔はダリア王都カクタスの東に位置する\impレオンタイス砂漠を']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　越えた先\c[0]にあるの」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "The Tower of All Demons is
+
+        located beyond the \c[0]Leontais Desert to the
+
+        east of Daria''s royal capital Cactus."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_00', !!int '1', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「砂漠へ入るには王国が発行する許可証が必要だし、ひょっとしたら']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　万魔の塔に入るにも\imp国の許可が必要\c[0]かもしれないわ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "You''ll need a permit issued
+
+        by the kingdom to enter the desert, and you might
+
+        also need \c[0]the country''s permission to enter
+
+        the Tower of All Demons."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_02', !!int '4', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「その場合ダリアの女王Filica様にDiana陛下の手紙を見せれば']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　解決すると思うわよ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "In that case, showing Queen
+
+        Filica of Daria a letter from Queen Diana should
+
+        solve the problem."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp01_01', !!int '1', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「それから、塔の内部はこれまでにない強力な敵が生息してると思うわ。']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　敵の属性も色々でしょうからスキルレベルは満遍なく']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　上げた方がいいでしょうね」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[24]Mariana\C[0]: "Also, I think there will be
+
+        powerful enemies inside the tower like we''ve never
+
+        seen before. Since they may have various
+
+        attributes, it would be best to evenly raise your
+
+        skill levels."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '119', 'p': ['目的地終了']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '118', 'p': ['目的地終了']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -1032,8 +1124,8 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['回想部屋へ移動しますか？\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['はい', 'いいえ'], !!int '2']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Would you like to move to the Memory Room?']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Yes', 'No'], !!int '2']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', 'はい']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '121', 'p': [!!int '93', !!int '93', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '122', 'p': [!!int '23', !!int '23', !!int '0', !!int '3', !!int '7', !!int '0', !!int '0']}
@@ -1073,7 +1165,7 @@
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime2', 'pitch': !!int '150', 'volume': !!int '100'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['サブクエストが更新されました']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Subquest has been updated']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   'id': !!int '53'
 - !ruby/object:RPG::CommonEvent
@@ -1084,10 +1176,17 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '36', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime1', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['大討伐クエストの中には敗北エッチイベントのある物があります。\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['敗北エッチのある大討伐クエストは敗北した場合でも']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['失敗扱いとはならず何度でも挑戦する事が出来ますので']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['エッチイベントを見てからクエストを完了させる事が可能です']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Some of the grand subjugation quests have defeat
+
+        H-events. Even if you are defeated in these
+
+        quests, it''s not considered a failure, and you can
+
+        challenge them as many times as you like, so it''s
+
+        possible to complete the quest after viewing the
+
+        H-event.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '121', 'p': [!!int '36', !!int '36', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
@@ -1267,14 +1366,18 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「少し遠くて届きそうにないわね…」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "It seems a bit too far to
+
+        reach..."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '52', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '121', 'p': [!!int '52', !!int '52', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime1', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['この場所のように間が２マス離れている飛び石へ飛び移るには']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['アイテム「\db[i,150]」を入手している必要があります']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['To leap to stepping stones that are two spaces
+
+        apart like this place, you need to have acquired
+
+        the item ''\db[i,150]''.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -1386,7 +1489,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '9', !!int '0', !!int '2', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '1', !!int '9', !!int '0', !!int '2', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['誰が装置を作動させますか？(消費\mp\v[12])\!']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['Who will activate the device? (Consumes \mp\v[12])']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '102', 'p': [['\p[1](\ppr[1,1])', '\p[2](\ppr[2,1])'], !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '402', 'p': [!!int '0', '\p[1](\ppr[1,1])']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '122', 'p': [!!int '13', !!int '13', !!int '0', !!int '3', !!int '6', !!int '0', !!int '0']}
@@ -1398,7 +1501,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['誰が装置を作動させますか？(消費\mp\v[12])\!']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['Who will activate the device? (Consumes \mp\v[12])']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '102', 'p': [['\p[1](\ppr[1,1])', '\p[2](\ppr[2,1])', '\p[3](\ppr[3,1])'], !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '402', 'p': [!!int '0', '\p[1](\ppr[1,1])']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '122', 'p': [!!int '13', !!int '13', !!int '0', !!int '3', !!int '6', !!int '0', !!int '0']}
@@ -1418,7 +1521,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '1', !!int '11', !!int '1', !!int '12', !!int '4']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Buzzer1', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\mpが足りません']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['You don''t have enough \mp']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '122', 'p': [!!int '19', !!int '19', !!int '0', !!int '0', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '411', 'p': []}
@@ -1431,8 +1534,8 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['装置を作動させますか？(消費\mp\v[12])\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '102', 'p': [['はい', 'いいえ'], !!int '2']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Will you activate the device? (Consumes \mp\v[12])']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '102', 'p': [['Yes', 'No'], !!int '2']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '402', 'p': [!!int '0', 'はい']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '122', 'p': [!!int '11', !!int '11', !!int '0', !!int '3', !!int '3', !!int '1', !!int '3']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '355', 'p': ['$game_variables[13] = 1']}
@@ -1440,7 +1543,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '111', 'p': [!!int '1', !!int '11', !!int '1', !!int '12', !!int '4']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Buzzer1', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['\mpが足りません']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['You don''t have enough \mp']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '122', 'p': [!!int '19', !!int '19', !!int '0', !!int '0', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '411', 'p': []}
@@ -1505,7 +1608,9 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '111', 'p': [!!int '6', !!int '-1', !!int '8']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['上からなら飛び降りれそうだが、下から上がるのは無理そうだ']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['It looks like you could jump down from above, but
+
+        it seems impossible to climb up from below.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
@@ -1561,17 +1666,17 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '249', 'p': [!ruby/object:RPG::ME {'name': 'SSL_Fantasy_C', 'pitch': !!int '100', 'volume': !!int '100'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '12', !!int '0', !!int '0', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\nt[\v[11]]が一時的に仲間になった！\|\.\.']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\nt[\v[11]] has temporarily joined the party!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '12', !!int '0', !!int '1', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\nt[\v[11]]がパーティに加わった！\|\.\.']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\nt[\v[11]] has joined the party!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '12', !!int '0', !!int '2', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\nt[\v[11]]が正式にパーティに加わった！\|\.\.']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\nt[\v[11]] has officially joined the party!']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '7']}
@@ -1635,7 +1740,6 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['item = $data_items[$game_variables[8]]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '655', 'p': ['$game_party.gain_item(item,1) if item']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\dbi[i,\v[8]]を手に入れた']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\id[i,\v[8]]\|']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '122', 'p': [!!int '8', !!int '8', !!int '0', !!int '0', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -2156,7 +2260,6 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['item = $data_items[$game_variables[8]]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '655', 'p': ['$game_party.gain_item(item,1) if item']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\>\ln[\dbi[i,\v[8]]]を学習']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\id[i,\v[8]]\|']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '122', 'p': [!!int '8', !!int '8', !!int '0', !!int '0', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
@@ -2178,7 +2281,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Open2', 'pitch': !!int '150', 'volume': !!int '100'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '10']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['扉は固く閉ざされている']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['The door is firmly closed']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   'id': !!int '102'
 - !ruby/object:RPG::CommonEvent
@@ -2295,7 +2398,7 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['中から激しい喘ぎ声が漏れ聞こえてくる']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Intense moans can be heard leaking from inside']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   'id': !!int '104'
 - !ruby/object:RPG::CommonEvent
@@ -2304,13 +2407,14 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['結界が行く手を遮っている']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['A barrier is blocking our way.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '267', !!int '1']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「これは…淫魔が張った結界ですね。\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　おそらく術者が近くにいるハズです。その術者を倒せば']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['　結界を解除できると思います」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "This is... a barrier set up by a
+
+        succubus. The caster must be nearby. If we defeat
+
+        the caster, I believe we can break the barrier."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase(3)']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
@@ -2323,7 +2427,7 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['結界が行く手を遮っている']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['A barrier is blocking the way.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
   'id': !!int '106'
 - !ruby/object:RPG::CommonEvent
@@ -2378,10 +2482,11 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '121', 'p': [!!int '87', !!int '87', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['このシーンには']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['\imp\exh\c[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['の要素が含まれるためシーンを飛ばします。']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['※設定はオプションで変更できます']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '401', 'p': ['This scene contains \imp\exh\c[0] elements, so the
+
+        scene will be skipped. ※You can change this
+
+        setting in the options.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
@@ -2390,10 +2495,10 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '118', 'p': ['選択']}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '111', 'p': [!!int '1', !!int '136', !!int '0', !!int '131', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['このシーンには']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['\imp\exh\c[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['の要素が含まれます。飛ばしますか？\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '102', 'p': [['飛ばす', 'そのまま見る'], !!int '0']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['This scene contains \imp\exh\c[0] elements. Would
+
+        you like to skip it?']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '102', 'p': [['Skip', 'Watch as is'], !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '402', 'p': [!!int '0', '飛ばす']}
   - !ruby/object:RPG::EventCommand {'i': !!int '5', 'c': !!int '121', 'p': [!!int '87', !!int '87', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '5', 'c': !!int '0', 'p': []}
@@ -2403,10 +2508,10 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '3', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['このシーンには']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['\imp\exh\c[0]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['の要素が含まれます。飛ばしますか？\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '102', 'p': [['飛ばす', 'CG差し替えVerを見る', 'そのまま見る'], !!int '0']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '401', 'p': ['This scene contains \imp\exh\c[0] elements. Would
+
+        you like to skip it?']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '102', 'p': [['Skip', 'View the cg replacement version', 'Watch as is'], !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '4', 'c': !!int '402', 'p': [!!int '0', '飛ばす']}
   - !ruby/object:RPG::EventCommand {'i': !!int '5', 'c': !!int '121', 'p': [!!int '87', !!int '87', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '5', 'c': !!int '0', 'p': []}
@@ -2486,20 +2591,20 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[in\v[13]]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['「お客様は\db[i,156]をお持ちですので無料でお泊りいただけます。']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['　お泊りになられますか？」\!']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['泊まる', 'やめる'], !!int '2']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[in{Var_0}]"As you have the \db[i,156], you
+
+        can stay for free. Would you like to stay the
+
+        night?"']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Stay the night', 'Cancel'], !!int '2']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', '泊まる']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '117', 'p': [!!int '10']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in\v[13]]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「それでは、いってらっしゃいませ」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in{Var_0}]"Then, have a good day."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '1', 'やめる']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in\v[13]]']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「またお越しください」']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in{Var_0}]"Please come again."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '404', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '7']}
@@ -2606,7 +2711,9 @@
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '7']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['何かを嵌める窪みの様な物がある\!']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['There seems to be a depression for fitting
+
+        something into it.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '104', 'p': [!!int '11']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '1', !!int '11', !!int '0', !!int '343', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Switch2', 'pitch': !!int '100', 'volume': !!int '100'}]}
@@ -2617,7 +2724,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Buzzer2', 'pitch': !!int '100', 'volume': !!int '100'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['形が合わない']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['The shape doesn''t match.']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}

@@ -1,628 +1,673 @@
---- !ruby/object:RPG::Map
-parallax_name: ''
-height: 15
-events:
-  1: !ruby/object:RPG::Event
-    id: 1
-    name: SP01:ローザ凌辱
-    x: 1
-    y: 1
-    pages:
+!ruby/object:RPG::Map
+'parallax_name': ''
+'height': !!int '15'
+'events':
+  !!int '1': !ruby/object:RPG::Event
+    'id': !!int '1'
+    'name': 'SP01:ローザ凌辱'
+    'x': !!int '1'
+    'y': !!int '1'
+    'pages':
     - !ruby/object:RPG::Event::Page
-      condition: !ruby/object:RPG::Event::Page::Condition
-        switch1_valid: false
-        switch2_valid: false
-        variable_valid: false
-        self_switch_valid: false
-        item_valid: false
-        actor_valid: false
-        switch1_id: 1
-        switch2_id: 1
-        variable_id: 1
-        variable_value: 0
-        self_switch_ch: A
-        item_id: 1
-        actor_id: 1
-      graphic: !ruby/object:RPG::Event::Page::Graphic
-        tile_id: 0
-        character_name: '!H_Event'
-        character_index: 0
-        direction: 2
-        pattern: 0
-      move_type: 0
-      move_speed: 3
-      move_frequency: 3
-      move_route: !ruby/object:RPG::MoveRoute
-        repeat: true
-        skippable: false
-        wait: false
-        list:
-        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
-      walk_anime: false
-      step_anime: false
-      direction_fix: false
-      through: false
-      priority_type: 1
-      trigger: 0
-      list:
-      - !ruby/object:RPG::EventCommand {i: 0, c: 230, p: [60]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 245, p: [!ruby/object:RPG::BGS {name: ピストンタイプA（肉のぶつかる音入り）（速い）, volume: 100, pitch: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[16]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「んひっ\ht\|　いぃぃっ\ht\ht\|　オチンポォ、\|凄いのぉ\ht\ht」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 224, p: [!ruby/object:Color {r: 255.0, g: 255.0, b: 255.0, a: 255.0}, 60, false]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 246, p: [1]}
+      'condition': !ruby/object:RPG::Event::Page::Condition
+        'switch1_valid': !!bool 'false'
+        'switch2_valid': !!bool 'false'
+        'variable_valid': !!bool 'false'
+        'self_switch_valid': !!bool 'false'
+        'item_valid': !!bool 'false'
+        'actor_valid': !!bool 'false'
+        'switch1_id': !!int '1'
+        'switch2_id': !!int '1'
+        'variable_id': !!int '1'
+        'variable_value': !!int '0'
+        'self_switch_ch': 'A'
+        'item_id': !!int '1'
+        'actor_id': !!int '1'
+      'graphic': !ruby/object:RPG::Event::Page::Graphic
+        'tile_id': !!int '0'
+        'character_name': '!H_Event'
+        'character_index': !!int '0'
+        'direction': !!int '2'
+        'pattern': !!int '0'
+      'move_type': !!int '0'
+      'move_speed': !!int '3'
+      'move_frequency': !!int '3'
+      'move_route': !ruby/object:RPG::MoveRoute
+        'repeat': !!bool 'true'
+        'skippable': !!bool 'false'
+        'wait': !!bool 'false'
+        'list':
+        - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
+      'walk_anime': !!bool 'false'
+      'step_anime': !!bool 'false'
+      'direction_fix': !!bool 'false'
+      'through': !!bool 'false'
+      'priority_type': !!int '1'
+      'trigger': !!int '0'
+      'list':
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '60']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '245', 'p': [!ruby/object:RPG::BGS {'name': 'ピストンタイプA（肉のぶつかる音入り）（速い）', 'volume': !!int '100', 'pitch': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\sb[16]"Nnhii... Ahhii... Your dick, it''s
+
+            amazing..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '224', 'p': [!ruby/object:Color {'r': !!float '255.0', 'g': !!float '255.0', 'b': !!float '255.0', 'a': !!float '255.0'}, !!int '60', !!bool 'false']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '246', 'p': [!!int '1']}
       - !ruby/object:RPG::EventCommand
-        i: 0
-        c: 205
-        p:
-        - -1
+        'i': !!int '0'
+        'c': !!int '205'
+        'p':
+        - !!int '-1'
         - !ruby/object:RPG::MoveRoute
-          repeat: false
-          skippable: false
-          wait: false
-          list:
-          - &1 !ruby/object:RPG::MoveCommand {code: 44, parameters: [!ruby/object:RPG::SE {name: 射精音・中出し（短い）①, pitch: 100, volume: 100}]}
-          - &2 !ruby/object:RPG::MoveCommand {code: 15, parameters: [60]}
-          - &3 !ruby/object:RPG::MoveCommand {code: 44, parameters: [!ruby/object:RPG::SE {name: 脈打つ音+射精⑤, pitch: 100, volume: 100}]}
-          - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*1]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*3]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 230, p: [180]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 245, p: [!ruby/object:RPG::BGS {name: ピストンタイプC（狭い膣内）（速い）, volume: 100, pitch: 120}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[16]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「んぉっ\ht\|　おぉっ\ht\ht\|　もう、\|らめぇぇ\ht\ht」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 224, p: [!ruby/object:Color {r: 255.0, g: 255.0, b: 255.0, a: 255.0}, 60, false]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 246, p: [1]}
+          'repeat': !!bool 'false'
+          'skippable': !!bool 'false'
+          'wait': !!bool 'false'
+          'list':
+          - &1 !ruby/object:RPG::MoveCommand {'code': !!int '44', 'parameters': [!ruby/object:RPG::SE {'name': '射精音・中出し（短い）①', 'pitch': !!int '100', 'volume': !!int '100'}]}
+          - &2 !ruby/object:RPG::MoveCommand {'code': !!int '15', 'parameters': [!!int '60']}
+          - &3 !ruby/object:RPG::MoveCommand {'code': !!int '44', 'parameters': [!ruby/object:RPG::SE {'name': '脈打つ音+射精⑤', 'pitch': !!int '100', 'volume': !!int '100'}]}
+          - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*1]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*2]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*3]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '180']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '245', 'p': [!ruby/object:RPG::BGS {'name': 'ピストンタイプC（狭い膣内）（速い）', 'volume': !!int '100', 'pitch': !!int '120'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\sb[16]"Nnohh... Oohh... No more, I can''t take
+
+            it..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '224', 'p': [!ruby/object:Color {'r': !!float '255.0', 'g': !!float '255.0', 'b': !!float '255.0', 'a': !!float '255.0'}, !!int '60', !!bool 'false']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '246', 'p': [!!int '1']}
       - !ruby/object:RPG::EventCommand
-        i: 0
-        c: 205
-        p:
-        - -1
+        'i': !!int '0'
+        'c': !!int '205'
+        'p':
+        - !!int '-1'
         - !ruby/object:RPG::MoveRoute
-          repeat: false
-          skippable: false
-          wait: false
-          list:
-          - &4 !ruby/object:RPG::MoveCommand {code: 44, parameters: [!ruby/object:RPG::SE {name: 射精音・中出し（短い）①, pitch: 100, volume: 100}]}
-          - &5 !ruby/object:RPG::MoveCommand {code: 15, parameters: [60]}
-          - &6 !ruby/object:RPG::MoveCommand {code: 44, parameters: [!ruby/object:RPG::SE {name: 脈打つ音+射精⑥, pitch: 100, volume: 100}]}
-          - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*4]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*5]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*6]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 230, p: [180]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
-  2: !ruby/object:RPG::Event
-    id: 2
-    name: SP02:ローザフェラ奉仕
-    x: 3
-    y: 1
-    pages:
+          'repeat': !!bool 'false'
+          'skippable': !!bool 'false'
+          'wait': !!bool 'false'
+          'list':
+          - &4 !ruby/object:RPG::MoveCommand {'code': !!int '44', 'parameters': [!ruby/object:RPG::SE {'name': '射精音・中出し（短い）①', 'pitch': !!int '100', 'volume': !!int '100'}]}
+          - &5 !ruby/object:RPG::MoveCommand {'code': !!int '15', 'parameters': [!!int '60']}
+          - &6 !ruby/object:RPG::MoveCommand {'code': !!int '44', 'parameters': [!ruby/object:RPG::SE {'name': '脈打つ音+射精⑥', 'pitch': !!int '100', 'volume': !!int '100'}]}
+          - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*4]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*5]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*6]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '180']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
+  !!int '2': !ruby/object:RPG::Event
+    'id': !!int '2'
+    'name': 'SP02:ローザフェラ奉仕'
+    'x': !!int '3'
+    'y': !!int '1'
+    'pages':
     - !ruby/object:RPG::Event::Page
-      condition: !ruby/object:RPG::Event::Page::Condition
-        switch1_valid: false
-        switch2_valid: false
-        variable_valid: false
-        self_switch_valid: false
-        item_valid: false
-        actor_valid: false
-        switch1_id: 1
-        switch2_id: 1
-        variable_id: 1
-        variable_value: 0
-        self_switch_ch: A
-        item_id: 1
-        actor_id: 1
-      graphic: !ruby/object:RPG::Event::Page::Graphic
-        tile_id: 0
-        character_name: '!H_Event'
-        character_index: 0
-        direction: 2
-        pattern: 1
-      move_type: 0
-      move_speed: 3
-      move_frequency: 3
-      move_route: !ruby/object:RPG::MoveRoute
-        repeat: true
-        skippable: false
-        wait: false
-        list:
-        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
-      walk_anime: false
-      step_anime: false
-      direction_fix: false
-      through: false
-      priority_type: 1
-      trigger: 0
-      list:
-      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: ['stand_left(23, false)']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!kp23_01', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[23]Delta\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「グヒヒ…！　お目覚めかFilicaよ」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!kp13_02', 3, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[25]Filica\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「Deltaッ…！\!　\stnd[k,13,11]それに…\|\stnd[k,13,16]まさか……\sbt[16]ッ…!?\!']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['　あなた、一体何をっ…!?」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 245, p: [!ruby/object:RPG::BGS {name: VB01_10_10　ストロークSE（早）30秒, volume: 100, pitch: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[16]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「んぶっぢゅるる\ht　おひんぽぉ…\ht]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['　Deltaひゃまの、おひんぽぉ\ht\ht　ぢゅぷぷ、ぢゅぽぉ\ht\ht」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!kp13_02', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[25]Filica\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「\sbt[16]ッ…!!?\|　\stnd[k,13,24]くっ、淫魔の術の所為ですわねっ…！']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['　\sbt[16]になんて事をっ…！」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 224, p: [!ruby/object:Color {r: 255.0, g: 255.0, b: 255.0, a: 255.0}, 60, false]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 246, p: [1]}
+      'condition': !ruby/object:RPG::Event::Page::Condition
+        'switch1_valid': !!bool 'false'
+        'switch2_valid': !!bool 'false'
+        'variable_valid': !!bool 'false'
+        'self_switch_valid': !!bool 'false'
+        'item_valid': !!bool 'false'
+        'actor_valid': !!bool 'false'
+        'switch1_id': !!int '1'
+        'switch2_id': !!int '1'
+        'variable_id': !!int '1'
+        'variable_value': !!int '0'
+        'self_switch_ch': 'A'
+        'item_id': !!int '1'
+        'actor_id': !!int '1'
+      'graphic': !ruby/object:RPG::Event::Page::Graphic
+        'tile_id': !!int '0'
+        'character_name': '!H_Event'
+        'character_index': !!int '0'
+        'direction': !!int '2'
+        'pattern': !!int '1'
+      'move_type': !!int '0'
+      'move_speed': !!int '3'
+      'move_frequency': !!int '3'
+      'move_route': !ruby/object:RPG::MoveRoute
+        'repeat': !!bool 'true'
+        'skippable': !!bool 'false'
+        'wait': !!bool 'false'
+        'list':
+        - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
+      'walk_anime': !!bool 'false'
+      'step_anime': !!bool 'false'
+      'direction_fix': !!bool 'false'
+      'through': !!bool 'false'
+      'priority_type': !!int '1'
+      'trigger': !!int '0'
+      'list':
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['stand_left(23, false)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp23_01', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[23]Delta\C[0]: "Hehehe...! Are you awake,
+
+            Filica?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp13_02', !!int '3', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[25]Filica\C[0]: "Delta...! \stnd[k,13,11]And...
+
+            \stnd[k,13,16]Could it be... \sbt[16]What on earth
+
+            are you doing...!?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '245', 'p': [!ruby/object:RPG::BGS {'name': 'VB01_10_10　ストロークSE（早）30秒', 'volume': !!int '100', 'pitch': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\sb[16]: "Nngh, slurp slurp... your cock... Delta-
+
+            sama''s cock... slurp slurp, suck suck..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp13_02', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[25]Filica\C[0]: "\sbt[16]Ah...!!?
+
+            \stnd[k,13,24]Damn, it must be the succubus''s
+
+            spell...! What are you doing to me...!"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '224', 'p': [!ruby/object:Color {'r': !!float '255.0', 'g': !!float '255.0', 'b': !!float '255.0', 'a': !!float '255.0'}, !!int '60', !!bool 'false']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '246', 'p': [!!int '1']}
       - !ruby/object:RPG::EventCommand
-        i: 0
-        c: 205
-        p:
-        - -1
+        'i': !!int '0'
+        'c': !!int '205'
+        'p':
+        - !!int '-1'
         - !ruby/object:RPG::MoveRoute
-          repeat: false
-          skippable: false
-          wait: false
-          list:
-          - &7 !ruby/object:RPG::MoveCommand {code: 44, parameters: [!ruby/object:RPG::SE {name: 射精音・中出し（短い）①, pitch: 100, volume: 100}]}
-          - &8 !ruby/object:RPG::MoveCommand {code: 15, parameters: [60]}
-          - &9 !ruby/object:RPG::MoveCommand {code: 44, parameters: [!ruby/object:RPG::SE {name: 脈打つ音+射精⑤, pitch: 100, volume: 100}]}
-          - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*7]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*8]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 505, p: [*9]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 230, p: [30]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!kp23_01', 1, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[23]Delta\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「お、おぉっ…！\|　イクっ！\|　全部飲み干せよっ!!」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 245, p: [!ruby/object:RPG::BGS {name: VB01_10_10　ストロークSE（早）30秒, volume: 100, pitch: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[16]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「んぐっ…\|ぢゅるる\ht\ht\|　んふっ、ふぅぅ\ht\ht」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 246, p: [1]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 250, p: [!ruby/object:RPG::SE {name: VB_11_041_飲み込む音, pitch: 100, volume: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 230, p: [60]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['!kp23_00', 2, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[23]Delta\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ふぅ…\|口マンコで気持ちよくなったところで…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
-  3: !ruby/object:RPG::Event
-    id: 3
-    name: 03:入浴イベント
-    x: 5
-    y: 1
-    pages:
+          'repeat': !!bool 'false'
+          'skippable': !!bool 'false'
+          'wait': !!bool 'false'
+          'list':
+          - &7 !ruby/object:RPG::MoveCommand {'code': !!int '44', 'parameters': [!ruby/object:RPG::SE {'name': '射精音・中出し（短い）①', 'pitch': !!int '100', 'volume': !!int '100'}]}
+          - &8 !ruby/object:RPG::MoveCommand {'code': !!int '15', 'parameters': [!!int '60']}
+          - &9 !ruby/object:RPG::MoveCommand {'code': !!int '44', 'parameters': [!ruby/object:RPG::SE {'name': '脈打つ音+射精⑤', 'pitch': !!int '100', 'volume': !!int '100'}]}
+          - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*7]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*8]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '505', 'p': [*9]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '30']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp23_01', !!int '1', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[23]Delta\C[0]: "Oh, ohh...! I''m coming! Swallow
+
+            it all!!"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '245', 'p': [!ruby/object:RPG::BGS {'name': 'VB01_10_10　ストロークSE（早）30秒', 'volume': !!int '100', 'pitch': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\sb[16]: "Ngh... slurp slurp... mmm, mmm..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '246', 'p': [!!int '1']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'VB_11_041_飲み込む音', 'pitch': !!int '100', 'volume': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '230', 'p': [!!int '60']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!kp23_00', !!int '2', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[23]Delta\C[0]: "Phew... Now that I''ve felt good
+
+            with your mouth pussy..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
+  !!int '3': !ruby/object:RPG::Event
+    'id': !!int '3'
+    'name': '03:入浴イベント'
+    'x': !!int '5'
+    'y': !!int '1'
+    'pages':
     - !ruby/object:RPG::Event::Page
-      condition: !ruby/object:RPG::Event::Page::Condition
-        switch1_valid: false
-        switch2_valid: false
-        variable_valid: false
-        self_switch_valid: false
-        item_valid: false
-        actor_valid: false
-        switch1_id: 1
-        switch2_id: 1
-        variable_id: 1
-        variable_value: 0
-        self_switch_ch: A
-        item_id: 1
-        actor_id: 1
-      graphic: !ruby/object:RPG::Event::Page::Graphic
-        tile_id: 0
-        character_name: '!H_Event'
-        character_index: 0
-        direction: 2
-        pattern: 2
-      move_type: 0
-      move_speed: 3
-      move_frequency: 3
-      move_route: !ruby/object:RPG::MoveRoute
-        repeat: true
-        skippable: false
-        wait: false
-        list:
-        - !ruby/object:RPG::MoveCommand {code: 0, parameters: []}
-      walk_anime: true
-      step_anime: false
-      direction_fix: false
-      through: false
-      priority_type: 1
-      trigger: 0
-      list:
-      - !ruby/object:RPG::EventCommand {i: 0, c: 122, p: [38, 38, 0, 0, 561]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 108, p: [※回想スイッチNoを変数に格納]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [12]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 111, p: [0, 87, 0]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 119, p: [スキップ]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 412, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 122, p: [11, 11, 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 231, p: [1, evq_01_01, 0, 0, 0, 0, 100, 100, 255, 0]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 231, p: [2, evq_01_06, 0, 0, 0, 0, 100, 100, 255, 0]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [121]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 245, p: [!ruby/object:RPG::BGS {name: Drips, volume: 60, pitch: 70}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 241, p: [!ruby/object:RPG::BGM {name: moon03_09_22『昼下がりの紅茶』, volume: 100, pitch: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 222, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &10 ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ふぅ……とてもいい気持ちね…\ht」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *10}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ええ…全くですね…\ht」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 111, p: [12, 'Input.press?(:CTRL)']}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 0, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 411, p: []}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: [prepare_transition]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 0, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: ['perform_transition(30, "Event", 120)']}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 412, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &11 ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「体中の疲れが抜けていくようだわ…\ht」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *11}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「そう、ですね…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *11}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [（国の偉い人達と裸のお付き合いって…凄く緊張する……）]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *11}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「まさか陛下の浴場を使わせてもらえるなんて…]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　ラッキーだったわね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Velvet_face00, 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ええ、本当に。さっきはああ言ったけれど私も一度で]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　いいからこの浴場を利用してみたかったんです。\!]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　陛下の寛大な処置に感謝いたします」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Diana_face00, 3, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「フフ、これぐらい構いません。私も皆とこうして]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　入浴する事が出来て嬉しいわ」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 111, p: [12, 'Input.press?(:CTRL)']}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 255, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 411, p: []}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: [prepare_transition]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 255, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: ['perform_transition(30, "Event", 120)']}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 412, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &12 ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「Lunariaもそんなに緊張しないで、友人と一緒に']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　お風呂に入っている感覚でリラックスしてもらえると]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　有難いのだけど…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face04, 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ぜ、善処します…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *12}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「陛下…気さくで親しみやすい女王というのも結構ですが]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　あまり威厳を落とされません様、お願いしますね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *12}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「わかっています、\sbt[31]大臣。公の場では']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　ちゃんとしますから、今くらいは目を瞑ってください」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *12}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「仕方ありませんね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face02, 2, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「一緒に入浴してる時点で威厳も何もあったものではないと]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　思いますけどねぇ…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: ['next_cg(1,$game_variables[11])']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「そ、そんなぁ…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 221, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 0, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [76]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 222, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &13 ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「そういえば\sbt[31]大臣、眼鏡をかけたままお風呂に']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　入ってますけど、眼鏡が曇ったりしないんですか？」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Velvet_face00, 2, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「ええ、大丈夫よ。これはMarianaに頼んでレンズに']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　曇り防止の効果を付与してもらっているから]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　入浴時にも外さなくて済むの」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Velvet_face00, 2, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「更にそれだけでなく衝撃吸収などの強化魔術も]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　施してくれたって言っていたから、魔物との戦闘で]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　割れる心配もないそうよ」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *13}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「曇り防止に衝撃吸収ですか？]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['　Marianaさん、そんな事まで出来るんですね」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *13}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「Marianaもプライベートでは眼鏡をかけているし、研究の時も']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　眼鏡をかけている事が多いからその関係じゃないかしら」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Velvet_face00, 4, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「そうそう、自分用に試作したものだって言ってたわね。]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　そのついでに私の眼鏡にも付与してもらったのよ」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *13}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「そうだったんですか。それにしてもMarianaさんが']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　プライベートで眼鏡かけているなんて知りませんでした」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Diana_face00, 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「Marianaが城内で私服でいる事なんて殆どないものね。\!\face[2]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　結構さまになってるわよ、魔術学院の女教師みたいで」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [75]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &14 ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「教師は教師でもエロ教師だけどね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *14}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「あはは…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: ['next_cg(1,$game_variables[11])']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 111, p: [12, 'Input.press?(:CTRL)']}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 255, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 411, p: []}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: [prepare_transition]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 255, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: ['perform_transition(30, "Event", 120)']}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 412, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &15 ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「それにしても…このお湯に浸かっていると]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　なんだかお肌がツルツルになっていくような感覚がしますね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face05, 4, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「そう言われるとそんな感じがしますね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face00, 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「以前トキワの巫女から聞いたのですが、トキワの温泉には]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　美肌効果がある物が多いとの事ですよ」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face00, 2, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「なのでこの\db[i,297]にも疲労回復効果だけでなく']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　そういった効果もあるのかもしれませんね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *15}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「あら、そうなの？　それはいい事を聞いたわ。]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　そんな効果があるのなら定期的にトキワから買い付けようかしら」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *15}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「あら、大臣には誰か振りむいて欲しい男性でもいるのかしら？」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 241, p: [!ruby/object:RPG::BGM {name: sk25_03_何だろう？, volume: 100, pitch: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [77]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &16 ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「な、なんですか陛下、いきなり!?」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *16}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「いえ、ここは女子トークをするタイミングかと思って…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「べ、別に誰かに振り向いて欲しい訳では…\!ただ、女として]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　若さは保ちたいだけで…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *16}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「誤魔化さなくてもいいではないですか。大臣は独身ですし]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　気になる殿方の一人や二人はいるでしょう？」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *16}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ほ、本当に私は誰もっ……」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *16}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「むぅ…そうですか……\!]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['　それじゃあ、Millayは――\|聞かなくても']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　いないのは知ってますし…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face02, 4, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ちょっ…\|確かにそうですけど、なんだか少し]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　癪に障りますね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 241, p: [!ruby/object:RPG::BGM {name: sk27_02_シンキングタイム, volume: 100, pitch: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [77]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: &17 ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「Lunariaはどうですか？」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face05, 1, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「えっ!?　私ですか!?」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *17}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「この中では一番若いですし、学院時代から付き合ってる]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　彼氏の一人や二人いたりしないのかしら？」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face01, 1, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「えっ、そうなのLunaria!?」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face05, 7, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「い、いえっ…その…私にはそういう方は……」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *17}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「そうなの？　それじゃあ誰か城の関係者とかで気になる方が]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　いたりしないかしら？」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face04, 1, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「えっ？　城の関係者で…ですか？\!\face[34]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['　う～～～～ん\|\face[37]……………\|\face[32]特には…」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *17}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「それじゃあ、Lunariaはどういう男性がタイプかしら？」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face04, 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「タイプですか？　あまり考えた事はないですけど…\!]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　しいて言うなら誠実で嘘を吐かない]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　正直な人でしょうか…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face00, 1, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「ありがちだけど大事な要素よね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *17}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「その条件でいうなら、騎士団長のドレイクはどうかしら？」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: *17}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「確かに、ドレイクなら誠実だしLunariaの条件に']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　合致してはいるわね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Lunaria_face04, 6, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「騎士団長さん、ですか？　考えた事もないですね…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face02, 2, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「それはそうよね、年齢も結構離れてるし。\!\face[1]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['　むしろ\sbt[31]大臣の方が歳も近いし']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　お似合いなんじゃないかしら？」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「騎士団長はお給金もいいし、見た目も格好いい…\!]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　確かに好物件ではあるんだけど…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face00, 1, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「けど…？」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [77]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「遠征で長い事 家を空ける可能性のある人はちょっと…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Millay_face02, 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「国の為に頑張ってくれてるのに…世知辛いわね…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [76]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 111, p: [12, 'Input.press?(:CTRL)']}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 0, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 411, p: []}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: [prepare_transition]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 232, p: [2, ! '', 0, 0, 0, 0, 100, 100, 0, 0, 1, true]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 355, p: ['perform_transition(30, "Event", 120)']}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 412, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Diana_face01, 4, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「うぅん…思ったより女子トークが]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　広がらなかったですね…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「こういう話はMarianaさんがいた方が盛り上がりそうですけど…」']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [76]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 241, p: [!ruby/object:RPG::BGM {name: moon09_26_楽しい・明るい・コミカル・間抜け【にんじんが食べたい！】, volume: 100, pitch: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 250, p: [!ruby/object:RPG::SE {name: Blow8, pitch: 150, volume: 100}]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Diana_face02, 3, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[27]Diana\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['「Marianaがいたらただのエロトークに']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [　なっちゃうでしょ！」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: [Velvet_face00, 5, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\sb[31]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「そうね」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[17]Millay\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: [「それは確かに…」]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 101, p: ['', 0, 0, 2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['\C[14]Lunaria\C[0]']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 401, p: ['（ごめんなさいMarianaさん…\|否定してあげられなくて……）']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 246, p: [2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 242, p: [5]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: ['no_wait_fadeout(120, true)']}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 235, p: [1]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 235, p: [2]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 355, p: [flag_write]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 117, p: [7]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 118, p: [スキップ]}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 111, p: [0, 93, 0]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 117, p: [14]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 411, p: []}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 121, p: [561, 561, 0]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 117, p: [13]}
-      - !ruby/object:RPG::EventCommand {i: 1, c: 0, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 412, p: []}
-      - !ruby/object:RPG::EventCommand {i: 0, c: 0, p: []}
-parallax_sx: 0
-bgm: !ruby/object:RPG::BGM {name: '', volume: 100, pitch: 100}
-tileset_id: 2
-encounter_step: 30
-width: 21
-data: !ruby/object:Table
-  dim: 3
-  x: 21
-  y: 15
-  z: 4
-  data:
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-  - 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
-bgs: !ruby/object:RPG::BGS {name: '', volume: 80, pitch: 100}
-parallax_loop_y: false
-autoplay_bgm: false
-encounter_list: []
-autoplay_bgs: false
-parallax_show: false
-scroll_type: 0
-parallax_loop_x: false
-disable_dashing: false
-parallax_sy: 0
-display_name: ''
-specify_battleback: false
-note: ''
-battleback1_name: ''
-battleback2_name: ''
+      'condition': !ruby/object:RPG::Event::Page::Condition
+        'switch1_valid': !!bool 'false'
+        'switch2_valid': !!bool 'false'
+        'variable_valid': !!bool 'false'
+        'self_switch_valid': !!bool 'false'
+        'item_valid': !!bool 'false'
+        'actor_valid': !!bool 'false'
+        'switch1_id': !!int '1'
+        'switch2_id': !!int '1'
+        'variable_id': !!int '1'
+        'variable_value': !!int '0'
+        'self_switch_ch': 'A'
+        'item_id': !!int '1'
+        'actor_id': !!int '1'
+      'graphic': !ruby/object:RPG::Event::Page::Graphic
+        'tile_id': !!int '0'
+        'character_name': '!H_Event'
+        'character_index': !!int '0'
+        'direction': !!int '2'
+        'pattern': !!int '2'
+      'move_type': !!int '0'
+      'move_speed': !!int '3'
+      'move_frequency': !!int '3'
+      'move_route': !ruby/object:RPG::MoveRoute
+        'repeat': !!bool 'true'
+        'skippable': !!bool 'false'
+        'wait': !!bool 'false'
+        'list':
+        - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
+      'walk_anime': !!bool 'true'
+      'step_anime': !!bool 'false'
+      'direction_fix': !!bool 'false'
+      'through': !!bool 'false'
+      'priority_type': !!int '1'
+      'trigger': !!int '0'
+      'list':
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '122', 'p': [!!int '38', !!int '38', !!int '0', !!int '0', !!int '561']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '108', 'p': ['※回想スイッチNoを変数に格納']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '12']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '87', !!int '0']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '119', 'p': ['スキップ']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '122', 'p': [!!int '11', !!int '11', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '231', 'p': [!!int '1', 'evq_01_01', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '255', !!int '0']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '231', 'p': [!!int '2', 'evq_01_06', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '255', !!int '0']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '121']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '245', 'p': [!ruby/object:RPG::BGS {'name': 'Drips', 'volume': !!int '60', 'pitch': !!int '70'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '241', 'p': [!ruby/object:RPG::BGM {'name': 'moon03_09_22『昼下がりの紅茶』', 'volume': !!int '100', 'pitch': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '222', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': &10 ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Ahh... this feels so good..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *10}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Yes... absolutely..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', 'Input.press?(:CTRL)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '0', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['prepare_transition']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '0', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['perform_transition(30, "Event", 120)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': &11 ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "It''s like all the fatigue is draining out
+
+            of my body..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *11}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "That''s right..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *11}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: (Being naked with the important people of
+
+            the country... It''s really nerve-wracking...)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *11}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "To think we''d get to use Her Majesty''s
+
+            bath... We''re really lucky."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Velvet_face00', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Yes, truly. Although I said what I did earlier,
+
+            I''ve always wanted to try this bath at least once.
+
+            I''m grateful for Her Majesty''s generous
+
+            hospitality."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Diana_face00', !!int '3', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Hehe, don''t worry about it. I''m happy to
+
+            be able to bathe with everyone like this."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', 'Input.press?(:CTRL)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '255', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['prepare_transition']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '255', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['perform_transition(30, "Event", 120)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': &12 ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Lunaria, don''t be so tense. Just relax as
+
+            if you''re taking a bath with friends..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Lunaria_face04', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "I''ll, I''ll try my best..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *12}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Your Majesty... It''s fine to be a friendly and
+
+            approachable queen, but please don''t let it
+
+            diminish your dignity too much, I beg of you."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *12}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "I understand, \sbt[31]Minister. I''ll
+
+            behave properly in public, so please turn a blind
+
+            eye just for now."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *12}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Can''t be helped, I suppose."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face02', !!int '2', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "I mean, any sense of dignity is out the
+
+            window when we''re bathing together like this,
+
+            isn''t it..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['next_cg(1,$game_variables[11])']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Oh, come on..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '221', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '0', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '76']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '222', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': &13 ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "By the way, \sbt[31]Minister, you''re
+
+            wearing your glasses in the bath. Don''t they get
+
+            foggy?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Velvet_face00', !!int '2', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Yes, it''s fine. These have been treated by
+
+            Mariana with an anti-fogging effect on the lenses,
+
+            so I don''t need to take them off even when
+
+            bathing."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Velvet_face00', !!int '2', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Furthermore, she said she''s also applied
+
+            reinforcement magic like shock absorption, so
+
+            there''s no worry about them breaking during
+
+            battles with monsters."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *13}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "Anti-fogging and shock absorption?
+
+            Mariana can do such things?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *13}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "Mariana wears glasses in private too, and
+
+            often during research, so maybe that''s why."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Velvet_face00', !!int '4', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Exactly, she said she made a prototype for
+
+            herself. And while she was at it, she applied it
+
+            to my glasses too."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *13}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "Is that so? I had no idea Mariana wore
+
+            glasses in private."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Diana_face00', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Mariana hardly ever is in casual clothes
+
+            inside the castle. \face[2]She looks quite fitting
+
+            though, like a female teacher at a magic academy."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '75']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': &14 ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "Though she''s more like an erotic
+
+            teacher..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *14}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "Ahaha..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['next_cg(1,$game_variables[11])']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', 'Input.press?(:CTRL)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '255', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['prepare_transition']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '255', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['perform_transition(30, "Event", 120)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': &15 ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Anyway... soaking in this water makes my
+
+            skin feel so smooth and silky."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Lunaria_face05', !!int '4', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "Now that you mention it, it does feel
+
+            like that."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face00', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "I heard from a priestess in Tokiwa that
+
+            many of their hot springs have beautifying
+
+            effects."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face00', !!int '2', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "So perhaps this \db[i,297] has not only
+
+            fatigue recovery effects but also those kinds of
+
+            benefits."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *15}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Oh, really? That''s good to know. If it has such
+
+            effects, maybe we should consider purchasing it
+
+            regularly from Tokiwa."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *15}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Oh? Minister, do you have a man you want
+
+            to turn heads for?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '241', 'p': [!ruby/object:RPG::BGM {'name': 'sk25_03_何だろう？', 'volume': !!int '100', 'pitch': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '77']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': &16 ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Wh-what are you saying all of a sudden, Your
+
+            Majesty!?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *16}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "No, I just thought it might be time for
+
+            some girl talk..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"I-I''m not particularly looking for anyone to
+
+            notice me... I just want to maintain my youth as a
+
+            woman..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *16}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "You don''t have to hide it. You''re single
+
+            after all, Minister. Surely there must be a
+
+            gentleman or two who has caught your eye?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *16}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"I-I really don''t have anyone..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *16}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Hmm... is that so... Well then, Millay--I
+
+            know you don''t have anyone without asking..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face02', !!int '4', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "Hey... That''s true but it still kind of
+
+            stings to hear it put that way."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '241', 'p': [!ruby/object:RPG::BGM {'name': 'sk27_02_シンキングタイム', 'volume': !!int '100', 'pitch': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '77']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': &17 ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "What about you, Lunaria?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Lunaria_face05', !!int '1', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "Me!? Really!?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *17}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Being the youngest among us, I wonder if
+
+            you have a boyfriend or two from your academy
+
+            days?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face01', !!int '1', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "Eh, is that true, Lunaria!?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Lunaria_face05', !!int '7', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "N-no... I mean... I don''t have anyone
+
+            like that..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *17}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Is that so? Then, is there anyone from the
+
+            castle staff that you find interesting?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Lunaria_face04', !!int '1', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "Eh? Someone from the castle staff...?
+
+            \face[34]Hmmmm\face[37]...\face[32]Not
+
+            particularly..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *17}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"So, Lunaria, what type of man do you prefer?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Lunaria_face04', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "My type? I haven''t thought much about
+
+            it, but if I had to say... someone sincere and
+
+            honest who doesn''t tell lies..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face00', !!int '1', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "It''s a common answer but an important
+
+            quality indeed."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *17}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"With those criteria, what about the captain of
+
+            the knights, Drake?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': *17}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Indeed, Drake is sincere and does meet
+
+            Lunaria''s conditions."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Lunaria_face04', !!int '6', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "The captain of the knights? I''ve never
+
+            considered him..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face02', !!int '2', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "That makes sense, there''s quite an age
+
+            difference. \face[1]Rather\sbt[31], wouldn''t the
+
+            Minister be a better match since they''re closer in
+
+            age?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"The captain of the knights has a good salary and
+
+            looks handsome... He''s certainly a catch but..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face00', !!int '1', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "But...?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '77']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"Someone who might be away from home for long
+
+            periods on expeditions is a bit..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Millay_face02', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "Even though he''s working hard for the
+
+            country... it''s a harsh world..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '76']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', 'Input.press?(:CTRL)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '0', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['prepare_transition']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '232', 'p': [!!int '2', !!null 'null', !!int '0', !!int '0', !!int '0', !!int '0', !!int '100', !!int '100', !!int '0', !!int '0', !!int '1', !!bool 'true']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['perform_transition(30, "Event", 120)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Diana_face01', !!int '4', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "Hmm... our girl talk didn''t expand as much
+
+            as I thought it would..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "This conversation might be more lively
+
+            with Mariana around..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '76']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '241', 'p': [!ruby/object:RPG::BGM {'name': 'moon09_26_楽しい・明るい・コミカル・間抜け【にんじんが食べたい！】', 'volume': !!int '100', 'pitch': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Blow8', 'pitch': !!int '150', 'volume': !!int '100'}]}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Diana_face02', !!int '3', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Diana: "If Mariana were here, it would just turn
+
+            into erotic talk!"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['Velvet_face00', !!int '5', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['"That''s true."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Millay: "That''s definitely true..."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['Lunaria: "(I''m sorry Mariana-san... I couldn''t
+
+            deny it...)"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '246', 'p': [!!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '242', 'p': [!!int '5']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['no_wait_fadeout(120, true)']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '235', 'p': [!!int '1']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '235', 'p': [!!int '2']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '355', 'p': ['flag_write']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '7']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '118', 'p': ['スキップ']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '0', !!int '93', !!int '0']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '117', 'p': [!!int '14']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '411', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '121', 'p': [!!int '561', !!int '561', !!int '0']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '117', 'p': [!!int '13']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
+'parallax_sx': !!int '0'
+'bgm': !ruby/object:RPG::BGM {'name': '', 'volume': !!int '100', 'pitch': !!int '100'}
+'tileset_id': !!int '2'
+'encounter_step': !!int '30'
+'width': !!int '21'
+'data': !ruby/object:Table
+  'dim': !!int '3'
+  'x': !!int '21'
+  'y': !!int '15'
+  'z': !!int '4'
+  'data':
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630 0630'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+  - '0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000'
+'bgs': !ruby/object:RPG::BGS {'name': '', 'volume': !!int '80', 'pitch': !!int '100'}
+'parallax_loop_y': !!bool 'false'
+'autoplay_bgm': !!bool 'false'
+'encounter_list': []
+'autoplay_bgs': !!bool 'false'
+'parallax_show': !!bool 'false'
+'scroll_type': !!int '0'
+'parallax_loop_x': !!bool 'false'
+'disable_dashing': !!bool 'false'
+'parallax_sy': !!int '0'
+'display_name': ''
+'specify_battleback': !!bool 'false'
+'note': ''
+'battleback1_name': ''
+'battleback2_name': ''
