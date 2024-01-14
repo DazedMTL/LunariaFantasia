@@ -177,12 +177,12 @@ class Window_LearnPoint < Window_Base
   #--------------------------------------------------------------------------
   def draw_point_text(point, new_point, x, y)
     change_color(system_color)
-    draw_text(x + 320, y + line_height * 0, contents_width, line_height, "所持#{Vocab::ap}")
+    draw_text(x + 320, y + line_height * 0, contents_width, line_height, "#{Vocab::ap}")
     case @category
     when :learn
-      draw_text(x + 465, y + line_height * 0, contents_width, line_height, "習得後")
+      draw_text(x + 465, y + line_height * 0, contents_width, line_height, "After")
     when :skillup
-      draw_text(x + 465, y + line_height * 0, contents_width, line_height, "レベルアップ後")
+      draw_text(x + 465, y + line_height * 0, contents_width, line_height, "After")
     end
     change_color(normal_color)
     draw_text(x - 220, y + line_height * 1, contents_width, line_height, point, 2)
@@ -410,7 +410,7 @@ class Window_LearnList < Window_Selectable
     lv = Learn.l_flag(skill)[2]
     return if lv == 1
     change_color(normal_color, enable?(skill))
-    draw_text(x + 324, y, contents_width, line_height, "条件LV: #{lv}以上")
+    draw_text(x + 324, y, contents_width, line_height, "Need LV: #{lv}")
   end
   #--------------------------------------------------------------------------
   # ○ スキルの習得ポイントを描画
@@ -418,10 +418,10 @@ class Window_LearnList < Window_Selectable
   def draw_skill_cost(x, y, skill)
     if @actor.skill_learn?(skill)
       change_color(system_color)
-      draw_text(x - 4, y, contents_width, line_height, "習得済　", 2)
+      draw_text(x - 4, y, contents_width, line_height, "Learned ", 2)
     else
       change_color(normal_color, enable?(skill))
-      draw_text(x + 492, y, contents_width, line_height, "必要#{Vocab::ap}:#{skill_ap(skill)}")
+      draw_text(x + 492, y, contents_width, line_height, "Need#{Vocab::ap}:#{skill_ap(skill)}")
     end
   end
   #--------------------------------------------------------------------------
@@ -547,12 +547,12 @@ class Window_LearnResult < Window_Base
   def draw_skill_name(skill, point, x, y)
     return unless skill && point
     text_size = skill.name.size
-    result = @category == :learn ? "覚えますか":"Lvアップさせますか"
+    result = @category == :learn ? "Remember?":"Lvアップさせますか"
     change_color(normal_color)
-    draw_text(x + 4, y, contents_width, line_height, "#{Vocab::ap}を #{point} 消費して")
+    draw_text(x + 4, y, contents_width, line_height, "#{Vocab::ap} #{point} Consume")
     draw_icon(skill.icon_index, x + 12, y + line_height)
     draw_text(x + 36, y + line_height, text_size * 20, line_height, skill.name)
-    draw_text(x - 4, y + line_height, contents_width, line_height, "を#{result}？", 2)
+    draw_text(x - 4, y + line_height, contents_width, line_height, "#{result}？", 2)
   end
 end
 
@@ -590,8 +590,8 @@ class Window_YesNoChoice < Window_HorzCommand
   # ○ コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("はい",     :yes_select)
-    add_command("いいえ",   :no_select)
+    add_command("Yes",     :yes_select)
+    add_command("No",   :no_select)
   end
   #--------------------------------------------------------------------------
   # ○ 決定ボタンが押されたときの処理
@@ -622,7 +622,7 @@ class Window_Help < Window_Base
     return unless item
     skills = Learn.l_flag(item)[1]
     if skills.empty?
-      set_text("必要スキルなし")
+      set_text("No Skills Required")
     else
       text = ""
       skills.each_with_index do |skill, i|
@@ -631,7 +631,7 @@ class Window_Help < Window_Base
         (skill[1] - 1).times {star += "★"}
         text += "#{skill[0]}" + star + "　"
       end
-      set_text("必要スキル：#{text}")
+      set_text("Required: #{text}")
     end
   end
 end

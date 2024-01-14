@@ -275,8 +275,8 @@ end
 
 module Vocab
   
-  ObtainAp      = "%s を %s 獲得！"
-  Eating        = "料理 %s を使用"
+    ObtainAp      = "Obtained %s %s!"
+    Eating        = "Used the dish %s"
 
   EAT_SE = RPG::SE.new("Heal3", 80, 100)
 
@@ -296,8 +296,8 @@ module Vocab
     $data_system.armor_types[atype_id]
   end
   
-  def self.learn;       "スキル習得";     end   # 技習得
-  def self.skillup;     "強化";   end   # スキルレベルアップ
+  def self.learn;       "Learn";     end   # 技習得
+  def self.skillup;     "Enhance";   end   # スキルレベルアップ
   def self.ap;          "LP";             end   # APの名前
   def self.ap_ex;          "ＬＰ";             end   # APの名前（全角）
   
@@ -359,13 +359,13 @@ module BattleManager
         when 13 ; text2 += "ＳＰ#{$game_party.battle_eat.note =~ /\<TP回復率:(\d+)\>/ ? $1 : ""}% " #if $game_party.battle_eat.note =~ /\<TP回復率:(\d+)\>/
         when 22 
           if f.data_id == 2
-            text2 += "毒 "
+            text2 += "Poison "
           elsif f.data_id == 31
-            text2 += "閉門 "
+            text2 += "Close "
           end
         end
       end
-      text2 += "が回復！"
+      text2 += "Recovered!"
       $game_message.add('\.' + text)
       $game_message.add('\.' + target + text2)
       wait_for_message

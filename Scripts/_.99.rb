@@ -43,7 +43,7 @@ class Window_LearnCategory < Window_HorzCommand
   # ● コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("習得",     :learn)
+    add_command("Learn",     :learn)
     add_command(Vocab::skillup,   :skillup)
   end
   #--------------------------------------------------------------------------
@@ -213,7 +213,7 @@ class Window_SkillUpList < Window_LearnList
     @actor.skill_lv(skill.id).times do |i|
       star += "★" unless i == 0
     end
-    draw_text(x + 336, y, contents_width, line_height, "スキルLv:#{star}")
+    draw_text(x + 336, y, contents_width, line_height, "Skill LV:#{star}")
   end
   #--------------------------------------------------------------------------
   # ○ スキルの必要APを描画
@@ -225,7 +225,7 @@ class Window_SkillUpList < Window_LearnList
         draw_text(x - 4, y, contents_width, line_height, "----　", 2)
       else
         change_color(normal_color, enable?(skill))
-        draw_text(x + 492, y, contents_width, line_height, "必要#{Vocab::ap}:#{levelup_point(skill)}")
+        draw_text(x + 492, y, contents_width, line_height, "Need#{Vocab::ap}:#{levelup_point(skill)}")
       end
     else
       super
