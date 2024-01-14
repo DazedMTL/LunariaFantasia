@@ -29,8 +29,8 @@ module FRGP
   # ○ 術適正の描画
   #--------------------------------------------------------------------------
   def draw_magic_elements(x, y)
-    ary = ["炎","氷","雷","光","闇","無","回復"]
-    str = "術適正"
+    ary = ["Fire", "Ice", "Thunder", "Light", "Darkness", "None", "Heal"]
+    str = "Magic APT"
     rate = {}
     ary.each{|name| rate[name] = el_rate(name)}
     draw_percent(x, y, str, rate, false, 13)
@@ -39,18 +39,18 @@ module FRGP
   # ○ 属性耐性の描画
   #--------------------------------------------------------------------------
   def draw_guard_elements(x, y)
-    ary = ["炎","氷","雷","光","闇","艶"]
-    str = "属性耐性"
+    ary = ["Fire", "Ice", "Thunder", "Light", "Darkness", "Luster"]
+    str = "Elemental RES"
     rate = {}
     ary.each{|name| rate[ELEMENT_ICON[elements_comvert(name)]] = elg_rate(name)}
     draw_percent(x, y, str, rate, true)
   end
   #--------------------------------------------------------------------------
-  # ○ 状態耐性の描画
+  # ○ Status resistance drawing
   #--------------------------------------------------------------------------
-  def draw_guard_state(x, y, ext = "閉門")
-    ary = ["即死","毒","暗闇","沈黙","混乱","睡眠","麻痺","ｽﾀﾝ",ext]
-    str = "状態耐性"
+  def draw_guard_state(x, y, ext = "Seal")
+    ary = ["Instant Death", "Poison", "Blind", "Silence", "Confusion", "Sleep", "Paralysis", "Stun", ext]
+    str = "Status RES"
     rate = {}
     ary.compact.each{|name| rate[$data_states[state_comvert(name)].icon_index] = stg_rate(name)}
     draw_percent(x, y, str, rate, true)
@@ -60,7 +60,7 @@ module FRGP
   #--------------------------------------------------------------------------
   def draw_guard_debuff(x, y)
     ary = [2, 3, 4, 5, 6, 7]
-    str = "弱体耐性"
+    str = "Weakness"
     rate = {}
     ary.each{|id| rate[ICON_DEBUFF_START + id] = debuff_rate(id)}
     draw_percent(x, y, str, rate, true)
@@ -94,38 +94,38 @@ module FRGP
   #--------------------------------------------------------------------------
   # ○ 属性名をIDに変換
   #--------------------------------------------------------------------------
-  def elements_comvert(element_name)
-    case element_name
-    when "無" ; 0
-    when "炎" ; 3
-    when "氷" ; 4
-    when "雷" ; 5
-    when "艶" ; 7
-    when "光" ; 9
-    when "闇" ; 10
-    when "回復" ; 50
-    when "退魔" ; 6
-    when "物理" ; 1
-    when "吸収" ; 2
-    when "盗み" ; 11
-    else ; 0
-    end
+def elements_comvert(element_name)
+  case element_name
+  when "None" ; 0
+  when "Fire" ; 3
+  when "Ice" ; 4
+  when "Thunder" ; 5
+  when "Luster" ; 7
+  when "Light" ; 9
+  when "Darkness" ; 10
+  when "Heal" ; 50
+  when "Exorcism" ; 6
+  when "Physical" ; 1
+  when "Absorb" ; 2
+  when "Steal" ; 11
+  else ; 0
   end
-  #--------------------------------------------------------------------------
-  # ○ 状態名をIDに変換
-  #--------------------------------------------------------------------------
+end
+#--------------------------------------------------------------------------
+# ○ Convert state name to ID
+#--------------------------------------------------------------------------
   def state_comvert(state_name)
     case state_name
-    when "即死" ; 1
-    when "毒"   ; 2
-    when "暗闇" ; 3
-    when "沈黙" ; 4
-    when "混乱" ; 5
-    when "睡眠" ; 6
-    when "麻痺" ; 7
-    when "ｽﾀﾝ"  ; 8
-    when "閉門" ; 31
-    when "魅了" ; 26
+    when "Instant Death" ; 1
+    when "Poison"   ; 2
+    when "Blind" ; 3
+    when "Silence" ; 4
+    when "Confusion" ; 5
+    when "Sleep" ; 6
+    when "Paralysis" ; 7
+    when "Stun"  ; 8
+    when "Seal" ; 31
+    when "Charm" ; 26
     else ; 31
     end
   end
@@ -303,7 +303,7 @@ class Window_Status < Window_Selectable
     contents.font.size = 24
     h = 24
     change_color(system_color)
-    draw_text(x, y, width, h, "装備品")
+    draw_text(x, y, width, h, "Equipment")
     change_color(normal_color)
     @actor.equips.each_with_index do |item, i|
       draw_item_name(item, x, y + h * (i + 1), i)
@@ -317,7 +317,7 @@ class Window_Status < Window_Selectable
     contents.font.size = 24
     h = 24
     change_color(system_color)
-    draw_text(x, y, width, h, "スキル")
+    draw_text(x, y, width, h, "Skill")
     change_color(normal_color)
     @actor.change_skill.each_with_index do |item, i|
       draw_item_name(item, x, y + h * (i + 1), i)
@@ -507,9 +507,9 @@ class Window_Status < Window_Selectable
     xp = 148
     yp = 10
     change_color(system_color)
-    draw_text(x, y + h * 2 + yp, 100, h, "身長")
-    draw_text(x + xp, y + h * 2 + yp, 100, h, "3サイズ")
-    draw_text(x, y + h * 7, 100, h, "性経験")
+    draw_text(x, y + h * 2 + yp, 100, h, "Height")
+    draw_text(x + xp, y + h * 2 + yp, 100, h, "3 Sizes")
+    draw_text(x, y + h * 7, 100, h, "Sex EXP")
     draw_text(x + xp, y + h * 7, 100, h, FAKEREAL::SEX_POINT_NAME) if actor.main?
     change_color(normal_color)
     draw_text(x + 4, y + h * 3 + yp, 80, h, "#{actor.profile["t"]}cm", 2)
@@ -522,32 +522,32 @@ class Window_Status < Window_Selectable
     draw_text(x + 14 + xp, y + h * 5 + yp, 70, h, "#{actor.profile["h"]}cm", 2)
     #draw_horz_line(y + h * 7, 0.52)
     if actor.id != 2 #main?
-      sex = (!actor.virgin || actor.sex_all_count > 0 ) ? "あり" : "なし"
+      sex = (!actor.virgin || actor.sex_all_count > 0 ) ? "Yes" : "None"
       if actor.main?
         sp = $game_variables[FAKEREAL::SEX_POINT]
         draw_text(x + 224, y + h * 7, 80, h, sp)
       end
     else
-      sex = actor.virgin ? "夫のみ" : "夫以外ともあり"
+      sex = actor.virgin ? "Husband" : "Others"
     end
     draw_text(x + 74, y + h * 7, 120, h, sex)
-    contents.font.size = 22
+    contents.font.size = 18
     h = 22
     xa = -24
     xb = 168
     ya = 0
-    draw_text(x + xa, y + ya + h * 9, 100, h, "キス:", 2)
-    draw_text(x + xa, y + ya + h * 10, 100, h, "手コキ:", 2)
-    draw_text(x + xa, y + ya + h * 11, 100, h, "フェラ:", 2)
-    draw_text(x + xa, y + ya + h * 12, 100, h, "精飲:", 2)
-    draw_text(x + xa + xb, y + ya + h * 9, 100, h, "セクハラ:", 2)
-    draw_text(x + xa + xb, y + ya + h * 10, 100, h, "パイズリ:", 2)
-    draw_text(x + xa + xb, y + ya + h * 11, 100, h, "セックス:", 2)
-    draw_text(x + xa + xb, y + ya + h * 12, 100, h, "アナル:", 2)
-    #draw_text(x + xa + xb * 2, y + ya + h * 9, 100, h, "オナニー:", 2)
-    draw_text(x + xa + xb * 2, y + ya + h * 10, 100, h, "絶頂回数:", 2)
-    draw_text(x + xa + xb * 2, y + ya + h * 11, 100, h, "膣内射精:", 2)
-    draw_text(x + xa + xb * 2, y + ya + h * 12, 100, h, "ぶっかけ:", 2)
+    draw_text(x + xa, y + ya + h * 9, 100, h, "Kiss:", 2)
+    draw_text(x + xa, y + ya + h * 10, 100, h, "Handjob:", 2)
+    draw_text(x + xa, y + ya + h * 11, 100, h, "Fellatio:", 2)
+    draw_text(x + xa, y + ya + h * 12, 100, h, "Swallow:", 2)
+    draw_text(x + xa + xb, y + ya + h * 9, 100, h, "Harassment:", 2)
+    draw_text(x + xa + xb, y + ya + h * 10, 100, h, "Paizuri:", 2)
+    draw_text(x + xa + xb, y + ya + h * 11, 100, h, "Sex:", 2)
+    draw_text(x + xa + xb, y + ya + h * 12, 100, h, "Anal:", 2)
+    #draw_text(x + xa + xb * 2, y + ya + h * 9, 100, h, "Masturbation:", 2)
+    draw_text(x + xa + xb * 2, y + ya + h * 10, 100, h, "Climaxes:", 2)
+    draw_text(x + xa + xb * 2, y + ya + h * 11, 100, h, "Creampies:", 2)
+    draw_text(x + xa + xb * 2, y + ya + h * 12, 100, h, "Bukkake:", 2)
     sh = actor.harassment
     k = actor.kiss
     t = actor.tekoki
@@ -562,27 +562,27 @@ class Window_Status < Window_Selectable
     o = actor.onanie
     xc = 100
     if actor.id != 2 #main?
-      draw_text(x + xa + xc, y + ya + h * 9, 100, h, sex_count(k, "未経験", "人"))
+      draw_text(x + xa + xc, y + ya + h * 9, 100, h, sex_count(k, "None", "x"))
       draw_text(x + xa + xc, y + ya + h * 10, 100, h, sex_count(t))
       draw_text(x + xa + xc, y + ya + h * 11, 100, h, sex_count(f))
       draw_text(x + xa + xc, y + ya + h * 12, 100, h, sex_count(d))
       draw_text(x + xa + xb + xc, y + ya + h * 9, 100, h, sex_count(sh))
       draw_text(x + xa + xb + xc, y + ya + h * 10, 100, h, sex_count(p))
-      draw_text(x + xa + xb + xc, y + ya + h * 11, 100, h, sex_count(s, "処女", "人"))
-      draw_text(x + xa + xb + xc, y + ya + h * 12, 100, h, sex_count(a, "処女", "人"))
+      draw_text(x + xa + xb + xc, y + ya + h * 11, 100, h, sex_count(s, "Virgin", "x"))
+      draw_text(x + xa + xb + xc, y + ya + h * 12, 100, h, sex_count(a, "Virgin", "x"))
       #draw_text(x + xa + xb * 2 + xc, y + ya + h * 9, 100, h, sex_count(o))
-      draw_text(x + xa + xb * 2 + xc, y + ya + h * 10, 100, h, sex_count(e, "0回"))
+      draw_text(x + xa + xb * 2 + xc, y + ya + h * 10, 100, h, sex_count(e, "0x"))
       draw_text(x + xa + xb * 2 + xc, y + ya + h * 11, 100, h, sex_count(c))
       draw_text(x + xa + xb * 2 + xc, y + ya + h * 12, 100, h, sex_count(b))
     else
-      draw_text(x + xa + xc, y + ya + h * 9, 100, h, wife_count(k, "夫のみ", "人"))
+      draw_text(x + xa + xc, y + ya + h * 9, 100, h, wife_count(k, "Virgin", "x"))
       draw_text(x + xa + xc, y + ya + h * 10, 100, h, wife_count(t))
       draw_text(x + xa + xc, y + ya + h * 11, 100, h, wife_count(f))
       draw_text(x + xa + xc, y + ya + h * 12, 100, h, wife_count(d))
-      draw_text(x + xa + xb + xc, y + ya + h * 9, 100, h, wife_count(sh, "未経験"))
+      draw_text(x + xa + xb + xc, y + ya + h * 9, 100, h, wife_count(sh, "None"))
       draw_text(x + xa + xb + xc, y + ya + h * 10, 100, h, wife_count(p))
-      draw_text(x + xa + xb + xc, y + ya + h * 11, 100, h, wife_count(s, "夫のみ", "人"))
-      draw_text(x + xa + xb + xc, y + ya + h * 12, 100, h, wife_count(a, "処女", "人"))
+      draw_text(x + xa + xb + xc, y + ya + h * 11, 100, h, wife_count(s, "Virgin", "x"))
+      draw_text(x + xa + xb + xc, y + ya + h * 12, 100, h, wife_count(a, "Virgin", "x"))
       #draw_text(x + xa + xb * 2 + xc, y + ya + h * 9, 100, h, wife_count(o))
       draw_text(x + xa + xb * 2 + xc, y + ya + h * 10, 100, h, wife_count(e))
       draw_text(x + xa + xb * 2 + xc, y + ya + h * 11, 100, h, wife_count(c))
@@ -593,13 +593,13 @@ class Window_Status < Window_Selectable
   #--------------------------------------------------------------------------
   # ○ 
   #--------------------------------------------------------------------------
-  def sex_count(sex, virgin = "未経験", unit = "回")
+  def sex_count(sex, virgin = "None", unit = "x")
     return sex == 0 ? virgin : "#{sex}#{unit}"
   end
   #--------------------------------------------------------------------------
   # ○ 
   #--------------------------------------------------------------------------
-  def wife_count(sex, virgin = "夫のみ", unit = "回")
+  def wife_count(sex, virgin = "None", unit = "x")
     return sex == 0 ? virgin : "#{sex}#{unit}"
   end
   #--------------------------------------------------------------------------

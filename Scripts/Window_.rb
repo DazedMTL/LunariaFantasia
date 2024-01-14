@@ -11,7 +11,7 @@ class Window_Base < Window
   #--------------------------------------------------------------------------
   def draw_nil_name(x, y, enabled = true, width = 172)
     change_color(normal_color, enabled)
-    draw_text(x + 24, y, width, line_height, "外す")
+    draw_text(x + 24, y, width, line_height, "Remove")
   end
   #--------------------------------------------------------------------------
   # ○ 
@@ -336,52 +336,52 @@ end
 
 module FAKEREAL
   
-  SEX_POINT_NAME = "淫性値"
+  SEX_POINT_NAME = "Sex Stats"
   
-  KEYWORD      = { 0 => ["魔力吸収率",14],
-                   1 => ["魔力吸収",14],
-                   2 => [SEX_POINT_NAME,24],
-                   3 => ["リアトリス",0],#大陸の名前
-                   4 => ["ピオニーナイツ",0],#フィリカ直属の親衛隊
-                   5 => ["",0],
-                   6 => ["",0],
-                   7 => ["",0],
-                   8 => ["",0],
-                   9 => ["",0],
-                  10 => ["",0],
-                  11 => ["ブロンズランク",0],#闘技場ランク１
-                  12 => ["ゴールドランク",0],#闘技場ランク２
+  KEYWORD      = { 0 => ["Magic Absorb", 14],
+                    1 => ["Magic Absorb", 14],
+                    2 => [SEX_POINT_NAME, 24],
+                    3 => ["Riathris", 0], # Name of the continent
+                    4 => ["Peony Knights", 0], # Filica's direct guard
+                    5 => ["", 0],
+                    6 => ["", 0],
+                    7 => ["", 0],
+                    8 => ["", 0],
+                    9 => ["", 0],
+                    10 => ["", 0],
+                    11 => ["Bronze Rank", 0], # Arena Rank 1
+                    12 => ["Gold Rank", 0], # Arena Rank 2
   
                                   }
   
   IMP = 14
   
-  BUTTON       = { "SHIFT" => ["SHIFTキー", "Aボタン", "ボタン1"],
-                   "X"     => ["Xキー", "Bボタン", "ボタン2"],
-                   "Z"     => ["Zキー", "Cボタン", "ボタン3",],
-                   "A"     => ["Aキー", "Xボタン", "ボタン4"],
-                   "S"     => ["Sキー", "Yボタン", "ボタン5"],
-                   "D"     => ["Dキー", "Zボタン", "ボタン6"],
-                   "Q"     => ["Qキー", "Lボタン", "ボタン7"],
-                   "W"     => ["Wキー", "Rボタン", "ボタン8"],
-                   "ALT"   => ["ALTキー","ALTキー","ALTキー"],
-                   "CTRL"  => ["CTRLキー","CTRLキー","CTRLキー"],
-                   "F5"    => ["F5キー","F5キー","F5キー"]
-  
-                                  }
-  
-  MEMORY_C      = {"sentou01" => "\ekw[2]１００・絶頂４０・セクハラ１０以上",
-                   "sentou02" => "処女を喪失している・女湯更衣室で銭湯の鍵を拾っている",
-                   "sentou03" => "『ラグラス４』『カクタス４』『カクタス５』を見ている",
-                   "cactus01" => "娼館で個室対応した事がある",
-                   "cactus02" => "\ekw[2]６５・フェラ５・セクハラ１０・セックス４以上",
-                   "cactus03" => "\ekw[2]８０以上",
-                   "cactus04" => "『カクタス３』を見ている",
-                   "true01a"   => "\ekw[0]０・\ekw[2]０の状態(Hステータス全て０)で",
-                   "true01b"   => "宝玉を５つ集める",
-                   "true02"   => "高潔ルートのストーリー強制イベント",
-                                  }
-  
+BUTTON       = { 
+                    "SHIFT" => ["SHIFT key", "A button", "Button 1"],
+                    "X"     => ["X key", "B button", "Button 2"],
+                    "Z"     => ["Z key", "C button", "Button 3"],
+                    "A"     => ["A key", "X button", "Button 4"],
+                    "S"     => ["S key", "Y button", "Button 5"],
+                    "D"     => ["D key", "Z button", "Button 6"],
+                    "Q"     => ["Q key", "L button", "Button 7"],
+                    "W"     => ["W key", "R button", "Button 8"],
+                    "ALT"   => ["ALT key", "ALT key", "ALT key"],
+                    "CTRL"  => ["CTRL key", "CTRL key", "CTRL key"],
+                    "F5"    => ["F5 key", "F5 key", "F5 key"]
+                }
+
+MEMORY_C      = {
+                    "sentou01" => "\ekw[2]100・Climax 40・Sexual Harassment 10+",
+                    "sentou02" => "Has lost virginity & has picked up the bathhouse key in the women's bath changing room",
+                    "sentou03" => "Has seen 'Lagras 4', 'Cactus 4', 'Cactus 5'",
+                    "cactus01" => "Has handled private rooms in a brothel before",
+                    "cactus02" => "\ekw[2]65・Fellatio 5・Sexual Harassment 10・Sex 4+",
+                    "cactus03" => "\ekw[2]80+",
+                    "cactus04" => "Has seen 'Cactus 3'",
+                    "true01a"   => "\ekw[0]0・\ekw[2]0 condition (All H status at 0) and",
+                    "true01b"   => "collect 5 gems",
+                    "true02"   => "Mandatory event in the high integrity route story",
+                }
 end
 
 #==============================================================================

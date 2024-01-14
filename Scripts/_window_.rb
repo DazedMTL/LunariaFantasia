@@ -229,9 +229,9 @@ class Window_EquipSkillSlot < Window_Selectable
     ss = @actor.skill_slot[index]
     case ss[1].upcase
     when "LV"
-      return "解放条件:Lv#{ss[2]}"
+      return "Condition: Lv#{ss[2]}"
     when "SKILL"
-      return "解放条件:スキル習得"
+      return "Condition: Acquired Skill"
     when "SWITCHES"
       return ""
     else

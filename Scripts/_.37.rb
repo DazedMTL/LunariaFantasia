@@ -15,16 +15,16 @@ module FAKEREAL
   # 特殊能力値
   def self.xparam(param_id)
     case param_id
-    when 0 ;        "命中率"
-    when 1 ;        "回避率"
-    when 2 ;        "会心率"
+    when 0 ;        "Hit"
+    when 1 ;        "Evasion"
+    when 2 ;        "Crit"
     else   ;        ""
     end
   end
 
   def self.bwhsize(id)
     case id
-    when 0 ;        "身長:"
+    when 0 ;        "Height:"
     when 1 ;        "B:"
     when 2 ;        "W:"
     when 3 ;        "H:"
@@ -43,7 +43,7 @@ class << Vocab
     if param_id < 8
       max_tp_param(param_id)
     else
-      "最大ＳＰ"
+      "Max SP"
     end
   end
 end
@@ -57,7 +57,7 @@ end
 
 module Vocab
 
-  LevelAp     = "レベルアップにより %s を %s 獲得！"
+  LevelAp     = "Level up achieved %s to %s acquisition!"
   
 end
 
