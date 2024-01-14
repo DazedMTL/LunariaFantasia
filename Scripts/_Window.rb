@@ -535,7 +535,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
     rect = Rect.new(x, y, contents.width - 4 - x, line_height)
     change_color(system_color)
     if @item.is_a?(RPG::Weapon)
-      draw_text(rect, "武器：#{Vocab::wtype_name(@item.wtype_id)}")
+      draw_text(rect, "Weapon: #{Vocab::wtype_name(@item.wtype_id)}")
     elsif @item.is_a?(RPG::Armor)
       draw_text(rect, "#{Vocab::atype_name(@item.atype_id)}：#{Vocab::etype(@item.etype_id)}") if @item.etype_id != 4
       draw_text(rect, "#{Vocab::atype_name(@item.atype_id)}") if @item.etype_id == 4
@@ -626,18 +626,18 @@ class RPG::BaseItem
   end
   def ex_description_set
     ary = []
-    ary.push(self.note =~ /\<追加説明A:(\D+?)\>/ ? $1 : "")
-    ary.push(self.note =~ /\<追加説明B:(\D+?)\>/ ? $1 : "")
+    ary.push(self.note =~ /\<追加説明A:(\D+?)\>/ ? '\}\}'+$1 : "")
+    ary.push(self.note =~ /\<追加説明B:(\D+?)\>/ ? '\}\}'+$1 : "")
   end
 end
 
 class RPG::Skill < RPG::UsableItem
   def ex_description_set
     ary = super
-    ary.push(self.note =~ /\<追加説明C:(\D+?)\>/ ? $1 : "")
-    ary.push(self.note =~ /\<追加説明D:(\D+?)\>/ ? $1 : "")
-    ary.push(self.note =~ /\<追加説明E:(\D+?)\>/ ? $1 : "")
-    ary.push(self.note =~ /\<追加説明F:(\D+?)\>/ ? $1 : "")
+    ary.push(self.note =~ /\<追加説明C:(\D+?)\>/ ? '\}\}'+$1 : "")
+    ary.push(self.note =~ /\<追加説明D:(\D+?)\>/ ? '\}\}'+$1 : "")
+    ary.push(self.note =~ /\<追加説明E:(\D+?)\>/ ? '\}\}'+$1 : "")
+    ary.push(self.note =~ /\<追加説明F:(\D+?)\>/ ? '\}\}'+$1 : "")
   end
 end
 #==============================================================================
