@@ -616,7 +616,7 @@ class Scene_Tactics < Scene_MenuBase
   def start
     super
     create_help_window
-    @help_window.set_text("オート戦闘時の簡単な作戦を設定できます。「特になし」の場合 技や術の\n使用制限なく戦います。\e}\e}※オートでは\ehp回復・状態治療以外の補助行動を行いません\e{\e{")
+    @help_window.set_text("You can set a simple strategy for auto-battle. If \"None\" is selected, \nyou will fight without any restrictions on the use of skills or spells.\e}\e}\n※In auto mode,\eHP recovery and status treatment actions will be taken, but no other support actions will be performed\e{\e{")
     create_command_window
     create_tactics_window
   end

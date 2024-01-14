@@ -291,7 +291,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   #--------------------------------------------------------------------------
   def draw_remove_item(x, y, ary, hide)
     change_color(system_color)
-    draw_text(x, y, 48, line_height, "解除")
+    draw_text(x, y, 48, line_height, "Removes")
     draw_remove(x + 52, y, ary, hide)
   end
   #--------------------------------------------------------------------------
@@ -299,7 +299,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   #--------------------------------------------------------------------------
   def draw_add_item(x, y, ary)
     change_color(system_color)
-    draw_text(x, y, 48, line_height, "付加")
+    draw_text(x, y, 48, line_height, "Adds")
     draw_add(x + 52, y, ary)
   end
   #--------------------------------------------------------------------------

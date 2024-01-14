@@ -547,12 +547,12 @@ class Window_LearnResult < Window_Base
   def draw_skill_name(skill, point, x, y)
     return unless skill && point
     text_size = skill.name.size
-    result = @category == :learn ? "Remember?":"Lvアップさせますか"
+    result = @category == :learn ? "Learn?":"Lvアップさせますか"
     change_color(normal_color)
     draw_text(x + 4, y, contents_width, line_height, "#{Vocab::ap} #{point} Consume")
     draw_icon(skill.icon_index, x + 12, y + line_height)
     draw_text(x + 36, y + line_height, text_size * 20, line_height, skill.name)
-    draw_text(x - 4, y + line_height, contents_width, line_height, "#{result}？", 2)
+    draw_text(x - 4, y + line_height, contents_width, line_height, "#{result}", 2)
   end
 end
 

@@ -117,7 +117,7 @@ class Window_SummonStatus < Window_Selectable
       draw_heal_rate(160, line_height * 11)
       draw_next_skills(50, line_height * 12)
     when 1
-      ext = @actor.woman? ? nil : "魅了"
+      ext = @actor.woman? ? nil : "Charm"
       draw_guard_state(60, line_height * 6, ext)
       draw_magic_elements(180, line_height * 6)
     when 2
@@ -137,7 +137,7 @@ class Window_SummonStatus < Window_Selectable
   def draw_next_skills(x, y)
     #change_color(power_up_color)
     change_color(next_color)
-    draw_text(x + 8, y, 190, line_height, "NEXT習得スキル")
+    draw_text(x + 8, y, 190, line_height, "NEXT Skill")
     draw_skills(x + 8, y, 190) if @actor
   end
   #--------------------------------------------------------------------------
@@ -157,7 +157,7 @@ class Window_SummonStatus < Window_Selectable
   #--------------------------------------------------------------------------
   def draw_heal_rate(x, y)
     change_color(system_color)
-    draw_text(x + 4, y, 80, line_height, "回復率")
+    draw_text(x + 4, y, 80, line_height, "Recovery")
     draw_current_rate(x + 44, y, 84)
   end
   #--------------------------------------------------------------------------
@@ -246,7 +246,7 @@ class Window_SummonStatus < Window_Selectable
   # ○ ボーナスの種類の描画
   #--------------------------------------------------------------------------
   def draw_bonus(actor, x, y)
-    b_name = $game_switches[FAKEREAL::LIBERATE_OPACITY] ? "魔力吸収率100%ボーナス" : "ボーナス"
+    b_name = $game_switches[FAKEREAL::LIBERATE_OPACITY] ? "100% Magic Absorb" : "Bonus"
     draw_bonus_name(b_name, x, y)
     change_color(normal_color)
     draw_text_ex(x + 4, y + line_height, actor.bonus_text)
@@ -795,7 +795,7 @@ end
 class Window_Help < Window_Base
   def set_summon_text(item)
     #set_text(item ? item.description : "戦闘開始時に召喚するサーヴァントを選択して下さい。\n※\e}キーボードAでスキルの確認、Sで#{Vocab::rune}のセット、Dでステータス表示\e{")
-    set_text("戦闘開始時に召喚するサーヴァントをスロットにセットして下さい。\n\e}※\ekb[a]でスキルの確認、\ekb[s]で#{Vocab::rune}のセット、\ekb[d]でステータス表示\e{")
+    set_text("Please set the Servant to be summoned at the start of battle \nin the slot.\e}※\ekb[a] to check skills, \ekb[s] to set #{Vocab::rune}, \n\ekb[d] to display status\e{")
   end
 end
 
@@ -944,7 +944,7 @@ class Window_SummonName < Window_Base
   #--------------------------------------------------------------------------
   def draw_name(x, y)
     change_color(system_color)
-    draw_text(x, y, contents_width, line_height, "召喚スロット")
+    draw_text(x, y, contents_width, line_height, "Summon Slots")
   end
   #--------------------------------------------------------------------------
   # ● リフレッシュ

@@ -234,19 +234,19 @@ end
 
 module SummonSystem
   BONUS_TEXT = Hash[
-    5 => "\e}氷・闇の術適正＋２０：弱点属性帳消し\n氷・闇耐性＋：「\edb[s,545]」の魅了確率＋\e{",#アネモネ
-    6 => "物理与ダメージ１．２倍\n「\ei[50]」弱体完全ガード",#フェンサー
-    7 => "\epr[0]１．２倍\nスキル「\edb[s,307]」の復活時ＨＰ１００％",#ディフェンダー
-    8 => "回復の術適正＋１０\n\epr[1]１．２倍",#ヒーラー
-    9 => "炎・氷・雷の術適正＋１０\n\epr[1]１．２倍",#エレメ
-    10 => "回避率＋５・魔法回避率:＋１０\n\e}\epr[6]１．２倍：盗みの基本成功率１．５倍\e{",#シーフ
-    11 => "\epr[0]・\epr[1]１．０５倍\n全ダメージ１０％軽減",#バチェラー
-    12 => "炎の術適正＋２０：光の術適正＋５\n氷ダメージ軽減",#イフリート
-    13 => "炎ダメージ軽減\n\epr[2]・\epr[6]１．２倍",#フェンリル
-    14 => "氷・光ダメージ微軽減\n雷の術適正＋２０",#ヌエ
-    15 => "光の術適正＋２０：回復の術適正＋５\n闇ダメージ軽減",#ユニコーン
-    16 => "闇の術適正＋２０\n光・\edb[el,7]ダメージ軽減",#バイコーン
-    17 => "\edb[st,2]、\edb[st,7]無効・その他状態耐性(中)\n光・闇ダメージ微軽減",#ニーズヘッグ
+    5 => "Ice/Dark Magic Aptitude +20: Negates weakness element\nIce/Dark Resistance +: Charm chance increase for '\edb[s,545]'",#Anemone
+    6 => "Physical Damage Dealt 1.2x\n'\ei[50]' Full Ailment Guard",#Fencer
+    7 => "\epr[0] 1.2x\nHP 100% on revival with skill '\edb[s,307]'",#Defender
+    8 => "Healing Magic Aptitude +10\n\epr[1] 1.2x",#Healer
+    9 => "Fire/Ice/Thunder Magic Aptitude +10\n\epr[1] 1.2x",#Elem
+    10 => "Evasion Rate +5; Magic Evasion Rate +10\n\e}\epr[6] 1.2x: Base success rate of stealing 1.5x\e{",#Thief
+    11 => "\epr[0]・\epr[1] 1.05x\nAll Damage Reduced by 10%",#Bachelor
+    12 => "Fire Magic Aptitude +20: Light Magic Aptitude +5\nIce Damage Reduction",#Ifrit
+    13 => "Fire Damage Reduction\n\epr[2]・\epr[6] 1.2x",#Fenrir
+    14 => "Ice/Light Damage Slight Reduction\nThunder Magic Aptitude +20",#Nue
+    15 => "Light Magic Aptitude +20: Healing Magic Aptitude +5\nDark Damage Reduction",#Unicorn
+    16 => "Dark Magic Aptitude +20\nLight & \edb[el,7] Damage Reduction",#Baikorn
+    17 => "\edb[st,2], \edb[st,7] Nullification & Other Status Resistances (Medium)\nLight & Dark Damage Slight Reduction",#Nidhogg
   ]
 
   HEAL_ITEM = "<サーヴァント回復>"  # サーヴァントの回復アイテムノートコメント
