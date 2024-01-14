@@ -1,1034 +1,999 @@
 module Quest
   
-  MAIN = Hash[
-               "OP-01" => ["序章", "00", 
-"魔法王国サジタリーズに仕える
-宮廷魔術師のLunariaは
-同僚のShirley、Estiaと共に
-魔物が異常発生したという遺跡の調査へ
-向かう準備をしていた。"],
-               
-               "OP-02" => ["序章", "00", 
-"宮廷魔術師の先輩であるLiliの指示の下
-遺跡へ転移したLunaria達。
-遺跡を探索していると最下層で
-魔物の発生源である魔法陣を発見する。
+    MAIN = Hash[
+        "OP-01" => ["Preface", "00", 
+"In the magical kingdom of Sagittaries
+the court magician Lunaria,
+along with her colleagues Shirley and Estia,
+were preparing to investigate the ruins
+where a surge of monsters has been reported."],
 
-皆で魔法陣を無力化した次の瞬間
-新たな魔法陣が発動し、Lunaria達は謎の男に
-魔力を奪われ、意識を失ってしまう。
+        "OP-02" => ["Preface", "00", 
+"Under the direction of their senior court magician Lili,
+Lunaria and her team teleported to the ruins.
+As they explored the deepest layer,
+they found a magical circle, the source of the monsters.
 
-団長のMillayに救出され、次に目が覚めた時
-そこは城のベッドの上だった。
-そこでLunariaは、Marianaから告げられる。
+The moment they neutralized the magic circle,
+a new one activated, and Lunaria and the others
+were robbed of their magical power by a mysterious man,
+and they lost consciousness.
 
-奪われた魔力は、もう元には
-戻らないかもしれないと…"], # 最大１５行 ２３文字
-               
-               "OP-03" => ["序章", "00", 
-"古の魔神を討伐した際に用いられた
-５つの宝玉の力を借りれば皆の失われた魔力を
-元に戻せるかもしれないと話すMariana。
+They were rescued by the leader Millay, and when Lunaria awoke,
+she was back on the bed in the castle.
+It was then that Mariana told her.
 
-それを聞いた女王Dianaは
-Lunariaに５つの宝玉を集めるように命じる。
-最初に目指すのは\eC[8]サジタリーズの南\ec[0]に位置する
-森の奥にある遺跡。
+The stolen magic power may
+never return to its original state..."], # Maximum 15 lines 23 characters
 
-Marianaから、失った魔力を補う術として
-\eC[8]サキュバスの秘術\ec[0]と呼ばれる力を
-受け取り、城を後にするLunaria。
+        "OP-03" => ["Preface", "00", 
+"Mariana spoke of a possibility to restore the lost magic power
+by borrowing the strength of five jewels used
+to defeat ancient demons.
 
-―こうしてLunariaの宝玉集めの旅が始まった―"],
-               
-               "01-01" => ["第一章", "01", 
-"サジタリーズの城下町の南に位置するリゼルの森。
+Hearing this, Queen Diana commanded Lunaria
+to collect the five jewels.
+The first one was headed for a ruin located deep in a forest
+to the \eC[8]south of Sagittaries\ec[0].
 
-一つ目の宝玉は
-その\eC[8]森の最奥の遺跡\ec[0]にあるという。
-Lunariaは宝玉を求め森の奥を目指す。"],
+From Mariana, Lunaria received a power called
+the \eC[8]Succubus's Secret Art\ec[0] as a means to
+compensate for her lost magic power, and she left the castle.
 
-               "01-02" => ["第一章", "01", 
-"リゼルの森の途中にある村 ロべで一晩休息を
-取ったLunariaは、村に滞在する宮廷魔術師の
-仲間から南の森には強力な魔物が
-住み着いているかもしれないという情報を得る。
+―Thus began Lunaria's journey to collect the jewels―"],
 
-森の奥の遺跡手前にいたアーマードホーンを
-倒したLunariaは遺跡へと向かったが、
-遺跡の扉には何かの仕掛けが施してあり
-簡単に中に入れそうになかった。
+        "01-01" => ["Chapter One", "01", 
+"In the Rizel Forest located south of Sagittaries' castle town,
 
-魔導通信機でMarianaに連絡を取ると\eC[8]そういう時は
-近くの村や町で情報を集めるといい\ec[0]と言われる。
+the first jewel is said to be in a ruin at the
+\eC[8]heart of the forest\ec[0].
+Lunaria set out deep into the forest in search of the jewel."],
 
-Lunariaは遺跡について何か知っていないか
-\eC[8]ロべの村長\ec[0]を訪ねる事にした。
+        "01-02" => ["Chapter One", "01", 
+"After resting for the night in the village of Robe located
+partway through Rizel forest, Lunaria learned from her fellow
+court magicians staying in the village that powerful monsters might
+reside in the southern forest.
+
+Having defeated the Armored Horn in front of the
+ruins deep in the forest, Lunaria approached the ruins,
+only to find that its doors were rigged with some mechanism
+making them not so easy to enter.
+
+When she contacted Mariana via magic communication,
+she was advised to \eC[8]gather information from nearby villages or towns
+when such situations arise\ec[0].
+
+Lunaria decided to ask the \eC[8]village chief of Robe\ec[0]
+if he knew anything about the ruins.
 "],
 
-               "01-03" => ["第一章", "01", 
-"ロべの村長から遺跡へ入るための石板を受け取り
-無事 遺跡の扉を開ける事に成功する。
+        "01-03" => ["Chapter One", "01", 
+"Receiving a slate to enter the ruins from the chief of Robe village,
+Lunaria successfully opened the doors to the ruins.
 
-魔物の巣喰う遺跡内部を進み遂に一つ目の宝玉を
-手に入れたLunaria。その時ちょうどMarianaから
-連絡が入り次の宝玉がフリゼニア神殿と
-九条迷宮にある事を教えられる。
+Having made her way through the monster-infested interiors,
+Lunaria finally obtained the first jewel. Right then, Mariana
+contacted her to reveal that the next jewels were located
+in the Fritzenia Temple and the Kujou Labyrinth.
 
-どちらも\eC[8]城下町から南西にあるグレア洞窟\ec[0]を
-抜ける必要がある為、Lunariaは一先ず
-洞窟を抜けた先の\eC[8]ラグラス\ec[0]という町を目指す事に。
+Since both are located beyond the \eC[8]Grea Cave to the southwest of
+the castle town\ec[0], Lunaria decides to head towards the town of
+\eC[8]Raglus\ec[0], just past the cave.
 
-しかし、宝玉を黒衣の男が狙っている事を
-Lunariaはまだ知らずにいた…
+However, Lunaria was still unaware that the jewels were
+being targeted by a man in a black coat...
 "],
 
-               "02-01" => ["第二章", "02", 
-"グレア洞窟を抜けラグラスに到着したLunaria。
+        "02-01" => ["Chapter Two", "02", 
+"Having passed through Grea Cave, Lunaria arrived in Raglus.
 
-次の目的地であるフリゼニア神殿と九条迷宮の
-あるティモル山とトキワについての情報を得る為
-\eC[8]酒場で情報を集める\ec[0]事に。
+In order to gather information on her next destinations,
+the Fritzenia Temple and Kujou Labyrinth located in Mt. Timor and Tokiwa,
+she decides to \eC[8]collect information at the tavern\ec[0].
 "],
 
-               "02-02" => ["第二章", "02", 
-"ティモル山では崖崩れが起き、トキワへの船は
-運航中止という事でラグラスで足止めを喰らう
-Lunaria。そんな時、夫を探す\eC[8]Sonia\ec[0]と名乗る
-人妻戦士と出会う。
+        "02-02" => ["Chapter Two", "02", 
+"With a landslide on Mt. Timor and the boat to Tokiwa suspended from operation,
+Lunaria was stuck in Raglus. It was then that she met a married warrior woman
+named \eC[8]Sonia\ec[0], who was searching for her husband.
 
-彼女が町の\eC[8]南の洞窟\ec[0]をねぐらにしている盗賊を
-退治しに向かったというので、彼女の事が
-気になったLunariaは後を追う。
+Learning that Sonia had gone to defeat bandits nesting in a
+\eC[8]cave to the south of the town\ec[0], Lunaria, concerned for her,
+decided to follow her.
 
-洞窟前でSoniaと合流し、二人は協力して
-\eC[8]盗賊退治\ec[0]をする事になった。
+Joining forces with Sonia at the entrance to the cave,
+the two agreed to collaboratively \eC[8]eliminate the bandits\ec[0].
 "],
 
-               "02-03" => ["第二章", "02", 
-"洞窟の奥で隠し通路を発見すると、その先には
-盗賊達のアジトがあった。
+        "02-03" => ["Chapter Two", "02", 
+"In the depths of the cave, upon discovering a hidden passage,
+beyond it was the hideout of the thieves.
 
-二人はアジトに乗り込み、盗賊の一味を退治して
-捕まっていた女性達を助ける事に成功する。
-Soniaは助けた女性達に
-夫の事について聞くが収穫は無かった…
+The two stormed the hideout, managed to defeat the gang of thieves,
+and succeeded in rescuing the captive women.
+Sonia asked the rescued women about her husband,
+but to no avail...
 
-盗賊との戦いで疲れた二人は
-一旦\eC[8]ラグラスへ戻り宿で一休み\ec[0]する事に。
+Wearied by the battle with the thieves,
+the two decided to return to \eC[8]Lagras and rest at an inn\ec[0] for a while.
 "],
 
-               "02-04" => ["第二章", "02", 
-"町へ戻り一休みした翌日、ティモル山の土砂が
-撤去され山道の封鎖が解かれた事を知る。
+        "02-04" => ["Chapter Two", "02", 
+"After resting in town the next day, they learn that the landslide at Mount Timor
+has been cleared, and the mountain pass is now open.
 
-Soniaはティモル山を越えた先のダリア地方で
-夫の捜索を続けるというので、二人は
-\eC[8]ティモル山\ec[0]の途中まで一緒に行く事にした。
+Sonia continues her search for her husband in the Dalia region beyond
+Mount Timor, and so the two decide to accompany each other
+as far as \eC[8]Mount Timor\ec[0].
 "],
 
-               "02-05" => ["第二章", "02", 
-"山の中腹の分かれ道でSoniaと別れる事に。
+        "02-05" => ["Chapter Two", "02", 
+"They decide to part ways with Sonia at a fork in the middle of the mountain.
 
-Soniaが行方不明の夫と無事に再会出来る事を
-願いながら、Lunariaは\eC[8]山頂の
-フリゼニア神殿\ec[0]を目指す。
+Lunaria heads for the \eC[8]Frozenia Temple\ec[0] atop the mountain,
+hoping that Sonia safely reunites with her missing husband.
 
-彼女とは、また近いうちに会えるような
-そんな不思議な予感がした。
+She had a strange hunch that they would meet again soon.
 "],
 
-               "03-01" => ["第三章", "03", 
-"ティモル山の山頂付近は雪が吹きすさんでいた。
+        "03-01" => ["Chapter Three", "03", 
+"The vicinity of the summit of Mount Timor was swept with snow.
 
-吹雪の中を山頂目指して進んでいくと
-目的地であるフリゼニア神殿へと到着する。
+Proceeding through the blizzard towards the summit,
+she finally arrives at the destination, the Frozenia Temple.
 
-内部にはどうやら自分以外にも
-冒険者が数名いるようだ。
+It seems there are several other adventurers inside,
+besides herself.
 
-他の者に宝玉を取られてしまわないよう
-Lunariaは急ぎ\eC[8]神殿の最上階\ec[0]を目指す。
+To ensure none of the others take the gem,
+Lunaria hurries to the \eC[8]temple's top floor\ec[0].
 "],
 
-               "03-02" => ["第三章", "03", 
-"フリゼニア神殿を攻略し、最上階にて
-守護者を倒し二つ目の宝玉を手に入れる事に
-成功したLunaria。
+        "03-02" => ["Chapter Three", "03", 
+"After conquering the Frozenia Temple and defeating the guardian on the top floor,
+Lunaria successfully secures the second gemstone.
 
-現在判明している\eC[8]三つ目の宝玉のあるトキワ\ec[0]へ
-渡る為、\eC[8]ラグラスから東にある港町の
-セネシオを目指す\ec[0]事に。
+Now, to cross to \eC[8]Tokiva where the third gem is known to be\ec[0],
+she heads for the port town of \eC[8]Senecio to the east of Lagras\ec[0].
 "],
 
-               "03-03" => ["第三章", "03", 
-"港町セネシオでは未だトキワ行きの定期船が
-運航休止のままだった。
+        "03-03" => ["Chapter Three", "03", 
+"At the port town of Senecio, the regular service to Tokiva
+was still suspended.
 
-途方に暮れるLunariaにトキワ出身の\eC[8]Mana\ec[0]と
-名乗る少女が声をかけてくる。
-Manaは、自分に協力する事を約束するなら
-特別な方法でトキワへ連れて行ってくれるという。
+Lunaria, at a loss, is approached by a girl named \eC[8]Mana\ec[0]
+who is from Tokiva.
+Mana promises that if Lunaria helps her,
+she will take her to Tokiva by a special means.
 
-他にトキワへ渡る方法がない事もあり、
-Lunariaは\eC[8]Manaに協力\ec[0]する事を約束し
-\eC[8]トキワへ連れて行ってもらう\ec[0]事となった。
+With no other way to get to Tokiva,
+Lunaria promises to \eC[8]assist Mana\ec[0] and is
+taken to \eC[8]Tokiva\ec[0].
 "],
 
-               "03-04" => ["第三章", "03", 
-"移送方陣でトキワ近くの小島へ転移した二人は
-地下道を進みトキワを目指す。
+        "03-04" => ["Chapter Three", "03", 
+"The two teleport to an island near Tokiva via a transfer matrix
+and make their way through the underground passage towards Tokiva.
 
-トキワでは\eC[8]邪龍\ec[0]と呼ばれる妖怪の封印が
-解けかかっており、これの再封印に
-協力して欲しいという。
+In Tokiva, a monster known as the \eC[8]Evil Dragon\ec[0] is said to be
+on the brink of breaking its seal, and they are asked to
+help reseal it.
 
-邪龍の封印が弱まった影響でトキワの妖怪達が
-狂暴化しているという話を聞いたLunariaは
-大陸の魔物が狂暴化している原因もそれが
-関係しているのではと疑う。
-しかしManaはそれを否定する。
-――むしろ、大陸の方で起きている何かが原因で
-邪龍の封印が弱まっているのではないか――
-と、Manaはそう考えるのだった…
+Lunaria, hearing about the demonization of the creatures in Tokiva
+due to the weakening of the Evil Dragon's seal, suspects it might relate
+to the reason behind the aggressive behavior of the mainland's creatures.
+However, Mana denies this possibility.
+Instead, Mana suspects that something happening on the mainland
+might be the cause of the weakening seal of the Evil Dragon...
 "],
 
-               "04-01" => ["第四章", "04", 
-"地下道を抜け少し進むとすぐに集落が見えた。
+        "04-01" => ["Chapter Four", "04", 
+"Passing through the underground passage, she soon sees a settlement.
 
-そこは巫女達が住む
-\eC[8]常盤国 九条の里\ec[0] と呼ばれる所だった。
+It was called \eC[8]Kunoh Country Kujo Village\ec[0],
+where the shrine maidens live.
 
-Manaの話によると一番奥の屋敷に
-この里の長がいると言うのでまずは里の長に
-挨拶する為\eC[8]一番奥の大きな屋敷\ec[0]を目指す事に。
+According to Mana, the head of the village is in the rearmost residence,
+so the first order of business is to head to the \eC[8]large mansion at the end\ec[0]
+to greet the village head.
 "],
 
-               "04-02" => ["第四章", "04", 
-"屋敷の奥間にて里長のTsukihaと面会するLunaria。
+        "04-02" => ["Chapter Four", "04", 
+"Lunaria meets with the village chief, Tsukiha, in the back room of the mansion.
 
-Tsukihaは、邪龍の再封印に協力すれば
-宝玉の封印されているという九条迷宮への
-立ち入りを許可してくれると約束してくれた。
+Tsukiha promises to grant access to the sealed Kujo Labyrinth, where the gem is,
+if Lunaria helps with the resealing of the Evil Dragon.
 
-Tsukihaへの面会を済ませたLunariaは
-邪龍再封印の為、\eC[8]Manaと共に里の北にある
-封印の洞窟\ec[0]を目指すのだった。
+After meeting with Tsukiha, Lunaria, along with Mana,
+heads towards the \eC[8]Seal Cave\ec[0] to the north of the village to reseal the Evil Dragon.
 "],
 
-               "04-03" => ["第四章", "04", 
-"封印の洞窟の途中でヤマコと呼ばれる妖怪と
-遭遇する二人。ヤマコは里の巫女達を攫い
-監禁して孕むまで犯すのだという。
+        "04-03" => ["Chapter Four", "04", 
+"The two encounter monsters called Yamako on the way through the Seal Cave.
+The Yamako have been kidnapping shrine maidens and imprisoning them.
 
-なんとか二体のヤマコを退治した二人は
-監禁されていた巫女達を救出し、再び\eC[8]洞窟の
-最奥\ec[0]を目指す。
+The two manage to defeat the two Yamako and rescue
+the captive shrine maidens, resuming their journey to the \eC[8]deepest part of the cave\ec[0].
 "],
 
-               "04-04" => ["第四章", "04", 
-"洞窟の奥地、封印の地で邪龍の影を倒し
-再封印に成功したLunariaとMana。
+        "04-04" => ["Chapter Four", "04", 
+"In the depths of the cave, at the site of sealing, Lunaria and Mana defeat
+the shadow of the Evil Dragon and successfully reseal it.
 
-Lunariaは約束通り\eC[8]九条迷宮\ec[0]への立ち入りを
-許可して貰える事となった。
+As promised, Lunaria is granted access to the \eC[8]Kujo Labyrinth\ec[0].
 
-九条迷宮へは\eC[8]里から南の川を渡り、更に南下した
-先の港町サカイから船で渡る\ec[0]のだという。
+To get to the Kujo Labyrinth, they need to cross the river to the south of the village
+and head further south to the port town of Sakai, where they will
+take a boat\ec[0].
 
-名残を惜しみつつManaに別れを告げた
-Lunariaは、一人宝玉を求め南へ旅立つのだった。
+With a heavy heart, Lunaria bids farewell to Mana
+and sets out alone seeking the gemstone to the south.
 "],
 
-               "04-05" => ["第四章", "04", 
-"サカイから九条迷宮のある孤島へと渡った
-Lunaria。九条迷宮内部は複雑に入り組み、
-多くの仕掛けが施されていた。
+        "04-05" => ["Chapter Four", "04", 
+"Lunaria crosses from Sakai to the solitary island where the Kujo Labyrinth is located.
+The interior of the Kujo Labyrinth is complex and full of mechanisms.
 
-全ての仕掛けを解き、最深部で守護者を倒した
-Lunariaは三つ目の宝玉を手に入れる事に
-成功する。そこへMarianaから連絡が入り
-残り二つの宝玉がサジタリーズの隣国である
-ダリア王国方面に封印されている事が判明する。
+After solving all the mechanisms and defeating the guardian in the innermost part,
+Lunaria succeeds in obtaining the third gemstone. Then, Mariana contacts her,
+revealing that the remaining two gemstones are sealed near the kingdom of Dalia,
+neighboring Sagittarius.
 
-ダリアとの関所を通過する為の\eC[8]通行手形\ec[0]を貰うため
-Lunariaは一路\eC[8]サジタリーズへ戻る\ec[0]事となった。
+To pass through the checkpoint to Dalia, Lunaria heads back to
+\eC[8]Sagittarius to get a \eC[8]pass\ec[0].
 "],
 
-               "05-01" => ["第五章", "05", 
-"久しぶりにサジタリーズへと戻ってきたLunaria。
+        "05-01" => ["Chapter Five", "05", 
+"Lunaria returns to Sagittarius after a long while.
 
-Marianaから通行手形を貰うため、
-城内にある\eC[8]Marianaの研究室\ec[0]を目指す。
+To receive a pass from Mariana,
+she heads to \eC[8]Mariana's research lab\ec[0] inside the castle.
 "],
 
-               "05-02" => ["第五章", "05", 
-"研究室でMariana、Diana、Millayと会い
-\eC[8]通行手形\ec[0]とダリアの女王Filicaへ宛てた\eC[8]手紙\ec[0]を
-受け取ったLunaria。
+        "05-02" => ["Chapter Five", "05", 
+"In the laboratory, Lunaria meets with Mariana, Diana, and Millay,
+and receives a \eC[8]pass\ec[0] and a \eC[8]letter\ec[0] addressed to Queen Filica of Dalia.
 
-残り２つの宝玉はダリア王都カクタスより北西の
-\eC[8]フォリア遺跡\ec[0]とダリア王国東のレオンタイス砂漠を
-越えた先にある\eC[8]万魔の塔\ec[0]に封印されているという。
+The remaining two gemstones are said to be sealed northwest of the Dalia capital, Cactus, in
+the \eC[8]Folia Ruins\ec[0], and beyond the Leontes Desert to the east of the Dalia kingdom, in
+the \eC[8]Tower of Babel\ec[0].
 
-ダリア王国を目指し、Lunariaは\eC[8]ティモル山を
-西に抜けた先\ec[0]にある二国間の\eC[8]関所\ec[0]へと向かった。
+Aiming for the Dalia kingdom, Lunaria travels to the \eC[8]checkpoint\ec[0] between the two nations
+located just west of \eC[8]Mount Timor\ec[0].
 "],
 
-               "05-03" => ["第五章", "05", 
-"ティモル山を西に抜け北上すると国境の
-関所が見えた。関所のダリア王国側の兵士に
-通行手形を見せると問題なく通行を許可される。
+        "05-03" => ["Chapter Five", "05", 
+"After passing through Mount Timor to the west and heading north,
+Lunaria sees the border checkpoint. When she shows her pass to the soldier on the Dalia side,
+he allows her to pass without any issues.
 
-兵士の話では関所を出て\eC[8]道なりに北\ec[0]へ行くと
-\eC[8]ハイドラ湿原\ec[0]があり、そこを越えると
-\eC[8]王都カクタス\ec[0]に着くという。
+According to the soldier, if you go \eC[8]straight north from the checkpoint\ec[0],
+you will come across the \eC[8]Hydra Marsh\ec[0], and beyond that lies the
+\eC[8]capital, Cactus\ec[0].
 
-関所から湿原へ行く途中に\eC[8]ネメシア\ec[0]と呼ばれる
-町があるが、どうやら\eC[8]あまり治安は良くない\ec[0]らしい。
+On the way from the checkpoint to the marsh there is a town called \eC[8]Nemecia\ec[0],
+but it seems the \eC[8]public order is not very good\ec[0].
 
-補給等でどうしてもという場合以外は
-立ち寄らない方が賢明だろう。
+It would be wise not to stop there unless absolutely necessary for supplies.
 "],
 
-#----------------------------------------------Aルート
+#----------------------------------------------A Route
 
-               "05-04" => ["第五章", "05", 
-"無法街ネメシアでスリにあい、Dianaから
-預かった大切な手紙を盗まれてしまったLunaria。
-手紙を取り返すべく男の家へ行くと、手紙を返す
-代わりに身体を要求される。
+        "05-04" => ["Chapter 5", "05", 
+"In the lawless streets of Nemesis, Lunaria is pickpocketed
+and the precious letter entrusted to her by Diana
+is stolen. In an attempt to retrieve the letter, Lunaria
+heads to the man's house, where he demands her body
+in exchange for the letter.
 
-男に犯されたLunariaは手紙を手に家を
-飛び出すが、その直後 男の前に
-煽情的な格好をした女の魔物が姿を表す。
+After being violated by the man, Lunaria takes the
+letter and flees the house, but shortly thereafter, a
+demonic woman in seductive attire appears before the man.
 
-\eC[8]同族の匂い\ec[0]につられて来たという魔物は
-男の魂を刈り取り、愉快そうに笑う。
+\eC[8]Attracted by the scent of her own kind\ec[0], the demon
+harvests the man's soul and laughs with delight.
 
-――\eC[8]淫魔の女王の復活\ec[0]――
-その言葉を残し、魔物は闇へと消えていった…
+---\eC[8]The Resurrection of the Queen of Lust\ec[0]---
+Leaving those words behind, the demon vanishes into the darkness...
 "],
 
-               "05-05" => ["第五章", "05", 
-"雨の降る湿原を抜けるとすぐ先には王都が見えた。
-サジタリーズよりも大きな城下に
-圧倒されつつも、まずは砂漠への\eC[8]許可証を
-発行してくれる場所\ec[0]を探す事に。
+        "05-05" => ["Chapter 5", "05", 
+"After passing through the rainy marshes, the royal capital
+comes into view just ahead. Overwhelmed by the size of the city
+which is larger than Sagittarius, Lunaria first sets out to find
+the place where she can get the \eC[8]permit\ec[0] for the desert.
 "],
 
-               "05-06" => ["第五章", "05", 
-"王都へ入ってすぐの役所で許可証の申請を
-したLunaria。許可証の発行には少し時間が
-かかるというのでその間にフォリア遺跡を
-探索する事に。
+        "05-06" => ["Chapter 5", "05", 
+"Lunaria, having entered the royal capital, applies for the permit
+at the local government office. Since it will take some time for
+the permit to be issued, she decides to explore the Folia Ruins
+in the meantime.
 
-フォリア遺跡は\eC[8]王都から北西に進んだ場所\ec[0]にある。
-準備が出来たら出発しよう。
+The Folia Ruins are located to the \eC[8]northwest of the royal capital\ec[0].
+Let's set out as soon as preparations are complete.
 "],
 
 
 #-----------------------------------------------
 
-               "06-01" => ["第六章", "06", 
-"山間の村ビオーサを抜けると森の奥に
-フォリア遺跡があった。
+        "06-01" => ["Chapter 6", "06", 
+"Passing through the mountain village of Viosa, the Folia Ruins
+are located deep in the forest.
 
-見た所、他の冒険者などは見当たらないようだが
-特に許可なく入れる遺跡の為 うかうかしていると
-誰かに宝玉を取られてしまうかもしれない。
-
-なるべく急いで宝玉の間へと急ごう。
+It appears there are no other adventurers around, but since the
+ruins are open to enter without special permission, there's
+a risk that someone might take the jewel. We should hurry to
+the chamber where the jewel is kept.
 "],
 
 #-----------------------------------------------TRUE
 
-               "06-02" => ["第六章", "06", 
-"Lunariaがフォリア遺跡へ入るとその後を追う
-怪しい影が二つ…
+        "06-02" => ["Chapter 6", "06", 
+"As Lunaria enters the Folia Ruins, two suspicious shadows
+follow her...
 
-一人はLunaria達の魔力を奪ったローブの男…
-そしてもう一人は謎の淫魔…
+One is a robed man who has stolen Lunaria and her companions' magical power...
+And the other is a mysterious succubus...
 
-利害の一致した二人は手を組み、暗躍を始める。
+With their interests aligned, the two join forces and begin to scheme in secret.
 
-だがその事をまだLunariaは
-知る由もなかった…
+But Lunaria has no way of knowing
+about this yet...
 "],
 
-               "06-03a" => ["第六章", "06", 
-"遺跡の最深部で守護者を倒し４つ目の宝玉を
-手に入れる事に成功したLunaria。
+        "06-03a" => ["Chapter 6", "06", 
+"Lunaria successfully defeats the guardian in the deepest part of the ruins
+and secures the fourth jewel.
 
-残る宝玉はあと一つ…レオンタイス砂漠を
-越えた先にある万魔の塔に封印されている。
+Only one jewel remains... It's sealed in the Tower of All Demons, beyond
+the Leontice Desert.
 
-遺跡へ行く前に申請していた砂漠へ入る為の
-許可証がそろそろ発行されている頃だ。
+The permit to enter the desert, which she had applied for before heading
+to the ruins, should be issued soon.
 
-王都カクタスへ戻り、\eC[8]役所で許可証を受け取ろう\ec[0]。
+It's time to return to the royal capital, Cactus, and \eC[8]pick up the permit
+from the office\ec[0].
 "],
 
 #-----------------------------------------------NORMAL
 
-               "06-03b" => ["第六章", "06", 
-"フォリア遺跡の最深部へ入ると、既に守護者は
-倒されており宝玉も見当たらなかった。
+        "06-03b" => ["Chapter 6", "06", 
+"Upon entering the deepest part of the Folia Ruins, the guardian was
+already defeated and the jewel was nowhere to be found.
 
-魔力の残滓を調べてみると、戦いがあってから
-まだそんなに時間は経っていないようだった。
+Investigating the remnants of magic power, it doesn't seem like much time
+has passed since the battle.
 
-Lunariaは自分以外の冒険者が遺跡に
-行っていないか\eC[8]ビオーサで聞き込み\ec[0]を
-する事にした。
+Wondering if any other adventurers have visited the ruins, Lunaria decides
+to \eC[8]make inquiries in Viosa\ec[0].
 "],
 
-               "06-04-1" => ["第六章", "06", 
-"ビオーサで聞き込みをすると宝玉を持ってると
-思われる女冒険者が王都で宝玉を売って
-お金にすると言っていたらしい。
+        "06-04-1" => ["Chapter 6", "06", 
+"After making inquiries in Viosa, it seems that a female adventurer who is
+believed to have the jewel has mentioned that she would sell the jewel for money
+in the royal capital.
 
-カクタスの冒険者ギルドでその事を聞き込むと
-その女冒険者と出会う事が出来た。しかし
-宝玉は既に彼女の手元にはなく富豪に売った
-後だった。
-Lunariaは富豪に直接交渉する為
-\eC[8]富裕区の北東\ec[0]にある\eC[8]ゴード\ec[0]という人物の
-屋敷を訪ねる事に…
+By asking around the Adventurers' Guild in Cactus, Lunaria is able to meet with
+the woman. However, the jewel is no longer in her possession; she had already
+sold it to a wealthy man.
+
+In order to negotiate directly with the wealthy man, Lunaria decides to
+visit the mansion of a person named \eC[8]Gorde\ec[0] in 
+the \eC[8]northeast of the affluent district\ec[0]...
 "],
 
-               "06-04-2" => ["第六章", "06", 
-"富豪ゴードの屋敷へ赴き宝玉を
-譲ってもらえないかお願いすると、知り合いを
-呼んで\eC[8]自分と３Ｐ\ec[0]をしてくれれば譲るという
-驚きの提案をされる。
+        "06-04-2" => ["Chapter 6", "06", 
+"Upon visiting the mansion of the wealthy Gorde to ask if he would be willing to
+hand over the jewel, Lunaria is met with a surprising proposal – if she would agree
+to a \eC[8]threesome with him and an acquaintance\ec[0] of his, he would give her the jewel.
 
-その提案を承諾してくれそうな知り合い…
-Lunariaは真っ先にMarianaの事を思い浮かべ
-Marianaへ事情を説明する為、
-\eC[8]サジタリーズ城\ec[0]へと戻るのだった…
+Thinking of an acquaintance who might accept his proposal...
+Lunaria immediately thinks of Mariana and decides to return to
+the \eC[8]Sagittarius Castle\ec[0] to explain the situation to Mariana...
 "],
 
 #-----------------------------------------------BAD
-               "06-05a" => ["第六章", "06", 
-"Marianaに事情を説明して協力してもらい
-無事に富豪から光の宝玉を譲り受けたLunaria。
+        "06-05a" => ["Chapter 6", "06", 
+"Having explained the situation to Mariana and secured her cooperation,
+Lunaria successfully receives the Jewel of Light from the wealthy man.
 
-快楽に耽る昨夜の自分に戸惑いながらも
-使命を忘れる事なく、次なる目的の為
-\eC[8]許可証\ec[0]を受け取りに\eC[8]役所\ec[0]へ向かう事に。
+While puzzled by her indulgence in pleasure the night before, she does not forget
+her mission and decides to head to the \eC[8]office\ec[0] to pick up the
+\eC[8]permit\ec[0].
 
-そのLunariaを、ネメシアに現れた
-謎の淫魔が怪しい瞳で見つめていた…
+The mysterious succubus that appeared in Nemesis watches Lunaria with
+sinister eyes...
 
-今回の事は全て、彼女が仕組んだ事
-だったのだ。
+It turns out that all of this was orchestrated by her.
 "],
 #-----------------------------------------------
 
-               "06-05b" => ["第六章", "06", 
-"Marianaに事情を説明して協力してもらい
-無事に富豪から光の宝玉を譲り受けたLunaria。
+        "06-05b" => ["Chapter 6", "06",
+"After explaining the circumstances to Mariana and getting her cooperation,
+Lunaria successfully obtained the Light Gem from the wealthy individual.
 
-快楽に耽る昨夜の自分に戸惑いながらも
-使命を忘れる事なく、次なる目的の為
-\eC[8]許可証\ec[0]を受け取りに\eC[8]役所\ec[0]へ向かう事に。
+Feeling puzzled about her indulgence from the night before,
+she did not forget her mission, and for her next objective,
+she decided to head to the \eC[8]office\ec[0] to pick up a \eC[8]permit\ec[0].
 "],
 
-               "06-06" => ["第六章", "06", 
-"役所にて許可証を受け取った時に確認すると
-万魔の塔へ入る為にはダリアの女王の
-許可が必要だと教えられた。
+        "06-06" => ["Chapter 6", "06",
+"Upon receiving the permit at the office, it was confirmed that
+permission from the Queen of Dalia was necessary
+to enter the Tower of Demons.
 
-Lunariaは女王へ謁見し協力を仰ぐ為
-\eC[8]王都の階段を上がった先\ec[0]にある
-\eC[8]ダリアの王城\ec[0]へと赴くことにした。
+Lunaria decided to visit the \eC[8]Dalia Royal Castle\ec[0], located at
+the top of the \eC[8]stairs of the royal capital\ec[0], to request an audience 
+with the queen and seek her cooperation.
 "],
 
-               "07-01" => ["第七章", "07", 
-"役所にて許可証を受け取った時に確認すると
-万魔の塔へ入る為にはダリアの女王の
-許可が必要だと教えられた。
+        "07-01" => ["Chapter 7", "07",
+"Upon receiving the permit at the office, it was confirmed that
+permission from the Queen of Dalia was necessary
+to enter the Tower of Demons.
 
-役所を出ると折よく女王が遠征から帰還した
-所だった。Lunariaは女王へ謁見し協力を仰ぐ為
-\eC[8]王都の階段を上がった先\ec[0]にある
-\eC[8]ダリアの王城\ec[0]へと赴くことにした。
+As Lunaria left the office, it happened to be the time when the Queen
+was returning from an expedition. To seek her cooperation and request 
+an audience, Lunaria decided to visit the \eC[8]Dalia Royal Castle\ec[0], 
+located at the top of the \eC[8]stairs of the royal capital\ec[0].
 "],
 
-               "07-02" => ["第七章", "07", 
-"ダリアの女王Filicaに謁見し、Dianaから
-預かった手紙を見せると、何故か私室へと
-案内された。そこで事情を聴いたFilicaは
-万魔の塔へ入るのを許可する代わりに
-\eC[8]ネメシアにあるZepar教\ec[0]という教団を
-調査して欲しいとLunariaにお願いしてくる。
+        "07-02" => ["Chapter 7", "07",
+"After meeting with Queen Filica of Dalia and showing her the letter
+entrusted by Diana, Lunaria was unexpectedly invited to the queen's private chambers.
+After hearing the situation, Filica asked Lunaria to investigate a cult located in 
+\eC[8]Nemesia called the Zepar Church\ec[0] in exchange for permission to enter the Tower of Demons.
 
-なんでも、教団は裏でいかがわしい事をしている
-らしく、その証拠を掴んで欲しいというのだ。
-少し前\eC[8]Sonia\ec[0]が調査に向かったらしいが
-一切の\eC[8]連絡がない\ec[0]というので心配になった
-Lunariaは調査を引き受ける事にした。
+Apparently, the cult was engaged in questionable activities behind the scenes, 
+and Filica wanted Lunaria to gather evidence of this. Lunaria had learned that 
+\eC[8]Sonia\ec[0] had headed there to investigate some time ago but had not 
+made any \eC[8]contact\ec[0] ever since, which worried her, so she decided to 
+accept the task of investigating.
 "],
 
-               "07-03" => ["第七章", "07", 
-"ネメシアで情報を集めるとSoniaが
-Zepar教に入信したという話を耳にする。
-確かめる為Zepar教本部へ行ったLunariaは
-その場でSoniaと再会する。しかし彼女の様子が
-おかしい事に気付いたLunariaは教祖の男の勧誘を
-断り一旦引き返す事に。
+        "07-03" => ["Chapter 7", "07",
+"Gathering information in Nemesia, Lunaria hears that Sonia joined
+the Zepar Church. To check the facts, Lunaria goes to the headquarters
+of the Zepar Church, where she meets Sonia on the spot. However, noticing
+something odd about her behavior, Lunaria declines the cult leader's invitation
+and decides to retreat for the moment.
 
-なんとか本部内に忍び込めないか考えていた所
-本部の建築に関わったという大工の男に出会う。
+While contemplating how to sneak into the church's headquarters,
+she meets a carpenter who was involved in the construction of the building.
 
-その男が言うにはハイドラ湿原の入口辺りにある
-地下水路への入口と、教団本部内の教祖の部屋は
-繋がっているのだという。
-Lunariaは急ぎ\eC[8]ハイドラ湿原\ec[0]へ行き、
-\eC[8]地下水路への入口\ec[0]を探す事にした。
+According to the man, an entrance to the underground waterway near the entrance
+of Hydra Marsh, and the private room of the cult leader within the headquarters,
+are connected. Lunaria hurries to the \eC[8]Hydra Marsh\ec[0] to find the 
+\eC[8]entrance to the underground waterway\ec[0].
 "],
 
-               "07-04" => ["第七章", "07", 
-"男の言う通り、ハイドラ湿原の入口の石像の
-下には地下水路への入口があり、水路の先は
-教団本部内の教祖の部屋へと繋がっていた。
+        "07-04" => ["Chapter 7", "07",
+"As the man said, there was an entrance to the underground waterway beneath the 
+statue at the entrance of Hydra Marsh, and the waterway led to the private room 
+of the cult leader within the headquarters.
 
-地下水路から上手く教団内に潜入したLunariaは、
-何かいかがわしい事をしているという証拠を
-掴む為、教祖の部屋を捜索する事に。
+Successfully infiltrating the cult from the underground waterway, Lunaria
+starts to search the cult leader's room to find evidence of any questionable 
+activities.
 "],
 
-               "07-05a" => ["第七章", "07", 
-"教祖の部屋には魔映水晶と呼ばれる映像記録用の
-水晶があり、そこに全てが記録されていた。
-Soniaは\eC[8]洗脳\ec[0]により言い成りにされていたのだ。
-その水晶を証拠として回収し、脱出しようと
-した所を教祖とSoniaに見つかってしまう。
+        "07-05a" => ["Chapter 7", "07",
+"In the cult leader's room, there was a crystal called the Demon Reflecting Crystal
+used for video recording, and it had recorded everything. Sonia had been made 
+compliant by \eC[8]brainwashing\ec[0]. Taking the crystal as evidence, Lunaria
+attempted to escape but was discovered by the cult leader and Sonia.
 
-しかしなんとか二人を退けたLunariaは
-この事をFilicaに報告。Zepar教は
-解体される事となった。
+However, Lunaria managed to fend them off and reported the matter to Filica. The 
+Zepar Church was to be disbanded.
 "],
 
-               "07-05b" => ["第七章", "07", 
-"教祖の部屋には魔映水晶と呼ばれる映像記録用の
-水晶があり、そこに全てが記録されていた。
-Soniaは\eC[8]洗脳\ec[0]により言い成りにされていたのだ。
-その水晶を証拠として回収し、脱出しようと
-した所を教祖とSoniaに見つかってしまう。
+        "07-05b" => ["Chapter 7", "07",
+"In the cult leader's room, there was a crystal called the Demon Reflecting Crystal
+used for video recording, and it had recorded everything. Sonia had been made 
+compliant by \eC[8]brainwashing\ec[0]. When attempting to recover the crystal and escape,
+Lunaria was discovered by the cult leader and Sonia.
 
-Soniaを相手に苦戦を強いられたLunariaは
-\eC[8]自らも教祖の洗脳の術に陥落\ec[0]してしまう。
-そうしてSoniaとLunariaを洗脳下においた
-教祖カマラは二人を相手に\eC[8]快楽の宴\ec[0]を
-始めるのだった…
+In the struggle against Sonia, Lunaria was unfortunately subjected to the cult leader's 
+\eC[8]brainwashing\ec[0]. The brainwashed Sonia and Lunaria were then made part of
+the cult leader Kamara's \eC[8]feast of pleasure\ec[0]...
 "],
 
-               "07-06a" => ["第七章", "07", 
-"二人を相手にたっぷり楽しんだカマラの前に
-Lunariaをネメシア到着からずっと尾けていた
-淫魔が姿を現す。二人は顔見知りのようで
-\eC[8]Renno\ec[0]と呼ばれたその淫魔はカマラの事を
-\eC[8]Zepar\ec[0]と呼んでいた。
+        "07-06a" => ["Chapter 7", "07",
+"After thoroughly enjoying himself with the two women, Kamara is confronted 
+by a succubus who had been tailing Lunaria since her arrival in Nemesia. 
+The two appeared to be acquainted, and the succubus, called \eC[8]Renno\ec[0], addressed Kamara
+as \eC[8]Zepar\ec[0].
 
-Lunariaを\eC[8]淫魔の女王の器\ec[0]にしようというRennoと
-自分の所有物として
-傍においておきたいZepar…
+Renno wanted to make Lunaria into the \eC[8]vessel for the Queen of the Succubi\ec[0], while
+Zepar wanted to keep her as his own possession.
 
-二人の意見が交わる事はなく、そして遂にRennoは
-強硬手段に出る。\eC[8]Zeparの魂はRennoの能力に
-よって刈り取られ、跡形もなく消滅\ec[0]してしまった…
+As their opinions did not align, Renno eventually took drastic measures. \eC[8]Zepar's soul
+was harvested by Renno's abilities and was completely obliterated\ec[0]...
 "],
 
-               "07-06b" => ["第七章", "07", 
-"二人を相手にたっぷり楽しんだカマラの前に
-何者かが姿を現し、そして―――
+        "07-06b" => ["Chapter 7", "07",
+"After thoroughly enjoying himself with the two women, Kamara is confronted 
+by someone, and then―――
 "],
 
-               "07-07" => ["第七章", "07", 
-"教祖との情事のあと、目覚めたLunariaの
-洗脳は解けていた。部屋には教祖の男が
-倒れており、何者かに倒されたとみられる。
+        "07-07" => ["Chapter 7", "07",
+"After the encounter with the cult leader, the brainwashed Lunaria awoke,
+with the effect worn off. In the room, the cult leader man was lying
+defeated, seemingly by someone else.
 
-共に洗脳の解けたSoniaを介抱し、
-Lunariaは事の顛末をFilicaに報告。
-魔映水晶が証拠となり教祖の数々の悪事は
-露見、Zepar教は解体される事となった。
+After nursing Sonia back to health, as she too had been released from the brainwashing,
+Lunaria reported the events to Filica. The Demon Reflecting Crystal served as evidence,
+and the cult leader's many misdeeds were exposed, leading to the dissolution of the 
+Zepar Church.
 "],
 
-               "07-08a" => ["第七章", "07", 
-"Zepar教調査のお礼としてLunariaは
-万魔の塔と北の廃坑の探索をFilicaから
-許可される。
+        "07-08a" => ["Chapter 7", "07",
+"As a reward for investigating the Zepar Church, Lunaria receives permission from Filica
+to explore the Tower of Demons and the mines to the north.
 
-王都に残るというSoniaに別れを告げ
-Lunariaは最後の宝玉の眠る場所である
-\eC[8]万魔の塔\ec[0]を目指し、\eC[8]レオンタイス砂漠\ec[0]へ
-足を踏み入れるのだった。
+Bidding farewell to Sonia, who decided to stay in the capital, Lunaria sets off towards
+the \eC[8]Tower of Demons\ec[0], the location of the last gemstone, entering the 
+\eC[8]Leontius Desert\ec[0].
 "],
 
-               "07-08b" => ["第七章", "07", 
-"Zepar教調査のお礼としてLunariaは
-万魔の塔と北の廃坑の探索をFilicaから
-許可される。
+        "07-08b" => ["Chapter Seven", "07", 
+"As a token of gratitude for investigating the Zepar Church,
+Lunaria is given permission by Filica to explore
+the Tower of Babel and the abandoned mine in the north.
 
-王都に残るというSoniaに別れを告げ
-Lunariaは最後の宝玉の眠る場所である
-\eC[8]万魔の塔\ec[0]を目指し、\eC[8]レオンタイス砂漠\ec[0]へ
-足を踏み入れるのだった。
+After bidding farewell to Sonia, who decided to stay in the royal capital,
+Lunaria sets out for the \eC[8]Tower of Babel\ec[0], the resting place of the last gemstone,
+and steps into the \eC[8]Leontius Desert\ec[0].
 
-――その裏で何者かが暗躍している事を
-Lunariaは知る由もない…
+Unaware that someone is secretly manoeuvring behind the scenes...
 "],
 
-               "07-08c" => ["第七章", "07", 
-"Zepar教調査のお礼としてLunariaは
-万魔の塔と北の廃坑の探索をFilicaから
-許可される。
+        "07-08c" => ["Chapter Seven", "07", 
+"As a token of gratitude for investigating the Zepar Church,
+Lunaria is given permission by Filica to explore
+the Tower of Babel and the abandoned mine in the north.
 
-王都に残るというSoniaに別れを告げ
-Lunariaは最後の宝玉の眠る場所である
-\eC[8]万魔の塔\ec[0]を目指し、\eC[8]レオンタイス砂漠\ec[0]へ
-足を踏み入れるのだった。
+After bidding farewell to Sonia, who decided to stay in the royal capital,
+Lunaria sets out for the \eC[8]Tower of Babel\ec[0], the resting place of the last gemstone,
+and steps into the \eC[8]Leontius Desert\ec[0].
 
-しかし、Lunariaには気掛かりな事があった。
-教祖の部屋で気絶している時に聞いた
-\eC[8]「北の廃坑で待ってる」\ec[0]という言葉…
-それは一体誰の言葉なのだろうか…
-\eC[8]塔へ行く前\ec[0]に\eC[8]廃坑を探索\ec[0]してみるのも
-悪くないかもしれない…
+However, Lunaria had something on her mind.
+The words \"I'll be waiting at the northern abandoned mine\"
+that she heard while unconscious in the high priest's room...
+Whose words could they be?
+It might not be a bad idea to explore the \eC[8]abandoned mine\ec[0] before going to the \eC[8]tower\ec[0]...
 "],
 
-               "08-01" => ["第八章", "08", 
-"レオンタイス砂漠は砂塵の吹き荒ぶ
-広大なエリアだった。強力な魔物も多く
-生息しており、非常に危険な場所だという。
+        "08-01" => ["Chapter Eight", "08", 
+"The Leontius Desert was a vast area
+where sandstorms raged. Many powerful monsters lived there,
+making it a very dangerous place.
 
-しかしながら道中にオアシスがあるらしいので
-そこで休憩をとりつつ、砂漠を抜ける事にした。
+However, there seemed to be an oasis on the way,
+so they decided to take a break there and make their way through the desert.
 "],
 
-               "08-02a" => ["第八章", "08", 
-"なんとか砂漠を抜けた先には万魔の塔が高く
-聳え立っていた。
+        "08-02a" => ["Chapter Eight", "08", 
+"Somehow making their way out of the desert, the Tower of Babel stood tall before them.
 
-入口の兵士に話は通っていたようで、話しかけると
-すぐに道を開けてくれた。
+The guards at the entrance seemed to have been informed about them; upon speaking with them,
+they quickly cleared the way.
 
-この塔の\eC[8]最上階に最後の宝玉\ec[0]が封印されている…
-Lunariaは気を引き締め、最上階を目指し
-万魔の塔を登り始めるのだった。
+The \eC[8]last gemstone\ec[0] was sealed on the \eC[8]top floor of this tower\ec[0]...
+Lunaria, with renewed determination, aimed for the top floor
+and began to ascend the Tower of Babel.
 "],
 
-               "08-02b" => ["第八章", "08", 
-"なんとか砂漠を抜けた先には万魔の塔が高く
-聳え立っていた。
+        "08-02b" => ["Chapter Eight", "08", 
+"Somehow making their way out of the desert, the Tower of Babel stood tall before them.
 
-入口の兵士に話は通っていたようで、話しかけると
-すぐに道を開けてくれた。
+The guards at the entrance seemed to have been informed about them; upon speaking with them,
+they quickly cleared the way.
 
-この塔の\eC[8]最上階に最後の宝玉\ec[0]が封印されている…
-Lunariaは気を引き締め、最上階を目指し
-万魔の塔を登り始めるのだった。
+The \eC[8]last gemstone\ec[0] was sealed on the \eC[8]top floor of this tower\ec[0]...
+Lunaria, with renewed determination, aimed for the top floor
+and began to ascend the Tower of Babel.
 
-――その頃、時を同じくして
-万魔の塔に忍び寄る影があった…
-そして魔の手は、塔だけではなく
-故郷の\eC[8]サジタリーズ\ec[0]にも……
+――Meanwhile, at the same time,
+a shadowy figure was sneaking towards the Tower of Babel...
+And the evil forces targeted not only the tower, but also
+the homeland, \eC[8]Sagittarius\ec[0]...
 "],
 
-               "08-03a" => ["第八章", "08", 
-"最上階にて守護者を倒し、無事最後の宝玉を
-手に入れたLunaria。その事をMarianaに
-報告すると、向こうでも魔力源を回復させる
-魔法陣が完成したとの事。その事に喜び、急いで
-サジタリーズへ戻ろうとするLunariaの前に
-今回の事件の元凶である黒いローブの男が現れる。
+        "08-03a" => ["Chapter Eight", "08", 
+"On the top floor, Lunaria defeated the guardian and safely obtained the last gemstone.
+When she reported this to Mariana,
+she was informed that a magical circle that recovers magical power had also been completed.
+Overjoyed by the news, Lunaria was about to hurry back to Sagittarius when
+the man in the black robe, the source of this incident, appeared.
 
-男はLunariaの集めた宝玉を奪おうと襲い掛かるが
-なんとかこれを撃退。男を気絶させるとその場に
-Millayが現れる。Millayは男の行動を事前に
-予測し、Lunariaの事を心配して駆けつけたのだ。
+The man attacked, attempting to steal the gemstones Lunaria had collected,
+but she managed to repel him. After rendering the man unconscious,
+Millay appeared at the scene. Millay had anticipated the man's actions
+and rushed to check on Lunaria out of concern.
 
-Lunariaの無事に安堵したMillayは男を連れ
-一足先にサジタリーズへ戻る。その後を追い
-Lunariaも\eC[8]サジタリーズへ戻る\ec[0]のだった。
+Millay, relieved of Lunaria's safety, took the man and went back to Sagittarius first.
+Lunaria followed suit, and \eC[8]returned to Sagittarius\ec[0].
 "],
 
-               "08-03b" => ["第八章", "08", 
-"最上階にて守護者を倒し、無事最後の宝玉を
-手に入れたLunaria。その事をMarianaに
-報告しようとするが魔導通信機が繋がらない…
-心配するLunariaの前に今回の事件の
-元凶である黒いローブの男が現れる。
+        "08-03b" => ["Chapter Eight", "08", 
+"On the top floor, Lunaria defeated the guardian and safely obtained the last gemstone.
+She attempted to report this to Mariana, but the magic communication device failed to connect...
+Worried, Lunaria was then confronted by the man in the black robe, the source of this incident.
 
-男はLunariaの集めた宝玉を奪おうと襲い掛かるが
-なんとかこれを撃退。敗れた男はあっさりと
-その場を撤退した…
+The man attacked, attempting to steal the gemstones Lunaria had collected,
+but she managed to repel him. Defeated, the man retreated from the place readily...
 
-その事に違和感を覚えたLunariaは
-妙な胸騒ぎを覚え、大急ぎで
-\eC[8]サジタリーズへ戻る\ec[0]のだった。
+Sensing something was amiss, and with an unsettling feeling,
+Lunaria hurried back to \eC[8]Sagittarius\ec[0] with great urgency.
 "],
 
-               "09-01a" => ["最終章", "09", 
-"無事５つの宝玉を集めサジタリーズへと
-戻ってきたLunaria。
+        "09-01a" => ["Final Chapter", "09", 
+"Safely gathering the five gemstones, Lunaria
+returned to Sagittarius.
 
-任務完了の報告を女王陛下にする為、
-\eC[8]お城の謁見の間\ec[0]へと急いだ
+To report the completion of her mission to Her Majesty the Queen,
+she hurried to the \eC[8]audience hall of the castle\ec[0].
 "],
 
-               "09-02a" => ["最終章", "09", 
-"謁見の間で報告を済ませるとすぐに
-魔力再生の儀を執り行う準備が始められた。
+        "09-02a" => ["Final Chapter", "09", 
+"After finishing her report in the audience hall,
+preparations for the magical power restoration ceremony began immediately.
 
-魔力再生の儀はお城の\eC[8]地下研究室の奥\ec[0]にある
-\eC[8]訓練場\ec[0]で行われる。
+The magical power restoration ceremony was to be held in the \eC[8]training area\ec[0]
+located deep inside the \eC[8]underground laboratory of the castle\ec[0].
 
-\eC[8]長かった旅もこれでようやく終わりを迎える。
-悔いの無いように準備をして
-地下の訓練場へ向かおう。\ec[0]
+\eC[8]This marks the end of the long journey at last.
+Without any regrets, let's prepare and head to the underground training area.\ec[0]
 "],
 
-               "09-01b" => ["第九章", "09", 
-"急いでサジタリーズへ戻ったLunariaの目の前に
-広がっていたもの…それは魔物達に
-襲撃を受けている城下町の姿だった。
+        "09-01b" => ["Chapter Nine", "09", 
+"Hurriedly returning to Sagittarius, what Lunaria saw before her eyes
+was the town under attack by monsters.
 
-一体何が起こっているのかは分からないが、まずは
-魔物から町を守る事を最優先に行動する。
-ちょうどそこへSoniaが町を訪れ、\eC[8]二人で
-協力して町の魔物達を討伐\ec[0]する事になった。
+She didn't know what had caused this, but the priority was to
+protect the town from the monsters. Just then, Sonia arrived to visit the town,
+and the \eC[8]two of them teamed up to subdue the monsters in the town\ec[0].
 "],
 
-               "09-02b" => ["第九章", "09", 
-"魔物を倒していると町の一角でLunariaの母
-Eleanorが戦っている所に遭遇する。しかし
-Lunariaの目の前でEleanorは無情にも魔物達に
-連れ去られてしまう。
-悲しむ間もなく襲い来る魔物を倒すLunaria。
+        "09-02b" => ["Chapter Nine", "09", 
+"While fighting off the monsters, Lunaria encountered her mother,
+Eleanor, battling. But before Lunaria's eyes, Eleanor was mercilessly
+captured by the monsters.
+Without a moment to grieve, Lunaria fought off the attacking monsters.
 
-城下町の魔物を粗方片づけた二人はお城へ救援に
-向かう。しかしそこで見た光景は魔物に
-連れ去られるShirleyとEstiaの姿だった。
+After clearing most of the monsters from the town, the two headed to the castle for reinforcements.
+However, the sight they witnessed there was Shirley and Estia being carried off by monsters.
 
-首謀者と思われる淫魔は二人を転移させた後
-『人質』という言葉を残しその場を去った…
+The instigator, thought to be a succubus, transported the two away
+and left the scene with the word \"hostages\"…
 "],
 
-               "09-03" => ["第九章", "09", 
-"MillayやDianaに塔での経緯を報告していると
-黒ローブの男から通信が入る。攫った人質を
-解放して欲しければ宝玉を持って
-西の地下遺跡へ来い――と。
+        "09-03" => ["Chapter Nine", "09", 
+"While reporting to Millay and Diana about the events in the tower,
+a message from the man in the black robe came in. If they wanted the captured hostages released,
+they were to bring the gemstones to the western underground ruins―so said the man.
+Hearing the man's voice, Sonia was at a loss for words.
+The man was none other than \eC[8]Sonia's husband,
+Wright Sandile\ec[0]. However, it wasn't truly Wright,
+it was someone, or something, possessing Wright's body.
+With the captured people and even Sonia's husband taken hostage,
+Lunaria agrees to the man's deal...
 
-その男の声を聞いてSoniaは絶句する。
-男の正体は\eC[8]Soniaの夫
-Wright・サンディール\ec[0]だったのだ。
-しかしそれはWright本人ではなく、Wrightの
-身体に憑依した何者かの意思だという。
-攫った人々だけでなくSoniaの夫までも人質に
-とられたLunariaは、男の取引に応じる事に…
-
-こうしてLunariaはSoniaと共に
-\eC[8]西の地下遺跡\ec[0]へと向かう事になった。
+Thus, Lunaria, along with Sonia, set out for the 
+\eC[8]western underground ruins\ec[0].
 "],
 
-               "09-04" => ["第九章", "09", 
-"地下遺跡の最下層で黒ローブの男と対峙する
-Lunaria達。人質の解放を条件に宝玉を男に渡すと
-邪石を通した宝玉の魔力が男に流入――気付くと
-そこには\eC[8]古の魔神Beelzelian\ec[0]が復活していた。
+        "09-03" => ["Chapter 9", "09", 
+"While reporting the events in the tower to Millay and Diana,
+a communication from a man in a black robe comes in. He demands
+the jewel in exchange for the release of the kidnapped hostages,
+and to bring it to the western underground ruins.
 
-魔神は\eC[8]DianaとMillayを拘束すると
-そのまま二人を浮遊大陸へと連れ去った\ec[0]。
+Upon hearing the man's voice, Sonia is at a loss for words.
+The man turns out to be \eC[8]Sonia's husband
+Wright・Sundial\ec[0]. However, it is not actually Wright,
+but someone else's will possessing Wright's body.
+Lunaria, having not only the kidnapped people but also Sonia's husband
+as hostages, decides to comply with the man's deal...
 
-その後 救出した人質を連れ城へと戻り
-Marianaや大臣らに現状を報告。連れ去られた
-Diana達を救出する作戦を話し合うがいい案は
-浮かばず一旦解散する。
-
-Soniaとその夫の容態が気になったLunariaは
-\eC[8]医務室\ec[0]へと向かった。
+Thus, Lunaria sets out for the \eC[8]western underground ruins\ec[0]
+together with Sonia.
 "],
 
-               "09-05" => ["第九章", "09", 
-"Soniaと夫のWrightはダリア王国が面倒を
-見てくれる事となった。Sonia達に別れを告げ
-会議室へ戻るとMarianaとVelvetから
-魔神のいる浮遊大陸へ行く方法を教えられる。
-浮遊大陸へは\eC[8]城の地下にある魔法陣\ec[0]を起動
-させなければならず、それには\eC[8]トキワとダリア
-それぞれの神器\ec[0]が必要だという。
+        "09-04" => ["Chapter 9", "09", 
+"Lunaria and the others confront the black-robed man on the lowest
+floor of the underground ruins. They hand over the jewel on the
+condition that he releases the hostages, and through an evil stone,
+the magical power of the jewel flows into the man—only for them to
+realize that the ancient demon god \eC[8]Beelzelian\ec[0] had been revived.
 
-ダリアの神器は既にFilicaに手配済みだが
-トキワとは連絡がつかないという…
+The demon god restrains \eC[8]Diana and Millay and
+then flies away with the two to the floating continent\ec[0].
 
-Lunariaはトキワの神器を借り受けるため
-\eC[8]グレア洞窟を抜け港町セネシオを目指す\ec[0]事に
+Afterward, they return to the castle with the rescued hostages
+and report the situation to Mariana and the ministers. They discuss
+strategies to rescue Diana and the others, but without a good plan,
+they temporarily disband.
+
+Concerned about Sonia and her husband's condition, Lunaria
+heads to the \eC[8]infirmary\ec[0].
 "],
 
-               "10-01" => ["第十章", "10", 
-"トキワへ渡るため港町セネシオを目指すLunaria。
-一方、浮遊大陸 魔神城では魔神が
-\eC[8]淫魔の女王Asmolios\ec[0]を復活させていた。
+        "09-05" => ["Chapter 9", "09", 
+"Sonia and her husband Wright are to be taken care of by the kingdom
+of Dalia. After bidding farewell to Sonia and the others, Lunaria
+returns to the conference room where Mariana and Velvet explain how
+to reach the demon-infested floating continent. A magic circle
+beneath the \eC[8]castle\ec[0] must be activated to travel there,
+and it requires the \eC[8]sacred treasures of Tokiwa and Dalia\ec[0],
+respectively.
 
-復活した淫魔の女王はBeelzelianに
-忠誠を誓う。そして人を殺さずダリア王国を
-陥落させて見せると言い、配下のRennoを連れ
-王都カクタスへと飛び立っていった…
+The sacred treasure of Dalia has already been arranged by Filica, but
+contact with Tokiwa has been unsuccessful...
+
+Lunaria decides to pass through the \eC[8]Glare Cave on the way to the
+port town Senesio\ec[0] to borrow Tokiwa's sacred treasure.
 "],
 
-               "10-02" => ["第十章", "10", 
-"グレア洞窟を無事に抜けたLunaria。
-その頃 浮遊大陸では\eC[8]DianaとMillayが
-淫堕の洗脳鬼Zeparの術に落ち
-洗脳鬼の忠実な肉奴隷\ec[0]へと堕とされていた。
+        "10-01" => ["Chapter 10", "10", 
+"Lunaria aims for the port town Senesio to cross to Tokiwa.
+Meanwhile, on the floating continent at the demon king's castle,
+the demon god has revived the \eC[8]succubus queen Asmolios\ec[0].
 
-一方、港町へと到着したLunariaは
-トキワへの船が出ていないことを聞かされるが
-以前Manaが使っていた転送陣を思い出す。
-
-それを使い無事トキワ近くの小島への上陸を
-果たした。後はこのまま\eC[8]トキワへ続く地下道\ec[0]を
-進むだけだ。
+The resurrected succubus queen swears loyalty to Beelzelian and
+claims that she will bring down the kingdom of Dalia without killing its
+people. Accompanied by her subordinate Renno, she takes off to the
+royal capital Cactus...
 "],
 
-               "10-03" => ["第十章", "10", 
-"トキワへの地下道を進んでいると、途中で
-Manaと遭遇する。なんとトキワが妖怪軍団に襲われ
-九条の里も陥落寸前だという。
+        "10-02" => ["Chapter 10", "10", 
+"Lunaria safely passes through the Glare Cave.
+At this time on the floating continent, \eC[8]Diana and Millay
+fall prey to the mind-controlling demon Zepar,
+becoming the demon's faithful flesh slaves\ec[0].
 
-サジタリーズの救援が絶望的だと知ったManaは
-Lunariaの助力を得、そのまま\eC[8]九条の里\ec[0]へと
-急いで戻るのだった。
+Meanwhile, having arrived at the port town, Lunaria learns
+that no ships are sailing to Tokiwa but recalls a teleportation
+circle previously used by Mana.
+
+Using it, she successfully lands on a small island near Tokiwa.
+All that remains is to continue through the \eC[8]underground passage
+leading to Tokiwa\ec[0].
 "],
 
-               "11-01" => ["第十一章", "11", 
-"Lunaria達が地下道を進んでいる頃、九条の里は
-復活した\eC[8]邪龍Magatsuorochi\ec[0]に襲われ
-全ての巫女は敗北。
+        "10-03" => ["Chapter 10", "10", 
+"As Lunaria progresses through the underground passage to Tokiwa,
+she encounters Mana. It turns out that Tokiwa is being attacked by a
+demon army and that the Kujo Village is on the brink of collapse.
 
-巫女の長である\eC[8]Tsukihaと側近のHarunaは
-邪龍に攫われて\ec[0]しまった…
+Knowing that aid from Sagittarius is hopeless, Mana seeks Lunaria's
+help, and they both hastily return to \eC[8]Kujo Village\ec[0].
 "],
 
-               "11-02" => ["第十一章", "11", 
-"里へと到着したMana達が見た物、それは
-妖怪に蹂躙される里の悲惨な現状だった。
+        "11-01" => ["Chapter 11", "11", 
+"While Lunaria and the others are advancing through the underground
+passage, Kujo Village is attacked by the resurrected \eC[8]evil dragon
+Magatsuorochi\ec[0], and all the shrine maidens are defeated.
 
-妖怪への怒りから法術の奥義を放ち
-敵を全滅させるMana。しかしその直後
-術の影響で倒れてしまう。
-
-無事だった巫女からTsukiha達が攫われた事を
-知ったManaとLunariaは彼女達を救出する為
-邪龍の待つ\eC[8]北の洞窟の最奥 封印の地\ec[0]を
-目指すのだった。
+The chief shrine maiden \eC[8]Tsukiha and her adjutant Haruna
+are kidnapped by the evil dragon\ec[0]...
 "],
 
-               "11-03" => ["第十一章", "11", 
-"洞窟の途中で捕まった他の巫女達が妖怪の苗床に
-されている現場に遭遇した二人は
-その妖怪達を倒し彼女達を救出する。
+        "11-02" => ["Chapter 11", "11", 
+"What Mana and the others see upon arriving at the village is
+the tragic sight of the village being ravaged by demons.
 
-妖怪達は既に多くの子供を巫女達に産ませ
-自分達の戦力としているようだ。
+Mana, enraged by the demons, unleashes a profound spell and
+obliterates the enemy. However, she collapses from the effect of
+the spell immediately after.
 
-おそらく邪龍も既に繁殖を開始しているだろう…
-手遅れになる前に洞窟の最奥へ行き
-邪龍を倒さなければならない。
+Learning that Tsukiha and the others have been kidnapped from the
+unharmed shrine maidens, Mana and Lunaria set out to rescue them,
+heading for the sealed land in the \eC[8]northern cave's deepest part\ec[0].
 "],
 
-               "11-04" => ["第十一章", "11", 
-"LunariaとManaは力を合わせ
-封印の地で邪龍を倒す事に成功する。
-その際ManaはLunariaの中に不思議な力が
-ある事を感じ取る。あれは一体なんだったのか…
+        "11-03" => ["Chapter Eleven", "11", 
+"The two, who encountered the scene where other shrine maidens caught 
+in the middle of the cave were being used as seedbeds for monsters, 
+defeated the monsters and rescued the girls.
 
-邪龍を倒した翌朝、Lunariaは
-Manaと合流すると本来の目的であった
-神器を借り受けるため\eC[8]Tsukihaの屋敷\ec[0]へと
-足を運ぶのだった。
+The monsters had already made many children be born from the shrine maidens
+and it seemed they were using them as their own troops.
+
+Most likely, the evil dragon has already started breeding...
+Before it's too late, they must head to the deepest part of the cave
+and defeat the evil dragon.
 "],
 
-               "11-05" => ["第十一章", "11", 
-"Tsukihaから無事トキワの神器を借り受けた
-Lunaria。そして今回の女王救出に\eC[8]Manaも
-同行\ec[0]してくれるという。
+        "11-04" => ["Chapter Eleven", "11", 
+"Lunaria and Mana, joining forces,
+manage to defeat the evil dragon at the Land of Seals.
+During the battle, Mana senses a mysterious power
+within Lunaria. What on earth was it...
 
-心強い仲間を加えたLunariaのもとにMarianaから
-通信が入る。ダリアからの神器が届かないので
-様子を見てきて欲しい、と。
+The morning after defeating the evil dragon, Lunaria
+joins with Mana for their main purpose of
+borrowing the sacred treasure from Tsukiha's mansion.
 
-ダリアへは\eC[8]ラグラス西のティモル山\ec[0]を越える
-必要がある。二人は準備が出来次第、
-\eC[8]ダリア王国を目指す\ec[0]事となった。
 "],
 
-               "12-01" => ["第十二章", "12", 
-"Lunaria一行がダリアを目指している頃
-ダリア王国は淫魔の軍勢の襲撃を受けていた。
+        "11-05" => ["Chapter Eleven", "11", 
+"Lunaria, having successfully borrowed Tokiwa's sacred treasure from Tsukiha,
+and now Mana will also accompany her on the mission to rescue the queen.
 
-Filicaや王国騎士団は必死に応戦したが
-淫魔の女王が現れた事で戦況は一変する。
+Mariana contacts Lunaria, with the strong-hearted companion added,
+saying that the sacred treasure from Dalia has not arrived, and asks
+them to go check on the situation.
 
-ダリア最強であった\eC[8]騎士王Filicaは
-淫魔の女王に敗れて\ec[0]しまう。
-これにより騎士団は戦意を喪失、
-これからダリア王都は、淫魔達が支配する
-\eC[8]淫靡と快楽の都\ec[0]へと姿を変える…
+To reach Dalia, they need to cross
+the Timor Mountain to the west of Lagras. 
+The two prepare and set out
+towards the Kingdom of Dalia.
 "],
 
-               "12-02" => ["第十二章", "12", 
-"国境の関所へ行くとそこにダリアの兵士の姿は
-なかった。不信に思った二人はネメシアへ
-立ち寄ると、ダリアの王都が淫魔の軍勢により
-陥落している事を聞かされる。
+        "12-01" => ["Chapter Twelve", "12", 
+"While Lunaria and her companions head for Dalia,
+the Kingdom of Dalia was being attacked by succubi.
 
-王都を淫魔の魔手から解放する為
-Lunaria達は\eC[8]ハイドラ湿原\ec[0]を越え
-ダリア王都を目指す。
+Filica and the Knights of the Kingdom fought desperately,
+but the tide of battle changed when the queen of succubi appeared.
+
+The Knight King Filica, the strongest in Dalia,
+was defeated by the queen of succubi.
+Consequently, the Knights lost their will to fight,
+transforming the Royal City of Dalia into
+a city of decadence and pleasure ruled by the succubi…
 "],
 
-               "12-03" => ["第十二章", "12", 
-"王都内は聞いていた通り淫魔達の跋扈する
-淫靡と快楽の都へと変貌していた。
+        "12-02" => ["Chapter Twelve", "12", 
+"Arriving at the national border checkpoint, 
+the two found no soldiers from Dalia present. 
+Suspecting something amiss, they stopped by Nemesia,
+where they were informed that the Royal City of Dalia 
+had fallen to the succubi forces.
 
-Manaの話では強力な気を放つ者が城に
-いるらしい。恐らくそれが淫魔のボスだろう。
-
-淫魔のボスを倒し王都を解放する為
-二人は\eC[8]王都を抜けダリア城を目指す\ec[0]事に。
+To liberate the Royal City from the grasp of the succubi,
+Lunaria and the others cross the Hydra Marshland
+heading for the Royal City.
 "],
 
-               "12-04" => ["第十二章", "12", 
-"王都の途中でSoniaと男達がセックスを
-しているところを目撃した二人は淫魔を倒し
-Sonia達を術で解放する。
+        "12-03" => ["Chapter Twelve", "12", 
+"As heard, the Royal City had transformed into
+a decadent city of debauchery and pleasure overrun by succubi.
 
-王都解放のメンバーにSoniaも加わり
-三人は再び城を目指し進み始めた。
+According to Mana, someone emanating a strong aura is 
+in the castle. It's likely that’s the boss of the succubi.
+
+To defeat the boss and free the Royal City,
+the two decide to pass through the Royal City and head for the Castle of Dalia.
 "],
 
-               "12-05" => ["第十二章", "12", 
-"城内にはさらに強力な魔物が蔓延っている。
+        "12-04" => ["Chapter Twelve", "12", 
+"The two witnessed Sonia and men having sex along the way in the Royal City,
+they defeated the succubi and used a spell to free Sonia and the others.
 
-淫魔のボスと思しき者がいる場所はどうやら
-\eC[8]三階の謁見の間\ec[0]のようだ。
+With Sonia joining the members liberating the Royal City,
+the three set off towards the castle once more.
 "],
 
-               "12-06" => ["第十二章", "12", 
-"謁見の間にいた淫魔Rennoを倒し
-無事王都を解放する事に成功したLunaria達。
+        "12-05" => ["Chapter Twelve", "12", 
+"Even stronger monsters have spread within the castle.
 
-Filicaからダリアの神器を借り受け
-\eC[8]Soniaも正式にパーティに加わる\ec[0]事になった。
-
-２つの神器を揃えた一行はMarianaに
-報告する為、\eC[8]サジタリーズへ戻る\ec[0]事に。
+The place where the boss of the succubi seems to be
+appears to be the audience chamber on the third floor.
 "],
 
-               "13-01" => ["第十三章", "13", 
-"無事に２つの神器を集めサジタリーズへ
-帰還した三人は、\eC[8]城の会議室\ec[0]にいる
-Marianaのもとへ急いだ。
+        "12-06" => ["Chapter Twelve", "12", 
+"Lunaria and her companions, having defeated the succubus Renno
+in the audience chamber, successfully liberate the Royal City.
+
+Lunaria borrows Dalia's sacred treasure from Filica and
+Sonia officially joins the party.
+
+With two sacred treasures in hand, the group decides
+to report back to Mariana in Sagittarius.
 "],
 
-               "13-02" => ["第十三章", "13", 
-"浮遊大陸への魔法陣がある地下へ下りた
-Lunaria、Mana、Sonia、そしてMariana。
-
-王家の者しか開ける事の出来ない扉を前に
-\eC[8]Marianaは自分が王家の血を引く
-Dianaの腹違いの姉妹\ec[0]であることを告げ
-魔法陣へ続く扉を開ける。
-
-神器を祭壇に捧げ、魔法陣の起動に成功した
-Lunaria達は\eC[8]浮遊大陸\ec[0]へと旅立つ。
-
-――妹であるDianaの事を
-Marianaに託されて…
+        "13-01" => ["Chapter Thirteen", "13", 
+"Upon safely gathering the two sacred treasures and returning to Sagittarius,
+the three rushed to Mariana in
+the conference room of the castle.
 "],
 
-               "13-03" => ["第十三章", "13", 
-"浮遊大陸を進むと、魔神の居城ではない
-怪しげな砦が行く手を遮る。
+        "13-02" => ["Chapter Thirteen", "13", 
+"Lunaria, Mana, Sonia, and Mariana descended underground
+to a magic circle leading to the floating continent.
 
-砦内は巧妙な罠が仕掛けられており
-落とし穴の罠にかかってしまったSoniaは
-Lunaria達と分断されてしまう。
+In front of a door that could only be opened by the royal family,
+Mariana revealed that she is Diana's half-sister
+with royal blood
+and unlocked the door to the magic circle.
 
-Soniaが落ちた先には淫堕の洗脳鬼が
-待ち構えており、\eC[8]Soniaはネメシアの時同様
-Zeparの洗脳術\ec[0]にかかってしまう。
+After offering the sacred treasures to the altar and successfully
+activating the magic circle, Lunaria and her companions set off
+to the floating continent.
+
+Entrusted with the care of her sister Diana by Mariana...
 "],
 
-               "13-04" => ["第十三章", "13", 
-"Soniaを探して砦を探索していたLunaria達の
-前に洗脳されたDiana、Millay、そして
-Soniaが立ち塞がる。
+        "13-03" => ["Chapter Thirteen", "13", 
+"Progressing through the floating continent, they came across a suspicious fortress
+blocking their path, one not the lair of the demon king.
 
-三人をなんとか退け浄化の術を施すも
-解除できたのはSoniaだけだった。
-その後洗脳鬼を倒すもトドメをDianaに
-阻まれ取り逃がしてしまう。
-すぐに後を追うが、そこで見たのは\eC[8]魔神により
-屠られた洗脳鬼\ec[0]と、\eC[8]魔神の洗脳下におかれた
-DianaとMillay\ec[0]の二人だった。
+The fortress was rigged with cunning traps, and Sonia, falling into a pitfall trap,
+got separated from Lunaria and others.
 
-――\eC[8]魔神城の玉座にて待つ\ec[0]――
-魔神はそう言い残すと再び二人を連れ去り
-闇へと消えて行った…
+At the bottom where Sonia fell, a demon of brainwashing corruption was waiting,
+and Sonia fell under Zepar's brainwashing magic, just like she did in Nemesia.
 "],
 
-               "14-01" => ["最終章", "14", 
-"砦を出ると北の方角に魔神城が見て取れた。
+        "13-04" => ["Chapter Thirteen", "13", 
+"As Lunaria and her companions searched the fortress for Sonia, 
+brainwashed Diana, Millay, and Sonia blocked their way.
 
-三人は決意を胸に魔神城への道を歩き始めた…
+They managed to repel the three and purify them, but only Sonia was freed.
+After defeating the brainwashing demon, Diana interrupted their attempt to finish it off,
+allowing their escape. They immediately gave chase, but what they saw there was 
+the brainwashing demon slaughtered by the demon king,
+and Diana and Millay now under the mind control of the demon king.
+
+The demon king, waiting in the throne room –
+left those words behind, taking the two with him
+into the darkness...
 "],
 
-#＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "14-02" => ["最終章", "14", 
-"魔神城へ到着したLunaria達。
-城からは禍々しい気配が満ちており
-その異様さに圧倒される。
+        "14-01" => ["Final Chapter", "14", 
+"Leaving the fortress, they could see the Demon King's castle to the north.
 
-三人は決意を新たにし、\eC[8]魔神のいる玉座\ec[0]を目指し
-城へと足を踏み入れた。
+The three begin their journey to the demon king’s castle with determination in their hearts…
 "],
 
-               "14-03" => ["最終章", "14", 
-"魔神のいる最上階を目指して城を上がっていくと
-途中 邪悪な気配に満ちた部屋へと到着する。
+#＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
+        "14-02" => ["Final Chapter", "14", 
+"Lunaria and her companions arrive at the Demon King's castle.
+The castle brims with an ominous presence,
+overpowering them with its abnormality.
 
-そこにはFilicaを倒し王都カクタスを淫都へと
-変えた淫魔の女王Asmoliosの姿があった。
-
-Rennoを倒した事により復讐に燃えるAsmolios。
-真の姿を現した彼女と対決し辛くも勝利するも
-淫魔の女王は消滅を免れようとLunariaの中に
-眠る淫魔石を介して身体を乗っ取ろうと画策し
-Lunariaへと襲い掛かった…
+With renewed determination, the three set foot into the castle,
+aiming for the throne room where the Demon King resides.
 "],
 
-               "14-04" => ["最終章", "14", 
-"Lunariaの身体を乗っ取ろうとしたAsmolios
-だったが、その時Lunariaを不思議な力が守り
-淫魔の女王を身体の外へと弾き飛ばし、
-それと同時に淫魔石が砕け散る。
+        "14-03" => ["Final Chapter", "14", 
+"Ascending the castle to reach the highest floor where the Demon King resides,
+they arrive at a room filled with malevolent aura.
 
-身体を奪う事に失敗した淫魔の女王は断末魔の
-叫びと共にそのまま消滅…
+There, they encounter Asmolios, the queen of succubi who defeated Filica
+and turned the Royal City Cactus into a city of lechery.
 
-自分の中に眠る不思議な力を疑問に思いつつも
-LunariaはDianaとMillayを救出する為
-仲間と共に魔神のいる玉座を目指し
-再び城を上がっていった…
+Asmolios, fueled by revenge for Renno's defeat, reveals her true form.
+Although they barely managed to win,
+the Queen of Succubi, in order to avoid annihilation,
+tries to take over Lunaria's body using the Succubus Stone sleeping within her.
+However, she is forcefully repelled out by a mysterious force protecting Lunaria
+and at the same time, the Succubus Stone shatters.
+
+Failing to take over the body, the Queen of Succubi perishes with a death cry...
+
+Doubtful about the mysterious power sleeping within her,
+Lunaria, aiming to rescue Diana and Millay with her companions,
+heads for the demon king's throne, ascending the castle once more…
 "],
 
+        "14-04" => ["Final Chapter", "14", 
+"Asmolios, attempting to take over Lunaria's body,
+was protected by a mysterious force within Lunaria,
+which repelled the Queen of Succubi out of her body,
+and with it, the Succubus Stone shattered.
+
+The Queen of Succubi, failing to take over the body, perished with a final scream...
+
+While uncertain about the mysterious power within her,
+Lunaria pursues the demon king's throne with her comrades,
+eager to rescue Diana and Millay...
+"],
   ]
   
 end

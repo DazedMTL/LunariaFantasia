@@ -1,420 +1,420 @@
 #=begin
 module Quest
   
-  SUB = [ #0-No  #1-管理変数 #2-種類    #3-受注場所      #4-依頼人   #5-報酬  #6-推奨LV
-           [1,   51,         "納品",   "サジタリーズ城下町　冒険者ギルド", "Mariana", "\edbi[a,98]", "--", 
-           "ネバプル実験", #7-題名
-           #8-詳細
-           "今度行う実験の材料に\edb[e,1]系モンスターが\n落とすアイテム\edbi[i,171]が必要だから\n３つほど調達して欲しいの。お願いできるかしら？\n\n\edbi[i,171]　\e}必要数 3/ 所持数 \eqin[i,171]\e{",
-           #9-達成条件ハッシュ
-           {"171 i"=>3}, 
-           #10-報酬ハッシュ
-           {"98 a"=>1}
-           ],
+    SUB = [ #0-No  #1-Management Variable #2-Type    #3-Request Location        #4-Requester  #5-Reward   #6-Recommended LV
+             [1,   51,         "Delivery",   "Sagittarius Town Adventurer's Guild", "Mariana", "\edbi[a,98]", "--", 
+             "Nebapuru Experiment", #7-Title
+             #8-Details
+             "I need items dropped by \edb[e,1] monsters for\nan upcoming experiment. I'd like you to procure\nabout three of them. Could you do that for me?\n\n\edbi[i,171]　\e}Needed 3/ In Possession \eqin[i,171]\e{",
+             #9-Completion Condition Hash
+             {"171 i"=>3}, 
+             #10-Reward Hash
+             {"98 a"=>1}
+             ],
+             
+             [2,   52,         "Suppression",   "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "200\eg、\edbi[i,4]×２", "3～", 
+             "Goblin Slayer", #7-Title
+             #8-Details
+             "Attackers who assault adventurers and merchants\nto steal their goods or kidnap women are the despicable\n\eimp\edb[e,5]. Please subdue six of them.\n\edb[e,5] primarily inhabit the surroundings of Sagittarius\nand the southern area of Rizel Forest.\n\n\edb[e,5] Suppression　\e}Remaining \eqkm[5]\e{",
+             #9-Completion Condition Hash
+             {5=>6}, 
+             #10-Reward Hash
+             {"g"=>200, "4 i"=>2}
+             ],
+             
+             [3,   53,      "Suppression", "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,106]", "4～", 
+             "Rabbit Hunt", 
+             "Please subdue five of the rabbit-like demons\n\eimp\edb[e,6] that inhabit the southern Robe area and\nRizel Forest etc.\n\n\edb[e,6] Suppression　\e}Remaining \eqkm[6]\e{",
+             {6=>5},
+             {"106 a"=>1}
+             ],
+             
+             [4,   54,      "Delivery", "Sagittarius Town Adventurer's Guild", "Tool Shop", "\edbi[w,2]", "--", 
+             "Healing Potion Ingredients", 
+             "The tool shop has requested \edbi[i,27] and \edbi[i,32].\nSo please collect five of each \edbi[i,27] and\n\edbi[i,32]. Both can be collected in Rizel Forest.\n\n\edbi[i,27]　\e}Needed 5/ In Possession \eqin[i,27]\e{\n\edbi[i,32]　\e}Needed 5/ In Possession \eqin[i,32]\e{",
+             {"27 i"=>5, "32 i"=>5},
+             {"2 w"=>1}
+             ],
+             
+             [5,   55,      "Suppression", "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "200\eg、\edbi[i,4]×３", "5～", 
+             "Pest Control", 
+             "Please subdue five each of the pests \eimp\edb[e,7] and\n\edb[e,8]\ec[0] that inhabit Rizel Forest.\n\edb[e,7] can be found throughout the forest, while\n\edb[e,8] resides in the southern area.\n\n\edb[e,7] Suppression　\e}Remaining \eqkm[7]\e{\n\edb[e,8] Suppression　\e}Remaining \eqkm[8]\e{",
+             {7=>5, 8=>5},
+             {"g"=>200, "4 i"=>3}
+             ],
+                        
+  #--------Only after clearing the ruins No.6-----------------------------------------------------------------------------------
+  
+             [6,   56,         "Major Suppression",   "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "2000\eg", "11～", 
+             "Defeat the Giant Slime!", #7-Title
+             #8-Details
+             "We've received reports of a high-level giant slime\nappearing near the northern area water sites of Rizel Forest.\nPlease exterminate it. There's information that if a\n\eimp female adventurer confronts it alone and loses, she will be violated\ec[0].\nTake extra caution if you go alone. Reports suggest\nthat this creature is resistant to physical attacks.",
+             #9-Completion Condition Hash
+             {}, 
+             #10-Reward Array
+             {"g"=>2000},
+             #11-Request Conditions and Other Hash. Optional
+             {"l"=>[37,40], "h"=>1}
+             ],
+             
+             [7,   57,         "Search",   "Sagittarius Town Near Home", "\emob[f3]", "\edbi[i,116]", "--", 
+             "Lost Item", #7-Title
+             #8-Details
+             "\emob[f3] says she lost her strap somewhere\nin Sagittarius town. Let's search the town and\nfind the bear strap she lost.",
+             #9-Completion Condition Hash
+             {}, 
+             #10-Reward Hash
+             {"116 i"=>1}
+             ],
+             
+             [8,   58,      "Delivery", "Sagittarius Town In front of the Restaurant", "\emob[a1_f1]", "\edbi[a,22]", "--", 
+             "In Search of Ingredients?", 
+             "The restaurant wants to use \edbi[i,75], which grows in forests,\nfor their dishes. Apparently, \edbi[i,75] becomes very\ntasty after detoxifying… Let's collect \edbi[i,75] from\nRizel Forest and give it to \emob[a1_f1].\n\n\edbi[i,75]　\e}Needed 5/ In Possession \eqin[i,75]\e{",
+             {"75 i"=>5},
+             {"22 a"=>1}
+             ],
+             
+  #--------After one night in Robe-----------------------------------------------------------------------------------
+  
+             [9,   59,      "Delivery", "Forest Village Robe Chief's House 1st Floor", "\emob[f8]", "500\eg", "--", 
+             "Fuzzy", 
+             "The \emob[f8] at the chief's house seems to be obsessed\nwith hair-type monsters. Let's collect three \edbi[i,173],\nwhich are dropped by hair creatures, and give them to her.\n\n\edbi[i,173]　\e}Needed 3/ In Possession \eqin[i,173]\e{",
+             {"173 i"=>3},
+             {"g"=>500}
+             ],
+  
+             [10,   60,      "Major Suppression", "Forest Village Robe Tavern/Inn 1st Floor", "\emob[m2]", "1000\eg、\edbi[i,93]", "7～", 
+             "Bee Swarm", 
+             "A huge swarm of \edb[e,8] has appeared at the\npond in the southern area of Rizel Forest. Moreover,\nthese are a bit higher level than others in the forest,\ncreating potential unknown damages if left unchecked. It's\nlikely to be a continuous battle, so prepare\nthoroughly and head to the southern area pond.",
+             #9-Completion Condition Hash
+             {},
+             #10-Reward Hash
+             {"g"=>1000, "93 i"=>1}
+             ],
+             
+  #--------After arrival in Ragras, also No.17-----------------------------------------------------------------------------------
+  
+             [11,   61,      "Delivery", "Commercial Town Ragras Adventurer's Guild", "Street Vendor Food Shop", "800\eg、\edbi[i,113]×２", "--", 
+             "Monster Meat", 
+             "The food shop has requested the delivery of hair-monster's \edbi[i,181] and boar-monster's \edbi[i,180],\nthree each. Boars are found in both north and south caves,\nwhile hairs are around Ragras.\n\n\edbi[i,180]　\e}Needed 3/ In Possession \eqin[i,180]\e{\n\edbi[i,181]　\e}Needed 3/ In Possession \eqin[i,181]\e{",
+             {"180 i"=>3, "181 i"=>3},
+             {"g"=>800, "113 i"=>2}
+             ],
+  
+             [12,   62,      "Suppression", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,24]、\edbi[a,171]", "10～", 
+             "More Goblin Slayers", 
+             "There are \edb[e,5] that have high intelligence and\nuse sword skills and \esk[2]. They live in the southern cave.\nPlease subjugate five each of \eimp\edb[e,18]\ \edb[e,19]\ec[0].\n\n\edb[e,18] Suppression　\e}Remaining \eqkm[18]\e{\n\edb[e,19] Suppression　\e}Remaining \eqkm[19]\e{",
+             {18=>5, 19=>5},
+             {"24 a"=>1, "171 a"=>1},
+             {"v"=>[[52,6,0]], "t"=>"You can accept this quest after completing Quest No.02"}
+             ],
+  
+             [13,   63,      "Suppression", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[w,5]", "9～", 
+             "Poison Ant Breeding Season", 
+             "The poisonous \edb[e,16] started their breeding season.\nTo prevent further proliferation, please subjugate eight\nof them. This creature resides in the Grayer Cave near\nRagras and the south cave of Ragras.\n\n\edb[e,16] Suppression　\e}Remaining \eqkm[16]\e{",
+             {16=>8},
+             {"5 w"=>1}
+             ],
+  
+  #--------After the morning following the bandit Suppression-----------------------------------------------------------------------------------
+  
+             [14,   64,      "Delivery", "Commercial Town Ragras Adventurer's Guild", "Street Vendor Material Shop", "1200\eg\nMonster materials will be added to the Ragras material shop's inventory", "--", 
+             "Monster Material Drops", 
+             "The material shop wants to handle monster materials.\nSo they need three each of \edbi[i,171] and \edbi[i,174],\nand two of \edbi[i,176].\n\n\edbi[i,171]　\e}Needed 3/ In Possession \eqin[i,171]\e{\n\edbi[i,174]　\e}Needed 3/ In Possession \eqin[i,174]\e{\n\edbi[i,176]　\e}Needed 2/ In Possession \eqin[i,176]\e{",
+             {"171 i"=>3, "174 i"=>3, "176 i"=>2},
+             {"g"=>1200}
+             ],
+  
+             [15,   65,      "Suppression", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,84]、\edbi[a,106]", "13～", 
+             "Snake Hunt", 
+             "Timor Mountain is an important route for traffic between Dalia.\nHowever, the mountain path is dangerous due to numerous\nsnake monsters 'edb[e,23]' living there. For\nthe sake of those who travel between the two countries,\nplease subjugate six \eimp\edb[e,23].\n\n\edb[e,23] Suppression　\e}Remaining \eqkm[23]\e{",
+             {23=>6},
+             {"84 a"=>1, "106 a"=>1}
+             ],
+  
+             [16,   66,      "Suppression", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[i,113]×２、\edbi[a,257]", "14～", 
+             "Snowmen", 
+             "\eimpThe area near the summit of Timor Mountain\ec[0] is always\ncovered in snow, and there are monsters that look\nlike snowmen. Please subjugate five \eimp\edb[e,27]\ec[0].\n\n\edb[e,27] Suppression　\e}Remaining \eqkm[27]\e{",
+             {27=>5},
+             {"113 i"=>2, "257 a"=>1}
+             ],
+  
+             [17,   67,      "Errand", "Commercial Town Ragras Red-Roofed Private House", "\emob[f7]", "\edbi[w,24]、\edbi[a,287]", "14～", 
+             "Desire to Be Busty!", 
+             "\emob[f7] wants to get her hands on freshly milked\nmilk from the ranch because she's eager to have bigger\nbreasts. It seems there's a ranch by the lake west of\nRagras, so let's ask the ranch owner.\n\eimp If you go with the busty married woman\ec[0],\nsomething special might happen…?",
+             {},
+             {"287 a"=>1, "24 w"=>1},
+             {"h"=>2}
+             ],
+  
+             [18,   68,      "Investigation", "Commercial Town Ragras Mayor's House 2nd Floor", "\emob[p11b]", "\edbi[i,52]", "12～", 
+             "What Lurks in the Underground Waterway", 
+             "There's something wrong with Ragras' underground\nwaterway. The water quality has deteriorated significantly\nrecently. The purification device prevents any serious\nproblems, but if left unchecked, it could harm the residents.\n\eimp Go through the white building located in the northwest of the town\ec[0]\nand down to the waterway to investigate the cause.",
+             {},
+             {"52 i"=>1}
+             ],
+  
+             [19,   69,      "Errand", "Timor Mountain Cave Entrance", "\emob[p1_f]", "\edbi[i,2]×２、\n\edbi[i,8]", "--", 
+             "Lower the Rope Ladder", 
+             "\emob[p1_f] en route over the mountain fears goblins and can't enter\nthe cave leading to the cliff. Without passing through the cave,\nthe mountain cannot be crossed… So he asked us to\ngo through the cave on his behalf and drop the rope ladder\non the other side. Let's complete the mountain path\nby lowering the rope ladder from the cliff on his behalf.",
+             {},
+             {"2 i"=>2, "8 i"=>1}
+             ],
+  
+  #--------After arrival at the temple-----------------------------------------------------------------------------------
+  
+             [20,   70,      "Other", "Frizenia Temple 4th Floor Small Room", "\esb[34]", "\edbi[w,6]", "--", 
+             "Monster Girl Talk", 
+             "Met a \edb[e,28] named Anemone in a small\nroom on the fourth floor of the Frizenia Temple.\nInitially wary, Lunaria gradually warmed up to her\nas they spoke and realized despite being a monster,\nshe bore no malice. Considering becoming friends,\nvisit her again when the opportunity arises.",
+             {},
+             {"6 w"=>1},
+             {"l"=>[38,41]}
+             ],
+  
+  #--------After arrival in Senessio-----------------------------------------------------------------------------------
+  
+             [21,   71,      "Suppression", "Port Town Senessio Café with Ocean View", "\emob[p2_f]", "\edbi[i,54]", "--", 
+             "Octopus Wiener", 
+             "A \emob[p2_f] at the port café has requested that we\nsubdue \edb[e,34] around \eimpSenessio\ec[0]. Apparently, it makes\nher hungry watching them and is quite bothersome…\n\n\edb[e,34] Suppression　\e}Remaining \eqkm[34]\e{",
+             {34=>5},
+             {"54 i"=>1}
+             ],
+             
+  #--------After meeting Tsukihana-----------------------------------------------------------------------------------
+  
+             [22,   72,      "Delivery", "Kujou Village Warehouse", "\emob[f7]", "2000\eg", "--", 
+             "Naughty Underwear", 
+             "A woman from the village has asked us to collect\nthree \edbi[i,188], which female-shaped demons (monsters)\ndrop. She plans to study them to create a technique to\nseduce men. Female ghosts often appear\n\eimparound the village, Nawate, and the Sealing Cave\ec[0].\n\n\edbi[i,188]　\e}Needed 3/ In Possession \eqin[i,188]\e{",
+             {"188 i"=>3},
+             {"g"=>2000}
+             ],
+             
+             [23,   73,      "Suppression", "Town of Nawate Adventurers' Association", "Guild Receptionist \emob[qp2]", "\e}\edbi[i,123]、\edbi[i,124]\n\edbi[i,125]、\edbi[i,126]\e{", "20～", 
+             "Foreign Goblin Slayer", 
+             "The 'edb[e,41]' yokai, who turns pillows to\nconfuse sleeping people, have been spotted\n\eimparound and inside the Sealing Cave\ec[0].\nPlease subjugate five \eimp\edb[e,41].\n\n\edb[e,41] Suppression　\e}Remaining \eqkm[41]\e{",
+             {41=>5},
+             {"123 i"=>1, "124 i"=>1, "125 i"=>1, "126 i"=>1}
+             ],
            
-           [2,   52,         "討伐",   "サジタリーズ城下町　冒険者ギルド", "ギルド受付 \emob[qp2]", "200\eg、\edbi[i,4]×２", "3～", 
-           "小鬼殺し", #7-題名
-           #8-詳細
-           "冒険者や行商人を襲っては荷物を盗んだり\n女性をさらう\edb[e,5]。そんな憎き\n\eimp\edb[e,5]を６体討伐\ec[0]して来て下さい。\n\edb[e,5]は主にサジタリーズ周辺や\nリゼルの森・南エリアに棲息しています。\n\n\edb[e,5]討伐　\e}残り\eqkm[5]体\e{",
-           #9-達成条件ハッシュ
-           {5=>6}, 
-           #10-報酬ハッシュ
-           {"g"=>200, "4 i"=>2}
-           ],
+             [24, 74, "Suppression", "Nawate Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "\edbi[i,64]×2\n1000\eg", "20～",
+             "Demonic Youkai",
+             "In Tokiwa, there exist demonic youkai that seduce men, kidnap, and consume them. Please subjugate four of each of these youkai \eimp\edb[e,42] and\n\edb[e,43]\e}\e}(Jorougumo)\e{\e{. Both inhabit the Sealed Cave from the midway point onwards.\n\n\edb[e,42] Suppression　\e}Remaining \eqkm[42] bodies\e{\n\edb[e,43] Suppression　\e}Remaining \eqkm[43] bodies\e{",
+             {42=>4, 43=>4},
+             {"64 i"=>2, "g"=>1000}
+             ],
+  
+             [25, 75, "Delivery", "Nawate Town Adventurers' Guild", "Shrine Maiden \esb[14]", "\edbi[w,7], 1000\eg", "--",
+             "Youkai Ecology",
+             "To understand the ecology of youkai, please deliver three each of \edb[e,37] dropped \edbi[i,187] and\n\edb[e,44] dropped \edbi[i,189]. \edb[e,37] mainly inhabits the \eimpvillage surroundings\ec[0],\n\edb[e,44] dwells in the \eimpSealed Cave\ec[0].\n\n\edbi[i,187]　\e}Required Number 3/ Possessed Number \eqin[i,187]\e{\n\edbi[i,189]　\e}Required Number 3/ Possessed Number \eqin[i,189]\e{",
+             {"187 i"=>3, "189 i"=>3},
+             {"7 w"=>1, "g"=>1000}
+             ],
+  
+             [26, 76, "Delivery", "Nawate Town Adventurers' Guild", "\emob[m13]", "\edbi[i,262]×2\n\edbi[i,20]×4", "--",
+             "Medicine Compounding",
+             "The clinic's doctor has requested the delivery of five \edbi[i,29] and three \edbi[i,35]. Both can be collected in the Sealed Cave.\n\n\edbi[i,29]　\e}Required Number 5/ Possessed Number \eqin[i,29]\e{\n\edbi[i,35]　\e}Required Number 3/ Possessed Number \eqin[i,35]\e{",
+             {"29 i"=>5, "35 i"=>3},
+             {"262 i"=>2, "20 i"=>4}
+             ],
+  
+             [27, 77, "Delivery", "Nawate Town Adventurers' Guild", "\eshop[we4]", "2000\eg", "--",
+             "Spiritual Stone",
+             "\eshop[we4] wants to request a new weapon from the blacksmith, so please deliver four \edbi[i,47]. \edbi[i,47] is an ore that can only be collected in Tokiwa.\n\n\edbi[i,47]　\e}Required Number 4/ Possessed Number \eqin[i,47]\e{",
+             {"47 i"=>4},
+             {"g"=>2000}
+             ],
+  
+             [28, 78, "Delivery", "Nawate Town Row Houses", "\emob[f2]", "\edbi[i,283]×2", "--",
+             "Weaving Thread",
+             "A woman living in the row houses is in trouble because she has run out of weaving thread. She said that \edbi[i,184] would be a good substitute, so let's deliver five \edbi[i,184].\n\n\edbi[i,184]　\e}Required Number 5/ Possessed Number \eqin[i,184]\e{",
+             {"184 i"=>5},
+             {"283 i"=>2}
+             ],
+  
+  #--------↓Post-evil dragon Suppression-----------------------------------------------------------------------------------
+  
+             [29, 79, "Errand", "In front of Nawate Town Public Bath", "\eshop[hu1]", "\edbi[a,288], \edbi[a,258]", "--",
+             "Grand Reopening",
+             "According to Mr. \eshop[hu1] from the public bath, they are short on stones for a renovation, so let's go to the underground passage to Tokiwa and mine \edbi[i,205]. It seems \edbi[i,205] can be mined from the place where water is falling from both sides near the exit of Tokiwa.",
+             {},
+             {"288 a"=>1,"258 a"=>1}
+             ],
+  
+  #--------↓Post-Sakai Arrival-----------------------------------------------------------------------------------
+  
+             [30, 80, "Suppression", "Sakai Port Town Pier", "\emob[f9]", "\edbi[i,97]", "24～",
+             "Peaceful Demise",
+             "In the port of Sakai, I met a sorrowful nun. She wants to give a peaceful rest to the youkai called \edb[e,47]. To grant her wish, let's subjugate eight \edb[e,47] wandering in the \eimpKujo Labyrinth.\n\n\edb[e,47] Suppression　\e}Remaining \eqkm[47] bodies\e{",
+             {47=>8},
+             {"97 i"=>1}
+             ],
+  
+             [31, 81, "Errand", "Furisenia Temple 4th Floor Small Room", "\esb[34]", "\edbi[i,56]", "--",
+             "Tokiwa's Food",
+             "When I visited Anemone after a long time, she envied that I had been to Tokiwa. It seems she has a longing for Tokiwa, so she wants to at least taste the atmosphere of Tokiwa through its food. Let's buy rice balls and dumplings from the tea house near the northern ferry and give them to her.\ec[0]",
+             {},
+             {"56 i"=>1},
+             {"l"=>[38,41], "s"=>[127], "t"=>"This quest can be accepted after completing Quest No. 20"}
+             ],
+  
+  #--------↓After receiving the pass-----------------------------------------------------------------------------------
+  
+             [32, 82, "Errand", "Sagittarius Castle Throne Room", "Millay", "\edbi[i,57]", "--",
+             "Hot Spring's Essence",
+             "Millay is taking a break from the investigation of the mysterious man. She has been investigating without much rest and seems tired... To relieve her fatigue, let's buy the essence of a hot spring, which is said to have recovery effects, at the public bath in Nawate.",
+             {},
+             {"57 i"=>1},
+             {"l"=>[27,29], "v"=>[[79,6,0]], "t"=>"This quest can be accepted after completing Quest No. 29"}
+             ],
+  
+             [33, 83, "Suppression", "Timor Mountain Dalia-side Downhill Path", "\emob[s1]", "\edbi[i,64]\n\edbi[a,264]", "25～",
+             "New Imp Slayer",
+             "The \edb[e,5] of Timor Mountain are a challenge for everyone. Among them, it is believed that a higher-ranking species, the \eimp\edb[e,53], is leading them. We have been asked to subjugate six \edb[e,53]. They are often spotted in the \eimpcaves on the Dalia-side downhill path.\n\n\edb[e,53] Suppression　\e}Remaining \eqkm[53] bodies\e{",
+             {53=>6},
+             {"64 i"=>1, "264 a"=>1},
+             {"v"=>[[62,6,0]], "t"=>"This quest can be accepted after completing Quest No. 12"}
+             ],
+  
+             [34, 84, "Hunt", "Ragras Commercial Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "5000\eg", "28～",
+             "That Pig, Beware its Ferocity...",
+             "An urgent request. A ferocious monster, the \eimp\edb[e,60], has appeared in Grea Cave. Already, several adventurers have been defeated, and one \eimpfemale adventurer was continuously violated by \edb[e,60] until it was satisfied. Please be aware of the danger and subjugate the \edb[e,60] residing in Grea Cave. It is said to be near the western water area immediately after entering from the Ragras side.",
+             {},
+             {"g"=>5000},
+             {"l"=>[37,40], "h"=>1}
+             ],
+  
+             [35, 85, "Suppression", "Border Checkpoint", "\emob[p6_m]", "\edbi[i,118]×2\n\edbi[i,70]×2", "26～",
+             "If One Must Be Poisoned",
+             "At the border checkpoint, I met \emob[p6_m] who said he is weak against poison attacks. Let's help him reduce the number of \edb[e,54] in the Hydra Marsh before crossing it by subjugating five \edb[e,54].\n\n\edb[e,54] Suppression　\e}Remaining \eqkm[54] bodies\e{",
+             {54=>5},
+             {"118 i"=>2, "70 i"=>2},
+             {}
+             ],
+  
+  #--------↓Arrival in Cactus-----------------------------------------------------------------------------------
+  
+             [36, 86, "Other", "Furisenia Temple 4th Floor Small Room", "\esb[34]", "???", "33～",
+             "Humans and Monsters",
+             "Anemone, a monster, says she would like to \eimptravel together one day. However, I can't take her, a monster, around, and because she herself does not enjoy fighting, she deems it best not to leave the temple. Her next request is to taste the apple manju from Ragras. Let's go to \eimpRagras\ec[0] and buy some \eimpapple manju\ec[0] from a street stall to give to her.",
+             {},
+             {},
+             {"l"=>[38,41], "s"=>[128], "t"=>"This quest can be accepted after completing Quest No. 31"}
+             ],
+  
+             [37, 87, "Suppression", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "1000\eg、\edbi[a,289]", "28～",
+             "Ghostbusting",
+             "In \eimpFolia Ruins\ec[0], there are monsters that have left unfinished business in this world and cannot pass on peacefully. This request is to subjugate one such ghostly monster, \edb[e,55]. Please subjugate five \edb[e,55].\n\n\edb[e,55] Suppression　\e}Remaining \eqkm[55] bodies\e{",
+             {55=>5},
+             {"g"=>1000, "289 a"=>1},
+             {}
+             ],
+  
+             [38, 88, "Suppression", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "1000\eg、\edbi[a,290]", "28～",
+             "Knight of the Shadows",
+             "There are monsters that lurk and merge with shadows. Please subjugate six shadow monsters, the \eimp\edb[e,12]. They mainly inhabit the \eimpFolia Ruins.\n\n\edb[e,12] Suppression　\e}Remaining \eqkm[12] bodies\e{",
+             {12=>6},
+             {"g"=>1000, "290 a"=>1},
+             {}
+             ],
+  
+             [39, 89, "Delivery", "Cactus Royal Capital Adventurers' Guild", "Tool Shop", "2000\eg", "26～",
+             "Mysterious Plants",
+             "Plants that grow by absorbing mana from the atmosphere have mysterious magical powers. Among them, the plant \eimp\edbi[i,30], which is used in healing medications, is required. Please deliver four \edbi[i,30]. In this area, they can be collected in the \eimpHydra Marsh.\n\n\edbi[i,30]　\e}Required Number 4/ Possessed Number \eqin[i,30]\e{",
+             {"30 i"=>4},
+             {"g"=>2000},
+             {}
+             ],
+  
+             [40, 90, "Delivery", "Cactus Royal Capital Adventurers' Guild", "\emob[m2]", "\edbi[i,64]", "26～",
+             "I Want to Sleep While Numb",
+             "A peculiar person―ahem, a person with unique tastes wants to sleep while feeling numb. Thus, please deliver \eimp\edbi[i,79] and \edbi[i,80]\ec[0], three of each.\n\n\edbi[i,79]　\e}Required Number 3/ Possessed Number \eqin[i,79]\e{\n\edbi[i,80]　\e}Required Number 3/ Possessed Number \eqin[i,80]\e{",
+             {"79 i"=>3, "80 i"=>3},
+             {"64 i"=>1},
+             {}
+             ],
+  
+             [41, 91, "Hunt", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "4000\eg\n\edbi[a,333]、\edbi[a,334]", "30～",
+             "Tentacle Squirming",
+             "Monsters with tentacles, \eimp\edb[e,61], have appeared in the Hydra Marsh. \edb[e,61] uses its numerous tentacles to capture and violate \eimpfemale adventurers, so please be extra cautious, especially the ladies, while subjugating them. The location is the \eimpsecond area on the royal capital side of the marsh, just beyond the stepping stones to the west.\ec[0]",
+             {},
+             {"g"=>4000, "333 a"=>1, "334 a"=>1},
+             {"l"=>[37,40], "h"=>1}
+             ],
+  
+             [42, 92, "Errand", "Cactus Capital Wealthy District Brown-roofed House", "\esb[19]", "\edbi[i,98]\n\edbi[a,259]、\edbi[a,260]", "--",
+             "A Letter to Mother",
+             "In the royal capital of the Dalia Kingdom, I met \esb[32]'s mother, my colleague's mother. It seems that Eriora, of Dalia's nobility, became a court magician in Sagittarius against her father's wishes. Persuade her to write \eimpa letter destined for her mother and let's get it from her. \esb[32] is likely on the \eimpfirst floor of the magician's wing in Sagittarius Castle.\ec[0]",
+             {},
+             {"98 i"=>1, "259 a"=>1, "260 a"=>1},
+             {"s"=>[132],"l"=>[38,50], "t"=>"This quest can be accepted if you have spoken to the court magician Eriora of Sagittarius at least once"}
+             ],
            
-           [3,   53,      "討伐", "サジタリーズ城下町　冒険者ギルド", "ギルド受付 \emob[qp2]", "\edbi[a,106]", "4～", 
-           "うさぎ狩り", 
-           "南のロベ周辺及びリゼルの森等に棲息している\nウサギに似た魔物\eimp\edb[e,6]を\n５体討伐\ec[0]してきて下さい\n\n\edb[e,6]討伐　\e}残り\eqkm[6]体\e{",
-           {6=>5},
-           {"106 a"=>1}
-           ],
-           
-           [4,   54,      "納品", "サジタリーズ城下町　冒険者ギルド", "道具屋", "\edbi[w,2]", "--", 
-           "回復薬の材料", 
-           "道具屋からの依頼で\edbi[i,27]と\edbi[i,32]が\n欲しいと要望がありました。なので\edbi[i,27]と\n\edbi[i,32]をそれぞれ５つずつ集めて下さい。\nどちらもリゼルの森で採取できます。\n\n\edbi[i,27]　\e}必要数 5/ 所持数 \eqin[i,27]\e{\n\edbi[i,32]　\e}必要数 5/ 所持数 \eqin[i,32]\e{",
-           {"27 i"=>5, "32 i"=>5},
-           {"2 w"=>1}
-           ],
-           
-           [5,   55,      "討伐", "サジタリーズ城下町　冒険者ギルド", "ギルド受付 \emob[qp2]", "200\eg、\edbi[i,4]×３", "5～", 
-           "害虫駆除", 
-           "リゼルの森に棲息している\eimp\edb[e,7]と\n\edb[e,8]\ec[0]をそれぞれ\eimp５体ずつ討伐\ec[0]して来て下さい。\n\edb[e,7]は森全域に、\n\edb[e,8]は南エリアに棲息しています。\n\n\edb[e,7]討伐　\e}残り\eqkm[7]体\e{\n\edb[e,8]討伐　\e}残り\eqkm[8]体\e{",
-           {7=>5, 8=>5},
-           {"g"=>200, "4 i"=>3}
-           ],
-                      
-#--------６のみ遺跡クリア後-----------------------------------------------------------------------------------
-
-           [6,   56,         "大討伐",   "サジタリーズ城下町　冒険者ギルド", "ギルド受付 \emob[qp2]", "2000\eg", "11～", 
-           "巨大スライムを倒せ！", #7-題名
-           #8-詳細
-           "リゼルの森の北エリア、水場付近に高レベルの\n巨大スライムが出没するという情報が入ったので\nこれを退治して下さい。巨大スライムは\n\eimp女性冒険者が一人の場合負けると犯される\ec[0]\nという情報が入ってきていますので\n一人で挑む場合は充分注意するようお願いします。\nまた、この魔物は物理が通りにくいとの報告有。",
-           #9-達成条件ハッシュ
-           {}, 
-           #10-報酬配列
-           {"g"=>2000},
-           #11-受注条件およびその他ハッシュ。なくてもOK
-           {"l"=>[37,40], "h"=>1}
-           ],
-           
-           [7,   57,         "捜索",   "サジタリーズ城下町　自宅付近", "\emob[f3]", "\edbi[i,116]", "--", 
-           "落とし物", #7-題名
-           #8-詳細
-           "サジタリーズの城下町でストラップを\n落してしまったという\emob[f3]。町の中を捜して\n彼女が落としたという\nくまのストラップを捜してあげよう。",
-           #9-達成条件ハッシュ
-           {}, 
-           #10-報酬ハッシュ
-           {"116 i"=>1}
-           ],
-           
-           [8,   58,      "納品", "サジタリーズ城下町　レストラン前", "\emob[a1_f1]", "\edbi[a,22]", "--", 
-           "食材？を求めて", 
-           "レストランで出す料理に、森などに生えている\n\edbi[i,75]が必要らしい。なんでも\edbi[i,75]は\n毒抜きをすると大変美味なんだとか…\nリゼルの森などで\edbi[i,75]を採取して\n\emob[a1_f1]さんに渡してあげよう\n\n\edbi[i,75]　\e}必要数 5/ 所持数 \eqin[i,75]\e{",
-           {"75 i"=>5},
-           {"22 a"=>1}
-           ],
-           
-#--------↓ロべで一夜後-----------------------------------------------------------------------------------
-
-           [9,   59,      "納品", "森の村ロベ　村長の家１階", "\emob[f8]", "500\eg", "--", 
-           "フサフサ", 
-           "村長宅にいる\emob[f8]はヘア系モンスターに\nご執心の様子。なのでヘア達が落とす\n\edbi[i,173]を３つ集めて\n彼女に渡してあげよう。\n\n\edbi[i,173]　\e}必要数 3/ 所持数 \eqin[i,173]\e{",
-           {"173 i"=>3},
-           {"g"=>500}
-           ],
-           
-           [10,   60,      "大討伐", "森の村ロベ　飲み屋兼宿屋１階", "\emob[m2]", "1000\eg、\edbi[i,93]", "7～", 
-           "蜂の群れ", 
-           "リゼルの森・南エリアの池に\edb[e,8]が\n大量発生。おまけに森にいる他の\edb[e,8]より\nレベルが少し高い為、放っておくとどんな被害が\n出るかわからないので退治して欲しいとの事。\n恐らく\eimp連戦になる\ec[0]ので入念に準備をして\n南エリアの池へ向かおう。",
-           #9-達成条件ハッシュ
-           {},
-           #10-報酬ハッシュ
-           {"g"=>1000, "93 i"=>1}
-           ],
-           
-#--------↓ラグラス到着後　No17も-----------------------------------------------------------------------------------
-
-           [11,   61,      "納品", "商業の町ラグラス　冒険者ギルド", "露天商 食材屋", "800\eg、\edbi[i,113]×２", "--", 
-           "魔物のお肉", 
-           "食材屋からの依頼でヘア系モンスターの\edbi[i,181]と\nボア系モンスターの\edbi[i,180]を３つずつ納めて\n欲しいという依頼がありました。ボア系は\n南北の両洞窟に、ヘア系はラグラス周辺にいます。\n\n\edbi[i,180]　\e}必要数 3/ 所持数 \eqin[i,180]\e{\n\edbi[i,181]　\e}必要数 3/ 所持数 \eqin[i,181]\e{",
-           {"180 i"=>3, "181 i"=>3},
-           {"g"=>800, "113 i"=>2}
-           ],
-           
-           [12,   62,      "討伐", "商業の町ラグラス　冒険者ギルド", "ギルド受付 \emob[qp2]", "\edbi[a,24]、\edbi[a,171]", "10～", 
-           "続・小鬼殺し", 
-           "\edb[e,5]の中には知能が高く剣技や\esk[2]を扱う\n個体が存在します。南の洞窟に住むそれら\n\eimp\edb[e,18]\ \edb[e,19]\ec[0]を\n\eimpそれぞれ５体ずつ討伐\ec[0]願います。\n\n\edb[e,18]討伐　\e}残り\eqkm[18]体\e{\n\edb[e,19]討伐　\e}残り\eqkm[19]体\e{",
-           {18=>5, 19=>5},
-           {"24 a"=>1, "171 a"=>1},
-           {"v"=>[[52,6,0]], "t"=>"こちらはクエストNo.02をクリアすると\n受注できます"}
-           ],
-           
-           [13,   63,      "討伐", "商業の町ラグラス　冒険者ギルド", "ギルド受付 \emob[qp2]", "\edbi[w,5]", "9～", 
-           "毒蟻繁殖期", 
-           "毒を持つ\edb[e,16]が繁殖期に入りました。\nこれ以上の増殖を避けるため\eimp\edb[e,16]を\n８体討伐\ec[0]して下さい。\nこの魔物は\eimpグレア洞窟のラグラス側\ec[0]および、\n\eimpラグラス南の洞窟\ec[0]に棲息しています。\n\n\edb[e,16]討伐　\e}残り\eqkm[16]体\e{",
-           {16=>8},
-           {"5 w"=>1}
-           ],
-           
-#--------↓盗賊退治後翌朝-----------------------------------------------------------------------------------
-
-           [14,   64,      "納品", "商業の町ラグラス　冒険者ギルド", "露天商 素材屋", "1200\eg\nラグラス素材屋の品揃えに魔物素材が追加", "--", 
-           "魔物が落とす素材", 
-           "素材屋では魔物の素材も扱いたいとの事。\nなので\edbi[i,171]と\edbi[i,174]を３つ、\n\edbi[i,176]を２つ納品して欲しいとの事です。\n\n\edbi[i,171]　\e}必要数 3/ 所持数 \eqin[i,171]\e{\n\edbi[i,174]　\e}必要数 3/ 所持数 \eqin[i,174]\e{\n\edbi[i,176]　\e}必要数 2/ 所持数 \eqin[i,176]\e{",
-           {"171 i"=>3, "174 i"=>3, "176 i"=>2},
-           {"g"=>1200}
-           ],
-           
-           [15,   65,      "討伐", "商業の町ラグラス　冒険者ギルド", "ギルド受付 \emob[qp2]", "\edbi[a,84]、\edbi[a,106]", "13～", 
-           "スネークハント", 
-           "ダリアとの交通の要である\eimpティモル山\ec[0]。\nしかし山道には多くの蛇モンスター\n「\edb[e,23]」が棲息しており大変危険です。\n二国を行き来する者達の為にも\n\eimp\edb[e,23]を６体討伐\ec[0]して下さい。\n\n\edb[e,23]討伐　\e}残り\eqkm[23]体\e{",
-           {23=>6},
-           {"84 a"=>1, "106 a"=>1}
-           ],
-           
-           [16,   66,      "討伐", "商業の町ラグラス　冒険者ギルド", "ギルド受付 \emob[qp2]", "\edbi[i,113]×２、\edbi[a,257]", "14～", 
-           "雪だるま", 
-           "\eimpティモル山の山頂付近\ec[0]は常に雪が降っており\n雪だるまのような外見の魔物が出没する\nという話です。その雪だるま状の魔物\n\eimp\edb[e,27]を５体討伐\ec[0]してください。\n\n\edb[e,27]討伐　\e}残り\eqkm[27]体\e{",
-           {27=>5},
-           {"113 i"=>2, "257 a"=>1}
-           ],
-           
-           [17,   67,      "お使い", "商業の町ラグラス　赤い屋根の民家", "\emob[f7]", "\edbi[w,24]、\edbi[a,287]", "14～", 
-           "巨乳になりたい！", 
-           "巨乳になりたいという\emob[f7]から\n牧場で搾りたてのミルクをもらってきて欲しいと\n頼まれた。\eimpラグラスから西へ行った所の湖畔\ec[0]に\n牧場があるらしいので、そこの牧場主に\nお願いしてみよう。\n\eimp爆乳人妻と一緒\ec[0]だと\n\eimp何か特別な事が起こる\ec[0]かもしれない…？",
-           {},
-           {"287 a"=>1, "24 w"=>1},
-           {"h"=>2}
-           ],
-           
-           [18,   68,      "調査", "商業の町ラグラス　町長宅２階", "\emob[p11b]", "\edbi[i,52]", "12～", 
-           "地下水路に潜む者", 
-           "ラグラスの地下水路に異変が起きている。\nなんでも、最近水質がかなり悪くなっている\nとの事。浄化装置があるので大事には至って\nいないが、このままではいつ町民に害が及ぶか\n分からない。\eimp町の北西にある白い建物\ec[0]から\n地下水路へと降りて原因を調べよう。",
-           {},
-           {"52 i"=>1}
-           ],
-           
-           [19,   69,      "お使い", "ティモル山　登り口洞窟前", "\emob[p1_f]", "\edbi[i,2]×２、\n\edbi[i,8]", "--", 
-           "縄梯子を下ろして", 
-           "山越え途中の\emob[p1_f]は、ゴブリンが苦手で\n崖上へ続く洞窟の中に入れないという。\n洞窟を抜けないと山越えは出来ない…\nなので代わりに洞窟を抜け、その先で縄梯子を\n下ろしてほしいと頼まれた。\n\emob[p1_f]の代わりに洞窟を抜け、\n崖上から縄梯子を下ろしてあげよう。",
-           {},
-           {"2 i"=>2, "8 i"=>1}
-           ],
-           
-#--------↓神殿到着後-----------------------------------------------------------------------------------
-
-           [20,   70,      "その他", "フリゼニア神殿　４階小部屋", "\esb[34]", "\edbi[w,6]", "--", 
-           "魔物と女子トーク", 
-           "フリゼニア神殿４階の小部屋で\nアネモネと名乗る\edb[e,28]と出会った。\n最初は警戒するLunariaだったが、\n魔物でありながら敵意のない彼女と\n話しをするうち、次第に打ち解けていき\n仲良くなった。また今度、機会があれば\n彼女に会いに行ってみよう。",
-           {},
-           {"6 w"=>1},
-           {"l"=>[38,41]}
-           ],
-           
-#--------↓神殿クリア後セネシオ到着-----------------------------------------------------------------------------------
-
-           [21,   71,      "討伐", "港町セネシオ　海の見えるカフェ", "\emob[p2_f]", "\edbi[i,54]", "--", 
-           "タコさんウィンナー", 
-           "港町のカフェにいる\emob[p2_f]から\n\eimpセネシオ周辺\ec[0]に棲息している\edb[e,34]を\n倒して欲しいとお願いされた。\nなんでも、見てるとお腹が空いてきて\n迷惑なんだとか…\n\n\edb[e,34]討伐　\e}残り\eqkm[34]体\e{",
-           {34=>5},
-           {"54 i"=>1}
-           ],
-           
-#--------↓ツキハ面会後-----------------------------------------------------------------------------------
-
-           [22,   72,      "納品", "九条の里　蔵", "\emob[f7]", "2000\eg", "--", 
-           "エッチな下着", 
-           "里の女性から、女型の魔物(妖怪)が落とす\n\edbi[i,188]を３つ集めて欲しいとお願いされた。\nその下着で男を誘惑する術を研究するんだとか…。\n女の妖怪は\eimp里やナワテ周辺、封印の洞窟等に\nよく出没する\ec[0]らしい。\n\n\edbi[i,188]　\e}必要数 3/ 所持数 \eqin[i,188]\e{",
-           {"188 i"=>3},
-           {"g"=>2000}
-           ],
-           
-           [23,   73,      "討伐", "ナワテの町　冒険者組合", "ギルド受付 \emob[qp2]", "\e}\edbi[i,123]、\edbi[i,124]\n\edbi[i,125]、\edbi[i,126]\e{", "20～", 
-           "異国の小鬼殺し", 
-           "\eimp封印の洞窟周辺および洞窟内\ec[0]には、\n寝ている者の枕を返して相手を混乱させる\n「\edb[e,41]」という妖怪が出没します。\nその\eimp\edb[e,41]を５体討伐\ec[0]してきて下さい。\n\n\edb[e,41]討伐　\e}残り\eqkm[41]体\e{",
-           {41=>5},
-           {"123 i"=>1, "124 i"=>1, "125 i"=>1, "126 i"=>1}
-           ],
-           
-           [24,   74,      "討伐", "ナワテの町　冒険者組合", "ギルド受付 \emob[qp2]", "\edbi[i,64]×２\n1000\eg", "20～", 
-           "魔性の妖怪", 
-           "トキワには 男を魅了してかどわかし、喰らって\nしまう魔性の妖怪が存在します。その妖怪\eimp\edb[e,42]と\n\edb[e,43]\e}\e}(じょろうぐも)\e{\e{を各４体ずつ討伐\ec[0]してきて下さい。\nどちらも封印の洞窟中盤以降に棲息しています。\n\n\edb[e,42]討伐　\e}残り\eqkm[42]体\e{\n\edb[e,43]討伐　\e}残り\eqkm[43]体\e{",
-           {42=>4, 43=>4},
-           {"64 i"=>2, "g"=>1000}
-           ],
-           
-           [25,   75,      "納品", "ナワテの町　冒険者組合", "巫女 \esb[14]", "\edbi[w,7]、1000\eg", "--", 
-           "妖怪の生態", 
-           "妖怪の生態を知る為 \edb[e,37]が落とす\edbi[i,187]と\n\edb[e,44]が落とす\edbi[i,189]を３つずつ\n納品願います。\edb[e,37]は主に\eimp里周辺\ec[0]、\n\edb[e,44]は\eimp封印の洞窟\ec[0]に棲息しています\n\n\edbi[i,187]　\e}必要数 3/ 所持数 \eqin[i,187]\e{\n\edbi[i,189]　\e}必要数 3/ 所持数 \eqin[i,189]\e{",
-           {"187 i"=>3, "189 i"=>3},
-           {"7 w"=>1, "g"=>1000}
-           ],
-           
-           [26,   76,      "納品", "ナワテの町　冒険者組合", "\emob[m13]", "\edbi[i,262]×２\n\edbi[i,20]×４", "--", 
-           "薬の調合", 
-           "診療所の先生からの依頼で\edbi[i,29]を５つ、\n\edbi[i,35]を３つ納品して欲しいそうです。\nどちらも封印の洞窟で採取出来ます。\n\n\edbi[i,29]　\e}必要数 5/ 所持数 \eqin[i,29]\e{\n\edbi[i,35]　\e}必要数 3/ 所持数 \eqin[i,35]\e{",
-           {"29 i"=>5, "35 i"=>3},
-           {"262 i"=>2, "20 i"=>4}
-           ],
-           
-           [27,   77,      "納品", "ナワテの町　冒険者組合", "\eshop[we4]", "2000\eg", "--", 
-           "霊力の石", 
-           "\eshop[we4]が鍛冶屋へ新しい武器を依頼する為\n\edbi[i,47]を４つ納品して欲しいとの事です。\n\edbi[i,47]はトキワのみで採取できる鉱石の事です。\n\n\edbi[i,47]　\e}必要数 4/ 所持数 \eqin[i,47]\e{",
-           {"47 i"=>4},
-           {"g"=>2000}
-           ],
-           
-           [28,   78,      "納品", "ナワテの町　長屋", "\emob[f2]", "\edbi[i,283]×２", "--", 
-           "機織りの糸", 
-           "長屋に住む女性が機織りの糸がなくなって\n困っているという。代用品として\edbi[i,184]が\nあればいいというので\edbi[i,184]を５つ納品しよう。\n\n\edbi[i,184]　\e}必要数 5/ 所持数 \eqin[i,184]\e{",
-           {"184 i"=>5},
-           {"283 i"=>2}
-           ],
-           
-#--------↓邪龍討伐後-----------------------------------------------------------------------------------
-
-           [29,   79,      "お使い", "ナワテの町　銭湯前", "\eshop[hu1]", "\edbi[a,288]、\edbi[a,258]", "--", 
-           "新装開店", 
-           "銭湯の\eshop[hu1]さんの話によると\n銭湯を改装するための石が足りないらしいので\nトキワへの地下道へ行き\edbi[i,205]を\n採掘してこよう。\edbi[i,205]は\nトキワの出口側の両脇から水が落ちている\n場所で採掘出来るらしい。",
-           {},
-           {"288 a"=>1,"258 a"=>1}
-           ],
-           
-#--------↓サカイ到着後-----------------------------------------------------------------------------------
-
-           [30,   80,      "討伐", "港町サカイ　埠頭", "\emob[f9]", "\edbi[i,97]", "24～", 
-           "安らかなる終焉", 
-           "サカイの港で物憂げな尼さんに出会った。\n彼女は\edb[e,47]という妖怪に安らかなる眠りを与えて\nあげたいという。彼女の願いを叶えるべく、\n\eimp九条迷宮を彷徨っている\edb[e,47]を８体討伐\ec[0]しよう。\n\n\edb[e,47]討伐　\e}残り\eqkm[47]体\e{",
-           {47=>8},
-           {"97 i"=>1}
-           ],
-           
-           [31,   81,      "お使い", "フリゼニア神殿　４階小部屋", "\esb[34]", "\edbi[i,56]", "--", 
-           "トキワの食べ物", 
-           "久しぶりにアネモネに会いに行くと\nトキワに行った事を羨ましがられた。\nどうやら彼女はトキワに憧れを持っているらしい。\nせめて食べ物だけでもトキワの雰囲気を\n味わいたいと言うので\eimp北の渡し場の茶屋から\nおむすびとお団子を買ってきてあげよう。\ec[0]",
-           {},
-           {"56 i"=>1},
-           {"l"=>[38,41], "s"=>[127], "t"=>"こちらはクエストNo.20をクリアすると\n受注できます"}
-           ],
-           
-#--------↓通行手形受け取り後-----------------------------------------------------------------------------------
-
-           [32,   82,      "お使い", "サジタリーズ城　玉座の間", "Millay", "\edbi[i,57]", "--", 
-           "温泉の素", 
-           "謎の男の調査の合間に一息ついているMillay。\nあまり休憩を取らず調査しているため\nお疲れの様子…。そんな彼女の疲れを取る為、\n疲労回復効果のあるという温泉の素を\nナワテの銭湯で購入してこよう。",
-           {},
-           {"57 i"=>1},
-           {"l"=>[27,29], "v"=>[[79,6,0]], "t"=>"こちらはクエストNo.29をクリアすると\n受注できます"}
-           ],
-           
-           [33,   83,      "討伐", "ティモル山 ダリア方面への下山道", "\emob[s1]", "\edbi[i,64]\n\edbi[a,264]", "25～", 
-           "新・小鬼殺し", 
-           "ティモル山の\edb[e,5]には皆 手を焼いている。\nその中でも彼らを統率していると思われる\n上位種の\eimp\edb[e,53]を６体討伐\ec[0]して欲しいと\nお願いされた。\edb[e,53]は\eimpダリア側下山道の\n洞窟\ec[0]によく出没するらしい。\n\n\edb[e,53]討伐　\e}残り\eqkm[53]体\e{",
-           {53=>6},
-           {"64 i"=>1, "264 a"=>1},
-           {"v"=>[[62,6,0]], "t"=>"こちらはクエストNo.12をクリアすると\n受注できます"}
-           ],
-           
-           [34,   84,      "大討伐", "商業の町ラグラス　冒険者ギルド", "ギルド受付 \emob[qp2]", "5000\eg", "28～", 
-           "その豚、狂暴につき…", 
-           "緊急の依頼です。グレア洞窟に狂暴な魔物の\eimp\edb[e,60]\nが１体\ec[0]住み着きました。既に何人かの冒険者が返り\n討ちにあい、敗れた\eimp女性冒険者は\edb[e,60]が満足する\nまで犯され続けた\ec[0]との事…。危険を承知でお願い\nします、グレア洞窟に住み着いた\edb[e,60]を討伐\nしてください。\edb[e,60]はラグラス側から入って\nすぐの西側水場辺りにいるという話です。",
-           {},
-           {"g"=>5000},
-           {"l"=>[37,40], "h"=>1}
-           ],
-           
-           [35,   85,      "討伐", "国境の関所", "\emob[p6_m]", "\edbi[i,118]×２\n\edbi[i,70]×２", "26～", 
-           "毒を喰らわば", 
-           "国境の関所で毒攻撃が苦手だという\emob[p6_m]に\n出会った。湿原を越える前に少しでも\n\edb[e,54]の数を減らしたいという彼の為に\n\eimpハイドラ湿原の\edb[e,54]を\n５体討伐\ec[0]しよう。\n\n\edb[e,54]討伐　\e}残り\eqkm[54]体\e{",
-           {54=>5},
-           {"118 i"=>2, "70 i"=>2},
-           {}
-           ],
-           
-#--------↓カクタス到着-----------------------------------------------------------------------------------
-           
-           [36,   86,      "その他", "フリゼニア神殿　４階小部屋", "\esb[34]", "???", "33～", 
-           "人間と魔物", 
-           "自分と\eimp一緒に旅がしてみたい\ec[0]というアネモネ。\nしかし魔物である彼女を連れて歩く訳にもいかず、\n彼女自身も戦いを好まない為、神殿の外に出る事を\nよしとしていない。そんな彼女の次のお願いは\nラグラス名物のアップル饅頭を食べてみたい\nという事だった。早速\eimpラグラス\ec[0]へ行き、\eimp露店で\nアップル饅頭\ec[0]を買ってきてあげよう。",
-           {},
-           {},
-           {"l"=>[38,41], "s"=>[128], "t"=>"こちらはクエストNo.31をクリアすると\n受注できます"}
-           ],
-           
-           [37,   87,      "討伐", "王都カクタス　冒険者ギルド", "ギルド受付 \emob[qp2]", "1000\eg、\edbi[a,289]", "28～", 
-           "おばけ退治", 
-           "\eimpフォリア遺跡\ec[0]にはこの世に未練を残し\n成仏できなかった魔物が出ます。今回の依頼は\nそのおばけの魔物、\edb[e,55]の討伐です。\n\eimp\edb[e,55]を５体討伐\ec[0]願います。\n\n\edb[e,55]討伐　\e}残り\eqkm[55]体\e{",
-           {55=>5},
-           {"g"=>1000, "289 a"=>1},
-           {}
-           ],
-           
-           [38,   88,      "討伐", "王都カクタス　冒険者ギルド", "ギルド受付 \emob[qp2]", "1000\eg、\edbi[a,290]", "28～", 
-           "影の騎士", 
-           "魔物の中には影に潜み、影と同化する者が\n存在します。影より出でし影の魔物\n\eimp\edb[e,12]を６体討伐\ec[0]して下さい。\n主に\eimpフォリア遺跡\ec[0]に棲息しています。\n\n\edb[e,12]討伐　\e}残り\eqkm[12]体\e{",
-           {12=>6},
-           {"g"=>1000, "290 a"=>1},
-           {}
-           ],
-           
-           [39,   89,      "納品", "王都カクタス　冒険者ギルド", "道具屋", "2000\eg", "26～", 
-           "不思議な植物", 
-           "大気中のマナを取り入れて成長した植物は\n不思議な魔力を秘めます。中でも治療薬に使われる\n\eimp\edbi[i,30]という植物を４つ納品\ec[0]して下さい。\nこの近くだと\eimpハイドラ湿原\ec[0]で採取出来ます。\n\n\edbi[i,30]　\e}必要数 4/ 所持数 \eqin[i,30]\e{",
-           {"30 i"=>4},
-           {"g"=>2000},
-           {}
-           ],
-           
-           [40,   90,      "納品", "王都カクタス　冒険者ギルド", "\emob[m2]", "\edbi[i,64]", "26～", 
-           "痺れながら眠りたい", 
-           "痺れながら眠りたいという変人――いえ、\n変わった人からの要望が届いています。\nなので\eimp\edbi[i,79]と\edbi[i,80]\ec[0]を\nそれぞれ\eimp３つずつ\ec[0]納品して下さい。\n\n\edbi[i,79]　\e}必要数 3/ 所持数 \eqin[i,79]\e{\n\edbi[i,80]　\e}必要数 3/ 所持数 \eqin[i,80]\e{",
-           {"79 i"=>3, "80 i"=>3},
-           {"64 i"=>1},
-           {}
-           ],
-           
-           [41,   91,      "大討伐", "王都カクタス　冒険者ギルド", "ギルド受付 \emob[qp2]", "4000\eg\n\edbi[a,333]、\edbi[a,334]", "30～", 
-           "触手ウネウネ", 
-           "ハイドラ湿原に触手を携えた魔物の\eimp\edb[e,61]が\n複数体\ec[0]出現しました。\edb[e,61]はその無数の触手で\n\eimp女性冒険者を捕らえ犯してくる\ec[0]という事ですので、\n特に女性の方は細心の注意を払いつつ討伐を\nお願いします。場所は\eimp王都側\ec[0]から湿原に入って\n\eimp２つ目のエリア、西側の飛び石を越えた先\ec[0]です。",
-           {},
-           {"g"=>4000, "333 a"=>1, "334 a"=>1},
-           {"l"=>[37,40], "h"=>1}
-           ],
-           
-           [42,   92,      "お使い", "王都カクタス・富裕区　茶色い屋根の民家", "\esb[19]", "\edbi[i,98]\n\edbi[a,259]、\edbi[a,260]", "--", 
-           "母への手紙", 
-           "ダリア王国の王都でなんと同僚の\esb[32]の母親と\n出会った。どうやらErioraはダリア出身の\n貴族だったようだが父親の反対を押し切り\n隣国サジタリーズの宮廷魔術師になったという。\nそんな彼女を説得して\eimp母親宛ての手紙を書いて\n貰って\ec[0]こよう。\esb[32]は\eimpサジタリーズ城の\n魔術師棟１階\ec[0]にいるだろう。",
-           {},
-           {"98 i"=>1, "259 a"=>1, "260 a"=>1},
-           {"s"=>[132],"l"=>[38,50], "t"=>"こちらはサジタリーズの宮廷魔術師Erioraに\n一度でも話しかけていれば受注できます"}
-           ],
-           
-#--------↓女王凱旋後-------------------------------------------------------------------------
-           # 43はカマラ対決後
-           [43,   93,      "討伐", "王都カクタス　冒険者ギルド", "ギルド受付 \emob[qp2]", "\edbi[a,265]×２", "36～", 
-           "骸骨戦士", 
-           "砂漠や廃坑で死んだ戦士が骸となって\n彷徨っていると聞きます。その者達が生者を\n道連れにしないよう、砂漠や廃坑に出没する\n\eimp\edb[e,73]を６体討伐\ec[0]して下さい。\n\n\edb[e,73]討伐　\e}残り\eqkm[73]体\e{",
+#--------↓After the Queen's Triumph-------------------------------------------------------------------------
+           # 43 is after the Kamala confrontation
+           [43,   93,      "Suppression", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,265]×２", "36～", 
+           "Skeletal Warriors", 
+           "I have heard that warriors who died in deserts or mines wander as skeletons. Please subjugate \eimp\edb[e,73]\ec[0] appearing in deserts and mines so they do not make the living join them. You need to defeat 6 of them.\n\n\edb[e,73]Suppression \e}Remaining \eqkm[73] units\e{",
            {73=>6},
            {"265 a"=>2},
            {}
            ],
            
-           [44,   94,      "捜索", "山間の村ビオーサ　民家(下)", "\esb[4]", "\edbi[i,9]×３", "32～", 
-           "息子を助けて下さい！", 
-           "ビオーサに住む少年\esb[3]が\n\eimpフォリア遺跡\ec[0]へ行ったまま帰ってこないという。\nこのままでは少年の命が危ないので、\n急いで遺跡へ少年を捜しに行こう。",
+           [44,   94,      "Search", "Mountain Village Biorsa, Lower House", "\esb[4]", "\edbi[i,9]×３", "32～", 
+           "Please Help My Son!", 
+           "A boy from Biorsa \esb[3] has not returned after going to the \eimpFolia Ruins\ec[0]. His life is in danger, so we must hurry to the ruins to search for the boy.",
            {},
            {"9 i"=>3},
            {"h"=>1}
            ],
            
-#--------↓カマラと対決後-------------------------------------------------------------------------------
+#--------↓After confronting Kamala-------------------------------------------------------------------------------
            
-           [45,   95,      "納品", "王都カクタス　冒険者ギルド", "研究員", "\edbi[i,40]×２", "36～", 
-           "怪しい研究", 
-           "お城の研究員が実験に使う材料を探しているとの\n事。なので\edbi[i,191] \edbi[i,192]\n\edbi[i,193]をそれぞれ４つずつ納品願います。\n\n\edbi[i,191]　\e}必要数 4/ 所持数 \eqin[i,191]\e{\n\edbi[i,192]　\e}必要数 4/ 所持数 \eqin[i,192]\e{\n\edbi[i,193]　\e}必要数 4/ 所持数 \eqin[i,193]\e{",
+           [45,   95,      "Delivery", "Royal Capital Cactus Adventurer's Guild", "Researcher", "\edbi[i,40]×２", "36～", 
+           "Suspicious Research", 
+           "A researcher from the castle is looking for materials for an experiment, hence please deliver 4 each of \edbi[i,191], \edbi[i,192], and \edbi[i,193].\n\n\edbi[i,191]　\e} Required amount 4/ Owned amount \eqin[i,191]\e{\n\edbi[i,192]　\e} Required amount 4/ Owned amount \eqin[i,192]\e{\n\edbi[i,193]　\e} Required amount 4/ Owned amount \eqin[i,193]\e{",
            {"191 i"=>4, "192 i"=>4, "193 i"=>4},
            {"40 i"=>2},
            {}
            ],
            
-           [46,   96,      "討伐", "王都カクタス　冒険者ギルド", "彼氏持ちの女性達", "\edbi[i,287]×５", "36～", 
-           "女性達の願い", 
-           "彼氏が淫魔に誑かされたといった報告が\n相次いでいます。淫魔に魅了された男は\n骨抜きになり恋人や妻の事をほったらかしに\nしてしまうんだとか…。そんな女性達から\n怨嗟の声が届いていますので\eimp暗闇の廃坑\ec[0]や\n\eimp砂漠\ec[0]に出る\eimp\edb[e,71]を１２体討伐\ec[0]して下さい。\n\edb[e,71]討伐　\e}残り\eqkmk[SC]体\e{",
+           [46,   96,      "Suppression", "Royal Capital Cactus Adventurer's Guild", "Women with Boyfriends", "\edbi[i,287]×５", "36～", 
+           "A Wish from Women", 
+           "There are successive reports of boyfriends being seduced by succubi. Men charmed by succubi become spineless and neglect their lovers or wives. A multitude of women are voicing their resentment, so please subjugate \eimp12 units of \edb[e,71] found in the Dark Mines and the Desert.\n\edb[e,71]Suppression \e}Remaining \eqkmk[SC] units\e{",
            {"SC"=>12},
            {"287 i"=>5},
            {}
            ],
            
-           [47,   97,      "大討伐", "王都カクタス　冒険者ギルド", "ギルド受付 \emob[qp2]", "\edbi[a,261]×２", "40～", 
-           "小鬼殺し・激闘編", 
-           "砂漠の洞窟に住み着いた\edb[e,5]の群れの討伐を\nお願いします。相手は数も多くメイジ等も混じって\nいるので入念に準備をして挑んで下さい。\nなお、既に何人かの冒険者達が討伐に\n向かいましたが皆返り討ちにあい、多くの\n女性冒険者が捕らえられているというので\n彼女達の救出も合わせてお願いします。",
+           [47,   97,      "Hunt", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,261]×２", "40～", 
+           "Imp Slayer・Fierce Battle Edition", 
+           "Please subjugate the swarms of \edb[e,5] that dwell in the desert caves. The enemies are numerous including mages, so prepare thoroughly before challenging them. Additionally, numerous adventurers have already attempted to subdue them but were outnumbered, and many female adventurers have been captured, so please rescue them as well.",
            {},
            {"261 a"=>2},
-           {"v"=>[[83,6,0]], "t"=>"こちらはクエストNo.33をクリアすると\n受注できます"}
+           {"v"=>[[83,6,0]], "t"=>"This quest can be accepted after clearing Quest No.33"}
            ],
            
-#---------↓八章開始後------------------------------------------------------------------------------
+#---------↓Chapter 8 Begins------------------------------------------------------------------------------
 
-           [48,   98,      "納品", "砂漠のオアシス", "\emob[pe_f]", "1000\eg\n\edbi[i,40]×４", "--", 
-           "亀の甲羅", 
-           "ラグラスで盗賊から助けた行商人とオアシスで偶然\n再会した。どうやら彼女は\eimp\edb[e,79]\ec[0]等が\n落とす\eimp\edbi[i,185]\ec[0]を集めているらしい。５つ程必要だと\nいうので数が集まったら彼女の下へ持っていこう。\n\n\edbi[i,185]　\e}必要数 5/ 所持数 \eqin[i,185]\e{",
+           [48,   98,      "Delivery", "Desert Oasis", "\emob[pe_f]", "1000\eg\n\edbi[i,40]×４", "--", 
+           "Turtle Shell", 
+           "Met accidentally at the oasis with a merchant whom I saved from thieves in Lagras. It seems she is collecting \eimp\edbi[i,185]\ec[0] dropped by \eimp\edb[e,79]. She needs about 5, so let's bring them to her once we've gathered enough.\n\n\edbi[i,185]　\e} Required amount 5/ Owned amount \eqin[i,185]\e{",
            {"185 i"=>5},
            {"40 i"=>4, "g"=>1000},
            {}
            ],
            
            
-           [49,   99,      "納品", "リゾート地ガラディ ビーチ", "\emob[f7s]", "\edbi[i,64]×２", "--", 
-           "魅力度アップ！",
-           "ガラディのビーチにいる女性から、自分では材料を\n入手できないので代わりに\edbi[i,325]を\n作ってきて欲しいと頼まれた。これさえ食べれば\nビーチの男達もイチコロなんだとか…？\n材料を集め、お店で調理し彼女に届けてあげよう。\n\n\edbi[i,325]　\e}必要数 1/ 所持数 \eqin[i,325]\e{",
+           [49,   99,      "Delivery", "Resort Area Galadi Beach", "\emob[f7s]", "\edbi[i,64]×２", "--", 
+           "Boosting Charm!",
+           "A woman at Galadi Beach asked for a \edbi[i,325] because she can't get the ingredients on her own. She says that with this, she can swoon the beachgoers...? Let's gather the ingredients, cook it at the shop, and deliver it to her.\n\n\edbi[i,325]　\e} Required amount 1/ Owned amount \eqin[i,325]\e{",
            {"325 i"=>1},
            {"64 i"=>2},
            {}
            ],
            
-           [50,   100,      "討伐", "リゾート地ガラディ 東の岩壁", "\emob[ex]", "\edbi[a,114]", "44～", 
-           "人魚への逆恨み", 
-           "ガラディの岩壁の上で海を眺める男性。\n彼女にフラれたという彼はその原因を作った魔物の\n\edb[e,84]を憎んで(?)いた。彼の恨みを\n晴らす為 \eimp万魔の塔４階以降\ec[0]に生息している\n\edb[e,84]を\eomp６体\ec[0]討伐してこよう。\n\n\edb[e,84]討伐　\e}残り\eqkm[84]体\e{",
+           [50,   100,      "Suppression", "Resort Area Galadi East Cliff", "\emob[ex]", "\edbi[a,114]", "44～", 
+           "Grudge Against the Mermaid", 
+           "A man looking out to sea from the cliff top in Galadi. He was dumped by his girlfriend and blames the creature \edb[e,84] for causing it. To clear his grudge, let us go and subjugate \eimp6 units of \edb[e,84]\ec[0] that inhabit the \eimpFourth-floor and above of the Demon's Tower.\n\n\edb[e,84]Suppression　\e}Remaining \eqkm[84] units\e{",
            {84=>6},
            {"114 a"=>1},
            {}
@@ -558,9 +558,9 @@ end
   # クエストタイトル取得
   def self.title(n)
     if q_ary(n)[11] && q_ary(n)[11]["h"]
-      "クエストNo.#{format("%02d",q_ary(n)[0])}" + "「#{q_ary(n)[7]}」" + " \eI[#{self.heart_change(q_ary(n)[11]["h"])}] "
+      "Quest No.#{format("%02d",q_ary(n)[0])}" + "「#{q_ary(n)[7]}」" + " \eI[#{self.heart_change(q_ary(n)[11]["h"])}] "
     else
-      "クエストNo.#{format("%02d",q_ary(n)[0])}" + "「#{q_ary(n)[7]}」"
+      "Quest No.#{format("%02d",q_ary(n)[0])}" + "「#{q_ary(n)[7]}」"
     end
   end
   
@@ -587,10 +587,10 @@ end
   # 討伐と納品のクエストクリア判定
   def self.cc(n)
     item = q_ary(n)
-    if item[2] == "討伐"
+    if item[2] == "Hunt"
       key = item[9].keys
       key.all?{|id| $game_party.kill_list(id) == 0 }
-    elsif item[2] == "納品"
+    elsif item[2] == "Delivery"
       key = item[9].keys
       key.all?{|c| quest_item_number?(c, item[9][c])}
     else
@@ -601,9 +601,9 @@ end
   # 終了　総合
   def self.q_end(n)
     item = q_ary(n)
-    if item[2] == "討伐"
+    if item[2] == "Hunt"
       kill_end(item)
-    elsif item[2] == "納品"
+    elsif item[2] == "Delivery"
       deliver_end(item)
     end
   end
