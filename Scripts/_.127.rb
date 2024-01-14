@@ -61,7 +61,7 @@ class Window_ActorCommand < Window_Command
   #--------------------------------------------------------------------------
   def add_extra_command
     add_command($data_skills[FAKEREAL::MIKO_SKILL].name, :concentration) if @actor.id == 3
-    add_command("武器変更", :equip, @actor.action_input_index == 0) if !@actor.summon_type?
+    add_command("Equipment", :equip, @actor.action_input_index == 0) if !@actor.summon_type?
     #@actor.action_input_index == 0 #武器変更をリストに入れる場合のenable判定
   end
 end

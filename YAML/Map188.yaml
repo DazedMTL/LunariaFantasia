@@ -209,14 +209,14 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Miss', 'pitch': !!int '100', 'volume': !!int '80'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '213', 'p': [!!int '-1', !!int '1', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I should be able to jump over
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I should be able to jump over a gap
 
-            a gap this wide."']}
+            this wide."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime1', 'pitch': !!int '100', 'volume': !!int '80'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['You can jump over stepping stones like these
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['You can jump over stepping stones like these marked spots by
 
-            marked spots by pressing the confirm button.']}
+            pressing the confirm button.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '123', 'p': ['A', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '0', 'p': []}
     - !ruby/object:RPG::Event::Page
@@ -1920,9 +1920,9 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Miss', 'pitch': !!int '100', 'volume': !!int '80'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '213', 'p': [!!int '-1', !!int '1', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['!n01_04', !!int '4', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "It seems like someone is
+      - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "It seems like someone is fighting up
 
-            fighting up ahead."']}
+            ahead."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Move forward', 'Go back'], !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', '進む']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '242', 'p': [!!int '10']}
@@ -2054,7 +2054,7 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*81]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*82]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_01', !!int '4', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「Mana!?」\|']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「Mana!?」']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['event_wait(49,61,-1)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_left(3)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['enemy_item_set(1, 65)']}
@@ -2074,9 +2074,9 @@
           - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*83]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_03', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I''ll provide support!! Leave
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I''ll provide support!! Leave these guys
 
-            these guys to me!"']}
+            to me!"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_03', !!int '1', !!int '0', !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Please do!"']}
       - !ruby/object:RPG::EventCommand
@@ -2239,85 +2239,71 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*127]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '241', 'p': [!ruby/object:RPG::BGM {'name': 'moon06_17_和風・田舎・日常・素朴・単純', 'volume': !!int '100', 'pitch': !!int '100'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_05', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Phew... we somehow managed to
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Phew... we somehow managed to defeat
 
-            defeat them."']}
+            them."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "This side is taken care of as
-
-            well."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "This side is taken care of as well."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['event_wait(49,58,-1)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_00', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Thank you, Lunaria-san. You were
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Thank you, Lunaria-san. You were a big
 
-            a big help."']}
+            help."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "No problem, I''m just glad
-
-            you''re safe."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "No problem, I''m just glad you''re safe."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '30']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "But what brings you here,
-
-            Lunaria-san...?"']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "But what brings you here, Lunaria-san...?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I had business in Tokiwa as
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I had business in Tokiwa as part of a
 
-            part of a mission."']}
+            mission."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Since there were no ships
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Since there were no ships leaving from
 
-            leaving from Senecio, I used the magic circle that
+            Senecio, I used the magic circle that Mana had used before
 
-            Mana had used before to get here."']}
+            to get here."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "What about you? Why are you
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "What about you? Why are you in this
 
-            in this underground passage?\stnd[n,1,42] Also,
+            underground passage?\stnd[n,1,42] Also, the rumor I heard in
 
-            the rumor I heard in Senecio... Is it true that
+            Senecio... Is it true that the Evil Dragon has been
 
-            the Evil Dragon has been resurrected?"']}
+            resurrected?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '242', 'p': [!!int '5']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '213', 'p': [!!int '16', !!int '8', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_02', !!int '7', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "It''s true... The Evil Dragon has
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "It''s true... The Evil Dragon has fully
 
-            fully resurrected, and most of Tokiwa has been
+            resurrected, and most of Tokiwa has been overtaken by
 
-            overtaken by monsters."']}
+            monsters."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_change(1,12)']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Miss', 'pitch': !!int '100', 'volume': !!int '80'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '213', 'p': [!!int '-1', !!int '1', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '241', 'p': [!ruby/object:RPG::BGM {'name': 'FMDL04_18_sad', 'volume': !!int '100', 'pitch': !!int '100'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_03', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Kujou Village is still holding
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Kujou Village is still holding on somehow,
 
-            on somehow, but it''s uncertain how much longer it
-
-            can last..."']}
+            but it''s uncertain how much longer it can last..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_03', !!int '5', !!int '0', !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "That''s terrible..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "In order to break through this
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "In order to break through this situation,
 
-            situation, I was on my way to request assistance
+            I was on my way to request assistance from Diana-sama of
 
-            from Diana-sama of Sagittarius, under the orders
-
-            of Tsukiha-sama."']}
+            Sagittarius, under the orders of Tsukiha-sama."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_05', !!int '2', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "...Mana... I''m sorry to say
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "...Mana... I''m sorry to say this,
 
-            this, but... I think it would be futile to go to
-
-            Sagittarius."']}
+            but... I think it would be futile to go to Sagittarius."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_02', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "What do you
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "What do you mean...!?\stnd[n,3,14] Don''t
 
-            mean...!?\stnd[n,3,14] Don''t tell me... Something
-
-            happened in Sagittarius...!?"']}
+            tell me... Something happened in Sagittarius...!?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_03', !!int '6', !!int '0', !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Actually..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '221', 'p': []}
@@ -2325,103 +2311,81 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '222', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '213', 'p': [!!int '16', !!int '1', !!bool 'false']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "No way...!? The ancient demon
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "No way...!? The ancient demon god has been
 
-            god has been resurrected and... the Queen and
-
-            Millay-san are...!?"']}
+            resurrected and... the Queen and Millay-san are...!?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_01', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "To go to the floating
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "To go to the floating continent where
 
-            continent where the demon god is, we need two
+            the demon god is, we need two divine artifacts... I heard
 
-            divine artifacts... I heard one of them is in
-
-            Tokiwa."']}
+            one of them is in Tokiwa."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "A divine artifact...? You must
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "A divine artifact...? You must be talking
 
-            be talking about the divine sword
-
-            \imp布都之御魂[ﾌﾂﾉﾐﾀﾏ]\c[0], right?"']}
+            about the divine sword \imp布都之御魂[ﾌﾂﾉﾐﾀﾏ]\c[0], right?"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I was on my way to consult
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I was on my way to consult with
 
-            with Tsukiha-sama about borrowing that artifact."']}
+            Tsukiha-sama about borrowing that artifact."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '1', !!int '0', !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Is that so..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '213', 'p': [!!int '16', !!int '8', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "...So the seal on the Evil
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "...So the seal on the Evil Dragon was
 
-            Dragon was broken because of the demon god''s
-
-            resurrection..."']}
+            broken because of the demon god''s resurrection..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '45']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_03', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I''m sorry... Mana... If only
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I''m sorry... Mana... If only I hadn''t
 
-            I hadn''t gathered the jewels... none of this would
-
-            have happened..."']}
+            gathered the jewels... none of this would have happened..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '45']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '3', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Why are you apologizing,
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Why are you apologizing, Lunaria-san?
 
-            Lunaria-san? Unless you did it on purpose, you
+            Unless you did it on purpose, you were just trying to save
 
-            were just trying to save your friends and yourself
-
-            by collecting the jewels."']}
+            your friends and yourself by collecting the jewels."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '242', 'p': [!!int '8']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_01', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "That''s true, but... the fact
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "That''s true, but... the fact remains
 
-            remains that my actions led us to this
+            that my actions led us to this situation... I bear the
 
-            situation... I bear the responsibility for what
-
-            has happened..."']}
+            responsibility for what has happened..."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '213', 'p': [!!int '16', !!int '8', !!bool 'true']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '30']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '241', 'p': [!ruby/object:RPG::BGM {'name': '武器を手に取れ', 'volume': !!int '100', 'pitch': !!int '100'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_02', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "That may be true... but that''s
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "That may be true... but that''s just
 
-            just hindsight. Even if you hadn''t collected the
+            hindsight. Even if you hadn''t collected the jewels, the
 
-            jewels, the demon god would have found some other
-
-            way to resurrect."']}
+            demon god would have found some other way to resurrect."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_00', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "And the reason you collected the
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "And the reason you collected the jewels
 
-            jewels was because the demon god had stolen your
-
-            magical power."']}
+            was because the demon god had stolen your magical power."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "You''ve always done your best in
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "You''ve always done your best in every
 
-            every situation. You''re still fighting against the
+            situation. You''re still fighting against the resurrected
 
-            resurrected demon god and working hard to save the
+            demon god and working hard to save the two who were taken.
 
-            two who were taken. You have no reason to be
-
-            blamed."']}
+            You have no reason to be blamed."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '45']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "If anyone still blames you for
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "If anyone still blames you for that...
 
-            that... \stnd[n,3,8]I would despise that person."']}
+            \stnd[n,3,8]I would despise that person."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '6', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「Mana…」']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['「Mana...」']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '0', !!int '0', !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Besides, the real culprit behind
 
-            everything is the demon god. That''s an undeniable
-
-            fact...!"']}
+            everything is the demon god. That''s an undeniable fact...!"']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '60']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_02', !!int '6', !!int '0', !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "...Yes, you''re right
@@ -2460,11 +2424,9 @@
           - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*129]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '1', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "But now we''re in a bind... If we
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "But now we''re in a bind... If we can''t
 
-            can''t expect any reinforcements, what should we
-
-            do...?"']}
+            expect any reinforcements, what should we do...?"']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '1'
         'c': !!int '205'
@@ -2485,19 +2447,17 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*132]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*133]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '4', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "In that case, I''ll lend a
-
-            hand."']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "In that case, I''ll lend a hand."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '4', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I might not be much on my
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "I might not be much on my own... but
 
-            own... but now that my magical power has returned,
+            now that my magical power has returned, I think I can be
 
-            I think I can be more useful than before."']}
+            more useful than before."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_05', !!int '4', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Besides, I can''t just abandon
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Besides, I can''t just abandon a friend
 
-            a friend in need."']}
+            in need."']}
       - !ruby/object:RPG::EventCommand
         'i': !!int '1'
         'c': !!int '205'
@@ -2512,14 +2472,14 @@
           - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*134]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_00', !!int '2', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Thank you. Having you with us,
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Thank you. Having you with us, Lunaria-
 
-            Lunaria-san, is very reassuring."']}
+            san, is very reassuring."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '230', 'p': [!!int '30']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n03_01', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Then, let''s return to Kujo
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Mana\C[0]: "Then, let''s return to Kujo Village before
 
-            Village before it''s too late."']}
+            it''s too late."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '4', !!int '0', !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Understood."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['all_erase']}
@@ -2530,34 +2490,28 @@
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\ca[19]A new skill for Mana has been added!']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['With Mana joining, from now on in battle, one of
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['With Mana joining, from now on in battle, one of the three
 
-            the three members at the end will be a reserve
+            members at the end will be a reserve member. Reserve members
 
-            member. Reserve members can be swapped in without
+            can be swapped in without losing a turn using the "Switch"
 
-            losing a turn using the "Switch" party command
-
-            (Switching is only possible among reserve
+            party command (Switching is only possible among reserve
 
             members).']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Reserve members will immediately join the battle
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['Reserve members will immediately join the battle if a
 
-            if a fighting member is defeated or leaves the
+            fighting member is defeated or leaves the front line. Also,
 
-            front line. Also, abilities like \db[s,279] that
+            abilities like \db[s,279] that affect the entire party will
 
-            affect the entire party will activate including
+            activate including for reserve members, so they can be
 
-            for reserve members, so they can be utilized in
-
-            battle even without being active participants.']}
+            utilized in battle even without being active participants.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime2', 'pitch': !!int '100', 'volume': !!int '80'}]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\ca[21]The party command "Switch" has been
-
-            unlocked.']}
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\ca[21]The party command "Switch" has been unlocked.']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '121', 'p': [!!int '114', !!int '114', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '129', 'p': [!!int '3', !!int '0', !!int '0']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['leveling(3,55)']}
@@ -2613,9 +2567,9 @@
           - !ruby/object:RPG::MoveCommand {'code': !!int '0', 'parameters': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '505', 'p': [*137]}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['!n01_04', !!int '4', !!int '0', !!int '2']}
-      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Let''s make preparations just
+      - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\C[14]Lunaria\C[0]: "Let''s make preparations just to be
 
-            to be safe."']}
+            safe."']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '355', 'p': ['stand_erase']}
       - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
       - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '404', 'p': []}
