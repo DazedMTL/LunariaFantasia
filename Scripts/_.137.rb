@@ -58,7 +58,7 @@ module Option
   EXH_SWF = 313 # フタナリスイッチ
   EXH_D = 314 # 断面図スイッチ
   
-  WORD_S = "Spawn"
+  WORD_S = "Birth"
   
   ScreenZoom = 306 #開始時画面サイズ判定スイッチ
 
@@ -188,7 +188,7 @@ class Window_OptionCommand < Window_Command
   #--------------------------------------------------------------------------
   def update_help
     super
-    @help_window.set_text("Select the item you wish to change. Use ← → to switch pages. The items marked with green text will be shared by all saved data.")
+    @help_window.set_text("Select the item you wish to change. Use ← → to switch pages. \nThe items marked with green text will be shared by all \nsaved data.")
     @info_window.set_item(@page_index + 1) if @info_window
   end  
 end
@@ -522,7 +522,7 @@ class Window_KeyButton < Window_Option
   # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "You can change the control instructions displayed in the game to either keyboard or pad.\nThe notation for the gamepad is compliant with RPG Maker, so please be aware that\nit does not necessarily match the buttons on the pad you are using.\n(Especially the alphabet letters)\n※ Some special operations such as #{key_button("CTRL")} are fixed to keyboard notation."
+    return "You can change the control instructions displayed in the game to either \nkeyboard or pad. The notation for the gamepad is compliant with RPG \nMaker, so please be aware that it does not necessarily match the buttons on \nthe pad you are using. (Especially the alphabet letters) ※ Some special \noperations such as #{key_button("CTRL")} \nare fixed to keyboard notation."
   end
 end
 
@@ -599,7 +599,7 @@ class Window_AutoSpeed < Window_Option
   # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "You can set the speed for the automatic message progression that starts when you press #{key_button("ALT")} during an event scene. The smaller the number, the faster it goes.\n※ During event scenes, the beads in the four corners of the message window turn blue.\n  When the beads are blue, automatic progression is available.\n(All H scenes can be auto-progressed)"
+    return "You can set the speed for the automatic message progression that \nstarts when you press #{key_button("ALT")} during an event scene. The smaller the number, the faster it goes.\n※ During event scenes, the beads in the four corners of the \nmessage window turn blue. When the beads are blue, automatic progression\nis available. (All H scenes can be auto-progressed)"
   end
 end
 
@@ -634,7 +634,7 @@ class Window_MessageSkip < Window_Option # Added read recognition
   # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "You can choose the type of text to skip with #{key_button("CTRL")}.\nOnly event conversations that have been seen once will be treated as read.\n'Non-Events' refers to conversations with people in town, combat conversations, etc."
+    return "You can choose the type of text to skip with #{key_button("CTRL")}.\nOnly event conversations that have been seen once will be treated as read.\n'Non-Events' refers to conversations with people in town, \ncombat conversations, etc."
   end
 end
 
@@ -675,7 +675,7 @@ class Window_H_Opacity < Window_Option
   # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "You can set the opacity of the H scene window background. The smaller the number, the higher the opacity, with '0' being transparent and '8' allowing no transparency."
+    return "You can set the opacity of the H scene window background. \nThe smaller the number, the higher the opacity, with '0' being transparent \nand '8' allowing no transparency."
   end
 end
 
@@ -708,7 +708,7 @@ class Window_ExtraH < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("Pregnant Belly:#{v_change($game_variables[Option::EXH_B])}",   :ok)
+    add_command("Preg Belly:#{v_change($game_variables[Option::EXH_B])}",   :ok)
     add_command("#{Option::WORD_S}:#{v_change($game_variables[Option::EXH_S])}",   :ok)
     add_command("Futanari:#{v_change($game_variables[Option::EXH_F])}",   :ok)
   end
@@ -742,7 +742,7 @@ class Window_ExtraH < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "Set up some H scenes with the ↑↓ keys. CG swap replaces the CG\nwith a different version (e.g. a non-futanari version for futanari scenes)\n※Text remains unchanged. Pregnant belly CG cannot be replaced.\nAfter setting all items, confirm with the decision key, or return to the original settings with cancel. Number of each scene: Pseudo Pregnant: 2  Pregnant: 1  #{Option::WORD_S}: 1  Futanari: 1"
+    return "Set up some H scenes with the ↑↓ keys. CG swap replaces the CG\nwith a different version (e.g. a non-futanari version for futanari scenes)\n※Text remains unchanged. Pregnant belly CG cannot be replaced.\nNumber of each scene: \nPseudo Pregnant: 2  Pregnant: 1  #{Option::WORD_S}: 1  Futanari: 1"
   end
   #--------------------------------------------------------------------------
   # 〇 Alignment retrieval
@@ -810,7 +810,7 @@ class Window_Danmenzu < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "Set whether or not to display cross-sectional views in some penetration H scenes.\nThere are not many scenes with cross-sectional views."
+    return "Set whether or not to display cross-sectional views in some \npenetration H scenes. There are not many scenes with cross-sectional views."
   end
 end
 
@@ -866,7 +866,7 @@ class Window_ShotCount < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "Set how many pages before ejaculation to start counting\nin H scenes with ejaculation (1 page is 1 window).\nIf ejaculation intervals are close (e.g. gangbang), it starts with a lower number\nthan the set value. Also, the last ejaculation in a scene is counted with yellow numbers.\n※\"0\" setting does not perform counting"
+    return "Set how many pages before ejaculation to start counting in H scenes \nwith ejaculation (1 page is 1 window). If ejaculation intervals are close \n(e.g. gangbang), it starts with a lower number than the set value. Also, \nthe last ejaculation in a scene is counted with yellow numbers. \n※\"0\" = No Counting."
   end
 end
 
@@ -958,7 +958,7 @@ class Window_ScreenZoom < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "At the start of the game, you can choose whether to begin with an enlarged screen size.\nScreen size changes during the game can be performed with \ekb[f5],\nand will vary up to three levels depending on the display resolution.\n"
+    return "At the start of the game, you can choose whether to begin with an enlarged \nscreen size. Screen size changes during the game can be \nperformed with \ekb[f5], and will vary up to three levels \ndepending on the display resolution.\n"
   end
 end
 
