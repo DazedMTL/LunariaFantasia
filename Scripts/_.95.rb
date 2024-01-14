@@ -63,8 +63,8 @@ module Learn
       return $game_variables[$1.to_i] >= $2.to_i
     elsif skill.note =~ /\<習得アイテム所持判定:(\D+?),(\d+)\>/
       case $1
-      when "武器"; return $game_party.has_item?($data_weapons[$2.to_i], true)
-      when "防具"; return $game_party.has_item?($data_armors[$2.to_i], true)
+      when "Weapon"; return $game_party.has_item?($data_weapons[$2.to_i], true)
+      when "Armor"; return $game_party.has_item?($data_armors[$2.to_i], true)
       else       ; return $game_party.has_item?($data_items[$2.to_i])
       end
     else

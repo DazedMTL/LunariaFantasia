@@ -540,7 +540,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
       draw_text(rect, "#{Vocab::atype_name(@item.atype_id)}：#{Vocab::etype(@item.etype_id)}") if @item.etype_id != 4
       draw_text(rect, "#{Vocab::atype_name(@item.atype_id)}") if @item.etype_id == 4
     elsif @item.is_a?(RPG::Item)
-      @item.cooking? ? draw_text(rect, "Cooking") : draw_text(rect, "Tool")
+      @item.cooking? ? draw_text(rect, "Cooking") : draw_text(rect, "Tools")
     elsif @item.is_a?(RPG::Skill)
       draw_skill_type(x, y, @item)
     end

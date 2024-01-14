@@ -106,7 +106,7 @@ class Window_ShopStatus < Window_Base
       end
       contents.font.size = 16
       change_color(normal_color)
-      draw_text(x, y+248, 250, line_height, "#{key_button("A")} #{key_button("S")}: キャラクター切り替え", 0)
+      draw_text(x, y+248, 250, line_height, "#{key_button("A")} #{key_button("S")}: Switch Character", 0)
       contents.font.size = 24
     end
   end

@@ -11,7 +11,7 @@ module Vocab
     ShopBuy         = "Buy"
     ShopSell        = "Sell"
     ShopCancel      = "Cancel"
-    Possession      = "Quantity Owned"
+    Possession      = "Owned "
 
     # Status screen
     ExpTotal        = "Current Experience"
