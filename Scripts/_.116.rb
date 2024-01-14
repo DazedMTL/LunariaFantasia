@@ -111,8 +111,8 @@ class Window_QuestCategory < Window_HorzCommand
   # ● コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("ストーリー",     :main)
-    add_command("サブクエスト",   :sub)
+    add_command("Story",     :main)
+    add_command("Side Quest",   :sub)
   end
   #--------------------------------------------------------------------------
   # ● アイテムウィンドウの設定
@@ -224,7 +224,7 @@ class Window_QuestList < Window_Selectable
       rect = item_rect(index)
       #rect.width -= 4
       progress_color(item)
-      draw_text(-8, rect.y, 152, line_height, "クエストNo.#{format("%02d",item[0])}", 1) if @category == :sub
+      draw_text(-8, rect.y, 152, line_height, "Quest No.#{format("%02d",item[0])}", 1) if @category == :sub
       #draw_text(-8, rect.y, 152, line_height, "#{format("%02d",index + 1)}-" + $game_temp.story[item][0], 1) if @category == :main
       draw_text(-8, rect.y, 152, line_height, $game_temp.story[item][0], 1) if @category == :main
     end
@@ -409,10 +409,10 @@ class Window_QuestDetail < Window_Base
       half = line_height / 2
       #サブクエスト処理
       change_color(system_color)
-      draw_text(16, line_height * 2 + half, window_width, line_height, "受注場所")
-      draw_text(16, line_height * 5, window_width, line_height, "依頼人:")
-      draw_text(16, line_height * 6 + half, window_width, line_height, "報酬:")
-      draw_text(16, line_height * 9, window_width, line_height, "詳細")
+      draw_text(16, line_height * 2 + half, window_width, line_height, "Quest")
+      draw_text(16, line_height * 5, window_width, line_height, "Client:")
+      draw_text(16, line_height * 6 + half, window_width, line_height, "Reward:")
+      draw_text(16, line_height * 9, window_width, line_height, "Details")
       pr = progress(item)
       title  = pr < 2 ? item[7].gsub(/./) {"？"} : item[7]
       lv     = pr < 1 ? "？？" : item[6]
@@ -431,21 +431,21 @@ class Window_QuestDetail < Window_Base
       draw_text(4, line_height * 0, window_width, line_height, title)
       change_color(normal_color)
       #依頼種別
-      draw_text(16, line_height * 1, window_width, line_height, "#{item[2]}依頼")
+      draw_text(16, line_height * 1, window_width, line_height, "#{item[2]}Request")
       #推奨Lv
-      draw_text(140, line_height * 1, window_width, line_height, "推奨レベル:#{lv}")
+      draw_text(140, line_height * 1, window_width, line_height, "Advised LV:#{lv}")
       l_text = ""
       if pr > 0
         #期限の有無
         if limit?(item[11]) && pr < 4
           if $game_variables[21] < item[11]["l"][0]
-            l_text = "期限有り"
+            l_text = "Deadline"
           elsif $game_variables[21] < item[11]["l"][1]
             change_color(crisis_color)
-            l_text = "期限間近"
+            l_text = "Deadline"
           else
             change_color(knockout_color)
-            l_text = "期限切れ"
+            l_text = "Expired"
           end
           draw_text(320, line_height * 0, window_width, line_height, l_text)
         end
@@ -455,11 +455,11 @@ class Window_QuestDetail < Window_Base
       change_color(normal_color)
       #受注状況
       text = ""
-      unless l_text == "期限切れ"
+      unless l_text == "Expired"
         case pr
-        when 1..2; text = "受注可能"
-        when 3; text = "受注中"
-        when 4; text = "クリア済み"
+        when 1..2; text = "Available"
+        when 3; text = "In Progress"
+        when 4; text = "Cleared"
         end
       end
       draw_text(320, line_height * 1, window_width, line_height, text)
@@ -470,7 +470,7 @@ class Window_QuestDetail < Window_Base
       #報酬
       draw_text_ex(66, line_height * 6 + half, reword)
       #詳細
-      draw_text_ex(28, line_height * 10, detail) unless l_text == "期限切れ"
+      draw_text_ex(28, line_height * 10, detail) unless l_text == "Expired"
     elsif item[0].is_a?(String)
       #メインストーリー処理
       change_color(system_color)
@@ -801,8 +801,8 @@ class Window_OrderChoice < Window_Command
   # ○ コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("このクエストを受ける",     :yes_select)
-    add_command("やめる",   :no_select)
+    add_command("Accept Quest",     :yes_select)
+    add_command("Cancel",   :no_select)
   end
   #--------------------------------------------------------------------------
   # ○ 決定ボタンが押されたときの処理
@@ -851,7 +851,7 @@ class Scene_QuestSelect < Scene_MenuBase
   def create_help_window
     @help_window = Window_Help.new(1)
     @help_window.viewport = @viewport
-    @help_window.set_text("受注するクエストを選択して下さい")
+    @help_window.set_text("Please select a quest.")
   end
   #--------------------------------------------------------------------------
   # ● ヘルプウィンドウの作成

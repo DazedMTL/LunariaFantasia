@@ -74,7 +74,7 @@ class Window_MenuCommand < Window_Command
   alias quest_add_original_commands add_original_commands
   def add_original_commands
     quest_add_original_commands
-    add_command("クエスト",  :quest)
+    add_command("Quest",  :quest)
   end
 end
 

@@ -135,7 +135,7 @@ class Window_BookList < Window_Selectable
   #--------------------------------------------------------------------------
   def draw_quest(index, item)
     rect = item_rect(index)
-    draw_text(-8, rect.y, 152, line_height, "クエストNo.#{format("%02d",item[0])}", 1)
+    draw_text(-8, rect.y, 152, line_height, "Quest No.#{format("%02d",item[0])}", 1)
   end
   #--------------------------------------------------------------------------
   # ● ヘルプウィンドウ更新メソッドの呼び出し
@@ -435,7 +435,7 @@ class Window_BookDetail < Window_Base
       draw_text(8, line_height * 0, contents_width, line_height, item[4])
     end
     change_color(system_color)
-    draw_text(328, line_height * 2, contents_width, line_height, "身長:")
+    draw_text(328, line_height * 2, contents_width, line_height, "Height:")
     if item[6]
       draw_text(354, line_height * 3, contents_width, line_height, "B:")
       draw_text(354, line_height * 4, contents_width, line_height, "W:")
@@ -518,14 +518,14 @@ class Window_BookDetail < Window_Base
   #--------------------------------------------------------------------------
   def draw_enemy_params(enemy, base, x, y)
     change_color(system_color)
-    draw_text(x - 4, y, 72, line_height * 1, "基準Lv")
+    draw_text(x - 4, y, 72, line_height * 1, "LV")
     draw_text(x + 8, y + line_height * 2, 48, line_height, Vocab.hp)
     draw_text(x + 8, y + line_height * 3, 48, line_height, Vocab.mp)
     draw_text(x + 8, y + line_height * 4, 48, line_height, Vocab.tp)
     6.times {|i| draw_text(x + 300, y + line_height * (i + 2), 48, line_height, Vocab.param(i + 2)) }
     3.times {|i| draw_text(x + 300, y + line_height * (i + 8), 48, line_height, FAKEREAL.xparam(i)) }
     draw_text(x + 8, y + line_height * 6, 48, line_height, "EXP")
-    draw_text(x + 8, y + line_height * 7, 48, line_height, "お金")
+    draw_text(x + 8, y + line_height * 7, 48, line_height, "Money")
     draw_text(x + 8, y + line_height * 8, 48, line_height, "LP")
     id = enemy.id
     @page = [base]
@@ -582,15 +582,15 @@ class Window_BookDetail < Window_Base
   #--------------------------------------------------------------------------
   def draw_enemy_validity(enemy, x, y)
     change_color(system_color)
-    draw_text(x, y + line_height * 0, 48, line_height, "弱点")
+    draw_text(x, y + line_height * 0, 48, line_height, "Weakness")
     weak_set(enemy.features + pfo_set(enemy)).each_with_index do |icon, i|
       draw_icon(icon, x + 48 + i * 24, y + line_height * 0)
     end
-    draw_text(x, y + line_height * 1, 48, line_height, "耐性")
+    draw_text(x, y + line_height * 1, 48, line_height, "RES")
     guard_set(enemy.features + pfo_set(enemy)).each_with_index do |icon, i|
       draw_icon(icon, x + 48 + i * 24, y + line_height * 1)
     end
-    draw_text(x, y + line_height * 2, 48, line_height, "無効")
+    draw_text(x, y + line_height * 2, 48, line_height, "Immune")
     resist_set(enemy.features + pfo_set(enemy)).each_with_index do |icon, i|
       draw_icon(icon, x + 48 + i * 24, y + line_height * 2)
     end
@@ -617,7 +617,7 @@ class Window_BookDetail < Window_Base
   #--------------------------------------------------------------------------
   def draw_enemy_drop(enemy, x, y)
     change_color(system_color)
-    draw_text(x - 4, y, 172, line_height, "落とすアイテム")
+    draw_text(x - 4, y, 172, line_height, "Dropped Items")
     change_color(normal_color)
     i = 1
     #enemy.drop_items.sort_by{|item| [-(item.denominator), item.data_id] }.each do |item|
@@ -644,7 +644,7 @@ class Window_BookDetail < Window_Base
   #--------------------------------------------------------------------------
   def draw_enemy_steal(enemy, x, y)
     change_color(system_color)
-    draw_text(x - 4, y, 172, line_height, "盗めるアイテム")
+    draw_text(x - 4, y, 172, line_height, "Stolen Items")
     change_color(normal_color)
     i = 1
     t = enemy.item_steal_total(@page[@page_index])
@@ -859,10 +859,10 @@ class Window_BookDetail < Window_Base
       half = line_height / 2
       #サブクエスト処理
       change_color(system_color)
-      draw_text(16, line_height * 2 + half, window_width, line_height, "受注場所")
-      draw_text(16, line_height * 5, window_width, line_height, "依頼人:")
-      draw_text(16, line_height * 6 + half, window_width, line_height, "報酬:")
-      draw_text(16, line_height * 9, window_width, line_height, "詳細")
+      draw_text(16, line_height * 2 + half, window_width, line_height, "Location")
+      draw_text(16, line_height * 5, window_width, line_height, "Client:")
+      draw_text(16, line_height * 6 + half, window_width, line_height, "Reward:")
+      draw_text(16, line_height * 9, window_width, line_height, "Details")
       pr = $game_system.book["quest"][item[1]]
       title  = pr ? item[7] : item[7].gsub(/./) {"？"}
       lv     = pr ? item[6] : "？？"
@@ -879,17 +879,17 @@ class Window_BookDetail < Window_Base
       draw_text(4, line_height * 0, window_width, line_height, title)
       change_color(normal_color)
       #依頼種別
-      draw_text(16, line_height * 1, window_width, line_height, "#{item[2]}依頼")
+      draw_text(16, line_height * 1, window_width, line_height, "Request: #{item[2]}")
       #推奨Lv
-      draw_text(140, line_height * 1, window_width, line_height, "推奨レベル:#{lv}")
+      draw_text(140, line_height * 1, window_width, line_height, "Advised LV:#{lv}")
       l_text = ""
       if pr
         draw_text_ex(416, line_height * 0, heart(item[11]["h"])) if h_event?(item[11])
-        l_text = "期限有り" if limit?(item[11])
+        l_text = "Deadline" if limit?(item[11])
       end
       change_color(normal_color)
       #受注状況
-      text = pr ? "クリア済み" : ""
+      text = pr ? "Cleared" : ""
       draw_text(320, line_height * 1, window_width, line_height, text)
       #場所
       draw_text(28, line_height * 3 + half, window_width, line_height, place)
@@ -917,10 +917,10 @@ class Window_BookCategory < Window_ItemCategory_Extra
   # ● コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("魔物",     :monster)
-    add_command("人物",     :character)
-    add_command("クエスト", :quest)
-    add_command("アイテム", :item)
+    add_command("Monster",     :monster)
+    add_command("Character",     :character)
+    add_command("Quest", :quest)
+    add_command("Item", :item)
   end
   #--------------------------------------------------------------------------
   # ○ フレーム更新
@@ -994,7 +994,7 @@ class Window_CollectionRate < Window_Base
   #--------------------------------------------------------------------------
   def draw_collect_rate(x, y, width, category)
     change_color(system_color)
-    draw_text(x, y, width, line_height, "収集率")
+    draw_text(x, y, width, line_height, "Collect Rate")
     tr = $game_switches[FAKEREAL::BOOK_EXTEND]
     rate = [collect_rate(@category, tr), 100].min
     if tr && rate == 100
