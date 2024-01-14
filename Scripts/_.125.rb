@@ -23,7 +23,7 @@ class Window_TargetHelp < Window_Help
     #lv_text = "" #追加★
     lv_text = " Lv#{@text.level}" #if lv_disclose #追加★
     random = "" #追加★
-    random = " + #{FAKEREAL::RANDOM}#{plus_random}体" if @random_change #追加★
+    random = " + #{FAKEREAL::RANDOM}#{plus_random}x" if @random_change #追加★
     #　↓二行lv_text追加★
     x = contents_width / 2 - contents.text_size(@text.name + lv_text + random).width / 2
     name_width = contents.text_size(@text.name + lv_text + random).width + 4
@@ -74,10 +74,10 @@ class Window_TargetHelp < Window_Help
   # ○ 選択対象の情報の描画　※追加
   #--------------------------------------------------------------------------
   def draw_summon_info
-      summon = "召喚"
+      summon = "Summons"
       change = ""
     if $game_party.summon_max?
-      summon = " 入れ替え召喚"
+      summon = " Replace"
       change = @text.summon_type? ? @text.name : $game_party.summon_members_top.name
       change += " → "
     end
@@ -88,7 +88,7 @@ class Window_TargetHelp < Window_Help
   # ○ 名前の描画　※追加
   #--------------------------------------------------------------------------
   def draw_actor_name(actor, x, y, width = 112)
-    random = @random_change ? " + #{FAKEREAL::RANDOM}#{plus_random}体" : ""
+    random = @random_change ? " + #{FAKEREAL::RANDOM}#{plus_random}x" : ""
     #if actor.enemy? && $game_party.lv_disclose?
     text = actor.name + " Lv#{actor.level}" + random
     change_color(hp_color(actor))
@@ -151,13 +151,13 @@ class Window_TargetHelp < Window_Help
     contents.clear
     change_color(normal_color)
     if @text == :party
-      draw_text(contents.rect, "味方全体", 1)
+      draw_text(contents.rect, "All Allies", 1)
     elsif @text == :troop
-      draw_text(contents.rect, "敵全体", 1)
+      draw_text(contents.rect, "All Enemies", 1)
     elsif @text == :troop_random
       case LNX11::RANDOMSCOPE_DISPLAY
-      when 0 ; draw_text(contents.rect, "敵全体 ランダム", 1)
-      when 1 ; draw_text(contents.rect, "ランダム #{random_number}回", 1)
+      when 0 ; draw_text(contents.rect, "Random Enemy", 1)
+      when 1 ; draw_text(contents.rect, "Random #{random_number}x", 1)
       # 上記を一部変更★
       #when 1 ; draw_text(contents.rect, random_target(random_number), 1)#"敵#{random_number}#{random_target} ランダム", 1)
       end

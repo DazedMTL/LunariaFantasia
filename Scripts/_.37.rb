@@ -2,7 +2,7 @@ module FAKEREAL
   
   ADD_EVENT      = [] #追加イベントの実装番号  25=サカイ名主息子 41=メリス 43=オアシス眠姦 45=仲間との休日
   LEVELAP        = 5
-  GOLD_NAME      = "リーベル"
+  GOLD_NAME      = "Rebel"
   IDATEN      = 86
   E_RATE_UP   = "<エンカウント倍加>"
   E_AURA   = "<雑魚避け>"
@@ -10,7 +10,7 @@ module FAKEREAL
   
   UNKNOWN_SWITCH = 14 # 敵ＨＰのハテナ表示判定
 
-  RANDOM = "右隣" # 
+  RANDOM = "Neighbor" # 
   
   # 特殊能力値
   def self.xparam(param_id)
