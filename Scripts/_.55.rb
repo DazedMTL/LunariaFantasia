@@ -190,7 +190,7 @@ class Window_NowMap < Window_Base
     nm_width = 60
     change_color(system_color)
     #draw_text(x, y, width, line_height, "現在地", 0)
-    draw_text(x, y, nm_width, line_height, "現在地", 0)
+    draw_text(x, y, nm_width, line_height, "Location", 0)
     change_color(normal_color)
     #draw_text(4, y + line_height, width, line_height, mapname, align)
     draw_text(4 + nm_width, y, width - nm_width, line_height, mapname, align)

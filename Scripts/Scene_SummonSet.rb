@@ -408,8 +408,8 @@ class Scene_Menu < Scene_MenuBase
 end
 
 module Vocab
-  def self.summon;       "サーヴァント";   end   # 事前召喚 召喚ユニット
-  def self.rune;         "ルーン";   end   # サーヴァント用装備品
+  def self.summon;       "Summon";   end   # 事前召喚 召喚ユニット
+  def self.rune;         "Rune";   end   # サーヴァント用装備品
 end
 
 #==============================================================================

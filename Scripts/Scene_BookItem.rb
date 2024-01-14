@@ -163,12 +163,12 @@ class Window_BookCategory_Item < Window_BookCategory
   # ● コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("道具",   :item)
-    add_command("貴重品", :key_item)
-    add_command("武器",   :weapon)
-    add_command("防具",   :armor)
-    add_command("ルーン", :rune)
-    add_command("スキル", :skill_book)
+    add_command("Item",   :item)
+    add_command("Valuable", :key_item)
+    add_command("Weapon",   :weapon)
+    add_command("Armor",   :armor)
+    add_command("Rune", :rune)
+    add_command("Skill", :skill_book)
   end
 end
 
