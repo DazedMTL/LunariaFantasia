@@ -213,7 +213,7 @@ class Window_SaveLoading < Window_Base
   def refresh
     contents.clear
     draw_background(contents.rect)
-    draw_text(contents.rect, "セーブデータ読み込み中", 1)
+    draw_text(contents.rect, "Loading Saved Data", 1)
   end
   #--------------------------------------------------------------------------
   # ● 背景の描画

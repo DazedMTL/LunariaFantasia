@@ -577,14 +577,14 @@ class Window_Tactics < Window_Command
   #--------------------------------------------------------------------------
   def tactics_name(ta)
     case ta
-    when :none ; "特になし"
-    when :heal_priority ; "回復を優先"
-    when :middle_battle ; "そこそこで戦え"
-    when :middle_technique ; "そこそこの技で戦え"
-    when :middle_magic ; "そこそこの術で戦え"
-    when :no_technique ; "術で戦え"
-    when :no_magic ; "技で戦え"
-    when :no_skill ; "技も術も使うな"
+    when :none ; "None"
+    when :heal_priority ; "Prioritize healing"
+    when :middle_battle ; "Fight moderately"
+    when :middle_technique ; "Fight with moderate techniques"
+    when :middle_magic ; "Fight with moderate magic"
+    when :no_technique ; "Fight with magic"
+    when :no_magic ; "Fight with techniques"
+    when :no_skill ; "Do not use techniques or magic"
     else ; ""
     end
   end
