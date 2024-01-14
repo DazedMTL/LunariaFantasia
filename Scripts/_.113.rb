@@ -2,14 +2,14 @@ module Quest
   
     MAIN = Hash[
         "OP-01" => ["Preface", "00", 
-"In the magical kingdom of Sagittaries
+"\e}In the magical kingdom of Sagittaries
 the court magician Lunaria,
 along with her colleagues Shirley and Estia,
 were preparing to investigate the ruins
 where a surge of monsters has been reported."],
 
         "OP-02" => ["Preface", "00", 
-"Under the direction of their senior court magician Lili,
+"\e}Under the direction of their senior court magician Lili,
 Lunaria and her team teleported to the ruins.
 As they explored the deepest layer,
 they found a magical circle, the source of the monsters.
@@ -28,7 +28,7 @@ The stolen magic power may
 never return to its original state..."], # Maximum 15 lines 23 characters
 
         "OP-03" => ["Preface", "00", 
-"Mariana spoke of a possibility to restore the 
+"\e}Mariana spoke of a possibility to restore the 
 lost magic power
 by borrowing the strength of five jewels used
 to defeat ancient demons.
@@ -47,7 +47,7 @@ the castle.
 ―Thus began Lunaria's journey to collect the jewels―"],
 
         "01-01" => ["Chapter One", "01", 
-"In the Rizel Forest located south of Sagittaries' 
+"\e}In the Rizel Forest located south of Sagittaries' 
 castle town,
 
 the first jewel is said to be in a ruin at the
@@ -56,7 +56,7 @@ Lunaria set out deep into the forest in search of
 the jewel."],
 
         "01-02" => ["Chapter One", "01", 
-"After resting for the night in the village of Robe 
+"\e}After resting for the night in the village of Robe 
 located partway through Rizel forest, Lunaria 
 learned from her fellow court magicians staying 
 in the village that powerful monsters might
@@ -77,7 +77,7 @@ Robe\ec[0] if he knew anything about the ruins.
 "],
 
         "01-03" => ["Chapter One", "01", 
-"Receiving a slate to enter the ruins from the 
+"\e}Receiving a slate to enter the ruins from the 
 chief of Robe village,
 Lunaria successfully opened the doors to the ruins.
 
@@ -96,7 +96,7 @@ being targeted by a man in a black coat...
 "],
 
         "02-01" => ["Chapter Two", "02", 
-"Having passed through Grea Cave, Lunaria arrived in Raglus.
+"\e}Having passed through Grea Cave, Lunaria arrived in Raglus.
 
 In order to gather information on her next destinations,
 the Fritzenia Temple and Kujou Labyrinth located 
@@ -105,7 +105,7 @@ information at the tavern\ec[0].
 "],
 
         "02-02" => ["Chapter Two", "02", 
-"With a landslide on Mt. Timor and the boat to Tokiwa 
+"\e}With a landslide on Mt. Timor and the boat to Tokiwa 
 suspended from operation, Lunaria was stuck in Raglus. 
 It was then that she met a married warrior woman
 named \eC[8]Sonia\ec[0], who was searching for her husband.
@@ -120,7 +120,7 @@ bandits\ec[0].
 "],
 
         "02-03" => ["Chapter Two", "02", 
-"In the depths of the cave, upon discovering a hidden 
+"\e}In the depths of the cave, upon discovering a hidden 
 passage, beyond it was the hideout of the thieves.
 
 The two stormed the hideout, managed to defeat the
@@ -134,7 +134,7 @@ an inn\ec[0] for a while.
 "],
 
         "02-04" => ["Chapter Two", "02", 
-"After resting in town the next day, they learn that 
+"\e}After resting in town the next day, they learn that 
 the landslide at Mount Timor
 has been cleared, and the mountain pass is now open.
 
@@ -145,7 +145,7 @@ as far as \eC[8]Mount Timor\ec[0].
 "],
 
         "02-05" => ["Chapter Two", "02", 
-"They decide to part ways with Sonia at a fork in 
+"\e}They decide to part ways with Sonia at a fork in 
 the middle of the mountain.
 
 Lunaria heads for the \eC[8]Frozenia Temple\ec[0] 
@@ -156,7 +156,7 @@ She had a strange hunch that they would meet again soon.
 "],
 
         "03-01" => ["Chapter Three", "03", 
-"The vicinity of the summit of Mount Timor was swept with snow.
+"\e}The vicinity of the summit of Mount Timor was swept with snow.
 
 Proceeding through the blizzard towards the summit,
 she finally arrives at the destination, the Frozenia Temple.
@@ -169,7 +169,7 @@ Lunaria hurries to the \eC[8]temple's top floor\ec[0].
 "],
 
         "03-02" => ["Chapter Three", "03", 
-"After conquering the Frozenia Temple and defeating 
+"\e}After conquering the Frozenia Temple and defeating 
 the guardian on the top floor,
 Lunaria successfully secures the second gemstone.
 
@@ -179,7 +179,7 @@ known to be\ec[0], she heads for the port town of
 "],
 
         "03-03" => ["Chapter Three", "03", 
-"At the port town of Senecio, the regular service to Tokiva
+"\e}At the port town of Senecio, the regular service to Tokiva
 was still suspended.
 
 Lunaria, at a loss, is approached by a girl named 
@@ -193,7 +193,7 @@ taken to \eC[8]Tokiva\ec[0].
 "],
 
         "03-04" => ["Chapter Three", "03", 
-"The two teleport to an island near Tokiva via a 
+"\e}The two teleport to an island near Tokiva via a 
 transfer matrix and make their way through the 
 underground passage towards Tokiva.
 
@@ -212,7 +212,7 @@ the cause of the weakening seal of the Evil Dragon...
 "],
 
         "04-01" => ["Chapter Four", "04", 
-"Passing through the underground passage, 
+"\e}Passing through the underground passage, 
 she soon sees a settlement.
 
 It was called \eC[8]Kunoh Country Kujo Village\ec[0],
@@ -225,7 +225,7 @@ at the end\ec[0] to greet the village head.
 "],
 
         "04-02" => ["Chapter Four", "04", 
-"Lunaria meets with the village chief, Tsukiha, 
+"\e}Lunaria meets with the village chief, Tsukiha, 
 in the back room of the mansion.
 
 Tsukiha promises to grant access to the sealed 
@@ -238,7 +238,7 @@ village to reseal the Evil Dragon.
 "],
 
         "04-03" => ["Chapter Four", "04", 
-"The two encounter monsters called Yamako on 
+"\e}The two encounter monsters called Yamako on 
 the way through the Seal Cave. The Yamako have 
 been kidnapping shrine maidens and imprisoning them.
 
@@ -248,7 +248,7 @@ to the \eC[8]deepest part of the cave\ec[0].
 "],
 
         "04-04" => ["Chapter Four", "04", 
-"In the depths of the cave, at the site of sealing, 
+"\e}In the depths of the cave, at the site of sealing, 
 Lunaria and Mana defeat the shadow of the Evil Dragon 
 and successfully reseal it.
 
@@ -265,7 +265,7 @@ and sets out alone seeking the gemstone to the south.
 "],
 
         "04-05" => ["Chapter Four", "04", 
-"Lunaria crosses from Sakai to the solitary island 
+"\e}Lunaria crosses from Sakai to the solitary island 
 where the Kujo Labyrinth is located. The interior 
 of the Kujo Labyrinth is complex and full of mechanisms.
 
@@ -280,7 +280,7 @@ To pass through the checkpoint to Dalia, Lunaria heads back to
 "],
 
         "05-01" => ["Chapter Five", "05", 
-"Lunaria returns to Sagittarius after a long while.
+"\e}Lunaria returns to Sagittarius after a long while.
 
 To receive a pass from Mariana,
 she heads to \eC[8]Mariana's research lab\ec[0] 
@@ -288,7 +288,7 @@ inside the castle.
 "],
 
         "05-02" => ["Chapter Five", "05", 
-"In the laboratory, Lunaria meets with Mariana, 
+"\e}In the laboratory, Lunaria meets with Mariana, 
 Diana, and Millay, and receives a \eC[8]pass\ec[0] 
 and a \eC[8]letter\ec[0] addressed to Queen Filica of Dalia.
 
@@ -304,7 +304,7 @@ located just west of \eC[8]Mount Timor\ec[0].
 "],
 
         "05-03" => ["Chapter Five", "05", 
-"After passing through Mount Timor to the west 
+"\e}After passing through Mount Timor to the west 
 and heading north, Lunaria sees the border checkpoint. 
 When she shows her pass to 
 the soldier on the Dalia side,
@@ -326,7 +326,7 @@ necessary for supplies.
 #----------------------------------------------A Route
 
         "05-04" => ["Chapter 5", "05", 
-"In the lawless streets of Nemesis, Lunaria is pickpocketed
+"\e}In the lawless streets of Nemesis, Lunaria is pickpocketed
 and the precious letter entrusted to her by Diana
 is stolen. In an attempt to retrieve the letter, Lunaria
 heads to the man's house, where he demands her body
@@ -345,7 +345,7 @@ the darkness...
 "],
 
         "05-05" => ["Chapter 5", "05", 
-"After passing through the rainy marshes, the royal 
+"\e}After passing through the rainy marshes, the royal 
 capital comes into view just ahead. Overwhelmed by 
 the size of the city which is larger than 
 Sagittarius, Lunaria first sets out to find 
@@ -354,7 +354,7 @@ for the desert.
 "],
 
         "05-06" => ["Chapter 5", "05", 
-"Lunaria, having entered the royal capital, 
+"\e}Lunaria, having entered the royal capital, 
 applies for the permit at the local government 
 office. Since it will take some time for the 
 permit to be issued, she decides to explore the Folia Ruins
@@ -369,7 +369,7 @@ Let's set out as soon as preparations are complete.
 #-----------------------------------------------
 
         "06-01" => ["Chapter 6", "06", 
-"Passing through the mountain village of Viosa, 
+"\e}Passing through the mountain village of Viosa, 
 the Folia Ruins are located deep in the forest.
 
 It appears there are no other adventurers around, 
@@ -382,7 +382,7 @@ the chamber where the jewel is kept.
 #-----------------------------------------------TRUE
 
         "06-02" => ["Chapter 6", "06", 
-"As Lunaria enters the Folia Ruins, two suspicious shadows
+"\e}As Lunaria enters the Folia Ruins, two suspicious shadows
 follow her...
 
 One is a robed man who has stolen Lunaria and her companions'
@@ -397,7 +397,7 @@ about this yet...
 "],
 
         "06-03a" => ["Chapter 6", "06", 
-"Lunaria successfully defeats the guardian in 
+"\e}Lunaria successfully defeats the guardian in 
 the deepest part of the ruins
 and secures the fourth jewel.
 
@@ -417,7 +417,7 @@ from the office\ec[0].
 #-----------------------------------------------NORMAL
 
         "06-03b" => ["Chapter 6", "06", 
-"Upon entering the deepest part of the Folia Ruins, 
+"\e}Upon entering the deepest part of the Folia Ruins, 
 the guardian was already defeated and the jewel 
 was nowhere to be found.
 
@@ -430,7 +430,7 @@ in Viosa\ec[0].
 "],
 
         "06-04-1" => ["Chapter 6", "06", 
-"After making inquiries in Viosa, it seems 
+"\e}After making inquiries in Viosa, it seems 
 that a female adventurer who is believed to 
 have the jewel has mentioned that she would 
 sell the jewel for money in the royal capital.
@@ -447,7 +447,7 @@ affluent district\ec[0]...
 "],
 
         "06-04-2" => ["Chapter 6", "06", 
-"Upon visiting the mansion of the wealthy Gorde 
+"\e}Upon visiting the mansion of the wealthy Gorde 
 to ask if he would be willing to hand over the 
 jewel, Lunaria is met with a surprising proposal 
 – if she would agree to a \eC[8]threesome with 
@@ -462,7 +462,7 @@ to explain the situation to Mariana...
 
 #-----------------------------------------------BAD
         "06-05a" => ["Chapter 6", "06", 
-"Having explained the situation to Mariana and 
+"\e}Having explained the situation to Mariana and 
 secured her cooperation, Lunaria successfully 
 receives the Jewel of Light from the wealthy man.
 
@@ -658,7 +658,7 @@ of the last gemstone, entering the
 "],
 
         "07-08b" => ["Chapter Seven", "07", 
-"As a token of gratitude for investigating 
+"\e}As a token of gratitude for investigating 
 the Zepar Church, Lunaria is given permission
 by Filica to explore the Tower of Babel 
 and the abandoned mine in the north.
@@ -674,7 +674,7 @@ behind the scenes...
 "],
 
         "07-08c" => ["Chapter Seven", "07", 
-"As a token of gratitude for investigating 
+"\e}As a token of gratitude for investigating 
 the Zepar Church, Lunaria is given permission 
 by Filica to explore the Tower of Babel and the 
 abandoned mine in the north.
@@ -695,7 +695,7 @@ before going to the \eC[8]tower\ec[0]...
 "],
 
         "08-01" => ["Chapter Eight", "08", 
-"The Leontius Desert was a vast area
+"\e}The Leontius Desert was a vast area
 where sandstorms raged. Many powerful 
 monsters lived there,
 making it a very dangerous place.
@@ -706,7 +706,7 @@ make their way through the desert.
 "],
 
         "08-02a" => ["Chapter Eight", "08", 
-"Somehow making their way out of the desert, 
+"\e}Somehow making their way out of the desert, 
 the Tower of Babel stood tall before them.
 
 The guards at the entrance seemed to have 
@@ -721,7 +721,7 @@ Tower of Babel.
 "],
 
         "08-02b" => ["Chapter Eight", "08", 
-"Somehow making their way out of the desert, 
+"\e}Somehow making their way out of the desert, 
 the Tower of Babel stood tall before them.
 
 The guards at the entrance seemed to have been 
@@ -742,7 +742,7 @@ the homeland, \eC[8]Sagittarius\ec[0]...
 "],
 
         "08-03a" => ["Chapter Eight", "08", 
-"On the top floor, Lunaria defeated the 
+"\e}On the top floor, Lunaria defeated the 
 guardian and safely obtained the last gemstone.
 When she reported this to Mariana,
 she was informed that a magical circle that 
@@ -764,7 +764,7 @@ Sagittarius\ec[0].
 "],
 
         "08-03b" => ["Chapter Eight", "08", 
-"On the top floor, Lunaria defeated the guardian 
+"\e}On the top floor, Lunaria defeated the guardian 
 and safely obtained the last gemstone.
 She attempted to report this to Mariana, but the 
 magic communication device failed to connect...
@@ -783,7 +783,7 @@ with great urgency.
 "],
 
         "09-01a" => ["Final Chapter", "09", 
-"Safely gathering the five gemstones, Lunaria
+"\e}Safely gathering the five gemstones, Lunaria
 returned to Sagittarius.
 
 To report the completion of her mission to Her 
@@ -792,7 +792,7 @@ Majesty the Queen, she hurried to the
 "],
 
         "09-02a" => ["Final Chapter", "09", 
-"After finishing her report in the audience hall,
+"\e}After finishing her report in the audience hall,
 preparations for the magical power restoration 
 ceremony began immediately.
 
@@ -807,7 +807,7 @@ to the underground training area.\ec[0]
 "],
 
         "09-01b" => ["Chapter Nine", "09", 
-"Hurriedly returning to Sagittarius, what 
+"\e}Hurriedly returning to Sagittarius, what 
 Lunaria saw before her eyes
 was the town under attack by monsters.
 
@@ -819,7 +819,7 @@ monsters in the town\ec[0].
 "],
 
         "09-02b" => ["Chapter Nine", "09", 
-"While fighting off the monsters, Lunaria 
+"\e}While fighting off the monsters, Lunaria 
 encountered her mother, Eleanor, battling. 
 But before Lunaria's eyes, Eleanor was mercilessly
 captured by the monsters. Without a moment to 
@@ -836,7 +836,7 @@ and left the scene with the word \"hostages\"…
 "],
 
         "09-03" => ["Chapter Nine", "09", 
-"While reporting to Millay and Diana about 
+"\e}While reporting to Millay and Diana about 
 the events in the tower, a message from the 
 man in the black robe came in. If they wanted 
 the captured hostages released, they were to 
@@ -854,7 +854,7 @@ Thus, Lunaria, along with Sonia, set out for the
 "],
 
         "09-03" => ["Chapter 9", "09", 
-"While reporting the events in the tower to 
+"\e}While reporting the events in the tower to 
 Millay and Diana, a communication from a man 
 in a black robe comes in. He demands the jewel 
 in exchange for the release of the kidnapped hostages,
@@ -874,7 +874,7 @@ underground ruins\ec[0] together with Sonia.
 "],
 
         "09-04" => ["Chapter 9", "09", 
-"Lunaria and the others confront the black-robed 
+"\e}Lunaria and the others confront the black-robed 
 man on the lowest floor of the underground ruins. 
 They hand over the jewel on the condition that he 
 releases the hostages, and through an evil stone,
@@ -896,7 +896,7 @@ heads to the \eC[8]infirmary\ec[0].
 "],
 
         "09-05" => ["Chapter 9", "09", 
-"Sonia and her husband Wright are to be taken 
+"\e}Sonia and her husband Wright are to be taken 
 care of by the kingdom of Dalia. After bidding 
 farewell to Sonia and the others, Lunaria returns 
 to the conference room where Mariana and Velvet 
@@ -915,7 +915,7 @@ to borrow Tokiwa's sacred treasure.
 "],
 
         "10-01" => ["Chapter 10", "10", 
-"Lunaria aims for the port town Senesio to cross 
+"\e}Lunaria aims for the port town Senesio to cross 
 to Tokiwa. Meanwhile, on the floating continent at 
 the demon king's castle, the demon god has revived 
 the \eC[8]succubus queen Asmolios\ec[0].
@@ -928,7 +928,7 @@ royal capital Cactus...
 "],
 
         "10-02" => ["Chapter 10", "10", 
-"Lunaria safely passes through the Glare Cave.
+"\e}Lunaria safely passes through the Glare Cave.
 At this time on the floating continent, \eC[8]Diana 
 and Millay fall prey to the mind-controlling demon Zepar,
 becoming the demon's faithful flesh slaves\ec[0].
@@ -943,7 +943,7 @@ the \eC[8]underground passage leading to Tokiwa\ec[0].
 "],
 
         "10-03" => ["Chapter 10", "10", 
-"As Lunaria progresses through the underground 
+"\e}As Lunaria progresses through the underground 
 passage to Tokiwa, she encounters Mana. It turns 
 out that Tokiwa is being attacked by a demon army
 and that the Kujo Village is on the brink of collapse.
@@ -954,7 +954,7 @@ to \eC[8]Kujo Village\ec[0].
 "],
 
         "11-01" => ["Chapter 11", "11", 
-"While Lunaria and the others are advancing through 
+"\e}While Lunaria and the others are advancing through 
 the underground passage, Kujo Village is attacked by 
 the resurrected \eC[8]evil dragon Magatsuorochi\ec[0],
 and all the shrine maidens are defeated.
@@ -964,7 +964,7 @@ are kidnapped by the evil dragon\ec[0]...
 "],
 
         "11-02" => ["Chapter 11", "11", 
-"What Mana and the others see upon arriving at the village is
+"\e}What Mana and the others see upon arriving at the village is
 the tragic sight of the village being ravaged by demons.
 
 Mana, enraged by the demons, unleashes a profound spell and
@@ -978,7 +978,7 @@ out to rescue them, heading for the sealed land in the
 "],
 
         "11-03" => ["Chapter Eleven", "11", 
-"The two, who encountered the scene where other shrine 
+"\e}The two, who encountered the scene where other shrine 
 maidens caught in the middle of the cave were being 
 used as seedbeds for monsters, defeated the monsters 
 and rescued the girls.
@@ -993,7 +993,7 @@ part of the cave and defeat the evil dragon.
 "],
 
         "11-04" => ["Chapter Eleven", "11", 
-"Lunaria and Mana, joining forces,
+"\e}Lunaria and Mana, joining forces,
 manage to defeat the evil dragon at the Land of Seals.
 During the battle, Mana senses a mysterious power
 within Lunaria. What on earth was it...
@@ -1005,7 +1005,7 @@ borrowing the sacred treasure from Tsukiha's mansion.
 "],
 
         "11-05" => ["Chapter Eleven", "11", 
-"Lunaria, having successfully borrowed Tokiwa's 
+"\e}Lunaria, having successfully borrowed Tokiwa's 
 sacred treasure from Tsukiha, and now Mana will 
 also accompany her on the mission to rescue the queen.
 
@@ -1021,7 +1021,7 @@ towards the Kingdom of Dalia.
 "],
 
         "12-01" => ["Chapter Twelve", "12", 
-"While Lunaria and her companions head for Dalia,
+"\e}While Lunaria and her companions head for Dalia,
 the Kingdom of Dalia was being attacked by succubi.
 
 Filica and the Knights of the Kingdom fought desperately,
@@ -1036,7 +1036,7 @@ a city of decadence and pleasure ruled by the succubi…
 "],
 
         "12-02" => ["Chapter Twelve", "12", 
-"Arriving at the national border checkpoint, 
+"\e}Arriving at the national border checkpoint, 
 the two found no soldiers from Dalia present. 
 Suspecting something amiss, they stopped by Nemesia,
 where they were informed that the Royal City of Dalia 
@@ -1048,7 +1048,7 @@ Marshland heading for the Royal City.
 "],
 
         "12-03" => ["Chapter Twelve", "12", 
-"As heard, the Royal City had transformed into
+"\e}As heard, the Royal City had transformed into
 a decadent city of debauchery and pleasure overrun 
 by succubi.
 
@@ -1061,7 +1061,7 @@ head for the Castle of Dalia.
 "],
 
         "12-04" => ["Chapter Twelve", "12", 
-"The two witnessed Sonia and men having sex along 
+"\e}The two witnessed Sonia and men having sex along 
 the way in the Royal City, they defeated the succubi 
 and used a spell to free Sonia and the others.
 
@@ -1070,14 +1070,14 @@ the three set off towards the castle once more.
 "],
 
         "12-05" => ["Chapter Twelve", "12", 
-"Even stronger monsters have spread within the castle.
+"\e}Even stronger monsters have spread within the castle.
 
 The place where the boss of the succubi seems to be
 appears to be the audience chamber on the third floor.
 "],
 
         "12-06" => ["Chapter Twelve", "12", 
-"Lunaria and her companions, having defeated the 
+"\e}Lunaria and her companions, having defeated the 
 succubus Renno in the audience chamber, successfully 
 liberate the Royal City.
 
@@ -1089,14 +1089,14 @@ to report back to Mariana in Sagittarius.
 "],
 
         "13-01" => ["Chapter Thirteen", "13", 
-"Upon safely gathering the two sacred treasures 
+"\e}Upon safely gathering the two sacred treasures 
 and returning to Sagittarius,
 the three rushed to Mariana in
 the conference room of the castle.
 "],
 
         "13-02" => ["Chapter Thirteen", "13", 
-"Lunaria, Mana, Sonia, and Mariana descended underground
+"\e}Lunaria, Mana, Sonia, and Mariana descended underground
 to a magic circle leading to the floating continent.
 
 In front of a door that could only be opened by the 
@@ -1113,7 +1113,7 @@ Entrusted with the care of her sister Diana by Mariana...
 "],
 
         "13-03" => ["Chapter Thirteen", "13", 
-"Progressing through the floating continent, they 
+"\e}Progressing through the floating continent, they 
 came across a suspicious fortress blocking their 
 path, one not the lair of the demon king.
 
@@ -1128,7 +1128,7 @@ she did in Nemesia.
 "],
 
         "13-04" => ["Chapter Thirteen", "13", 
-"As Lunaria and her companions searched the 
+"\e}As Lunaria and her companions searched the 
 fortress for Sonia, brainwashed Diana, Millay, 
 and Sonia blocked their way.
 
@@ -1147,7 +1147,7 @@ into the darkness...
 "],
 
         "14-01" => ["Final Chapter", "14", 
-"Leaving the fortress, they could see the Demon 
+"\e}Leaving the fortress, they could see the Demon 
 King's castle to the north.
 
 The three begin their journey to the demon king’s 
@@ -1156,7 +1156,7 @@ castle with determination in their hearts…
 
 #＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
         "14-02" => ["Final Chapter", "14", 
-"Lunaria and her companions arrive at the Demon 
+"\e}Lunaria and her companions arrive at the Demon 
 King's castle. The castle brims with an ominous 
 presence, overpowering them with its abnormality.
 
@@ -1166,7 +1166,7 @@ where the Demon King resides.
 "],
 
         "14-03" => ["Final Chapter", "14", 
-"Ascending the castle to reach the highest 
+"\e}Ascending the castle to reach the highest 
 floor where the Demon King resides, they 
 arrive at a room filled with malevolent aura.
 
@@ -1193,7 +1193,7 @@ once more…
 "],
 
         "14-04" => ["Final Chapter", "14", 
-"Asmolios, attempting to take over Lunaria's body,
+"\e}Asmolios, attempting to take over Lunaria's body,
 was protected by a mysterious force within Lunaria,
 which repelled the Queen of Succubi out of her body,
 and with it, the Succubus Stone shattered.

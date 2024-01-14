@@ -8,7 +8,7 @@ module GiveUp
   #--------------------------------------------------------------------------
   # ○ 定数
   #--------------------------------------------------------------------------
-  NAME = "降参"                 # コマンド名
+  NAME = "Surrender"                 # コマンド名
   SWITCH = 1                    # 降参可能戦闘前にオンにするスイッチ番号
   SE = "Bell1"                  # 降参時のSE名
   VOL = 80                      # 降参SEのボリューム
@@ -88,8 +88,8 @@ class Window_GiveUp < Window_Base
   #--------------------------------------------------------------------------
   def draw_giveup(x, y)
     change_color(normal_color)
-    draw_text(x + 4, y, contents_width, line_height, "この戦闘を降参します", 1)
-    draw_text(x, y + line_height, contents_width, line_height, "よろしいですか？", 1)
+    draw_text(x + 4, y, contents_width, line_height, "Are you sure you", 1)
+    draw_text(x, y + line_height, contents_width, line_height, "want to surrender?", 1)
   end
 end
 
