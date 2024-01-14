@@ -184,7 +184,7 @@ class Window_GOHelp < Window_Base
   def refresh
     contents.clear
     gold = $game_actors[1].level * 10
-    draw_text_ex(4, line_height * 0, "#{gold}\eg（\ent[1]のレベル×10）支払ってリトライ可能です。")
+    draw_text_ex(4, line_height * 0, "#{gold}\eg（Lunariaのレベル×10）支払ってリトライ可能です。")
     draw_text_ex(4, line_height * 1, "リトライすると全キャラが完全回復した状態で今の戦闘の最初から")
     draw_text_ex(4, line_height * 2, "始められます。また、使用したアイテムも戻ります。")
     draw_text_ex(4, line_height * 3, "武器変更を行った場合は変更後の状態になります。")
