@@ -306,827 +306,845 @@ end
 
 module Book
   
-  CHARA = Hash[ # 2の表示衣装は配列の場合　draw_costume_set　で衣装を選定
-                # id => 0 リスト表記名   1 立ちグラフィック名   2 表示衣装   3 年齢   4 フルネーム   5 キャラid   6 3サイズの有無　7 キャラ進行度いくつで名前を明かすか　8 表示画像調整値 nilなら50
-                "n1" => {0=>"ルナリア",1=>"Lunaria",2=>[["cos01","story",2],["cos02","", 0]],3=>19,4=>"ルナリア・セレネス・ムーンリット",5=>"n1",6=>true,7=>1,
-                },
-               
-                "n1_3" => {0=>"ルナリア(覚醒)",1=>"Lunaria",2=>"cos11b",3=>19,4=>"ルナリア・セレネス・ムーンリット",5=>"n1",6=>true,7=>1,
-                },
-               
-                "n1_2" => {0=>"ルナリア(淫魔)",1=>"Lunaria",2=>"cos08b",3=>19,4=>"淫魔の女王ルナリア",5=>"n1b",6=>true,7=>1,
-                },
-               
-                "n2" => {0=>"ソニア",1=>"Sonia",2=>"cos01",3=>36,4=>"ソニア・サンディール",5=>"n2",6=>true,7=>1,
-                },
-                
-                "n2_2" => {0=>"ソニア(洗脳)",1=>"Sonia",2=>"cos05b",3=>36,4=>"ソニア・サンディール",5=>"n2",6=>true,7=>1,
-                },
-                
-                "n3" => {0=>"マナ",1=>"Mana",2=>"cos01",3=>20,4=>"九条 愛",5=>"n3",6=>true,7=>1,
-                },
-                
-                # 立ち絵サブキャラ------------------------------------------------------------------------------------------------------------------------------
-                
-                "kp1" => {0=>Person::Name[1][0],1=>Person::Name[1][2],2=>"cos01",3=>28,4=>"マリアナ・アルテール",5=>"kp1",6=>true,7=>1,
-                },
-                
-                "kp1_2" => {0=>"#{Person::Name[1][0]}(２)",1=>Person::Name[1][2],2=>"cos02",3=>28,4=>"マリアナ・メルテシア・サジタリーズ",5=>"kp1",6=>true,7=>1,
-                },
-                
-                "kp1_3" => {0=>"#{Person::Name[1][0]}(淫魔)",1=>Person::Name[1][2],2=>"cos03b",3=>28,4=>"淫魔マリアナ",5=>"kp1b",6=>true,7=>1,
-                },
-                
-                "kp2" => {0=>Person::Name[2][0],1=>Person::Name[2][2],2=>"cos01",3=>27,4=>"ディアナ・アルテミア・サジタリーズ",5=>"kp2",6=>true,7=>1,
-                },
-                
-                "kp2_2" => {0=>"#{Person::Name[2][0]}(洗脳)",1=>Person::Name[2][2],2=>"cos03b",3=>27,4=>"ディアナ・アルテミア・サジタリーズ",5=>"kp2",6=>true,7=>1,
-                },
-                
-                "kp3" => {0=>Person::Name[3][0],1=>Person::Name[3][2],2=>"cos01",3=>125,4=>"ミレイ・ニーレンベルギア",5=>"kp3",6=>true,7=>1,
-                },
-                
-                "kp3_2" => {0=>"#{Person::Name[3][0]}(洗脳)",1=>Person::Name[3][2],2=>"cos03b",3=>125,4=>"ミレイ・ニーレンベルギア",5=>"kp3",6=>true,7=>1,
-                },
-                
-                "kp4" => {0=>Person::Name[4][0],1=>Person::Name[4][2],2=>"cos01",3=>19,4=>"シャーリー・フェンネル",5=>"kp4",6=>true,7=>1,
-                },
-                
-                "kp5" => {0=>Person::Name[5][0],1=>Person::Name[5][2],2=>"cos01",3=>19,4=>"エスティア・ユキ・エリンジウム",5=>"kp5",6=>true,7=>1,
-                },
-                
-                "kp12" => {0=>Person::Name[12][0],1=>Person::Name[12][2],2=>"cos01",3=>41,4=>"九条 月羽",5=>"kp12",6=>true,7=>1,
-                },
-                
-                "kp13" => {0=>Person::Name[13][0],1=>Person::Name[13][2],2=>"cos01",3=>27,4=>"フィリカ・レイン・ダリア",5=>"kp13",6=>true,7=>1,
-                },
-                
-                "kp13_2" => {0=>"#{Person::Name[13][0]}(発情)",1=>Person::Name[13][2],2=>"cos02b",3=>27,4=>"フィリカ・レイン・ダリア",5=>"kp13",6=>true,7=>1,
-                },
-                
-                "n5" => {0=>"アネモネ",1=>"Anemone",2=>"cos01",3=>"?",4=>"アネモネ",5=>"n5",6=>true,7=>1,
-                },
-               
-                "n5_2" => {0=>"アネモネ(２)",1=>"Anemone",2=>[["cos02","item",312],["cos01","",0]],3=>"?",4=>"アネモネ",5=>"n5",6=>true,7=>1,
-                },
-               
-                "kp14" => {0=>Person::Name[14][0],1=>Person::Name[14][2],2=>"cos01",3=>"?",4=>"シグン・レグエル・サジタリーズ",5=>"kp14",6=>false,7=>1,8=>20,
-                },
-                
-                "kp31" => {0=>Person::Name[31][0],1=>Person::Name[31][2],2=>"cos01",3=>"?",4=>"レノ",5=>"kp31",6=>true,7=>2,
-                },
-                
-                "kp31_2" => {0=>"#{Person::Name[31][0]}(真)",1=>Person::Name[31][2],2=>"cos01b",3=>"?",4=>"レノ",5=>"kp31",6=>true,7=>1,
-                },
-                
-                "kp32" => {0=>Person::Name[32][0],1=>Person::Name[32][2],2=>"cos01",3=>"?",4=>"アスモリオス",5=>"kp32",6=>true,7=>1,
-                },
-                
-                "kp32_2" => {0=>"#{Person::Name[32][0]}(真)",1=>Person::Name[32][2],2=>"cos01b",3=>"?",4=>"アスモリオス",5=>"kp32",6=>true,7=>1,8=>180,
-                },
-                
-                "kp21" => {0=>"謎の男",1=>Person::Name[21][2],2=>"cos01",3=>"?",4=>"",5=>"kp21",6=>false,7=>1,8=>20,
-                },
-                
-                "kp21_2" => {0=>Person::Name[21][0],1=>Person::Name[21][2],2=>"cos02",3=>"36",4=>"ライト・サンディール",5=>"kp21",6=>false,7=>1,8=>20,
-                },
-                
-                "kp23" => {0=>Person::Name[23][0],1=>Person::Name[23][2],2=>"cos01",3=>"44",4=>"デルタ・アベラーゼ",5=>"kp23",6=>false,7=>1,
-                },
-                
-                "kp42" => {0=>Person::Name[42][0],1=>Person::Name[42][2],2=>"cos01",3=>"?",4=>"マガツオロチ",5=>"kp42",6=>false,7=>1,
-                },
-                
-                "kp42_2" => {0=>"#{Person::Name[42][0]}(真)",1=>Person::Name[42][2],2=>"cos01b",3=>"?",4=>"マガツオロチ",5=>"kp42b",6=>false,7=>1,8=>-10,
-                },
-                
-                "kp41" => {0=>Person::Name[41][0],1=>Person::Name[41][2],2=>"cos01",3=>"?",4=>"ゼパール",5=>"kp41",6=>false,7=>1,
-                },
-                
-                "kp51" => {0=>Person::Name[51][0],1=>Person::Name[51][2],2=>"cos01",3=>"?",4=>"ベルゼリアン",5=>"kp51",6=>false,7=>1,
-                },
-                
-                "kp51_2" => {0=>"#{Person::Name[51][0]}(真)",1=>Person::Name[51][2],2=>"cos01b",3=>"?",4=>"ベルゼリアン",5=>"kp51b",6=>false,7=>1,8=>120,
-                },
-                
-                # 立ち絵無し・サジタリーズ------------------------------------------------------------------------------------------------------------------------------
-                                
-                "kp6" => {0=>Person::Name[6][0],1=>Person::Name[6][2],2=>"cos01",3=>42,4=>"エレノア・リリエス・ムーンリット",5=>"kp6",6=>true,7=>1,8=>-70,
-                },
-                
-                "kp11" => {0=>Person::Name[11][0],1=>Person::Name[11][2],2=>"cos01",3=>31,4=>"リリ・エクスコリネ",5=>"kp11",6=>true,7=>1,8=>-70,
-                },
-                
-                "kp8" => {0=>Person::Name[8][0],1=>Person::Name[8][2],2=>"cos01",3=>34,4=>"ドレイク・ガーベニア",5=>"kp8",6=>false,7=>1,
-                },
-                
-                "sb31" => {0=>Person::Sub[31][0],1=>Person::Sub[31][2],2=>"cos01",3=>38,4=>"ベルベット・ウォード",5=>"sb31",6=>true,7=>1,8=>0,
-                },
-                
-                "kp9" => {0=>Person::Name[9][0],1=>Person::Name[9][2],2=>"cos01",3=>43,4=>"サルビア・フローネ・エルメラリア",5=>"kp9",6=>true,7=>1,8=>-70,
-                },
-                
-                # 立ち絵無し・スノーフレーク家------------------------------------------------------------------------------------------------------------------------------
-                
-                "sb32" => {0=>Person::Sub[32][0],1=>Person::Sub[32][2],2=>"cos01",3=>19,4=>"エリオラ・レティ・スノーフレーク",5=>"sb32",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb19" => {0=>Person::Sub[19][0],1=>Person::Sub[19][2],2=>"cos01",3=>44,4=>"エリューシア・ルミナ・スノーフレーク",5=>"sb19",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb17" => {0=>Person::Sub[17][0],1=>Person::Sub[17][2],2=>"cos01",3=>22,4=>"エリス・ティオーネ・スノーフレーク",5=>"sb17",6=>true,7=>1,8=>-70,
-                },
-                
-                # 立ち絵無し・トキワ巫女------------------------------------------------------------------------------------------------------------------------------
-                
-                "sb14" => {0=>Person::Sub[14][0],1=>Person::Sub[14][2],2=>"cos01",3=>22,4=>"大宮 春奈",5=>"sb14",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb42" => {0=>Person::Sub[42][0],1=>Person::Sub[42][2],2=>"cos01",3=>45,4=>"烏丸 百合",5=>"sb42",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb43" => {0=>Person::Sub[43][0],1=>Person::Sub[43][2],2=>"cos01",3=>21,4=>"烏丸 小花",5=>"sb43",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb41" => {0=>Person::Sub[41][0],1=>Person::Sub[41][2],2=>"cos01",3=>20,4=>"伏見 桜",5=>"sb41",6=>true,7=>1,8=>-70,
-                },
-                
-                # 立ち絵無し・ダリア関連・その他------------------------------------------------------------------------------------------------------------------------------
-                
-                "sb16" => {0=>Person::Sub[16][0],1=>Person::Sub[16][2],2=>"cos01",3=>18,4=>"ローザ・セルフィーユ",5=>"sb16",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb16_2" => {0=>"#{Person::Sub[16][0]}(発情)",1=>Person::Sub[16][2],2=>"cos02",3=>18,4=>"ローザ・セルフィーユ",5=>"sb16",6=>true,7=>1,8=>0,
-                },
-                
-                "sb18" => {0=>Person::Sub[18][0],1=>Person::Sub[18][2],2=>"cos01",3=>19,4=>"フェリシア・カレンデュラ",5=>"sb18",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb33" => {0=>Person::Sub[33][0],1=>Person::Sub[33][2],2=>"cos01",3=>37,4=>"ベリア・マークス",5=>"sb33",6=>true,7=>1,8=>-70,
-                },
-                
-                "kp7" => {0=>Person::Name[7][0],1=>Person::Name[7][2],2=>"cos01",3=>19,4=>"メリス・インペリアリス",5=>"kp7",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb38" => {0=>Person::Sub[38][0],1=>Person::Sub[38][2],2=>"cos01",3=>"?",4=>"マキ",5=>"sb38",6=>true,7=>1,8=>-70,
-                },
-                
-                "sb35" => {0=>Person::Sub[35][0],1=>Person::Sub[35][2],2=>"cos01",3=>"?",4=>"ラナン",5=>"sb35",6=>true,7=>1,8=>0,
-                },
-                
-                "kp44" => {0=>Person::Name[44][0],1=>Person::Name[44][2],2=>"cos01",3=>"?",4=>"玉藻前",5=>"kp44",6=>true,7=>1,8=>0,
-                },
-                
-                "sb6" => {0=>Person::Sub[6][0],1=>Person::Sub[6][2],2=>"cos01",3=>"19",4=>"アークス・ダヴィディア",5=>"sb6",6=>false,7=>1,
-                },
-                
-                "kp22" => {0=>Person::Name[22][0],1=>Person::Name[22][2],2=>"cos01",3=>48,4=>"ゴード・アルディシア",5=>"kp22",6=>false,7=>1,
-                },
-                
-                "sb2" => {0=>Person::Sub[2][0],1=>Person::Sub[2][2],2=>"cos01",3=>"?",4=>"カマラ",5=>"sb2",6=>false,7=>1,
-                },
-                
-  ]
+    CHARA = Hash[ # The second costume for display is selected by draw_costume_set when the array case
+                    # id => 0 List notation name   1 Stand graphic name   2 Display costume   3 Age   4 Full name   5 Chara id   6 Presence of 3 sizes   7 How many character progress points to reveal the name   8 Display image adjustment value nil then 50
+                    "n1" => {0=>"Lunaria",1=>"Lunaria",2=>[["cos01","story",2],["cos02","", 0]],3=>19,4=>"Lunaria Serenes Moonlit",5=>"n1",6=>true,7=>1,
+                    },
+                    
+                    "n1_3" => {0=>"Lunaria (Awakened)",1=>"Lunaria",2=>"cos11b",3=>19,4=>"Lunaria Serenes Moonlit",5=>"n1",6=>true,7=>1,
+                    },
+                    
+                    "n1_2" => {0=>"Lunaria (Succubus)",1=>"Lunaria",2=>"cos08b",3=>19,4=>"Succubus Queen Lunaria",5=>"n1b",6=>true,7=>1,
+                    },
+                    
+                    "n2" => {0=>"Sonia",1=>"Sonia",2=>"cos01",3=>36,4=>"Sonia Sandiel",5=>"n2",6=>true,7=>1,
+                    },
+                    
+                    "n2_2" => {0=>"Sonia (Brainwashed)",1=>"Sonia",2=>"cos05b",3=>36,4=>"Sonia Sandiel",5=>"n2",6=>true,7=>1,
+                    },
+                    
+                    "n3" => {0=>"Mana",1=>"Mana",2=>"cos01",3=>20,4=>"Kujo Ai",5=>"n3",6=>true,7=>1,
+                    },
+                    
+                    # Sub-character stand graphics ------------------------------------------------------------------------------------------------------------------------------
+                    
+                    "kp1" => {0=>Person::Name[1][0],1=>Person::Name[1][2],2=>"cos01",3=>28,4=>"Mariana Alter",5=>"kp1",6=>true,7=>1,
+                    },
+                    
+                    "kp1_2" => {0=>"#{Person::Name[1][0]}(2)",1=>Person::Name[1][2],2=>"cos02",3=>28,4=>"Mariana Melticia Sagittarius",5=>"kp1",6=>true,7=>1,
+                    },
+                    
+                    "kp1_3" => {0=>"#{Person::Name[1][0]}(Succubus)",1=>Person::Name[1][2],2=>"cos03b",3=>28,4=>"Succubus Mariana",5=>"kp1b",6=>true,7=>1,
+                    },
+                    
+                    "kp2" => {0=>Person::Name[2][0],1=>Person::Name[2][2],2=>"cos01",3=>27,4=>"Diana Artemia Sagittarius",5=>"kp2",6=>true,7=>1,
+                    },
+                    
+                    "kp2_2" => {0=>"#{Person::Name[2][0]}(Brainwashed)",1=>Person::Name[2][2],2=>"cos03b",3=>27,4=>"Diana Artemia Sagittarius",5=>"kp2",6=>true,7=>1,
+                    },
+                    
+                    "kp3" => {0=>Person::Name[3][0],1=>Person::Name[3][2],2=>"cos01",3=>125,4=>"Mirei Nierenbergia",5=>"kp3",6=>true,7=>1,
+                    },
+                    
+                    "kp3_2" => {0=>"#{Person::Name[3][0]}(Brainwashed)",1=>Person::Name[3][2],2=>"cos03b",3=>125,4=>"Mirei Nierenbergia",5=>"kp3",6=>true,7=>1,
+                    },
+                    
+                    "kp4" => {0=>Person::Name[4][0],1=>Person::Name[4][2],2=>"cos01",3=>19,4=>"Shirley Fennel",5=>"kp4",6=>true,7=>1,
+                    },
+                    
+                    "kp5" => {0=>Person::Name[5][0],1=>Person::Name[5][2],2=>"cos01",3=>19,4=>"Estia Yuki Elingium",5=>"kp5",6=>true,7=>1,
+                    },
+                    
+                    "kp12" => {0=>Person::Name[12][0],1=>Person::Name[12][2],2=>"cos01",3=>41,4=>"Kujo Tsukasa",5=>"kp12",6=>true,7=>1,
+                    },
+                    
+                    "kp13" => {0=>Person::Name[13][0],1=>Person::Name[13][2],2=>"cos01",3=>27,4=>"Filica Rain Daria",5=>"kp13",6=>true,7=>1,
+                    },
+                    
+                    "kp13_2" => {0=>"#{Person::Name[13][0]}(In Heat)",1=>Person::Name[13][2],2=>"cos02b",3=>27,4=>"Filica Rain Daria",5=>"kp13",6=>true,7=>1,
+                    },
+                    
+                    "n5" => {0=>"Anemone",1=>"Anemone",2=>"cos01",3=>"?",4=>"Anemone",5=>"n5",6=>true,7=>1,
+                    },
+                    
+                    "n5_2" => {0=>"Anemone(2)",1=>"Anemone",2=>[["cos02","item",312],["cos01","",0]],3=>"?",4=>"Anemone",5=>"n5",6=>true,7=>1,
+                    },
+                    
+                    "kp14" => {0=>Person::Name[14][0],1=>Person::Name[14][2],2=>"cos01",3=>"?",4=>"Sign Regel Sagittarius",5=>"kp14",6=>false,7=>1,8=>20,
+                    },
+                    
+                    "kp31" => {0=>Person::Name[31][0],1=>Person::Name[31][2],2=>"cos01",3=>"?",4=>"Reno",5=>"kp31",6=>true,7=>2,
+                    },
+                    
+                    "kp31_2" => {0=>"#{Person::Name[31][0]}(True)",1=>Person::Name[31][2],2=>"cos01b",3=>"?",4=>"Reno",5=>"kp31",6=>true,7=>1,
+                    },
+                    
+                    "kp32" => {0=>Person::Name[32][0],1=>Person::Name[32][2],2=>"cos01",3=>"?",4=>"Asmorlios",5=>"kp32",6=>true,7=>1,
+                    },
+                    
+                    "kp32_2" => {0=>"#{Person::Name[32][0]}(True)",1=>Person::Name[32][2],2=>"cos01b",3=>"?",4=>"Asmorlios",5=>"kp32",6=>true,7=>1,8=>180,
+                    },
+                    
+                    "kp21" => {0=>"Mysterious Man",1=>Person::Name[21][2],2=>"cos01",3=>"?",4=>"",5=>"kp21",6=>false,7=>1,8=>20,
+                    },
+                    
+                    "kp21_2" => {0=>Person::Name[21][0],1=>Person::Name[21][2],2=>"cos02",3=>"36",4=>"Light Sandiel",5=>"kp21",6=>false,7=>1,8=>20,
+                    },
+                    
+                    "kp23" => {0=>Person::Name[23][0],1=>Person::Name[23][2],2=>"cos01",3=>"44",4=>"Delta Aberaze",5=>"kp23",6=>false,7=>1,
+                    },
+                    
+                    "kp42" => {0=>Person::Name[42][0],1=>Person::Name[42][2],2=>"cos01",3=>"?",4=>"Magatsu Orochi",5=>"kp42",6=>false,7=>1,
+                    },
+                    
+                    "kp42_2" => {0=>"#{Person::Name[42][0]}(True)",1=>Person::Name[42][2],2=>"cos01b",3=>"?",4=>"Magatsu Orochi",5=>"kp42b",6=>false,7=>1,8=>-10,
+                    },
+                    
+                    "kp41" => {0=>Person::Name[41][0],1=>Person::Name[41][2],2=>"cos01",3=>"?",4=>"Zepar",5=>"kp41",6=>false,7=>1,
+                    },
+                    
+                    "kp51" => {0=>Person::Name[51][0],1=>Person::Name[51][2],2=>"cos01",3=>"?",4=>"Belzerian",5=>"kp51",6=>false,7=>1,
+                    },
+                    
+                    "kp51_2" => {0=>"#{Person::Name[51][0]}(True)",1=>Person::Name[51][2],2=>"cos01b",3=>"?",4=>"Belzerian",5=>"kp51b",6=>false,7=>1,8=>120,
+                    },
+                    
+                    # No stand graphics - Sagittarius ------------------------------------------------------------------------------------------------------------------------------
+                                    
+                    "kp6" => {0=>Person::Name[6][0],1=>Person::Name[6][2],2=>"cos01",3=>42,4=>"Elenoa Lilies Moonlit",5=>"kp6",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "kp11" => {0=>Person::Name[11][0],1=>Person::Name[11][2],2=>"cos01",3=>31,4=>"Lili Excoline",5=>"kp11",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "kp8" => {0=>Person::Name[8][0],1=>Person::Name[8][2],2=>"cos01",3=>34,4=>"Drake Garbenia",5=>"kp8",6=>false,7=>1,
+                    },
+                    
+                    "sb31" => {0=>Person::Sub[31][0],1=>Person::Sub[31][2],2=>"cos01",3=>38,4=>"Velvet Ward",5=>"sb31",6=>true,7=>1,8=>0,
+                    },
+                    
+                    "kp9" => {0=>Person::Name[9][0],1=>Person::Name[9][2],2=>"cos01",3=>43,4=>"Salvia Frohne Elmeralia",5=>"kp9",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    # No stand graphics - Snowflake family ------------------------------------------------------------------------------------------------------------------------------
+                    
+                    "sb32" => {0=>Person::Sub[32][0],1=>Person::Sub[32][2],2=>"cos01",3=>19,4=>"Eliora Leti Snowflake",5=>"sb32",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb19" => {0=>Person::Sub[19][0],1=>Person::Sub[19][2],2=>"cos01",3=>44,4=>"Elyusia Lumina Snowflake",5=>"sb19",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb17" => {0=>Person::Sub[17][0],1=>Person::Sub[17][2],2=>"cos01",3=>22,4=>"Elis Tione Snowflake",5=>"sb17",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    # No stand graphics - Tikiwa Shrine Maidens ------------------------------------------------------------------------------------------------------------------------------
+                    
+                    "sb14" => {0=>Person::Sub[14][0],1=>Person::Sub[14][2],2=>"cos01",3=>22,4=>"Omiya Haruna",5=>"sb14",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb42" => {0=>Person::Sub[42][0],1=>Person::Sub[42][2],2=>"cos01",3=>45,4=>"Karazuma Yuri",5=>"sb42",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb43" => {0=>Person::Sub[43][0],1=>Person::Sub[43][2],2=>"cos01",3=>21,4=>"Karazuma Koka",5=>"sb43",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb41" => {0=>Person::Sub[41][0],1=>Person::Sub[41][2],2=>"cos01",3=>20,4=>"Fushimi Sakura",5=>"sb41",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    # No stand graphics - Daria related & Others ------------------------------------------------------------------------------------------------------------------------------
+                    
+                    "sb16" => {0=>Person::Sub[16][0],1=>Person::Sub[16][2],2=>"cos01",3=>18,4=>"Rosa Selfille",5=>"sb16",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb16_2" => {0=>"#{Person::Sub[16][0]}(In Heat)",1=>Person::Sub[16][2],2=>"cos02",3=>18,4=>"Rosa Selfille",5=>"sb16",6=>true,7=>1,8=>0,
+                    },
+                    
+                    "sb18" => {0=>Person::Sub[18][0],1=>Person::Sub[18][2],2=>"cos01",3=>19,4=>"Felicia Calendula",5=>"sb18",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb33" => {0=>Person::Sub[33][0],1=>Person::Sub[33][2],2=>"cos01",3=>37,4=>"Beriya Marks",5=>"sb33",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "kp7" => {0=>Person::Name[7][0],1=>Person::Name[7][2],2=>"cos01",3=>19,4=>"Meris Imperialis",5=>"kp7",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb38" => {0=>Person::Sub[38][0],1=>Person::Sub[38][2],2=>"cos01",3=>"?",4=>"Maki",5=>"sb38",6=>true,7=>1,8=>-70,
+                    },
+                    
+                    "sb35" => {0=>Person::Sub[35][0],1=>Person::Sub[35][2],2=>"cos01",3=>"?",4=>"Ranun",5=>"sb35",6=>true,7=>1,8=>0,
+                    },
+                    
+                    "kp44" => {0=>Person::Name[44][0],1=>Person::Name[44][2],2=>"cos01",3=>"?",4=>"Tamamo-no-Mae",5=>"kp44",6=>true,7=>1,8=>0,
+                    },
+                    
+                    "sb6" => {0=>Person::Sub[6][0],1=>Person::Sub[6][2],2=>"cos01",3=>"19",4=>"Arks Davidia",5=>"sb6",6=>false,7=>1,
+                    },
+                    
+                    "kp22" => {0=>Person::Name[22][0],1=>Person::Name[22][2],2=>"cos01",3=>48,4=>"Gord Aldishia",5=>"kp22",6=>false,7=>1,
+                    },
+                    
+                    "sb2" => {0=>Person::Sub[2][0],1=>Person::Sub[2][2],2=>"cos01",3=>"?",4=>"Kamala",5=>"sb2",6=>false,7=>1,
+                    },
+                    
+    ]
   
   TEXT = Hash[
 #２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
 #２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "n1" => {
-1=>"魔法王国サジタリーズの宮廷魔術師。魔術学院を首席で卒業
-した才女。高い魔力に驕らず努力も怠らない真面目な性格。
-また、仲間想いで義理堅く困っている人を放っておけないなど
-責任感も強い。炎の魔術を得意とし召喚も使いこなす実力者。
+                "n1" => {
+1=>"A court magician of the Magic Kingdom of Sagitarius, 
+a talented woman who graduated top of her class from the 
+Academy of Magic Arts. Doesn't become complacent with her 
+high magical power, and has a diligent, serious personality. 
+She's considerate of her companions and has a strong sense 
+of duty, unable to abandon those in need. Skilled in fire 
+magic and also proficient in summoning.
 ",
 
 :true=>0,
-               },
-               
-               "n1_3" => {
-1=>"古の五大魔術師より受け継いだ魔力を覚醒させたLunaria。
-その魔力は５つの宝玉にも匹敵する程で、魔神を遥かに
-凌駕していた。魔神を倒した後、役目を終えた魔力は
-Lunariaの中から消え、元の状態へと戻った。
+                },
+                
+                "n1_3" => {
+1=>"Lunaria, having awakened the magical powers inherited 
+from the ancient five great magicians. Her power was said 
+to rival that of the five jewels, far surpassing the demonic 
+gods. After defeating the demon god, the power that had 
+served its purpose vanished from within Lunaria, returning 
+her to her original state.
 ",
 
 :true=>1,
-               },
-               
-               "n1_2" => {
-1=>"淫魔石を介して女王の魂を植え付けられたLunariaの姿。
-Rennoの見立てではLunariaの自我が消滅し本来の女王が
-復活する予定だったがその目論見は外れ、女王の自我が消滅し
-その力を継承した新たな淫魔の女王Lunariaが誕生した。
+                },
+                
+                "n1_2" => {
+1=>"The form of Lunaria after having the soul of the queen 
+implanted within her using a succubus stone. According to 
+Renno's assessment, Lunaria's ego was supposed to be erased 
+and the original queen resurrected, but that plan failed, 
+and the queen's ego disappeared, giving birth to the new 
+queen of succubi, Lunaria.
 ",
 
 :true=>0,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "n2" => {
-1=>"行方不明の夫を探して旅をしている人妻戦士。戦闘では剣を
-武器に戦い、二刀流も使いこなすパワーファイター。お人好し
-な性格で、人を疑うよりは信じたいタイプ。身持ちが堅く
-貞操観念が強いが、現在は熟れた身体を持て余している。
+                },
+                
+#28 characters####################################
+#28 characters####################################
+                "n2" => {
+1=>"A married female warrior traveling in 
+search of her missing husband. In battle, 
+she wields swords and is proficient in dual-wielding, 
+making her a power-fighter. She's kind-hearted, 
+preferring to trust rather than suspect others. 
+Has strong moral convictions about chastity and 
+faithfulness, but is currently struggling with 
+desires due to her mature body.
 ",
 
 :true=>0,
-               },
-               
-               "n2_2" => {
-1=>"ダリア女王の頼みを受けゼパール教へと潜入したが、教祖の
-術で洗脳されてしまったSonia。洗脳後は教祖の色々な世話を
-する係に任命され、毎日のように教祖と交わり
-子宮に教祖の子種を大量に注がれていた。
+                },
+                
+                "n2_2" => {
+1=>"Sonia, who infiltrated the Zepar faith at 
+the request of Queen Dalia, was brainwashed by 
+the cult leader's techniques. After being brainwashed, 
+she was assigned to take care of various duties 
+for the cult leader, and would be inseminated with 
+his seed on a daily basis.
 ",
 
 :true=>0,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "n3" => {
-1=>"サジタリーズの東に位置する島国トキワの巫女。感情を表に
-出すのが苦手で、あまり表情が動くことはないが内には熱い
-激情を秘めている。トキワにおける相当な実力者で
-次期里長候補と言われている。
+                },
+                
+#28 characters####################################
+#28 characters####################################
+                "n3" => {
+1=>"A shrine maiden from the island nation of Tokiwa, 
+located to the east of Sagitarius. She finds it hard 
+to express her emotions and rarely changes her expression, 
+but harbors a passionate fervor inside. A formidable 
+power in Tokiwa, she's rumored to be a candidate for 
+the next village chief.
 ",
 
 :true=>0,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "kp1" => {
-1=>"サジタリーズの上級宮廷魔術師。城内のアイテム研究と開発の
-責任者であり、他の魔術師たちを指揮してアイテム開発を
-行っている。魔力はあまり高くなく、戦闘では支援担当。
-エッチが大好きで城内の兵士をたまにつまみ食いしている。
+                },
+                
+#28 characters####################################
+#28 characters####################################
+                "kp1" => {
+1=>"A senior court magician of Sagitarius. In charge 
+of item research and development within the castle 
+and leads other magicians in the development of items. 
+Her magical power isn't very high, and she's responsible 
+for support in combat. She loves sexual activities and 
+occasionally indulges with the soldiers in the castle.
 ",
 
 :true=>0,
-               },
-               
-               "kp1_2" => {
-1=>"サジタリーズの上級宮廷魔術師だが、実は前国王の妾腹で、
-女王であるDianaの姉にあたる。娼婦だった母親と
-その客だった前国王との間に生まれた。母親と共に娼婦として
-働いた経験があり、母娘丼プレイは当時大人気だった。
+                },
+                
+                "kp1_2" => {
+1=>"A senior court magician of Sagitarius, but in fact 
+the illegitimate daughter of the former king, thus 
+Diana's aunt. Born to a prostitute mother and the 
+former king, who was one of her clients. She has 
+experience working as a prostitute alongside her 
+mother, and the mother-daughter combo was quite 
+popular at the time.
 ",
 
 :true=>1,
-               },
-               
-               "kp1_3" => {
-1=>"Lunariaによって淫魔石を触媒にサキュバスへと変えられて
-しまったMarianaの姿。本来ならば例え淫魔の女王と言えど、
-淫魔石を触媒にしても人間をサキュバスに変えるなど出来ない
-のだが……
+                },
+                
+                "kp1_3" => {
+1=>"The appearance of Mariana, who was turned into 
+a succubus by Lunaria using a succubus stone as a 
+catalyst. Normally, even if she were the queen of 
+succubi, using a succubus stone as a catalyst to 
+turn a human into a succubus would not be possible but...
 ",
 
 :true=>0,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "kp2" => {
-1=>"魔法王国サジタリーズを治める女王。国民からの信頼も厚く
-城下町には彼女個人の公式ファンクラブが存在する程である。
-高い魔力と魔術の才に恵まれ、王女時代 王族きっての
-天才魔術師と呼ばれていた。相当な爆乳の持ち主。
+                },
+                
+#28 characters####################################
+#28 characters####################################
+                "kp2" => {
+1=>"The queen who rules the Magic Kingdom of 
+Sagitarius, deeply trusted by her people to the 
+extent that there is an official fan club for 
+her in the town below the castle. Blessed with 
+high magical power and talent, she was called a 
+genius magician among the royal family during 
+her princess days. She's also notably busty.
 ",
 
 :true=>0,
-               },
-               
-               "kp2_2" => {
-1=>"淫堕の洗脳鬼Zeparの傀儡種の術によって洗脳され
-身も心もZeparの虜となってしまったDianaの姿。
-洗脳されてからは毎日のようにZeparに奉仕し続け、
-子種を２５０回以上も中出しされている。
+                },
+                
+                "kp2_2" => {
+1=>"The appearance of Diana, having been brainwashed 
+by the enchantment of the brainwashing demon Zepar, 
+leaving her body and soul captive to him. Since 
+being brainwashed, she has continued to serve Zepar 
+daily and has been inseminated with his seed over 250 times.
 ",
 
 :true=>1,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "kp3" => {
-1=>"先々代の王の時代から魔法王国に仕えている宮廷魔術師団の
-団長にしてハーフエルフ。Dianaの魔術の師であると同時に
-よき友であり相談役でもある。エルフ由来の高い魔力をもち
-苦手属性のない一流の魔術師である。
+                },
+                
+#28 characters####################################
+#28 characters####################################
+                "kp3" => {
+1=>"The leader of the court magicians who has served 
+the Magic Kingdom since the reign of the king before 
+last, and a half-elf. Diana's magical mentor, a good 
+friend, and a confidante. She possesses high magical 
+power derived from her elf lineage and is a first-class 
+magician with no weak attributes.
 ",
 
 :true=>0,
-               },
-               
-               "kp3_2" => {
-1=>"淫堕の洗脳鬼Zeparの傀儡種の術によって洗脳され
-身も心もZeparの虜となってしまったMillayの姿。
-洗脳されてからは毎日のようにZeparに奉仕し続け、
-子種を２５０回以上も中出しされている。
+                },
+                
+                "kp3_2" => {
+1=>"The appearance of Millay, who has been brainwashed 
+by the enchantment of the brainwashing demon Zepar, 
+leaving her body and soul captive to him. Since being 
+brainwashed, she has continued to serve Zepar daily 
+and has been inseminated with his seed over 250 times.
 ",
 
 :true=>1,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "kp4" => {
-1=>"Lunariaの魔術学院時代の同級生で卒業後一緒に宮廷魔術師と
-なった活発な女性。魔力はあまり高くないがそれを補う体力・
-筋力・敏捷性を持ち、それを生かした格闘魔術を得意とする。
-周りの女性より胸が大きくないのを気にしている。
+                },
+                
+#28 characters####################################
+#28 characters####################################
+                "kp4" => {
+1=>"A spirited woman who became a court magician 
+alongside Lunaria after graduating from the same 
+magic academy. She doesn't have much magical power 
+but compensates with her physical strength, agility, 
+and strength which she utilizes in her specialized 
+martial magic. She's self-conscious about not having 
+as large breasts as the other women around her.
 ",
 
 :true=>0,
-               },
-               
-               "kp5" => {
-1=>"Lunariaの魔術学院時代の同級生で卒業後一緒に宮廷魔術師と
-なったおっとりした女性。Lunariaに負けない巨乳の持ち主で
-魔力も高く、回復魔術を得意としている。
+                },
+                
+                "kp5" => {
+1=>"A gentle woman who became a court magician 
+alongside Lunaria after graduating from the same 
+magic academy. She has large breasts comparable 
+to Lunaria and high magical power, specializing 
+in healing magic.
 ",
 
-2=>"Lunariaの魔術学院時代の同級生で卒業後一緒に宮廷魔術師と
-なったおっとりした女性。Lunariaに負けない巨乳の持ち主で
-魔力も高く、回復魔術を得意としている。母親が東の島国
-トキワの出身で、本人もそこで生まれ育った。
-",
-
-:true=>0,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "kp12" => {
-1=>"トキワの九条の里の長にして５人の里長の筆頭を務める巫女。
-高い法力を持ち戦闘能力も巫女の中では随一。Manaの叔母に
-あたり、母親を早くに亡くしている彼女の親代わりでもある。
-既婚者で息子が一人いる。
+2=>"A gentle woman who became a court magician 
+alongside Lunaria after graduating from the same 
+magic academy. She has large breasts comparable 
+to Lunaria and high magical power, specializing 
+in healing magic. Her mother is from the eastern 
+island nation of Tokiwa, and she was born and raised there.
 ",
 
 :true=>0,
-               },
-               
-               "kp13" => {
-1=>"武を重んじる大国ダリア王国の女王。常に気高く凛としており
-騎士王の異名を持つ。その剣技は王国最強で、王国騎士団の
-団長ですら敵わない程。曲がった事が許せない性格で、国の
-腐敗を正してきた為それを快く思わない者もいる。
+                },
+                
+#28 characters####################################
+#28 characters####################################
+                "kp12" => {
+1=>"The long-serving priestess of the Nine-Fold 
+Village of Tokiwa and the most senior of the five 
+village chiefs. She has high magical power and is 
+the top combatant among the shrine maidens. She is 
+Mana's aunt and has been a mother figure to her, 
+having lost her own mother early on. Married with one son.
 ",
 
 :true=>0,
-               },
-               
-               "kp13_2" => {
-1=>"淫魔の女王に発情の術を掛けられDeltaの肉奴隷へと堕ちた
-Filicaの姿。その強靭な精神力で抵抗し続けたが最後には
-自らDeltaのチンポをおねだりするようになった。
+                },
+                
+                "kp13" => {
+1=>"The queen of the martially esteemed kingdom of 
+Dalia, always dignified and noble, and known as the 
+Knight Queen. Her swordsmanship is unrivaled in the 
+kingdom, surpassing even the captain of the kingdom's 
+knights. She can't tolerate dishonesty and has worked 
+to eradicate corruption in her country, which has made
+her the target of those who disapprove of her methods.
+",
+
+:true=>0,
+                },
+                
+                "kp13_2" => {
+1=>"The form of Filica, who fell to become a flesh 
+slave to Delta after being subjected to the arousal 
+magic of the succubus queen. Her strong mental 
+fortitude kept her resisting, but eventually, she 
+ended up begging for Delta's member herself.
 ",
 
 :true=>1,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               "n5" => {
-1=>"Lunariaが神殿で出会ったスノーレディ。魔物でありながら
-戦いを好まない心優しい性格。人間の文化や食べ物に興味が
-あり、特に最近はトキワが気になっている。エッチな事にも
-興味があり、人間のそういった書物を密かに読んでいる。
+                },
+                
+#28 characters####################################
+#28 characters####################################
+                "n5" => {
+1=>"A Snow Lady whom Lunaria met in the temple. 
+Although a monster, she is kind-hearted and does
+not enjoy fighting. She's interested in human 
+culture and food, with a particular curiosity 
+about Tokiwa of late. She's also curious about 
+sexual matters, secretly reading human literature 
+on such topics.
 ",
 
 :true=>0,
-               },
-               
-               "n5_2" => {
-1=>"Anemoneの命を救う為、Lunariaは彼女を強制契約で
-自分の\esmとした。Lunariaはその事を申し訳なく
-思っているが、当の本人は人間の住む町に入れる事を
-とても喜んでおりLunariaに感謝している。
+                },
+            
+                "n5_2" => {
+1=>"To save Anemone's life, Lunaria entered into a forced contract with her
+making her her own \esm. Lunaria regrets this decision,
+but the person in question is very happy to be able to enter the human town
+and is grateful to Lunaria.
 ",
 
 :true=>0,
-               },
-               
-               "kp14" => {
-1=>"かつて魔神を討伐した五大魔術師のリーダーにして。魔法王国
-サジタリーズの初代国王。『英雄、色を好む』を体現している
-ような人物で、魔神討伐後は共に旅をしていた女性全員を王妃
-として娶ったという。
+                },
+                
+                "kp14" => {
+1=>"The leader of the five great magicians who once defeated the demon god, and 
+the first king of the magic kingdom of Sagittarius. He embodies the \"hero who loves color\",
+and after the defeat of the demon god, he married all the women who had traveled 
+with him as his queens.
 ",
 
 :true=>1,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
+                },
+                
+#28 CHARACTERS#######################################
+#28 CHARACTERS#######################################
 
-               "kp31" => {
-1=>"Lunariaの後を密かにつけている淫魔(サキュバス)。
-彼女に関する詳しい事はわかっていない…
+                "kp31" => {
+1=>"A succubus secretly following Lunaria.
+Nothing much is known about her...
 ",
 
-2=>"Lunariaの後を密かにつけている淫魔(サキュバス)。
-その目的はどうやら淫魔の女王の復活のようだが……
-淫魔の名に違わずエッチが好きで『セックスするならお腹の
-出た脂ぎった親父か屈強な戦士に限る』とは彼女の弁。
+2=>"A succubus secretly following Lunaria.
+Her purpose seems to be the resurrection of the succubus queen but...
+True to her name, she loves lewd acts, saying \"If I'm going to have sex, 
+it has to be with either a fat old man with a belly or a tough warrior.\"
 ",
 
 :true=>0,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               
-               "kp31_2" => {
-1=>"淫魔Rennoの真の姿。本気を出したRennoは翼が二枚増え顔に紋様
-が浮かび上がり、魔力が劇的に跳ね上がる。他の淫魔とは違う
-その特異性、更にはフタナリ化の能力を有している事から
-Asmoliosに気に入られ、ずっと彼女の腹心を務めていた。
+                },
+                
+#28 CHARACTERS#######################################
+#28 CHARACTERS#######################################
+                
+                "kp31_2" => {
+1=>"The true form of the succubus Renno. When Renno gets serious, two more wings appear,
+patterns emerge on her face, and her magical power dramatically increases. Different from other succubi
+in her uniqueness, and also possessing the ability to become a futanari,
+she was favored by Asmolios and had always served as her confidant.
 ",
 
 :true=>1,
-               },
-               
-               "kp32" => {
-1=>"魔神の力により復活した夜を統べる淫魔の女王。かつて
-ダリアの女王により討伐されてしまった所をRennoの能力で
-魂を保護されそのままの状態で悠久の時を過ごしていた。
-復活後は魔神に対して恩義を感じそのまま彼の配下となった。
+                },
+                
+                "kp32" => {
+1=>"The queen of the succubi who command the night, resurrected by the power of the demon god. She was once 
+subdued by the queen of Dalia but was protected by Renno's ability as a soul and spent an eternity in that state.
+After her revival, she felt indebted to the demon god and became one of his subordinates.
 ",
 
 :true=>1,
-               },
-               
-               "kp32_2" => {
-1=>"淫魔の女王Asmoliosの真の姿。その正体は淫魔と天使の
-ハーフにして輝く光の翼と漆黒の闇の翼の二つを併せ持つ
-ハーフエンジェル。その力は強大で光と闇に対する耐性を持ち
-両属性の上級魔術を使いこなす。
+                },
+                
+                "kp32_2" => {
+1=>"The true form of the succubus queen Asmolios. Her true identity is a half demon and half angel,
+possessing both glowing wings of light and dark wings of pitch black.
+Her power is immense, with resistance to both light and darkness and mastery
+over high-level magic of both attributes.
 ",
 
 :true=>1,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
+                },
+                
+#28 CHARACTERS#######################################
+#28 CHARACTERS#######################################
 
-               "kp21" => {
-1=>"Lunaria達の魔力源を奪った謎の男。その後Lunariaの後を
-つけ狙っているようだが……
+                "kp21" => {
+1=>"A mysterious man who stole Lunaria and her companions' source of magical power. He seems to be trailing after Lunaria...
 ",
 
-2=>"Lunaria達の魔力源を奪った謎の男。その後Lunariaの後を
-つけ狙っていたが、彼が魔神に意識を乗っ取られた
-Soniaの行方不明の夫のWrightである事が判明する。
+2=>"A mysterious man who stole Lunaria and her companions' source of magical power. He was trailing after Lunaria,
+but it is revealed that he is Sonia's missing husband Wright, whose consciousness had been overtaken by the demon god.
 ",
 
 :true=>2,
-               },
-               
-               "kp21_2" => {
-1=>"行方不明になっていたSoniaの夫。とある遺跡で魔神に意識を
-乗っ取られ、その後 魔神の意のままに操られていた。
-魔神から解放された後も長い間眠り続けていたが魔神討伐後、
-無事に意識を取り戻しSoniaと二人で家へと帰った。
+                },
+                
+                "kp21_2" => {
+1=>"Sonia's husband, who had gone missing. His consciousness was taken over by a demon god at some ruins,
+and he was being manipulated by the demon god ever since.
+Even after being freed from the demon god, he continued to sleep for a long time, but after the demon god was subdued,
+he regained consciousness and returned home with Sonia to their home.
 ",
 
 :true=>1,
-               },
-               
-               "kp23" => {
-1=>"ダリア王国の大臣。女王のFilicaに対して執着しており、
-彼女を自分の物にする為なら、怪しい教団の設立に裏で手を
-回す等手段を選ばない下衆。
-背が低い事を少しでも誤魔化す為、上げ底の靴を履いている。
+                },
+                
+                "kp23" => {
+1=>"A minister of the Kingdom of Dalia. Obsessed with Queen Filica,
+he would resort to any means to make her his own, such as backing the establishment of a suspicious cult.
+He wears platform shoes to try to hide his short stature even a little.
 ",
 
-2=>"ダリア王国の大臣。女王のFilicaに対して執着しており、
-彼女を自分の物にする為なら、怪しい教団の設立に裏で手を
-回したり淫魔の取引にも簡単に応じる等手段を選ばない下衆。
-背が低い事を少しでも誤魔化す為、上げ底の靴を履いている。
+2=>"A minister of the Kingdom of Dalia. Obsessed with Queen Filica,
+he would resort to any means to make her his own, such as establishing a suspicious cult
+or even easily agreeing to deals with succubi. He wears platform shoes to try to hide his short stature even a little.
 ",
 
 :true=>2,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
+                },
+                
+#28 CHARACTERS#######################################
+#28 CHARACTERS#######################################
 
-               "kp42" => {
-1=>"トキワに封印されていた邪龍と呼ばれる伝説の大妖怪。かつて
-偉大な九条の巫女がなんとか封印したと伝えられており、
-その力は現代の巫女では全く歯が立たない程 強大である。
-封印した九条の人間に対し恨みを持っている。
+                "kp42" => {
+1=>"The legendary great monster called the evil dragon that was sealed in Tokiwa. It is said to have been sealed by a great miko of the Kujou family,
+and its power is so great that modern mikos are completely powerless against it.
+The dragon harbors resentment towards the humans of the Kujou family who sealed it.
 ",
 
 :true=>1,
-               },
-               
-               "kp42_2" => {
-1=>"伝説の大妖怪、邪龍の真の姿。正体は巨大な三つ首の大蛇で
-あり、また本質は龍でもある。右目の傷はかつて自分を封印
-した九条の巫女に付けられたもので、今でもその恨みは
-傷と共に残っている。
+                },
+                
+                "kp42_2" => {
+1=>"The true form of the legendary great monster, the evil dragon. Its true nature is a giant three-headed serpent,
+and fundamentally, it is also a dragon. The scar on its right eye was inflicted by the Kujou miko who sealed it long ago,
+and the resentment for that scar remains to this day.
 ",
 
 :true=>1,
-               },
-               
-               "kp41" => {
-1=>"淫堕の洗脳鬼の異名を持つ魔物。かつてDianaが王女時代
-Millayと共に討伐したがその後 魂のみの状態で彷徨い
-自分と波長の合うカマラという男に憑依し生き永らえた。
-復活後は魔神の配下となりDianaとMillayを洗脳した。
+                },
+                
+                "kp41" => {
+1=>"A demon known as the brainwashing fiend of depravity. In the past, it was subdued by Diana when she was a princess,
+along with Millay, but afterward, it wandered as a soul alone and possessed a man named Kamara, with whom it resonated, to survive.
+After its revival, it became a subordinate of the demon god and brainwashed Diana and Millay.
 ",
 
 :true=>1,
-               },
-               
-               "kp51" => {
-1=>"遥か1000年の昔、世界を支配しようとした伝説の魔神。
-五大魔術師に敗れた後も消滅することなく悠久の時を経て
-徐々に力を取り戻し、遂には５つの宝玉の力を利用し現世へと
-復活を果たした。
+                },
+                
+                "kp51" => {
+1=>"A legendary demon god that tried to rule the world a thousand years ago.
+Defeated by the five great magicians, it did not perish and passed through eternity,
+slowly regaining its power, and finally used the power of five jewels to resurrect in the present world.
 ",
 
 :true=>1,
-               },
-               
-               "kp51_2" => {
-1=>"伝説の魔神の真の姿。絶望と支配を司り、３つの邪眼を
-その身に宿した悪の化身。黒き闇の翼から放たれる攻撃と
-邪眼による睨み、そして闇を纏った拳による攻撃は強力無比で
-生半可な防御力では即死を免れない。
+                },
+                
+                "kp51_2" => {
+1=>"The true form of the legendary demon god. An embodiment of despair and dominion, it harbors three evil eyes.
+The attacks unleashed from its black wings of darkness, the glare from its evil eyes, and its fists enshrouded in darkness are incomparably powerful,
+and any defense that is merely half-hearted will not spare one an instant death.
 ",
 
 :true=>1,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
+                },
+                
+#28 CHARACTERS#######################################
+#28 CHARACTERS#######################################
 
-               "kp6" => {
-1=>"Lunariaの母親でサジタリーズの元宮廷魔術師。
-現在は専業主婦。夫は元王国騎士団団長。
+                "kp6" => {
+1=>"Lunaria's mother and former court magician of Sagittarius.
+Now a full-time housewife. Her husband is the former captain of the royal knights.
 ",
 
 :true=>0,
-               },
+                },
 
-               "kp11" => {
-1=>"Lunaria達の先輩にあたる宮廷魔術師。しっかりしていて
-面倒見のいい性格。付き合っている彼と近々結婚する予定。
+                "kp11" => {
+1=>"A court magician who is a senior to Lunaria and her friends. She has a responsible and caring personality.
+She is planning to marry her boyfriend soon.
 ",
 
 :true=>0,
-               },
-               
-               "kp8" => {
-1=>"サジタリーズの王国騎士団団長。真面目で誠実であり
-剣の腕は一流。
+                },
+                
+                "kp8" => {
+1=>"The captain of the Knights of the Kingdom of Sagittarius. He is serious, honest, and his swordsmanship is first-rate.
 ",
 
 :true=>0,
-               },
+                },
 
 #２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
 #２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
                
-               "sb31" => {
-1=>"サジタリーズの女性大臣の一人。眼鏡をかけた知的な女性。
-恋人募集中の３８歳独身。お酒が好きで、最近は
-\edb[i,123]にハマっている。
+            "sb31" => {
+1=>"One of the female ministers in Sagittarius. An intellectual woman wearing glasses.
+A single 38-year-old seeking a lover. She loves alcohol and recently has become
+addicted to \edb[i,123].
 ",
 
 :true=>0,
-               },
-               
-               "kp9" => {
-1=>"王立魔術学院の召喚科の講師。Lunariaの召喚術の師。
-既婚者であり、夫は同じ魔術学院の魔術講師の一人。
-Velvetとは少し歳が離れている(禁句)が、一緒に
-お酒を飲む飲み友達で仲がいい。
+            },
+            
+            "kp9" => {
+1=>"An instructor of the summoning department at the Royal Magic Academy. Lunaria's summoning technique mentor.
+Married, with her husband being one of the magic instructors at the same magic academy.
+A bit older than Velvet (taboo), but they enjoy drinking together as good drinking buddies.
 ",
 
 :true=>1,
-               },
-               
-               "sb32" => {
-1=>"Lunariaと同期の宮廷魔術師の一人。自称Lunariaの
-ライバル。氷結という二つ名を持っており、その名の通り
-氷属性の魔術を得意とする。
+            },
+            
+            "sb32" => {
+1=>"One of Lunaria's fellow court magicians. She calls herself Lunaria's
+rival. Carrying the alias 'Icebind,' as implied by the name,
+she specializes in ice magic.
 ",
 
-2=>"Lunariaと同期の宮廷魔術師の一人。自称Lunariaの
-ライバル。氷結という二つ名を持っており、その名の通り
-氷属性の魔術を得意とする。実はダリアの貴族でお嬢様。
-母親はサジタリーズの元宮廷魔術師で、髪の色は母親譲り。
-",
-
-:true=>0,
-               },
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-               
-               "sb19" => {
-1=>"Erioraの母親でサジタリーズの元宮廷魔術師。Lunariaの
-母親であるEleanorの先輩にあたり、二人はよく一緒に
-コンビを組んで任務にあたっていた。愛称はエリィ。
+2=>"One of Lunaria's fellow court magicians. She calls herself Lunaria's
+rival. Known by the alias 'Icebind,' she specializes in ice magic as implied by the name.
+She's actually a lady from the noble Dahlia family.
+Her mother was a former court magician of Sagittarius, and she inherited her hair color from her mother.
 ",
 
 :true=>0,
-               },
-               
-               "sb17" => {
-1=>"Erioraの姉でダリアの女王親衛隊である\ekw[4]の
-隊長。剣の腕は隊で一番であり、統率力にも優れている。
-口には出さないが実家を出て行った妹のErioraを
-心配している。
+            },
+#28 characters#####################################
+#28 characters#####################################
+
+            "sb19" => {
+1=>"Eriora's mother and a former court magician of Sagittarius. A senior colleague of Lunaria's
+mother Eleanor, the two often partnered up for missions. She is affectionately known as Elly.
 ",
 
 :true=>0,
-               },
-
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-
-               "sb14" => {
-1=>"トキワの巫女の一人でTsukihaの側近を務める実力者。
-あまりよそ者を信用せず、Lunariaに対しても警戒心を
-抱いている。
+            },
+            
+            "sb17" => {
+1=>"Eriora's sister and the captain of the \ekw[4], the Queen's Royal Guard of Dahlia. 
+She has the best swordsmanship in the squad and is also an excellent leader.
+Although not outspoken about it, she is concerned about her younger sister Eriora, who has left home.
 ",
 
 :true=>0,
-               },
-               
-               "sb42" => {
-1=>"トキワの巫女の一人で\esbt[43]の母親。巫女の中では年長者の
-部類に入るが、綺麗で色っぽい。巫女の中では胸が
-Tsukihaに次いで大きい。
+            },
+
+#28 characters#####################################
+#28 characters#####################################
+
+            "sb14" => {
+1=>"One of the shrine maidens of Tokiwa and a key aide to Tsukiha.
+She doesn't trust outsiders much and is wary of Lunaria.
 ",
 
 :true=>0,
-               },
-               
-               "sb43" => {
-1=>"トキワの巫女の一人で\esbt[42]の娘。Manaとは喧嘩友達
-のような関係で、事ある毎に突っかかってくる。歳はManaの
-一個上だが、Manaより胸が小さい事を気にしている。
-母親の遺伝子的にいつか胸が大きくなる事を信じている。
+            },
+            
+            "sb42" => {
+1=>"One of the shrine maidens of Tokiwa and mother of \esbt[43]. Among the shrine maidens, she
+is considered an elder, but she is beautiful and seductive. Among the maidens, her bosom is
+second only to Tsukiha.
 ",
 
 :true=>0,
-               },
-               
-               "sb41" => {
-1=>"トキワの巫女の一人。趣味はオシャレとコイバナ。
-一度、巫女袴を可愛く改造しようとしたがこっぴどく
-怒られたため、大人しく普通の巫女袴を着ている。
+            },
+            
+            "sb43" => {
+1=>"One of the shrine maidens of Tokiwa and daughter of \esbt[42]. She has a frenemy-like relationship with Mana,
+constantly provoking her. Although she is one year older than Mana, she is self-conscious about
+having smaller breasts than her. She believes in the genetics of her mother and is convinced that her breasts will grow bigger eventually.
 ",
 
 :true=>0,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
-
-               "sb16" => {
-1=>"ダリアの女王であるFilica専属のメイド。控えめで
-礼儀正しく、その容姿から城内でもファンが多い。
+            },
+            
+            "sb41" => {
+1=>"One of the shrine maidens of Tokiwa. Her hobbies include fashion and love stories.
+Once, she tried to cutely modify her shrine maiden hakama but was severely scolded, so she now wears the standard shrine maiden hakama obediently.
 ",
 
 :true=>0,
-               },
-               
-               "sb16_2" => {
-1=>"淫魔の発情の術でDeltaの肉奴隷へと堕ちたRosaの姿。
-Filicaと違い最初に犯された段階でチンポに即堕ちして
-いた。即堕ち後はDeltaのチンポに進んで奉仕するなど、
-従順なメス奴隷となっていた。
+            },
+            
+#28 characters#####################################
+#28 characters#####################################
+
+            "sb16" => {
+1=>"A maid exclusively serving Queen Filica of Dahlia. She is reserved and well-mannered,
+and her appearance has garnered her many fans within the castle.
+",
+
+:true=>0,
+            },
+            
+            "sb16_2" => {
+1=>"Rosa's appearance after falling as a flesh slave to Delta due to the succubus's estrus spell.
+Unlike Filica, she succumbed to the penis from the first stage of being violated
+and after succumbing, she willingly serviced Delta's penis,
+becoming a submissive female slave.
 ",
 
 :true=>1,
-               },
-               
-               "sb18" => {
-1=>"ダリアの女王親衛隊である\ekw[4]の副隊長。
-平民出身ながら若くして実力だけで親衛隊の副隊長になった
-実力者。
+            },
+            
+            "sb18" => {
+1=>"The vice-captain of the \ekw[4], the Queen's Royal Guard of Dahlia.
+A talented individual who became the vice-captain of the Royal Guard based solely on her ability despite her commoner origins.
 ",
 
-2=>"ダリアの女王親衛隊である\ekw[4]の副隊長。
-平民出身ながら若くして実力だけで親衛隊の副隊長になった
-実力者。エッチな事が好きで、学生時代 夜のお店で
-エッチな踊り子として働いていた事がある。
+2=>"The vice-captain of the \ekw[4], the Queen's Royal Guard of Dahlia.
+A talented individual who became the vice-captain of the Royal Guard based solely on her ability despite her commoner origins.
+She loves erotic things, and during her student days, she worked as an erotic dancer in night establishments.
 ",
 
 :true=>2,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
+            },
+            
+#28 characters#####################################
+#28 characters#####################################
 
-               "sb33" => {
-1=>"ラグラスで娼館を営む女性。かつては自らも娼婦として
-働いていた過去を持つ。酒場で働いている見込みのありそうな
-女性に声を掛け娼婦としてスカウトしている。
+            "sb33" => {
+1=>"A woman who runs a brothel in Ragras. She herself has a past of working as a prostitute.
+She seeks out women working in taverns who seem to have potential and scouts them to become prostitutes.
 ",
 
 :true=>0,
-               },
-               
-               "kp7" => {
-1=>"世界を旅しながら救われない魂を浄化して回っている
-シスター。自己犠牲の精神が強く、他人への警戒心が少し
-薄い所がある。幼い外見に似合わず胸がデカい。
+            },
+            
+            "kp7" => {
+1=>"A Sister who travels the world purifying lost souls.
+She has a strong spirit of self-sacrifice and a bit of a weak guard against other people.
+Oddly, despite her young appearance, she has a large chest.
 ",
 
 :true=>1,
-               },
+            },
 
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
+#28 characters#####################################
+#28 characters#####################################
 
-               "sb38" => {
-1=>"ショートカットのスノーレディ。同じスノーレディである
-Anemoneとは親友であり、エッチな話で盛り上がる
-エロバナ仲間。Anemoneが粛清される原因を作り、且つその
-命を救ったLunariaに対しては複雑な感情を抱いている。
+            "sb38" => {
+1=>"A short-haired Snow Lady. A close friend of Anemone, who is also a Snow Lady,
+and they enjoy erotic chats together as lewd story buddies. She has mixed feelings towards Lunaria, who caused the purge of Anemone but also saved her life.
 ",
 
 :true=>1,
-               },
-               
-               "sb35" => {
-1=>"スノーレディの上位種にして群れを統べる氷魔の女王
-スノークイーン。人前に姿を現す事は殆どなく、魔物学者の
-間でもその存在を信じている者は少ない。
+            },
+            
+            "sb35" => {
+1=>"The Snow Lady of higher rank that rules over the pack, the Ice Demon Queen
+Snow Queen. She scarcely shows herself in public, and among demonologists,
+there are few who believe in her existence.
 ",
 
 :true=>1,
-               },
-               
-               "kp44" => {
-1=>"トキワの殺生石に封印されている大妖怪、九尾の狐。何らか
-の影響で封印が弱まり一度は外に出たがManaにより再び
-封印された。かつてはその美貌でトキワの民を惑わし
-多くの命を奪ったと伝えられている。
+            },
+            
+            "kp44" => {
+1=>"A great demon, the Nine-Tailed Fox, sealed in Tokiwa's killing stone. Some influence has weakened the seal, and it once escaped but was resealed by Mana.
+It is said that in the past, with its beauty, it deluded the people of Tokiwa and took many lives.
 ",
 
 :true=>1,
-               },
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
+            },
+#28 characters#####################################
+#28 characters#####################################
 
-               "sb6" => {
-1=>"Lunariaの学院時代の同期で、彼女に想いを寄せていた闇魔術
-師。当時、何度も彼女に召喚術バトルという名のアタックを
-かけていたが、一度も勝利した事はない。卒業後は一人 館に
-籠り、Lunaria打倒の為 高位魔獣の召喚の研究をしていた。
+            "sb6" => {
+1=>"A dark magician who harbored feelings for Lunaria during their academy days.
+At that time, he repeatedly challenged her to summoning battles, but he never won once.
+After graduation, he secluded himself in a mansion, researching high-level demon summoning for the downfall of Lunaria.
 ",
 
 :true=>0,
-               },
+            },
 
-               "kp22" => {
-1=>"ダリアを拠点に活動している貿易商人。一代で今の財を築き
-上げたやり手。王国とも取引があり、本人の人柄も誠実で
-紳士的。かなりの好色だが嫌がる女性には手を出さない。
+            "kp22" => {
+1=>"A trader based in Dahlia, working his way up to his current wealth in one generation.
+He has dealings with the kingdom, and his character is considered sincere and gentlemanly.
+Although quite lascivious, he does not touch women who are averse to him.
 ",
 
-2=>"ダリアを拠点に活動している貿易商人。一代で今の財を築き
-上げたやり手。王国とも取引があり、本人の人柄も誠実で
-紳士的。遠い先祖が淫魔と結ばれ子をなした為、その子供の
-子孫は代々異性を虜にする性的魅力と絶倫さを持っている。
+2=>"A trader based in Dahlia, working his way up to his current wealth in one generation.
+He has dealings with the kingdom, and his character is considered sincere and gentlemanly.
+Due to a distant ancestor mating with a succubus, his descendants have inherited sexual allure and stamina capable of captivating the opposite sex generation after generation.
 ",
 
 :true=>0,
-               },
-               
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
-#２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#
- 
-               "sb2" => {
-1=>"Zepar教という怪しい宗教の教祖。裏では何か
-いかがわしい事をしているという噂だが……
+            },
+            
+#28 characters#####################################
+#28 characters#####################################
+
+            "sb2" => {
+1=>"The leader of a suspicious religion called Zepar's teaching. There are rumors of
+unsavory acts being conducted behind the scenes...
 ",
 
-2=>"Zepar教という怪しい宗教の教祖。信者の女性を洗脳し
-毎日のように犯していた。Soniaも犠牲者の一人。
+2=>"The leader of a suspicious religion called Zepar's teaching. He brainwashed female followers
+and violated them daily. Sonia was one of the victims.
 ",
 
-3=>"Zepar教という怪しい宗教の教祖。信者の女性を洗脳し
-毎日のように犯していた。Soniaも犠牲者の一人。その正体は
-Zeparという名の魔物で、その魔物の魂がカマラという
-人間に憑依した姿だった。
+3=>"The leader of a suspicious religion called Zepar's teaching. He brainwashed female followers
+and violated them daily. Sonia was one of the victims. His true form was a demon named Zepar,
+and it was the soul of that demon possessing a human named Kamara.
 ",
 
 :true=>3,
-               },
+            },
 
 #２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#####
 #２８文字＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃#

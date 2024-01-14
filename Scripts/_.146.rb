@@ -504,7 +504,7 @@ class Window_BookDetail < Window_Base
   #--------------------------------------------------------------------------
   def draw_enemy_number(x, y)
     change_color(important_color)
-    draw_text(x, y, 128, line_height, "図鑑No.#{format("%03d",@number + 1)}")
+    draw_text(x, y, 128, line_height, "No.#{format("%03d",@number + 1)}")
   end
   #--------------------------------------------------------------------------
   # ○ 魔物名の描画
@@ -994,7 +994,7 @@ class Window_CollectionRate < Window_Base
   #--------------------------------------------------------------------------
   def draw_collect_rate(x, y, width, category)
     change_color(system_color)
-    draw_text(x, y, width, line_height, "Collect Rate")
+    draw_text(x, y, width, line_height, "Total")
     tr = $game_switches[FAKEREAL::BOOK_EXTEND]
     rate = [collect_rate(@category, tr), 100].min
     if tr && rate == 100

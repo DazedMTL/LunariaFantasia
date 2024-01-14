@@ -219,9 +219,9 @@ class Window_SaveInfo < Window_Base
     return unless @header
     if @header[:game_clear]
       star = @header[:game_clear] >= 1 ? (@header[:game_clear] == 1 ? "★" : "★x#{@header[:game_clear]}") : ""
-      draw_text(x, y, width, line_height, star + "プレイ時間 " + @header[:playtime_s], align)
+      draw_text(x, y, width, line_height, star + "Playtime " + @header[:playtime_s], align)
     else
-      draw_text(x, y, width, line_height, "プレイ時間 " + @header[:playtime_s], align)
+      draw_text(x, y, width, line_height, "Playtime " + @header[:playtime_s], align)
     end
   end
   #--------------------------------------------------------------------------

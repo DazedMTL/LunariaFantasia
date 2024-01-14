@@ -677,7 +677,7 @@ class Window_MenuCommand < Window_Command
   alias tactics_add_original_commands add_original_commands
   def add_original_commands
     tactics_add_original_commands
-    add_command("作戦",  :tactics, !$game_switches[FAKEREAL::AUTO_DISABLE])
+    add_command("Tactics",  :tactics, !$game_switches[FAKEREAL::AUTO_DISABLE])
   end
 end
 
@@ -714,7 +714,7 @@ class Window_PartyCommand < Window_Command
   alias tactics_make_command_list make_command_list
   def make_command_list
     tactics_make_command_list
-    add_command("作戦",   :tactics)
+    add_command("Tactics",   :tactics)
   end
 end
 

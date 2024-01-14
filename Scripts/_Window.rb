@@ -92,8 +92,8 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
     rect = Rect.new(x, y, (contents.width - 4 - x) / 2, line_height)
     rect2 = Rect.new(x + rect.width, y, (contents.width - 4 - x) / 2, line_height)
     change_color(system_color)
-    draw_text(rect.x + 24, rect.y, rect.width, rect.height, "所持数")
-    draw_text(rect2.x + 24, rect2.y, rect2.width, rect2.height, "装備数")
+    draw_text(rect.x + 24, rect.y, rect.width, rect.height, "Possessed")
+    draw_text(rect2.x + 24, rect2.y, rect2.width, rect2.height, "Equipped")
     change_color(normal_color)
     draw_text(rect, $game_party.item_number(@item), 2)
     draw_text(rect2, $game_party.members_equip_number(@item), 2)
@@ -166,55 +166,55 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   #--------------------------------------------------------------------------
   def scope_change_usable(scope, random_change, random_plus)
     case scope
-    when 0  ; "なし"
-    when 1  ; "敵単体"
-    when 2  ; "敵全体"
+    when 0  ; "None"
+    when 1  ; "Single Enemy"
+    when 2  ; "All Enemies"
     when 3..6
       num = (scope - 2 + random_plus).to_s.tr('0-9','０-９')
-      random_change ? "敵#{num}体" : "ランダム#{num}回"
-    when 7  ; "味方単体"
-    when 8  ; "味方全体"
-    when 9  ; "味方単体(戦闘不能)"
-    when 10 ; "味方全体(戦闘不能)"
-    else    ; "使用者"
+      random_change ? "Enemies #{num}" : "Random #{num} Times"
+    when 7  ; "Single Ally"
+    when 8  ; "All Allies"
+    when 9  ; "Single Ally (Incapacitated)"
+    when 10 ; "All Allies (Incapacitated)"
+    else    ; "User"
     end
   end
   #--------------------------------------------------------------------------
-  # ○ 使用可能時に変換
+  # ○ Convert to usable occasion
   #--------------------------------------------------------------------------
   def occasion_change(occasion)
     case occasion
-    when 0  ; "常時"
-    when 1  ; "バトルのみ"
-    when 2  ; "メニューのみ"
-    else    ; "使用不可"
+    when 0  ; "Always"
+    when 1  ; "Battle Only"
+    when 2  ; "Menu Only"
+    else    ; "Not Usable"
     end
   end
   #--------------------------------------------------------------------------
-  # ○ 消耗に変換
+  # ○ Convert consumption
   #--------------------------------------------------------------------------
   def consumable_change(consumable)
-    return "する" if consumable
-    return "しない"
+    return "Yes" if consumable
+    return "No"
   end
   #--------------------------------------------------------------------------
-  # ○ 項目の描画　アイテム１
+  # ○ Draw item data 1
   #--------------------------------------------------------------------------
   def draw_oc_sc(x, y, item)
-    draw_range(x, y * 2, "使用可能", occasion_change(item.occasion))
-    #draw_range(x, y * 4, "効果範囲", item.is_a?(RPG::UsableItem) ? scope_change_usable(item.scope, item.random_change, item.random_plus) : scope_change(item.scope))
-    draw_range(x, y * 4, "効果範囲", scope_change_usable(item.scope, item.random_change, item.random_plus))
-    draw_range(x, y * 6, "消耗", consumable_change(item.consumable))
+    draw_range(x, y * 2, "Usable", occasion_change(item.occasion))
+    #draw_range(x, y * 4, "Scope of Effect", item.is_a?(RPG::UsableItem) ? scope_change_usable(item.scope, item.random_change, item.random_plus) : scope_change(item.scope))
+    draw_range(x, y * 4, "Scope of Effect", scope_change_usable(item.scope, item.random_change, item.random_plus))
+    draw_range(x, y * 6, "Consumption", consumable_change(item.consumable))
   end
   #--------------------------------------------------------------------------
-  # ○ 各を描画
+  # ○ Draw each item
   #--------------------------------------------------------------------------
   def draw_range(x, y, name, type)
     draw_name_wide(x + 4, y, name, true)
     draw_name_wide(x + 12, y + line_height, type)
   end
   #--------------------------------------------------------------------------
-  # ○ を描画
+  # ○ Draw names
   #--------------------------------------------------------------------------
   def draw_name_wide(x, y, name, system = false)
     change_color(normal_color)
@@ -222,16 +222,16 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
     draw_text(x, y, 120, line_height, name)
   end
   #--------------------------------------------------------------------------
-  # ○ 項目の描画　アイテム１
+  # ○ Draw item data 1
   #--------------------------------------------------------------------------
   def draw_effects(x, y, ary, item)
     hp_h = ary.shift
-    draw_heal(x, y * 2, "ＨＰ回復", hp_h[0], hp_h[1])
+    draw_heal(x, y * 2, "HP Recovery", hp_h[0], hp_h[1])
     mp_h = ary.shift
-    draw_heal(x, y * 3, "ＭＰ回復", mp_h[0], mp_h[1])
+    draw_heal(x, y * 3, "MP Recovery", mp_h[0], mp_h[1])
     tp_h = ary.shift
     tp_h = tp_comvert(tp_h, item) unless tp_h.empty?
-    draw_heal(x, y * 4, "ＳＰ回復", tp_h[0], tp_h[1])
+    draw_heal(x, y * 4, "SP Recovery", tp_h[0], tp_h[1])
   end
   #--------------------------------------------------------------------------
   # ○ の描画
@@ -390,7 +390,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   #--------------------------------------------------------------------------
   def draw_tp_name(x, y, param_id)
     change_color(normal_color)
-    draw_text(x, y, 80, line_height, "最大#{Vocab::tp}")
+    draw_text(x, y, 80, line_height, "Max #{Vocab::tp}")
   end
   #--------------------------------------------------------------------------
   # ○ アイテムのTPを描画
@@ -406,7 +406,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   #--------------------------------------------------------------------------
   def draw_heal_rate(x, y)
     change_color(normal_color)
-    draw_text(x, y, 80, line_height, "回復率")
+    draw_text(x, y, 80, line_height, "Recovery Rate")
   end
   #--------------------------------------------------------------------------
   # ○ ルーンの回復率を描画
@@ -421,7 +421,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   # ○ 耐性項目の描画
   #--------------------------------------------------------------------------
   def draw_description(x, y, item)
-    draw_element(x + 4, y * 9, item, "属性耐性", 11)
+    draw_element(x + 4, y * 9, item, "ATR RES", 11)
     draw_state(x + 4, y * 10, item)
     draw_debuff(x + 4, y * 11, item)
   end
@@ -429,7 +429,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   # ○ 付加項目の描画
   #--------------------------------------------------------------------------
   def draw_description_add(x, y, item)
-    draw_element(x + 4, y * 9, item, "属性付加", 31)
+    draw_element(x + 4, y * 9, item, "ATR Add", 31)
     draw_state_add(x + 4, y * 10, item)
   end
   #--------------------------------------------------------------------------
@@ -472,7 +472,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   #--------------------------------------------------------------------------
   def draw_state(x, y, item)
     change_color(system_color)
-    draw_text(x, y, 80, line_height, "状態耐性")
+    draw_text(x, y, 80, line_height, "State RES")
     return unless item
     resist = resist_features(item, 14)
     strong = strong_features(item, 13)
@@ -483,7 +483,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   #--------------------------------------------------------------------------
   def draw_state_add(x, y, item)
     change_color(system_color)
-    draw_text(x, y, 80, line_height, "状態付加")
+    draw_text(x, y, 80, line_height, "State Add")
     return unless item
     resist = resist_features(item, 32)
     draw_state_name(x + 84, y, resist)
@@ -502,7 +502,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
   #--------------------------------------------------------------------------
   def draw_debuff(x, y, item)
     change_color(system_color)
-    draw_text(x, y, 80, line_height, "弱体耐性")
+    draw_text(x, y, 80, line_height, "Weakness")
     return unless item
     strong = strong_features(item, 12)
     draw_debuff_name(x + 84, y, strong)
@@ -540,7 +540,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
       draw_text(rect, "#{Vocab::atype_name(@item.atype_id)}：#{Vocab::etype(@item.etype_id)}") if @item.etype_id != 4
       draw_text(rect, "#{Vocab::atype_name(@item.atype_id)}") if @item.etype_id == 4
     elsif @item.is_a?(RPG::Item)
-      @item.cooking? ? draw_text(rect, "料理") : draw_text(rect, "道具")
+      @item.cooking? ? draw_text(rect, "Cooking") : draw_text(rect, "Tool")
     elsif @item.is_a?(RPG::Skill)
       draw_skill_type(x, y, @item)
     end
@@ -713,7 +713,7 @@ class Window_ItemStatus < Window_ShopStatus
   def draw_use_limit(x, y, item)
     width = 144
     change_color(important_color)
-    draw_text(x, y, width, line_height, "使用可能回数")
+    draw_text(x, y, width, line_height, "Limit")
     used = $game_party.in_battle ? item.use_limit - @actor.used_skill(item.id) : item.use_limit
     change_color(normal_color)
     draw_text(x + width, y, 100, line_height, "#{used}/#{item.use_limit}")
@@ -733,7 +733,7 @@ class Window_ItemStatus < Window_ShopStatus
     weapon.delete("")
     unless weapon.empty?
       text = ""
-      weapon.each_with_index {|name,i| text += "#{name}技 " }
+      weapon.each_with_index {|name,i| text += "#{name} " }
       change_color(normal_color)
       draw_text(rect2, text)
     end
@@ -742,8 +742,8 @@ class Window_ItemStatus < Window_ShopStatus
   # ○ 項目の描画　スキル
   #--------------------------------------------------------------------------
   def draw_os(x, y, item)
-    draw_range(x, y * 2, "使用可能", occasion_change(item.occasion))
-    draw_range(x + 140, y * 2, "効果範囲", scope_change_usable(item.scope, item.random_change, item.random_plus))
+    draw_range(x, y * 2, "Available", occasion_change(item.occasion))
+    draw_range(x + 140, y * 2, "Scope", scope_change_usable(item.scope, item.random_change, item.random_plus))
   end
   #--------------------------------------------------------------------------
   # ○ 項目の描画　スキル
@@ -752,7 +752,7 @@ class Window_ItemStatus < Window_ShopStatus
     el = elements_comvert(item)
     width = 44
     change_color(system_color)
-    draw_text(x, y, width, line_height, "属性")
+    draw_text(x, y, width, line_height, "ATR")
     change_color(normal_color)
     draw_text(x + width, y, 100, line_height, el)
     #rect = Rect.new(x, y, contents.width - 4 - x, line_height)
@@ -763,8 +763,8 @@ class Window_ItemStatus < Window_ShopStatus
   #--------------------------------------------------------------------------
   def draw_cost(x, y, item)
     change_color(system_color)
-    draw_text(x, line_height * y, 80, line_height, "消費#{Vocab::mp}", 2)
-    draw_text(x + 140, line_height * y, 80, line_height, "消費#{Vocab::tp}", 2)
+    draw_text(x, line_height * y, 80, line_height, "Use #{Vocab::mp}", 2)
+    draw_text(x + 140, line_height * y, 80, line_height, "Use #{Vocab::tp}", 2)
     change_color(normal_color)
     mp_cost = plus_cost(item, item.mp_cost, true)
     tp_cost = plus_cost(item, item.tp_cost)
@@ -821,13 +821,13 @@ class Window_ItemStatus < Window_ShopStatus
     change_color(system_color)
     #change_color(important_color)
     width = 100
-    base = "基本"
-    base += item.magni? ? "倍率" : (item.for_friend? ? "回復値" : "威力" )
+    base = "Base"
+    base += item.magni? ? "X" : (item.for_friend? ? "Recovery" : "Might" )
     draw_text(x, line_height * y, width, line_height, base) #if item.base != 0
     #draw_text(x, line_height * (y + 1), width, line_height, "スキルLv上昇") if item.plus != 0
     #draw_text(x, line_height * (y + 2), width, line_height, "現在の数値") if item.base != 0
-    draw_text(x + width * 1, line_height * y, width, line_height, "スキルLv上昇")
-    draw_text(x + width * 2, line_height * y, width, line_height, "現在値") #if item.base != 0
+    draw_text(x + width * 1, line_height * y, width, line_height, "Skill LV")
+    draw_text(x + width * 2, line_height * y, width, line_height, "Current") #if item.base != 0
     lv_max = item.base + item.plus * 3
     lv_max = lv_max.round(2) if item.magni?
     now = lv_max
@@ -837,7 +837,7 @@ class Window_ItemStatus < Window_ShopStatus
     num_width = 48
     draw_text(x + 10, line_height * (y + 1), num_width, line_height, item.base, 2) #if item.base != 0
     #draw_text(x + width, line_height * (y + 1), num_width, line_height, item.plus, 2) if item.plus != 0
-    draw_text(x + 10 + width * 1, line_height * (y + 1), num_width, line_height, item.plus > 0 ? item.plus : "なし", 2) #if item.plus != 0
+    draw_text(x + 10 + width * 1, line_height * (y + 1), num_width, line_height, item.plus > 0 ? item.plus : "None", 2) #if item.plus != 0
     change_color(important_color)
     #draw_text(x + width, line_height * (y + 2), num_width, line_height, now, 2) if item.base != 0
     draw_text(x + width * 2, line_height * (y + 1), num_width, line_height, now, 2) #if item.base != 0

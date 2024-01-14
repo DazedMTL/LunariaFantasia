@@ -135,7 +135,7 @@ class Window_MenuCommand < Window_Command
   alias book_add_original_commands add_original_commands
   def add_original_commands
     book_add_original_commands
-    add_command("図鑑",  :book)
+    add_command("Book",  :book)
   end
 end
 

@@ -977,7 +977,7 @@ class Window_MenuCommand < Window_Command
   alias option_add_original_commands add_original_commands
   def add_original_commands
     option_add_original_commands
-    add_command("オプション",  :option)
+    add_command("Options",  :option)
   end
 end
 
@@ -1810,7 +1810,7 @@ class Window_TitleCommand < Window_Command
   def make_command_list
     add_command(Vocab::new_game, :new_game)
     add_command(Vocab::continue, :continue, continue_enabled)
-    add_command("オプション", :option)
+    add_command("Options", :option)
     add_command(Vocab::shutdown, :shutdown)
   end
 end
