@@ -9,29 +9,29 @@
 #----------------------------------------------------------------------------
 
 module Option
-  Command = [
-             Hash[
-                  "難易度"                 => [:difficulty, false],
-                  "ダッシュボタン"         => [:dash, false],
-                  "スキルレベルの表示"     => [:skill_lv, false],
-                  "習得済みスキルの表示"   => [:learned, false],
-                  "通常攻撃魔力殴打化"     => [:magic_punch, false],
-                  "簡易アイテム開始項目"   => [:item_start, false],
-                  "クイックヒール優先項目" => [:quick_heal, false],
-                  "開始時画面サイズ"       => [:zoom, true],
-                  "音量変更"               => [:volume, true],
-  ],
-  
-             Hash[
-                  "操作ボタン表記"         => [:button, true],
-                  "登録済みHシーン"        => [:h_event, true],
-                  "オートスピード"         => [:auto_speed, true],
-                  "イベント文章スキップ"   => [:message_skip, true], # 既読判定追加
-                  "Hウィンドウ透過率"      => [:opacity, true],
-                  "特殊なHシーン"          => [:exh_event, true],
-                  "断面図の表示"           => [:dmz, true],
-                  "射精カウント"           => [:shot_count, true],
-  ]
+    Command = [
+               Hash[
+                    "Difficulty"               => [:difficulty, false],
+                    "Dash Button"              => [:dash, false],
+                    "Display Skill Level"      => [:skill_lv, false],
+                    "Display Learned Skills"   => [:learned, false],
+                    "Normal Attack Magic Strike" => [:magic_punch, false],
+                    "Simple Item Start Option" => [:item_start, false],
+                    "Quick Heal Priority"      => [:quick_heal, false],
+                    "Initial Screen Size"      => [:zoom, true],
+                    "Volume Adjustment"        => [:volume, true],
+    ],
+    
+               Hash[
+                    "Control Button Notation"  => [:button, true],
+                    "Registered H-Scenes"      => [:h_event, true],
+                    "Auto Speed"               => [:auto_speed, true],
+                    "Event Text Skip"          => [:message_skip, true], # Added read confirmation
+                    "H-Scene Window Transparency" => [:opacity, true],
+                    "Special H-Scenes"         => [:exh_event, true],
+                    "Cross-Sectional View Display" => [:dmz, true],
+                    "Ejaculation Count"        => [:shot_count, true],
+    ]
   
   ]
   H_Opacity  = 39 # エッチイベント中のウィンドウ背景透過率変数
@@ -58,7 +58,7 @@ module Option
   EXH_SWF = 313 # フタナリスイッチ
   EXH_D = 314 # 断面図スイッチ
   
-  WORD_S = "産卵"
+  WORD_S = "Spawn"
   
   ScreenZoom = 306 #開始時画面サイズ判定スイッチ
 
@@ -188,7 +188,7 @@ class Window_OptionCommand < Window_Command
   #--------------------------------------------------------------------------
   def update_help
     super
-    @help_window.set_text("変更したい項目を選んでください。← →でページを切り替えます。\n\eimp緑文字の項目は全セーブデータで共有されます\ec[0]")
+    @help_window.set_text("Select the item you wish to change. Use ← → to switch pages. The items marked with green text will be shared by all saved data.")
     @info_window.set_item(@page_index + 1) if @info_window
   end  
 end
@@ -254,9 +254,9 @@ class Window_Difficulty < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("イージー",   :easy)
-    add_command("ノーマル",   :normal)
-    add_command("ハード",     :hard)
+    add_command("Easy",   :easy)
+    add_command("Normal",   :normal)
+    add_command("Hard",     :hard)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -269,9 +269,9 @@ class Window_Difficulty < Window_Option
   #--------------------------------------------------------------------------
   def help_text
     case current_symbol
-    when :normal ; "ノーマル：敵の強さに変更はありません。通常の難易度です"
-    when :easy ; "イージー：敵のHPが0.8倍、その他の能力が0.9倍になります。\n更に一部強敵の行動回数が-1され、強力な技が封印されます。\n加えて、敵からのダメージが２０％軽減され、\nこちらが与えるダメージが２０％プラスされます。"
-    when :hard ; "ハード：敵のHPが1.5倍、その他の能力が1.2倍になります。\nノーマルでは物足りないという方はこちらをオススメします"
+    when :normal ; "Normal: No change to the enemy's strength. This is the normal difficulty."
+    when :easy ; "Easy: The enemy's HP is reduced to 0.8 times, and other abilities to 0.9 times.\nAdditionally, some stronger enemies will act one less time, and their powerful moves will be sealed.\nFurthermore, damage from enemies is reduced by 20%,\nand the damage you deal is increased by 20%."
+    when :hard ; "Hard: The enemy's HP is increased to 1.5 times, and other abilities to 1.2 times.\nIf normal is not satisfying enough for you, we recommend this mode."
     else ; ""
     end
   end
@@ -301,8 +301,8 @@ class Window_Dash < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("高速ダッシュ",   :dash)
-    add_command("歩く",   :walk)
+    add_command("Fast Dash",   :dash)
+    add_command("Walk",   :walk)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -314,7 +314,7 @@ class Window_Dash < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "#{key_button("SHIFT")}の機能を「高速ダッシュ」と「歩く」のどちらにするか\n選択できます"
+    return "#{key_button("SHIFT")} to dash or walk."
   end
 end
 
@@ -335,8 +335,8 @@ class Window_SkillLevel < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("表示する",   :show)
-    add_command("表示しない", :hide)
+    add_command("Show",   :show)
+    add_command("Hide", :hide)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -348,7 +348,7 @@ class Window_SkillLevel < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "スキル画面でスキルレベルの★を表示するかどうか選択できます"
+    return "You can choose whether or not to display the skill level * on the skill screen"
   end
 end
 
@@ -369,8 +369,8 @@ class Window_Learned < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("表示する",   :show)
-    add_command("表示しない", :hide)
+    add_command("Show",   :show)
+    add_command("Hide", :hide)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -382,7 +382,7 @@ class Window_Learned < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "スキル習得画面で習得済みやレベルMAXのスキルを\n表示するかどうか選択できます"
+    return "You can choose whether or not to display ɑn for skills that have already been learned or are at level MAX on the skill learning screen."
   end
 end
 
@@ -403,8 +403,8 @@ class Window_MagicPunch < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("変更する",   :change)
-    add_command("変更しない", :no_change)
+    add_command("Change",   :change)
+    add_command("No Change", :no_change)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -416,7 +416,7 @@ class Window_MagicPunch < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "スキル「\edb[s,106]」を覚えている場合、通常攻撃を\edb[s,106]に変更します。\nスキル使用条件を満たしていない場合は通常攻撃になります"
+    return "If you have learned the skill \edb[s,106], the normal attack will be changed to \edb[s,106]. If you do not meet the conditions for using the skill, the attack will be a normal attack"
   end
 end
 
@@ -437,10 +437,10 @@ class Window_ItemStart < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("ポーション系", :ok)
-    add_command("ボトル", :ok)
-    add_command("料理", :ok)
-    add_command("全て", :ok)
+    add_command("Potion-type", :ok)
+    add_command("Bottle", :ok)
+    add_command("Cooking", :ok)
+    add_command("All", :ok)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -452,7 +452,7 @@ class Window_ItemStart < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "簡易アイテム使用時の開始項目を変更できます。簡易アイテム使用は\nマップ画面で#{key_button("D")}入力により使用できます。"
+    return "You can change the start item when using a simple item. Simple items can be used by entering #{key_button("D")} on the \nmap screen."
   end
 end
 
@@ -473,9 +473,9 @@ class Window_HealOption < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("消費MP", :ok)
-    add_command("中間", :ok)
-    add_command("速度", :ok)
+    add_command("MP Consumption", :ok)
+    add_command("Intermediate", :ok)
+    add_command("Speed", :ok)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -487,7 +487,7 @@ class Window_HealOption < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "クイックヒール時の優先項目を変更できます。速度を優先すると回復量の\n大きいスキルや全体回復等を使い なるべく速く回復を終わらせます"
+    return "You can change the priority items during a quick heal. \nIf you prioritize speed, you can use a skill with a large amount of recovery, or use a total recovery, etc., to finish the recovery as quickly as possible."
   end
 end
 
@@ -508,21 +508,21 @@ class Window_KeyButton < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("キーボード",   :keyboard)
-    add_command("ゲームパッド(英字)",   :pad_a)
-    add_command("ゲームパッド(数字)",   :pad_b)
+    add_command("Keyboard",   :keyboard)
+    add_command("Gamepad (Alphabet)",   :pad_a)
+    add_command("Gamepad (Numbers)",   :pad_b)
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def select_last
     select($game_variables[Option::Button])
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "ゲーム中の操作説明の表記をキーボードかパッドかに変更できます。\nゲームパッドの表記は\eimpツクール準拠\ec[0]になりますので使用する\eimpパッドの\nボタンと表記が必ずしも一致するものではありません\ec[0]ので\nご了承ください。(特に英字)\n※#{key_button("CTRL")}等の一部の特殊な操作はキーボード表記固定になります。"
+    return "You can change the control instructions displayed in the game to either keyboard or pad.\nThe notation for the gamepad is compliant with RPG Maker, so please be aware that\nit does not necessarily match the buttons on the pad you are using.\n(Especially the alphabet letters)\n※ Some special operations such as #{key_button("CTRL")} are fixed to keyboard notation."
   end
 end
 
@@ -530,53 +530,53 @@ end
 #==============================================================================
 # □ Window_H_Event
 #------------------------------------------------------------------------------
-# 　オプション画面で、エッチシーンを見るか選択するウィンドウです。
+#   A window on the options screen for selecting whether to view H scenes.
 #==============================================================================
 
 class Window_H_Event < Window_Option
   #--------------------------------------------------------------------------
-  # 〇 桁数の取得
+  # ○ Number of columns
   #--------------------------------------------------------------------------
   def col_max
     return 3
   end
   #--------------------------------------------------------------------------
-  # 〇 コマンドリストの作成
+  # ○ Creating command list
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("見る",   :scene)
-    add_command("飛ばす",   :skip)
-    add_command("毎回選択",   :select)
+    add_command("View",   :scene)
+    add_command("Skip",   :skip)
+    add_command("Choose Each Time",   :select)
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def select_last
     select($game_variables[Option::Scene])
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "回想に登録済みのエッチシーンをスキップするかどうか選択できます"
+    return "You can choose whether to skip already registered H scenes in recollection."
   end
 end
 
 #==============================================================================
 # □ Window_
 #------------------------------------------------------------------------------
-# 　オプション画面で、を選択するウィンドウです。
+#   A window on the options screen for selecting .
 #==============================================================================
 
 class Window_AutoSpeed < Window_Option
   #--------------------------------------------------------------------------
-  # 〇 桁数の取得
+  # ○ Number of columns
   #--------------------------------------------------------------------------
   def col_max
     return 9
   end
   #--------------------------------------------------------------------------
-  # 〇 コマンドリストの作成
+  # ○ Creating command list
   #--------------------------------------------------------------------------
   def make_command_list
     add_command("１",   :ok)
@@ -590,69 +590,69 @@ class Window_AutoSpeed < Window_Option
     add_command("９",   :ok)
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def select_last
     select($game_variables[MessageEnhance::V] - 1)
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "イベントシーンで#{key_button("ALT")}を押した際に始まる自動メッセージ送りの\nスピードを設定できます。数字が小さいほど早く進みます。\n※イベントシーン時は\eimpメッセージウィンドウ四隅の玉が青く\ec[0]なります。\n　玉が青い状態の時は自動送りが可能になります。\n（Hシーンは全て自動送り可能です）"
+    return "You can set the speed for the automatic message progression that starts when you press #{key_button("ALT")} during an event scene. The smaller the number, the faster it goes.\n※ During event scenes, the beads in the four corners of the message window turn blue.\n  When the beads are blue, automatic progression is available.\n(All H scenes can be auto-progressed)"
   end
 end
 
 #==============================================================================
 # □ Window_
 #------------------------------------------------------------------------------
-# 　オプション画面で、を選択するウィンドウです。
+#   A window on the options screen for selecting .
 #==============================================================================
 
-class Window_MessageSkip < Window_Option # 既読判定追加
+class Window_MessageSkip < Window_Option # Added read recognition
   #--------------------------------------------------------------------------
-  # 〇 桁数の取得
+  # ○ Number of columns
   #--------------------------------------------------------------------------
   def col_max
     return 3
   end
   #--------------------------------------------------------------------------
-  # 〇 コマンドリストの作成
+  # ○ Creating command list
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("既読イベントのみ",   :kidoku)
-    add_command("既読＋イベント以外",     :people)
-    add_command("全て", :full)
+    add_command("Only Read Events",   :kidoku)
+    add_command("Read + Non-Events",     :people)
+    add_command("All", :full)
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def select_last
     select($game_switches[Option::Skip] ? 2 : ($game_switches[Option::PeopleSkip] ? 1 : 0))
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "#{key_button("CTRL")}でスキップする文章の種類を選べます。\n一度見た\eimpイベント会話のみ既読扱い\ec[0]となります。\n「イベント以外」とは、町の人との会話・戦闘会話等を指します"
+    return "You can choose the type of text to skip with #{key_button("CTRL")}.\nOnly event conversations that have been seen once will be treated as read.\n'Non-Events' refers to conversations with people in town, combat conversations, etc."
   end
 end
 
 #==============================================================================
 # □ Window_
 #------------------------------------------------------------------------------
-# 　オプション画面で、を選択するウィンドウです。
+#   A window on the options screen for selecting .
 #==============================================================================
 
 class Window_H_Opacity < Window_Option
   #--------------------------------------------------------------------------
-  # 〇 桁数の取得
+  # ○ Number of columns
   #--------------------------------------------------------------------------
   def col_max
     return 9
   end
   #--------------------------------------------------------------------------
-  # 〇 コマンドリストの作成
+  # ○ Creating command list
   #--------------------------------------------------------------------------
   def make_command_list
     add_command("０",   :ok)
@@ -666,16 +666,16 @@ class Window_H_Opacity < Window_Option
     add_command("８", :ok)
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def select_last
     select($game_variables[Option::H_Opacity] - 1)
   end
   #--------------------------------------------------------------------------
-  # 〇 
+  # ○ 
   #--------------------------------------------------------------------------
   def help_text
-    return "エッチシーンのウィンドウ背景透過率を設定できます。数字が小さいほど\n透過率が上がり「０」で透明、「８」で一切透過しません"
+    return "You can set the opacity of the H scene window background. The smaller the number, the higher the opacity, with '0' being transparent and '8' allowing no transparency."
   end
 end
 
@@ -708,20 +708,20 @@ class Window_ExtraH < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("ﾎﾞﾃ腹:#{v_change($game_variables[Option::EXH_B])}",   :ok)
+    add_command("Pregnant Belly:#{v_change($game_variables[Option::EXH_B])}",   :ok)
     add_command("#{Option::WORD_S}:#{v_change($game_variables[Option::EXH_S])}",   :ok)
-    add_command("ﾌﾀﾅﾘ:#{v_change($game_variables[Option::EXH_F])}",   :ok)
+    add_command("Futanari:#{v_change($game_variables[Option::EXH_F])}",   :ok)
   end
   #--------------------------------------------------------------------------
   # 〇 
   #--------------------------------------------------------------------------
   def v_change(v)
     case v
-    when 1 ; "見る"
-    when 2 ; "CG差替"
-    when 3 ; "飛ばす"
-    when 4 ; "確認"
-    else   ; "未設定"
+    when 1 ; "View"
+    when 2 ; "CG swap"
+    when 3 ; "Skip"
+    when 4 ; "Confirm"
+    else   ; "Not set"
     end
   end
   #--------------------------------------------------------------------------
@@ -742,10 +742,10 @@ class Window_ExtraH < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "一部Hシーンの設定を\eimp↑↓キー\ec[0]で行います。CG差替は該当のCGを\n別Verに差し替えます(フタナリなら\eimp生えていないCGになる\ec[0]等) \n※テキストはそのままになります。ボテ腹のCGは差し替え出来ません。\n\e}全項目を設定し終わったら決定キーで確定、キャンセルで元の設定に戻ります。\e{\n\e}\eimpそれぞれのシーン数　疑似ボテ:２　ボテ：１　#{Option::WORD_S}:１　フタナリ:１\ec[0]\e{"
+    return "Set up some H scenes with the ↑↓ keys. CG swap replaces the CG\nwith a different version (e.g. a non-futanari version for futanari scenes)\n※Text remains unchanged. Pregnant belly CG cannot be replaced.\nAfter setting all items, confirm with the decision key, or return to the original settings with cancel. Number of each scene: Pseudo Pregnant: 2  Pregnant: 1  #{Option::WORD_S}: 1  Futanari: 1"
   end
   #--------------------------------------------------------------------------
-  # 〇 アライメントの取得
+  # 〇 Alignment retrieval
   #--------------------------------------------------------------------------
   def alignment
     return 0
@@ -783,22 +783,22 @@ end
 #==============================================================================
 # □ Window_
 #------------------------------------------------------------------------------
-# 　オプション画面で、を選択するウィンドウです。
+# 　Select window for options menu.
 #==============================================================================
 
 class Window_Danmenzu < Window_Option
   #--------------------------------------------------------------------------
-  # 〇 桁数の取得
+  # 〇 Number of digits retrieval
   #--------------------------------------------------------------------------
   def col_max
     return 2
   end
   #--------------------------------------------------------------------------
-  # 〇 コマンドリストの作成
+  # 〇 Command list creation
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("表示する",   :show)
-    add_command("表示しない", :hide)
+    add_command("Show",   :show)
+    add_command("Do not show", :hide)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -810,7 +810,7 @@ class Window_Danmenzu < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "一部の挿入Hシーンにおいて断面図を表示するか設定します。\n断面図のあるシーンはそんなに多くありません"
+    return "Set whether or not to display cross-sectional views in some penetration H scenes.\nThere are not many scenes with cross-sectional views."
   end
 end
 
@@ -818,24 +818,24 @@ end
 #==============================================================================
 # □ Window_
 #------------------------------------------------------------------------------
-# 　オプション画面で、を選択するウィンドウです。
+# 　Select window for options menu.
 #==============================================================================
 
 class Window_ShotCount < Window_Option
   #--------------------------------------------------------------------------
-  # 〇 桁数の取得
+  # 〇 Number of digits retrieval
   #--------------------------------------------------------------------------
   def col_max
     return 11 #4
   end
   #--------------------------------------------------------------------------
-  # 〇 横に項目が並ぶときの空白の幅を取得
+  # 〇 Width of blank space when items are aligned horizontally
   #--------------------------------------------------------------------------
   def spacing
     return 2
   end
   #--------------------------------------------------------------------------
-  # 〇 コマンドリストの作成
+  # 〇 Command list creation
   #--------------------------------------------------------------------------
   def make_command_list
     add_command("０",   :ok)
@@ -850,10 +850,10 @@ class Window_ShotCount < Window_Option
     add_command("９",   :ok)
     add_command("10", :ok)
 =begin
-    add_command("８",   :ok)
-    add_command("５",   :ok)
-    add_command("３", :ok)
-    add_command("カウント無し", :ok)
+    add_command("8",   :ok)
+    add_command("5",   :ok)
+    add_command("3", :ok)
+    add_command("No count", :ok)
 =end
   end
   #--------------------------------------------------------------------------
@@ -866,7 +866,7 @@ class Window_ShotCount < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "射精のあるHシーンにおいて、射精の何ページ前から\nカウントするか設定します（１ページは１ウィンドウ分です）\n射精の間隔が詰まっている場合（乱交等）は設定数値より低い数字で\n始まります。また、\eimpシーン最後の射精\ec[0]は黄色の数字でカウントされます。\n※“０”設定でカウントを行いません"
+    return "Set how many pages before ejaculation to start counting\nin H scenes with ejaculation (1 page is 1 window).\nIf ejaculation intervals are close (e.g. gangbang), it starts with a lower number\nthan the set value. Also, the last ejaculation in a scene is counted with yellow numbers.\n※\"0\" setting does not perform counting"
   end
 end
 
@@ -945,8 +945,8 @@ class Window_ScreenZoom < Window_Option
   # 〇 コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("拡大",  :zoom)
-    add_command("通常",  :normal)
+    add_command("Zoom",  :zoom)
+    add_command("Normal",  :normal)
   end
   #--------------------------------------------------------------------------
   # 〇 
@@ -958,7 +958,7 @@ class Window_ScreenZoom < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "ゲーム開始時、画面サイズを拡大して始めるかどうかを選択できます。\nゲーム中の画面サイズ変更は\ekb[f5]で行え、\nディスプレイの解像度によって最大３段階に変化します。\n"
+    return "At the start of the game, you can choose whether to begin with an enlarged screen size.\nScreen size changes during the game can be performed with \ekb[f5],\nand will vary up to three levels depending on the display resolution.\n"
   end
 end
 
@@ -1892,7 +1892,7 @@ class Window_OptionInfo < Window_Base
     contents.clear
     change_color(important_color)
     draw_text(0, 0, contents.width, line_height, @text, 1)
-    draw_text(0, line_height, contents.width, line_height, "項目選択時に← →でページ変更", 1)
+    draw_text(0, line_height, contents.width, line_height, "Change page with ← → when selecting item", 1)
     change_color(normal_color)
   end
 end
