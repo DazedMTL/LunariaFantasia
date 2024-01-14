@@ -809,7 +809,7 @@ class Window_ItemStatus < Window_ShopStatus
     return "----" if item.damage.none?
     element_id = item.damage.element_id
     case element_id
-    when 0 ; "無"
+    when 0 ; "None"
     when -1 ; "武器依存"
     else ; $data_system.elements[element_id]
     end

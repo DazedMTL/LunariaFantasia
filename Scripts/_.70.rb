@@ -96,38 +96,38 @@ class Window_EquipStatus < Window_Base
   # ○ 術適正の描画
   #--------------------------------------------------------------------------
   def draw_magic_elements_new(x, y)
-    ary = ["炎","氷","雷","光","闇","無","回復"]
-    str = "術適正"
+    ary = ["Fire","Ice","Thunder","Light","Darkness","None","Heal"]
+    str = "Aptitude"
     rate = {}
     ary.each{|name| rate[name] = el_rate_new(name)}
     draw_percent_new(x, y, str, rate, false, 13)
   end
   #--------------------------------------------------------------------------
-  # ○ 属性耐性の描画
+  # ○ Drawing of Elemental Resistances
   #--------------------------------------------------------------------------
   def draw_guard_elements_new(x, y)
-    ary = ["炎","氷","雷","光","闇","艶"]
-    str = "属性耐性"
+    ary = ["Fire","Ice","Thunder","Light","Darkness","Exorcism"]
+    str = "Elemental RES"
     rate = {}
     ary.each{|name| rate[ELEMENT_ICON[elements_comvert(name)]] = elg_rate_new(name)}
     draw_percent_new(x, y, str, rate, true)
   end
   #--------------------------------------------------------------------------
-  # ○ 状態耐性の描画
+  # ○ Drawing of State Resistances
   #--------------------------------------------------------------------------
   def draw_guard_state_new(x, y)
-    ary = ["即死","毒","暗闇","沈黙","混乱","睡眠","麻痺","ｽﾀﾝ","閉門"]
-    str = "状態耐性"
+    ary = ["Instant Death","Poison","Blind","Silence","Confusion","Sleep","Paralysis","Stun","Seal"]
+    str = "State RES"
     rate = {}
     ary.each{|name| rate[$data_states[state_comvert(name)].icon_index] = stg_rate_new(name)}
     draw_percent_new(x, y, str, rate, true)
   end
   #--------------------------------------------------------------------------
-  # ○ 弱体耐性の描画
+  # ○ Drawing of Debuff Resistances
   #--------------------------------------------------------------------------
   def draw_guard_debuff_new(x, y)
     ary = [2, 3, 4, 5, 6, 7]
-    str = "弱体耐性"
+    str = "Debuff RES"
     rate = {}
     ary.each{|id| rate[ICON_DEBUFF_START + id] = debuff_rate_new(id)}
     draw_percent_new(x, y, str, rate, true)

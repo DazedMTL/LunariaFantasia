@@ -3,28 +3,28 @@ module FREA
   # ○ 属性耐性の描画
   #--------------------------------------------------------------------------
   def draw_analyze_elements(x, y)
-    ary = ["物理","吸収","炎","氷","雷","光","闇","艶","退魔","盗み"]
-    str = "属性有効度"
+    ary = ["Physical","Absorb","Fire","Ice","Thunder","Light","Darkness","Charm","Exorcism","Steal"]
+    str = "Element Effectiveness"
     rate = {}
     ary.each{|name| rate[FRGP::ELEMENT_ICON[elements_comvert(name)]] = elg_rate_analyze(name)}
     draw_percent(x, y, str, rate, true)
   end
   #--------------------------------------------------------------------------
-  # ○ 状態耐性の描画
+  # ○ Drawing state resistances
   #--------------------------------------------------------------------------
-  def draw_analyze_state(x, y, ext = "魅了")
-    ary = ["即死","毒","暗闇","沈黙","混乱","睡眠","麻痺","ｽﾀﾝ",ext]
-    str = "状態有効度"
+  def draw_analyze_state(x, y, ext = "Charm")
+    ary = ["Instant Death","Poison","Blind","Silence","Confusion","Sleep","Paralysis","Stun",ext]
+    str = "State Effectiveness"
     rate = {}
     ary.compact.each{|name| rate[$data_states[state_comvert(name)].icon_index] = stg_rate_analyze(name)}
     draw_percent(x, y, str, rate, true)
   end
   #--------------------------------------------------------------------------
-  # ○ 弱体耐性の描画
+  # ○ Drawing debuff resistances
   #--------------------------------------------------------------------------
   def draw_analyze_debuff(x, y)
     ary = [2, 3, 4, 5, 6, 7]
-    str = "弱体有効度"
+    str = "Debuff Effectiveness"
     rate = {}
     ary.each{|id| rate[FRGP::ICON_DEBUFF_START + id] = debuff_rate_analyze(id)}
     draw_percent(x, y, str, rate, true)
