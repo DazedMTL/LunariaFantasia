@@ -617,7 +617,7 @@ class Window_Costume < Window_Base
   #--------------------------------------------------------------------------
   def draw_costume(actor, x, y)
     change_color(system_color)
-    draw_text(x, y, 172, line_height, "現在の衣装")
+    draw_text(x, y, 172, line_height, "Costume")
     wear = $game_temp.wear_items[actor.id].select {|item| item.costume[1] == actor.costume.to_i }
     change_color(normal_color)
     draw_item_name(wear[0], x + 8, y + line_height)

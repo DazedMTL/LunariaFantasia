@@ -805,12 +805,12 @@ class Window_ItemStatus < Window_ShopStatus
   # ○ 属性IDを名前に変換
   #--------------------------------------------------------------------------
   def elements_comvert(item)
-    return "回復" if item.damage.recover? || CURE_SKILLS.include?(item.id)#( == 31 || item.id == 32 || item.id == 256)
+    return "Recovery" if item.damage.recover? || CURE_SKILLS.include?(item.id)#( == 31 || item.id == 32 || item.id == 256)
     return "----" if item.damage.none?
     element_id = item.damage.element_id
     case element_id
     when 0 ; "None"
-    when -1 ; "武器依存"
+    when -1 ; "Weapon"
     else ; $data_system.elements[element_id]
     end
   end

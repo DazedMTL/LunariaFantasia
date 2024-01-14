@@ -96,7 +96,7 @@ class Window_EquipStatus < Window_Base
   # ○ 術適正の描画
   #--------------------------------------------------------------------------
   def draw_magic_elements_new(x, y)
-    ary = ["Fire","Ice","Thunder","Light","Darkness","None","Heal"]
+    ary = ["Fire","Ice","Thunder","Light","Darkness","Void","Heal"]
     str = "Aptitude"
     rate = {}
     ary.each{|name| rate[name] = el_rate_new(name)}

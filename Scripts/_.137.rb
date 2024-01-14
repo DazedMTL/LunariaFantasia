@@ -348,7 +348,7 @@ class Window_SkillLevel < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "You can choose whether or not to display the skill level * on the skill screen"
+    return "You can choose whether or not to display the skill level * \non the skill screen"
   end
 end
 
@@ -382,7 +382,7 @@ class Window_Learned < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "You can choose whether or not to display ɑn for skills that have already been learned or are at level MAX on the skill learning screen."
+    return "You can choose whether or not to display ɑn for skills that \nhave already been learned or are at level MAX on the skill learning \nscreen."
   end
 end
 
@@ -416,7 +416,7 @@ class Window_MagicPunch < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "If you have learned the skill \edb[s,106], the normal attack will be changed to \edb[s,106]. If you do not meet the conditions for using the skill, the attack will be a normal attack"
+    return "If you have learned the skill \edb[s,106], the normal attack will be \nchanged to \edb[s,106]. If you do not meet the conditions for using \nthe skill, the attack will be a normal attack"
   end
 end
 
@@ -452,7 +452,7 @@ class Window_ItemStart < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "You can change the start item when using a simple item. Simple items can be used by entering #{key_button("D")} on the \nmap screen."
+    return "You can change the start item when using a simple item. Simple items can \nbe used by entering #{key_button("D")} on the map screen."
   end
 end
 
@@ -487,7 +487,7 @@ class Window_HealOption < Window_Option
   # 〇 
   #--------------------------------------------------------------------------
   def help_text
-    return "You can change the priority items during a quick heal. \nIf you prioritize speed, you can use a skill with a large amount of recovery, or use a total recovery, etc., to finish the recovery as quickly as possible."
+    return "You can change the priority items during a quick heal. \nIf you prioritize speed, you can use a skill with a large amount of \nrecovery, or use a total recovery, etc., \nto finish the recovery as quickly as possible."
   end
 end
 

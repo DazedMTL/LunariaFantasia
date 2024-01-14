@@ -29,7 +29,7 @@ module FRGP
   # ○ 術適正の描画
   #--------------------------------------------------------------------------
   def draw_magic_elements(x, y)
-    ary = ["Fire", "Ice", "Thunder", "Light", "Darkness", "None", "Heal"]
+    ary = ["Fire", "Ice", "Thunder", "Light", "Darkness", "Void", "Heal"]
     str = "Aptitude"
     rate = {}
     ary.each{|name| rate[name] = el_rate(name)}
@@ -96,7 +96,7 @@ module FRGP
   #--------------------------------------------------------------------------
   def elements_comvert(element_name)
     case element_name
-    when "None" ; 0
+    when "Void" ; 0
     when "Fire" ; 3
     when "Ice" ; 4
     when "Thunder" ; 5
