@@ -200,7 +200,7 @@ class Window_BookHelp < Window_Help
   #--------------------------------------------------------------------------
   # ● オブジェクト初期化
   #--------------------------------------------------------------------------
-  def initialize(line_number = 4)
+  def initialize(line_number = 10)
     super(line_number)
     self.width = window_width
     self.x = Graphics.width - window_width
@@ -435,7 +435,7 @@ class Window_BookDetail < Window_Base
       draw_text(8, line_height * 0, contents_width, line_height, item[4])
     end
     change_color(system_color)
-    draw_text(328, line_height * 2, contents_width, line_height, "Height:")
+    draw_text(300, line_height * 2, contents_width, line_height, "Height:")
     if item[6]
       draw_text(354, line_height * 3, contents_width, line_height, "B:")
       draw_text(354, line_height * 4, contents_width, line_height, "W:")
