@@ -76,7 +76,7 @@ module EasyCompose
   
   Title = "Materials"
   
-  Disc = "Required/Possessed"
+  Disc = "Required/Owned"
   
   #キー入力に関する文章を設定。
   #他の表示と被ったりして不要な場合はText = ""として下さい。

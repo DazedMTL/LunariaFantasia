@@ -92,7 +92,7 @@ class Window_ShopStatus  < Window_Base #Window_Selectable #
     rect = Rect.new(x, y, (contents.width - 4 - x) / 2, line_height)
     rect2 = Rect.new(x + rect.width, y, (contents.width - 4 - x) / 2, line_height)
     change_color(system_color)
-    draw_text(rect.x + 24, rect.y, rect.width, rect.height, "Possessed")
+    draw_text(rect.x + 24, rect.y, rect.width, rect.height, "Owned")
     draw_text(rect2.x + 24, rect2.y, rect2.width, rect2.height, "Equipped")
     change_color(normal_color)
     draw_text(rect, $game_party.item_number(@item), 2)
