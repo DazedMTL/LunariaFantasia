@@ -193,13 +193,13 @@ class Window_Base < Window
   # ○ フォントを大きくする
   #--------------------------------------------------------------------------
   def make_font_bigger_extra
-    contents.font.size += 4 if contents.font.size <= 64
+    contents.font.size += 3 if contents.font.size <= 64
   end
   #--------------------------------------------------------------------------
   # ○ フォントを小さくする
   #--------------------------------------------------------------------------
   def make_font_smaller_extra
-    contents.font.size -= 4 if contents.font.size >= 16
+    contents.font.size -= 3 if contents.font.size >= 16
   end
   #--------------------------------------------------------------------------
   # ● 制御文字の処理　※再定義

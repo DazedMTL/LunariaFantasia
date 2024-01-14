@@ -881,7 +881,7 @@ class Window_BookDetail < Window_Base
       #依頼種別
       draw_text(16, line_height * 1, window_width, line_height, "Request: #{item[2]}")
       #推奨Lv
-      draw_text(140, line_height * 1, window_width, line_height, "Advised LV:#{lv}")
+      draw_text(180, line_height * 1, window_width, line_height, "Advised LV:#{lv}")
       l_text = ""
       if pr
         draw_text_ex(416, line_height * 0, heart(item[11]["h"])) if h_event?(item[11])

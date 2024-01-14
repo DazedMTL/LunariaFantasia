@@ -327,13 +327,13 @@ class Window_Base < Window
   # ● フォントを大きくする
   #--------------------------------------------------------------------------
   def make_font_bigger
-    contents.font.size += 8 if contents.font.size <= 64
+    contents.font.size += 6 if contents.font.size <= 64
   end
   #--------------------------------------------------------------------------
   # ● フォントを小さくする
   #--------------------------------------------------------------------------
   def make_font_smaller
-    contents.font.size -= 8 if contents.font.size >= 16
+    contents.font.size -= 6 if contents.font.size >= 16
   end
   #--------------------------------------------------------------------------
   # ● 行の高さを計算

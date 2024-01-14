@@ -433,7 +433,7 @@ class Window_QuestDetail < Window_Base
       #依頼種別
       draw_text(16, line_height * 1, window_width, line_height, "Quest: #{item[2]}")
       #推奨Lv
-      draw_text(250, line_height * 1, window_width, line_height, "Advised LV:#{lv}")
+      draw_text(180, line_height * 1, window_width, line_height, "Advised LV:#{lv}")
       l_text = ""
       if pr > 0
         #期限の有無
