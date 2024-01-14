@@ -336,7 +336,7 @@ end
 
 module FAKEREAL
   
-  SEX_POINT_NAME = "Sex Stats"
+  SEX_POINT_NAME = "Sex"
   
   KEYWORD      = { 0 => ["Magic Absorb", 14],
                     1 => ["Magic Absorb", 14],
