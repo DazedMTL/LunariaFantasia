@@ -357,16 +357,16 @@ module LNX11
   
   # ポップアップの修飾文字
   # ["テキスト", 修飾文字の位置(2 = 下 / 4 = 左 / 6 = 右 / 8 = 上)]
-  # * 文字列中の \mp \tp はデータベースで設定した用語(短)に置き換わります
+  # * 文字列中の MP TP はデータベースで設定した用語(短)に置き換わります
   DECORATION_NUMBER = {            # 規定値
   :critical    => ["CRITICAL", 8], # ["CRITICAL", 8] / クリティカル
   :weakness    => ["WEAKNESS", 8], # ["WEAKNESS", 8] / 弱点ダメージ
   :resist      => ["RESIST"  , 8], # ["RESIST"  , 8] / 耐性ダメージ
-  :mp_damage   => ["\mp"     , 4], # ["\mp"     , 4] / MP ダメージ・回復
-  :mp_plus     => ["\mp+"    , 4], # ["\mp+"    , 4] / MP 再生
-  :mp_minus    => ["\mp-"    , 4], # ["\mp-"    , 4] / MP 消費
-  :tp_plus     => ["\tp+"    , 4], # ["\tp+"    , 4] / TP 増加
-  :tp_minus    => ["\tp-"    , 4], # ["\tp-"    , 4] / TP 減少
+  :mp_damage   => ["MP"     , 4], # ["MP"     , 4] / MP ダメージ・回復
+  :mp_plus     => ["MP+"    , 4], # ["MP+"    , 4] / MP 再生
+  :mp_minus    => ["MP-"    , 4], # ["MP-"    , 4] / MP 消費
+  :tp_plus     => ["TP+"    , 4], # ["TP+"    , 4] / TP 増加
+  :tp_minus    => ["TP-"    , 4], # ["TP-"    , 4] / TP 減少
   }
   # ステートや能力強化/弱体のポップアップの修飾文字
   # 　%s にステート・能力名が入る
@@ -386,10 +386,10 @@ module LNX11
   :levelup     => "LEVELUP!",      # "LEVELUP!"      / レベルアップ
   }
   # 能力強化/弱体ポップアップのパラメータ表記
-  # * 文字列中の \hp \mp はデータベースで設定した用語(短)に置き換わります
+  # * 文字列中の HP MP はデータベースで設定した用語(短)に置き換わります
   POPUP_VOCAB_PARAMS = [ # 規定値
-  "MAX\hp",              # "MAX\hp"  / 最大HP    MAXimum Hit Point
-  "MAX\mp",              # "MAX\mp"  / 最大MP    MAXimum Magic Point
+  "MAXHP",              # "MAXHP"  / 最大HP    MAXimum Hit Point
+  "MAXMP",              # "MAXMP"  / 最大MP    MAXimum Magic Point
   "ATK",                 # "ATK"     / 攻撃力    ATtacK power
   "DEF",                 # "DEF "    / 防御力    DEFense power
   "MAG",                 # "MATK"    / 魔法力    Magic ATtacK power

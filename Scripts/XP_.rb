@@ -337,9 +337,9 @@ module LNX11
   TEXT_SIZERATE_MCS = 0.9
   DECORATION_NUMBER = {
   :critical    => ["CRITICAL", 8], :weakness    => ["WEAKNESS", 8],
-  :resist      => ["RESIST"  , 8], :mp_damage   => ["\mp"     , 4],
-  :mp_plus     => ["\mp+"    , 4], :mp_minus    => ["\mp-"    , 4],
-  :tp_plus     => ["\tp+"    , 4], :tp_minus    => ["\tp-"    , 4]}
+  :resist      => ["RESIST"  , 8], :mp_damage   => ["MP"     , 4],
+  :mp_plus     => ["MP+"    , 4], :mp_minus    => ["MP-"    , 4],
+  :tp_plus     => ["TP+"    , 4], :tp_minus    => ["TP-"    , 4]}
   DECORATION_TEXT = {
   :add_state   => "+%s",      :rem_state   => "-%s",
   :add_buff    => "%s UP",    :add_debuff  => "%s DOWN",
@@ -349,7 +349,7 @@ module LNX11
   :reflection  => "Reflection", :substitute  => "Substitute",
   :levelup     => "LEVELUP!"}
   POPUP_VOCAB_PARAMS = [
-  "MAX\hp","MAX\mp","ATK","DEF","MATK","MDEF","AGI","LUCK"]
+  "MAXHP","MAXMP","ATK","DEF","MATK","MDEF","AGI","LUCK"]
   POPUP_COLOR = {
   :hp_damage     => [Color.new(255, 255, 255), Color.new(  0,   0,   0)],
   :critical      => [Color.new(255, 255,  80), Color.new(224,  32,   0)],
@@ -1327,9 +1327,9 @@ class Sprite_PopupBase < Sprite
       return @@cache_text[key].clone
     end
     # 用語の置き換え
-    text.gsub!("\hp") { Vocab::hp_a } if text.include?("\hp")
-    text.gsub!("\mp") { Vocab::mp_a } if text.include?("\mp")
-    text.gsub!("\tp") { Vocab::tp_a } if text.include?("\tp")
+    text.gsub!("HP") { Vocab::hp_a } if text.include?("HP")
+    text.gsub!("MP") { Vocab::mp_a } if text.include?("MP")
+    text.gsub!("TP") { Vocab::tp_a } if text.include?("TP")
     # <<ver1.10>> テキストの頭に _ があれば対応する画像ファイルを参照する
     if text[/^[\_]./]
       bitmap = get_text_bitmap(text, color, size)
