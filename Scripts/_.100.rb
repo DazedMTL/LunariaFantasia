@@ -150,7 +150,7 @@ class Window_SkillType < Window_Base
     fs = contents.font.clone
     contents.font.size = 20
     change_color(normal_color)
-    draw_text(x + 360, y + 2, window_width - 390, line_height, "#{key_button("A")}・#{key_button("S")}Switch Skill", 2)
+    draw_text(x + 360, y + 2, window_width - 390, line_height, "#{key_button("A")}・#{key_button("S")} - Switch", 2)
     contents.font = fs
   end
 end
