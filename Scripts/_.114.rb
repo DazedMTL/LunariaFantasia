@@ -184,7 +184,7 @@ module Quest
   
              [22,   72,      "Delivery", "Kujou Village Warehouse", "\emob[f7]", "2000\eg", "--", 
              "Naughty Underwear", 
-             "\e}\e}A woman from the village has asked us to collect\nthree \edbi[i,188], which female-shaped demons (monsters)\ndrop. She plans to study them to create a technique to\nseduce men. Female ghosts often appear\n\eimparound the village, Nawate, and the Sealing Cave\ec[0].\n\n\edbi[i,188]　\e}Needed 3/ In Possession \eqin[i,188]\e{",
+             "\e}\e}A woman from the village has asked us to collect\nthree \edbi[i,188], which female-shaped demons (monsters)\ndrop. She plans to study them to create a technique to\nseduce men. Female ghosts often appear\n\eimparound the village, Nawate, and the Sealing Cave\ec[0].\n\n\edbi[i,188]　\e}Needed 3/ In Possession \eqin[i,188]",
              {"188 i"=>3},
              {"g"=>2000}
              ],
