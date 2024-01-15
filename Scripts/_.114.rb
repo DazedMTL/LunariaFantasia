@@ -616,7 +616,7 @@ end
   # クエスト開始　町民・討伐用
   def self.q_start(n)
     item = q_ary(n)
-    $game_party.kill_list_fullset(item[9]) if item[2] == "討伐"
+    $game_party.kill_list_fullset(item[9]) if item[2] == "Suppression"
   end
   
   # 討伐終了　町民用
