@@ -257,7 +257,7 @@ class Window_QuestList < Window_Selectable
   # ○ 達成条件
   #--------------------------------------------------------------------------
   def clear_conditions(item)
-    if item[2] == "Suppression"
+    if item[2] == "Extermination"
       key = item[9].keys
       key.all?{|id| $game_party.kill_list(id) == 0 }
     elsif item[2] == "Delivery"
@@ -921,7 +921,7 @@ class Scene_QuestSelect < Scene_MenuBase
   # ○ 討伐クエストか？
   #--------------------------------------------------------------------------
   def kill_quest?(item)
-    item[2] == "Suppression"
+    item[2] == "Extermination"
   end
   #--------------------------------------------------------------------------
   # ○ 討伐数のセット

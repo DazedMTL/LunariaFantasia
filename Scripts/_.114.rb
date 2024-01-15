@@ -12,19 +12,19 @@ module Quest
              {"98 a"=>1}
              ],
              
-             [2,   52,         "Suppression",   "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "200\eg、\edbi[i,4]×２", "3～", 
+             [2,   52,         "Extermination",   "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "200\eg、\edbi[i,4]×２", "3～", 
              "Goblin Slayer", #7-Title
              #8-Details
-             "\e}\e}Attackers who assault adventurers and merchants\nto steal their goods or kidnap women are the despicable\n\eimp\edb[e,5]. Please subdue six of them.\n\edb[e,5] primarily inhabit the surroundings of Sagittarius\nand the southern area of Rizel Forest.\n\n\edb[e,5] Suppression　\e}Remaining \eqkm[5]\e{",
+             "\e}\e}Attackers who assault adventurers and merchants\nto steal their goods or kidnap women are the despicable\n\eimp\edb[e,5]. Please subdue six of them.\n\edb[e,5] primarily inhabit the surroundings of Sagittarius\nand the southern area of Rizel Forest.\n\n\edb[e,5] Extermination　\e}Remaining \eqkm[5]\e{",
              #9-Completion Condition Hash
              {5=>6}, 
              #10-Reward Hash
              {"g"=>200, "4 i"=>2}
              ],
              
-             [3,   53,      "Suppression", "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,106]", "4～", 
+             [3,   53,      "Extermination", "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,106]", "4～", 
              "Rabbit Hunt", 
-             "\e}\e}Please subdue five of the rabbit-like demons\n\eimp\edb[e,6] that inhabit the southern Robe area and\nRizel Forest etc.\n\n\edb[e,6] Suppression　\e}Remaining \eqkm[6]\e{",
+             "\e}\e}Please subdue five of the rabbit-like demons\n\eimp\edb[e,6] that inhabit the southern Robe area and\nRizel Forest etc.\n\n\edb[e,6] Extermination　\e}Remaining \eqkm[6]\e{",
              {6=>5},
              {"106 a"=>1}
              ],
@@ -36,9 +36,9 @@ module Quest
              {"2 w"=>1}
              ],
              
-             [5,   55,      "Suppression", "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "200\eg、\edbi[i,4]×３", "5～", 
+             [5,   55,      "Extermination", "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "200\eg、\edbi[i,4]×３", "5～", 
              "Pest Control", 
-             "\e}\e}Please subdue five each of the pests \eimp\edb[e,7] and\n\edb[e,8]\ec[0] that inhabit Rizel Forest.\n\edb[e,7] can be found throughout the forest, while\n\edb[e,8] resides in the southern area.\n\n\edb[e,7] Suppression　\e}Remaining \eqkm[7]\e{\n\edb[e,8] Suppression　\e}Remaining \eqkm[8]\e{",
+             "\e}\e}Please subdue five each of the pests \eimp\edb[e,7] and\n\edb[e,8]\ec[0] that inhabit Rizel Forest.\n\edb[e,7] can be found throughout the forest, while\n\edb[e,8] resides in the southern area.\n\n\edb[e,7] Extermination　\e}Remaining \eqkm[7]\e{\n\edb[e,8] Extermination　\e}Remaining \eqkm[8]\e{",
              {7=>5, 8=>5},
              {"g"=>200, "4 i"=>3}
              ],
@@ -101,22 +101,22 @@ module Quest
              {"g"=>800, "113 i"=>2}
              ],
   
-             [12,   62,      "Suppression", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,24]、\edbi[a,171]", "10～", 
+             [12,   62,      "Extermination", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,24]、\edbi[a,171]", "10～", 
              "More Goblin Slayers", 
-             "\e}\e}There are \edb[e,5] that have high intelligence and\nuse sword skills and \esk[2]. They live in the southern cave.\nPlease subjugate five each of \eimp\edb[e,18]\ \edb[e,19]\ec[0].\n\n\edb[e,18] Suppression　\e}Remaining \eqkm[18]\e{\n\edb[e,19] Suppression　\e}Remaining \eqkm[19]\e{",
+             "\e}\e}There are \edb[e,5] that have high intelligence and\nuse sword skills and \esk[2]. They live in the southern cave.\nPlease subjugate five each of \eimp\edb[e,18]\ \edb[e,19]\ec[0].\n\n\edb[e,18] Extermination　\e}Remaining \eqkm[18]\e{\n\edb[e,19] Extermination　\e}Remaining \eqkm[19]\e{",
              {18=>5, 19=>5},
              {"24 a"=>1, "171 a"=>1},
              {"v"=>[[52,6,0]], "t"=>"You can accept this quest after completing Quest No.02"}
              ],
   
-             [13,   63,      "Suppression", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[w,5]", "9～", 
+             [13,   63,      "Extermination", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[w,5]", "9～", 
              "Poison Ant Breeding Season", 
-             "\e}\e}The poisonous \edb[e,16] started their breeding season.\nTo prevent further proliferation, please subjugate eight\nof them. This creature resides in the Grayer Cave near\nRagras and the south cave of Ragras.\n\n\edb[e,16] Suppression　\e}Remaining \eqkm[16]\e{",
+             "\e}\e}The poisonous \edb[e,16] started their breeding season.\nTo prevent further proliferation, please subjugate eight\nof them. This creature resides in the Grayer Cave near\nRagras and the south cave of Ragras.\n\n\edb[e,16] Extermination　\e}Remaining \eqkm[16]\e{",
              {16=>8},
              {"5 w"=>1}
              ],
   
-  #--------After the morning following the bandit Suppression-----------------------------------------------------------------------------------
+  #--------After the morning following the bandit Extermination-----------------------------------------------------------------------------------
   
              [14,   64,      "Delivery", "Commercial Town Ragras Adventurer's Guild", "Street Vendor Material Shop", "1200\eg\nMonster materials will be added to the Ragras material shop's inventory", "--", 
              "Monster Material Drops", 
@@ -125,16 +125,16 @@ module Quest
              {"g"=>1200}
              ],
   
-             [15,   65,      "Suppression", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,84]、\edbi[a,106]", "13～", 
+             [15,   65,      "Extermination", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,84]、\edbi[a,106]", "13～", 
              "Snake Hunt", 
-             "\e}\e}Timor Mountain is an important route for traffic between Dalia.\nHowever, the mountain path is dangerous due to numerous\nsnake monsters 'edb[e,23]' living there. For\nthe sake of those who travel between the two countries,\nplease subjugate six \eimp\edb[e,23].\n\n\edb[e,23] Suppression　\e}Remaining \eqkm[23]\e{",
+             "\e}\e}Timor Mountain is an important route for traffic between Dalia.\nHowever, the mountain path is dangerous due to numerous\nsnake monsters 'edb[e,23]' living there. For\nthe sake of those who travel between the two countries,\nplease subjugate six \eimp\edb[e,23].\n\n\edb[e,23] Extermination　\e}Remaining \eqkm[23]\e{",
              {23=>6},
              {"84 a"=>1, "106 a"=>1}
              ],
   
-             [16,   66,      "Suppression", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[i,113]×２、\edbi[a,257]", "14～", 
+             [16,   66,      "Extermination", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[i,113]×２、\edbi[a,257]", "14～", 
              "Snowmen", 
-             "\e}\e}\eimpThe area near the summit of Timor Mountain\ec[0] is always\ncovered in snow, and there are monsters that look\nlike snowmen. Please subjugate five \eimp\edb[e,27]\ec[0].\n\n\edb[e,27] Suppression　\e}Remaining \eqkm[27]\e{",
+             "\e}\e}\eimpThe area near the summit of Timor Mountain\ec[0] is always\ncovered in snow, and there are monsters that look\nlike snowmen. Please subjugate five \eimp\edb[e,27]\ec[0].\n\n\edb[e,27] Extermination　\e}Remaining \eqkm[27]\e{",
              {27=>5},
              {"113 i"=>2, "257 a"=>1}
              ],
@@ -173,9 +173,9 @@ module Quest
   
   #--------After arrival in Senessio-----------------------------------------------------------------------------------
   
-             [21,   71,      "Suppression", "Port Town Senessio Café with Ocean View", "\emob[p2_f]", "\edbi[i,54]", "--", 
+             [21,   71,      "Extermination", "Port Town Senessio Café with Ocean View", "\emob[p2_f]", "\edbi[i,54]", "--", 
              "Octopus Wiener", 
-             "\e}\e}A \emob[p2_f] at the port café has requested that we\nsubdue \edb[e,34] around \eimpSenessio\ec[0]. Apparently, it makes\nher hungry watching them and is quite bothersome…\n\n\edb[e,34] Suppression　\e}Remaining \eqkm[34]\e{",
+             "\e}\e}A \emob[p2_f] at the port café has requested that we\nsubdue \edb[e,34] around \eimpSenessio\ec[0]. Apparently, it makes\nher hungry watching them and is quite bothersome…\n\n\edb[e,34] Extermination　\e}Remaining \eqkm[34]\e{",
              {34=>5},
              {"54 i"=>1}
              ],
@@ -189,16 +189,16 @@ module Quest
              {"g"=>2000}
              ],
              
-             [23,   73,      "Suppression", "Town of Nawate Adventurers' Association", "Guild Receptionist \emob[qp2]", "\edbi[i,123]、\edbi[i,124]\n\edbi[i,125]、\edbi[i,126]\e{", "20～", 
+             [23,   73,      "Extermination", "Town of Nawate Adventurers' Association", "Guild Receptionist \emob[qp2]", "\edbi[i,123]、\edbi[i,124]\n\edbi[i,125]、\edbi[i,126]\e{", "20～", 
              "Foreign Goblin Slayer", 
-             "\e}\e}The 'edb[e,41]' yokai, who turns pillows to\nconfuse sleeping people, have been spotted\n\eimparound and inside the Sealing Cave\ec[0].\nPlease subjugate five \eimp\edb[e,41].\n\n\edb[e,41] Suppression　\e}Remaining \eqkm[41]\e{",
+             "\e}\e}The 'edb[e,41]' yokai, who turns pillows to\nconfuse sleeping people, have been spotted\n\eimparound and inside the Sealing Cave\ec[0].\nPlease subjugate five \eimp\edb[e,41].\n\n\edb[e,41] Extermination　\e}Remaining \eqkm[41]\e{",
              {41=>5},
              {"123 i"=>1, "124 i"=>1, "125 i"=>1, "126 i"=>1}
              ],
            
-             [24, 74, "Suppression", "Nawate Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "\edbi[i,64]×2\n1000\eg", "20～",
+             [24, 74, "Extermination", "Nawate Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "\edbi[i,64]×2\n1000\eg", "20～",
              "Demonic Youkai",
-             "In Tokiwa, there exist demonic youkai that seduce men, kidnap, and consume them. Please subjugate four of each of these youkai \eimp\edb[e,42] and\n\edb[e,43]\e}\e}(Jorougumo)\e}\e}. Both inhabit the Sealed Cave from the midway point onwards.\n\n\edb[e,42] Suppression　\e}Remaining \eqkm[42] bodies\e{\n\edb[e,43] Suppression　\e}Remaining \eqkm[43] bodies\e{",
+             "In Tokiwa, there exist demonic youkai that seduce men, kidnap, and consume them. Please subjugate four of each of these youkai \eimp\edb[e,42] and\n\edb[e,43]\e}\e}(Jorougumo)\e}\e}. Both inhabit the Sealed Cave from the midway point onwards.\n\n\edb[e,42] Extermination　\e}Remaining \eqkm[42] bodies\e{\n\edb[e,43] Extermination　\e}Remaining \eqkm[43] bodies\e{",
              {42=>4, 43=>4},
              {"64 i"=>2, "g"=>1000}
              ],
@@ -231,7 +231,7 @@ module Quest
              {"283 i"=>2}
              ],
   
-  #--------↓Post-evil dragon Suppression-----------------------------------------------------------------------------------
+  #--------↓Post-evil dragon Extermination-----------------------------------------------------------------------------------
   
              [29, 79, "Errand", "In front of Nawate Town Public Bath", "\eshop[hu1]", "\edbi[a,288], \edbi[a,258]", "--",
              "Grand Reopening",
@@ -242,9 +242,9 @@ module Quest
   
   #--------↓Post-Sakai Arrival-----------------------------------------------------------------------------------
   
-             [30, 80, "Suppression", "Sakai Port Town Pier", "\emob[f9]", "\edbi[i,97]", "24～",
+             [30, 80, "Extermination", "Sakai Port Town Pier", "\emob[f9]", "\edbi[i,97]", "24～",
              "Peaceful Demise",
-             "In the port of Sakai, I met a sorrowful nun. She wants to give a peaceful rest to the youkai called \edb[e,47]. To grant her wish, let's subjugate eight \edb[e,47] wandering in the \eimpKujo Labyrinth.\n\n\edb[e,47] Suppression　\e}Remaining \eqkm[47] bodies\e{",
+             "In the port of Sakai, I met a sorrowful nun. She wants to give a peaceful rest to the youkai called \edb[e,47]. To grant her wish, let's subjugate eight \edb[e,47] wandering in the \eimpKujo Labyrinth.\n\n\edb[e,47] Extermination　\e}Remaining \eqkm[47] bodies\e{",
              {47=>8},
              {"97 i"=>1}
              ],
@@ -267,9 +267,9 @@ module Quest
              {"l"=>[27,29], "v"=>[[79,6,0]], "t"=>"This quest can be accepted after completing Quest No. 29"}
              ],
   
-             [33, 83, "Suppression", "Timor Mountain Dalia-side Downhill Path", "\emob[s1]", "\edbi[i,64]\n\edbi[a,264]", "25～",
+             [33, 83, "Extermination", "Timor Mountain Dalia-side Downhill Path", "\emob[s1]", "\edbi[i,64]\n\edbi[a,264]", "25～",
              "New Imp Slayer",
-             "The \edb[e,5] of Timor Mountain are a challenge for everyone. Among them, it is believed that a higher-ranking species, the \eimp\edb[e,53], is leading them. We have been asked to subjugate six \edb[e,53]. They are often spotted in the \eimpcaves on the Dalia-side downhill path.\n\n\edb[e,53] Suppression　\e}Remaining \eqkm[53] bodies\e{",
+             "The \edb[e,5] of Timor Mountain are a challenge for everyone. Among them, it is believed that a higher-ranking species, the \eimp\edb[e,53], is leading them. We have been asked to subjugate six \edb[e,53]. They are often spotted in the \eimpcaves on the Dalia-side downhill path.\n\n\edb[e,53] Extermination　\e}Remaining \eqkm[53] bodies\e{",
              {53=>6},
              {"64 i"=>1, "264 a"=>1},
              {"v"=>[[62,6,0]], "t"=>"This quest can be accepted after completing Quest No. 12"}
@@ -283,9 +283,9 @@ module Quest
              {"l"=>[37,40], "h"=>1}
              ],
   
-             [35, 85, "Suppression", "Border Checkpoint", "\emob[p6_m]", "\edbi[i,118]×2\n\edbi[i,70]×2", "26～",
+             [35, 85, "Extermination", "Border Checkpoint", "\emob[p6_m]", "\edbi[i,118]×2\n\edbi[i,70]×2", "26～",
              "If One Must Be Poisoned",
-             "At the border checkpoint, I met \emob[p6_m] who said he is weak against poison attacks. Let's help him reduce the number of \edb[e,54] in the Hydra Marsh before crossing it by subjugating five \edb[e,54].\n\n\edb[e,54] Suppression　\e}Remaining \eqkm[54] bodies\e{",
+             "At the border checkpoint, I met \emob[p6_m] who said he is weak against poison attacks. Let's help him reduce the number of \edb[e,54] in the Hydra Marsh before crossing it by subjugating five \edb[e,54].\n\n\edb[e,54] Extermination　\e}Remaining \eqkm[54] bodies\e{",
              {54=>5},
              {"118 i"=>2, "70 i"=>2},
              {}
@@ -301,17 +301,17 @@ module Quest
              {"l"=>[38,41], "s"=>[128], "t"=>"This quest can be accepted after completing Quest No. 31"}
              ],
   
-             [37, 87, "Suppression", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "1000\eg、\edbi[a,289]", "28～",
+             [37, 87, "Extermination", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "1000\eg、\edbi[a,289]", "28～",
              "Ghostbusting",
-             "In \eimpFolia Ruins\ec[0], there are monsters that have left unfinished business in this world and cannot pass on peacefully. This request is to subjugate one such ghostly monster, \edb[e,55]. Please subjugate five \edb[e,55].\n\n\edb[e,55] Suppression　\e}Remaining \eqkm[55] bodies\e{",
+             "In \eimpFolia Ruins\ec[0], there are monsters that have left unfinished business in this world and cannot pass on peacefully. This request is to subjugate one such ghostly monster, \edb[e,55]. Please subjugate five \edb[e,55].\n\n\edb[e,55] Extermination　\e}Remaining \eqkm[55] bodies\e{",
              {55=>5},
              {"g"=>1000, "289 a"=>1},
              {}
              ],
   
-             [38, 88, "Suppression", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "1000\eg、\edbi[a,290]", "28～",
+             [38, 88, "Extermination", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "1000\eg、\edbi[a,290]", "28～",
              "Knight of the Shadows",
-             "There are monsters that lurk and merge with shadows. Please subjugate six shadow monsters, the \eimp\edb[e,12]. They mainly inhabit the \eimpFolia Ruins.\n\n\edb[e,12] Suppression　\e}Remaining \eqkm[12] bodies\e{",
+             "There are monsters that lurk and merge with shadows. Please subjugate six shadow monsters, the \eimp\edb[e,12]. They mainly inhabit the \eimpFolia Ruins.\n\n\edb[e,12] Extermination　\e}Remaining \eqkm[12] bodies\e{",
              {12=>6},
              {"g"=>1000, "290 a"=>1},
              {}
@@ -351,9 +351,9 @@ module Quest
            
 #--------↓After the Queen's Triumph-------------------------------------------------------------------------
            # 43 is after the Kamala confrontation
-           [43,   93,      "Suppression", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,265]×２", "36～", 
+           [43,   93,      "Extermination", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,265]×２", "36～", 
            "Skeletal Warriors", 
-           "I have heard that warriors who died in deserts or mines wander as skeletons. Please subjugate \eimp\edb[e,73]\ec[0] appearing in deserts and mines so they do not make the living join them. You need to defeat 6 of them.\n\edb[e,73]Suppression \e}Remaining \eqkm[73] units\e{",
+           "I have heard that warriors who died in deserts or mines wander as skeletons. Please subjugate \eimp\edb[e,73]\ec[0] appearing in deserts and mines so they do not make the living join them. You need to defeat 6 of them.\n\edb[e,73]Extermination \e}Remaining \eqkm[73] units\e{",
            {73=>6},
            {"265 a"=>2},
            {}
@@ -377,9 +377,9 @@ module Quest
            {}
            ],
            
-           [46,   96,      "Suppression", "Royal Capital Cactus Adventurer's Guild", "Women with Boyfriends", "\edbi[i,287]×５", "36～", 
+           [46,   96,      "Extermination", "Royal Capital Cactus Adventurer's Guild", "Women with Boyfriends", "\edbi[i,287]×５", "36～", 
            "A Wish from Women", 
-           "There are successive reports of boyfriends being seduced by succubi. Men charmed by succubi become spineless and neglect their lovers or wives. A multitude of women are voicing their resentment, so please subjugate \eimp12 units of \edb[e,71] found in the Dark Mines and the Desert.\n\edb[e,71]Suppression \e}Remaining \eqkmk[SC] units\e{",
+           "There are successive reports of boyfriends being seduced by succubi. Men charmed by succubi become spineless and neglect their lovers or wives. A multitude of women are voicing their resentment, so please subjugate \eimp12 units of \edb[e,71] found in the Dark Mines and the Desert.\n\edb[e,71]Extermination \e}Remaining \eqkmk[SC] units\e{",
            {"SC"=>12},
            {"287 i"=>5},
            {}
@@ -412,9 +412,9 @@ module Quest
            {}
            ],
            
-           [50,   100,      "Suppression", "Resort Area Galadi East Cliff", "\emob[ex]", "\edbi[a,114]", "44～", 
+           [50,   100,      "Extermination", "Resort Area Galadi East Cliff", "\emob[ex]", "\edbi[a,114]", "44～", 
            "Grudge Against the Mermaid", 
-           "A man looking out to sea from the cliff top in Galadi. He was dumped by his girlfriend and blames the creature \edb[e,84] for causing it. To clear his grudge, let us go and subjugate \eimp6 units of \edb[e,84]\ec[0] that inhabit the \eimpFourth-floor and above of the Demon's Tower.\n\n\edb[e,84]Suppression　\e}Remaining \eqkm[84] units\e{",
+           "A man looking out to sea from the cliff top in Galadi. He was dumped by his girlfriend and blames the creature \edb[e,84] for causing it. To clear his grudge, let us go and subjugate \eimp6 units of \edb[e,84]\ec[0] that inhabit the \eimpFourth-floor and above of the Demon's Tower.\n\n\edb[e,84]Extermination　\e}Remaining \eqkm[84] units\e{",
            {84=>6},
            {"114 a"=>1},
            {}
@@ -616,7 +616,7 @@ end
   # クエスト開始　町民・討伐用
   def self.q_start(n)
     item = q_ary(n)
-    $game_party.kill_list_fullset(item[9]) if item[2] == "Suppression"
+    $game_party.kill_list_fullset(item[9]) if item[2] == "Extermination"
   end
   
   # 討伐終了　町民用
