@@ -503,7 +503,7 @@ class Game_Actor < Game_Battler
         pat[$2] = $1.to_sym
       end
     end
-    pat["攻撃力優先"] = :atk if pat.empty?
+    pat["Attack"] = :atk if pat.empty?
     return pat
     #@optimize_pattern ||= opt_pattern_set
     #return actor.note =~ /\<最適パターン:(\d+)\>/ ? $1.to_i : 1
@@ -529,7 +529,7 @@ class RPG::Actor < RPG::BaseItem
         pat[$2] = $1.to_sym
       end
     end
-    pat["攻撃力優先"] = :atk if pat.empty?
+    pat["Attack"] = :atk if pat.empty?
     return pat
   end
 end
