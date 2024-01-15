@@ -257,10 +257,10 @@ class Window_QuestList < Window_Selectable
   # ○ 達成条件
   #--------------------------------------------------------------------------
   def clear_conditions(item)
-    if item[2] == "討伐"
+    if item[2] == "Suppression"
       key = item[9].keys
       key.all?{|id| $game_party.kill_list(id) == 0 }
-    elsif item[2] == "納品"
+    elsif item[2] == "Delivery"
       key = item[9].keys
       key.all?{|c| quest_item_number?(c, item[9][c])}
     else

@@ -24,8 +24,8 @@ class Window_ReportChoice < Window_OrderChoice
   # ○ コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("このクエストを報告する",     :yes_select)
-    add_command("やめる",   :no_select)
+    add_command("Report this Quest",     :yes_select)
+    add_command("Cancel",   :no_select)
   end
 end
 
@@ -103,7 +103,7 @@ class Window_Reword < Window_Selectable
   #--------------------------------------------------------------------------
   def draw_reword(text, x, y)
     change_color(system_color)
-    draw_text(x + 4, y, contents_width, line_height, "報酬")
+    draw_text(x + 4, y, contents_width, line_height, "Reward")
     change_color(normal_color)
     i = 1
     text.each do |ary|
@@ -117,7 +117,7 @@ class Window_Reword < Window_Selectable
       end
       i += 1
     end
-    draw_text(x + 4, y + 24 * i, contents_width, line_height, "を受け取った")
+    draw_text(x + 4, y + 24 * i, contents_width, line_height, "Received")
   end
   #--------------------------------------------------------------------------
   # ○ カーソルの更新
@@ -157,7 +157,7 @@ class Scene_QuestReport < Scene_MenuBase
   def create_help_window
     @help_window = Window_Help.new(1)
     @help_window.viewport = @viewport
-    @help_window.set_text("報告するクエストを選択して下さい")
+    @help_window.set_text("Please select the quest you wish to report")
   end
   #--------------------------------------------------------------------------
   # ● ヘルプウィンドウの作成
