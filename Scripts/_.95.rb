@@ -382,6 +382,7 @@ class Window_LearnList < Window_Selectable
   # ○ スキルの種類と名前の描画
   #--------------------------------------------------------------------------
   def draw_type_name(skill, x, y, enabled = true)
+    contents.font.size = 18
     return unless skill
     stype = Vocab::stype_name(skill.stype_id)
     if @actor.skill_learn?(skill)
@@ -410,7 +411,7 @@ class Window_LearnList < Window_Selectable
     lv = Learn.l_flag(skill)[2]
     return if lv == 1
     change_color(normal_color, enable?(skill))
-    draw_text(x + 324, y, contents_width, line_height, "Need LV: #{lv}")
+    draw_text(x + 344, y, contents_width, line_height, "LV: #{lv}")
   end
   #--------------------------------------------------------------------------
   # ○ スキルの習得ポイントを描画
@@ -421,7 +422,7 @@ class Window_LearnList < Window_Selectable
       draw_text(x - 4, y, contents_width, line_height, "Learned ", 2)
     else
       change_color(normal_color, enable?(skill))
-      draw_text(x + 492, y, contents_width, line_height, "Need#{Vocab::ap}:#{skill_ap(skill)}")
+      draw_text(x + 492, y, contents_width, line_height, "#{Vocab::ap}:#{skill_ap(skill)}")
     end
   end
   #--------------------------------------------------------------------------
