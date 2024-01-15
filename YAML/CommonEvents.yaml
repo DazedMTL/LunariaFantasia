@@ -120,7 +120,7 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '$game_variables[11] < $game_variables[1]']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '250', 'p': [!ruby/object:RPG::SE {'name': 'Chime2', 'pitch': !!int '100', 'volume': !!int '80'}]}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '1', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\dbi[i,{Var_4}] acquired \id[i,{Var_4}]']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['The number of Servants that can be summoned has been reduced to \V[1].']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '111', 'p': [!!int '12', '$game_variables[12] < SummonSystem::LIBERATE_S_LV[0]']}
@@ -250,7 +250,7 @@
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '122', 'p': [!!int '12', !!int '12', !!int '0', !!int '3', !!int '7', !!int '2', !!int '0']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[in{Var_1}]: "One night will be \v[11]\G. Will you be
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[in\v[13]]: "One night will be \v[11]\G. Will you be
 
         staying?"$']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['I''ll stay', 'Cancel'], !!int '2']}
@@ -259,17 +259,17 @@
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '125', 'p': [!!int '1', !!int '1', !!int '11']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '117', 'p': [!!int '10']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\shop[in{Var_1}]: "Then, please have a safe trip."']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\shop[in\v[13]]: "Then, please have a safe trip."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '411', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\shop[in{Var_1}]: "It seems you don''t have enough money."']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '401', 'p': ['\shop[in\v[13]]: "It seems you don''t have enough money."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '2', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '412', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '1', 'やめる']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in{Var_1}]: "Please come again."']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in\v[13]]: "Please come again."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '404', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '7']}
@@ -2551,18 +2551,18 @@
   'switch_id': !!int '1'
   'list':
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[in{Var_0}]: "As you have the \db[i,156], you can stay
+  - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '401', 'p': ['\shop[in\v[13]]: "As you have the \db[i,156], you can stay
 
         for free. Would you like to stay the night?"']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '102', 'p': [['Stay the night', 'Cancel'], !!int '2']}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '0', '泊まる']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '117', 'p': [!!int '10']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in{Var_0}]: "Then, have a good day."']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in\v[13]]: "Then, have a good day."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '402', 'p': [!!int '1', 'やめる']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '101', 'p': ['', !!int '0', !!int '0', !!int '2']}
-  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in{Var_0}]: "Please come again."']}
+  - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '401', 'p': ['\shop[in\v[13]]: "Please come again."']}
   - !ruby/object:RPG::EventCommand {'i': !!int '1', 'c': !!int '0', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '404', 'p': []}
   - !ruby/object:RPG::EventCommand {'i': !!int '0', 'c': !!int '117', 'p': [!!int '7']}
