@@ -341,7 +341,7 @@ class Window_Status < Window_Selectable
   #--------------------------------------------------------------------------
   def draw_description(x, y)
     if @page_index == 0
-      contents.font.size = 15
+      contents.font.size = 18
       draw_text_ex(x, y-15, @actor.description)
     end
     contents.font.size = font_size
@@ -611,7 +611,7 @@ class Window_Status < Window_Selectable
   #--------------------------------------------------------------------------
   def draw_text_ex(x, y, text)
     text = convert_escape_characters(text)
-    pos = {:x => x, :y => y, :new_x => x, :height => calc_line_height(text)}
+    pos = {:x => x, :y => y, :new_x => x, :height => calc_line_height(text)-45}
     process_character(text.slice!(0, 1), text, pos) until text.empty?
   end
   #--------------------------------------------------------------------------
