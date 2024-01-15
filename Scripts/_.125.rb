@@ -105,7 +105,7 @@ class Window_TargetHelp < Window_Help
     if actor.enemy?
       icons = actor.most_weak
       width = weak_width(icons.size)
-      text = "弱点"
+      text = "Weakness"
       change_color(power_down_color)
       draw_text(x, y, width, line_height, text)
       x = contents.text_size(text).width
@@ -136,7 +136,7 @@ class Window_TargetHelp < Window_Help
   # ○ 弱点エリアの幅　※追加
   #--------------------------------------------------------------------------  
   def weak_width(size)
-    contents.text_size("弱点").width + 24 * size + 0
+    contents.text_size("Weakness").width + 24 * size + 0
   end
   #--------------------------------------------------------------------------
   # ○ 弱点描画の有無　※追加

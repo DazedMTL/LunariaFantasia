@@ -4,7 +4,7 @@ module FREA
   #--------------------------------------------------------------------------
   def draw_analyze_elements(x, y)
     ary = ["Physical","Absorb","Fire","Ice","Thunder","Light","Darkness","Charm","Exorcism","Steal"]
-    str = "Element Effectiveness"
+    str = "Elements"
     rate = {}
     ary.each{|name| rate[FRGP::ELEMENT_ICON[elements_comvert(name)]] = elg_rate_analyze(name)}
     draw_percent(x, y, str, rate, true)
@@ -14,7 +14,7 @@ module FREA
   #--------------------------------------------------------------------------
   def draw_analyze_state(x, y, ext = "Charm")
     ary = ["Instant Death","Poison","Blind","Silence","Confusion","Sleep","Paralysis","Stun",ext]
-    str = "State Effectiveness"
+    str = "States"
     rate = {}
     ary.compact.each{|name| rate[$data_states[state_comvert(name)].icon_index] = stg_rate_analyze(name)}
     draw_percent(x, y, str, rate, true)
@@ -24,7 +24,7 @@ module FREA
   #--------------------------------------------------------------------------
   def draw_analyze_debuff(x, y)
     ary = [2, 3, 4, 5, 6, 7]
-    str = "Debuff Effectiveness"
+    str = "Debuffs"
     rate = {}
     ary.each{|id| rate[FRGP::ICON_DEBUFF_START + id] = debuff_rate_analyze(id)}
     draw_percent(x, y, str, rate, true)
