@@ -24,12 +24,12 @@ Lunaria awoke,
 she was back on the bed in the castle.
 It was then that Mariana told her.
 
-The stolen magic power may
+The stolen Magic may
 never return to its original state..."], # Maximum 15 lines 23 characters
 
         "OP-03" => ["Preface", "00", 
 "\e}Mariana spoke of a possibility to restore the 
-lost magic power
+lost Magic
 by borrowing the strength of five jewels used
 to defeat ancient demons.
 
@@ -41,7 +41,7 @@ to the \eC[8]south of Sagittaries\ec[0].
 
 From Mariana, Lunaria received a power called
 the \eC[8]Succubus's Secret Art\ec[0] as a means to
-compensate for her lost magic power, and she left 
+compensate for her lost Magic, and she left 
 the castle.
 
 ―Thus began Lunaria's journey to collect the jewels―"],
@@ -421,7 +421,7 @@ from the office\ec[0].
 the guardian was already defeated and the jewel 
 was nowhere to be found.
 
-Investigating the remnants of magic power, it 
+Investigating the remnants of Magic, it 
 doesn't seem like much time has passed since the battle.
 
 Wondering if any other adventurers have visited 
