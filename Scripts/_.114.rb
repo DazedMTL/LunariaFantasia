@@ -277,7 +277,7 @@ module Quest
   
              [34, 84, "Boss Hunt", "Ragras Commercial Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "5000\eg", "28～",
              "That Pig, Beware its Ferocity...",
-             "An urgent request. A ferocious monster, the \eimp\edb[e,60], has appeared in Grea Cave. Already, several adventurers have been defeated, and one \eimpfemale adventurer was continuously violated by \edb[e,60] until it was satisfied. Please be aware of the danger and subjugate the \edb[e,60] residing in Grea Cave. It is said to be near the western water area immediately after entering from the Ragras side.",
+             "An urgent request. A ferocious monster, the \eimp\edb[e,60], \nhas appeared in Grea Cave. Already, several adventurers \nhave been defeated, and one \eimpfemale adventurer was \ncontinuously violated by \edb[e,60] until it was satisfied. \nPlease be aware of the danger and subjugate \nthe \edb[e,60] residing in Grea Cave. \nIt is said to be near the western \nwater area immediately after entering from \nthe Ragras side.",
              {},
              {"g"=>5000},
              {"l"=>[37,40], "h"=>1}
