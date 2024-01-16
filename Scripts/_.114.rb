@@ -206,70 +206,100 @@ module Quest
              [25, 75, "Delivery", "Nawate Town Adventurers' Guild", "Shrine Maiden \esb[14]", "\edbi[w,7], 1000\eg", "--",
              "Youkai Ecology",
              "To understand the ecology of youkai, please deliver three each of \edb[e,37] dropped \edbi[i,187] and\n\edb[e,44] dropped \edbi[i,189]. \edb[e,37] mainly inhabits the \eimpvillage surroundings\ec[0],\n\edb[e,44] dwells in the \eimpSealed Cave\ec[0].\n\n\edbi[i,187]　\e}Required Number 3/ Possessed Number \eqin[i,187]\e{\n\edbi[i,189]　\e}Required Number 3/ Possessed Number \eqin[i,189]\e{",
-             {"187 i"=>3, "189 i"=>3},
-             {"7 w"=>1, "g"=>1000}
-             ],
-  
-             [26, 76, "Delivery", "Nawate Town Adventurers' Guild", "\emob[m13]", "\edbi[i,262]×2\n\edbi[i,20]×4", "--",
-             "Medicine Compounding",
-             "The clinic's doctor has requested the delivery of five \edbi[i,29] and three \edbi[i,35]. Both can be collected in the Sealed Cave.\n\n\edbi[i,29]　\e}Required Number 5/ Possessed Number \eqin[i,29]\e{\n\edbi[i,35]　\e}Required Number 3/ Possessed Number \eqin[i,35]\e{",
-             {"29 i"=>5, "35 i"=>3},
-             {"262 i"=>2, "20 i"=>4}
-             ],
-  
-             [27, 77, "Delivery", "Nawate Town Adventurers' Guild", "\eshop[we4]", "2000\eg", "--",
-             "Spiritual Stone",
-             "\eshop[we4] wants to request a new weapon from the blacksmith, so please deliver four \edbi[i,47]. \edbi[i,47] is an ore that can only be collected in Tokiwa.\n\n\edbi[i,47]　\e}Required Number 4/ Possessed Number \eqin[i,47]\e{",
-             {"47 i"=>4},
-             {"g"=>2000}
-             ],
-  
-             [28, 78, "Delivery", "Nawate Town Row Houses", "\emob[f2]", "\edbi[i,283]×2", "--",
-             "Weaving Thread",
-             "A woman living in the row houses is in trouble because she has run out of weaving thread. She said that \edbi[i,184] would be a good substitute, so let's deliver five \edbi[i,184].\n\n\edbi[i,184]　\e}Required Number 5/ Possessed Number \eqin[i,184]\e{",
-             {"184 i"=>5},
-             {"283 i"=>2}
-             ],
-  
-  #--------↓Post-evil dragon Extermination-----------------------------------------------------------------------------------
-  
-             [29, 79, "Errand", "In front of Nawate Town Public Bath", "\eshop[hu1]", "\edbi[a,288], \edbi[a,258]", "--",
-             "Grand Reopening",
-             "According to Mr. \eshop[hu1] from the public bath, they are short on stones for a renovation, so let's go to the underground passage to Tokiwa and mine \edbi[i,205]. It seems \edbi[i,205] can be mined from the place where water is falling from both sides near the exit of Tokiwa.",
-             {},
-             {"288 a"=>1,"258 a"=>1}
-             ],
-  
-  #--------↓Post-Sakai Arrival-----------------------------------------------------------------------------------
-  
-             [30, 80, "Extermination", "Sakai Port Town Pier", "\emob[f9]", "\edbi[i,97]", "24～",
-             "Peaceful Demise",
-             "In the port of Sakai, I met a sorrowful nun. She wants to give a peaceful rest to the youkai called \edb[e,47]. To grant her wish, let's subjugate eight \edb[e,47] wandering in the \eimpKujo Labyrinth.\n\n\edb[e,47] Extermination　\e}Remaining \eqkm[47] bodies\e{",
-             {47=>8},
-             {"97 i"=>1}
-             ],
-  
-             [31, 81, "Errand", "Furisenia Temple 4th Floor Small Room", "\esb[34]", "\edbi[i,56]", "--",
-             "Tokiwa's Food",
-             "When I visited Anemone after a long time, she envied that I had been to Tokiwa. It seems she has a longing for Tokiwa, so she wants to at least taste the atmosphere of Tokiwa through its food. Let's buy rice balls and dumplings from the tea house near the northern ferry and give them to her.\ec[0]",
-             {},
-             {"56 i"=>1},
-             {"l"=>[38,41], "s"=>[127], "t"=>"This quest can be accepted after completing Quest No. 20"}
-             ],
-  
-  #--------↓After receiving the pass-----------------------------------------------------------------------------------
-  
-             [32, 82, "Errand", "Sagittarius Castle Throne Room", "Millay", "\edbi[i,57]", "--",
-             "Hot Spring's Essence",
-             "Millay is taking a break from the investigation of the mysterious man. She has been investigating without much rest and seems tired... To relieve her fatigue, let's buy the essence of a hot spring, which is said to have recovery effects, at the public bath in Nawate.",
-             {},
-             {"57 i"=>1},
-             {"l"=>[27,29], "v"=>[[79,6,0]], "t"=>"This quest can be accepted after completing Quest No. 29"}
-             ],
-  
-             [33, 83, "Extermination", "Timor Mountain Dalia-side Downhill Path", "\emob[s1]", "\edbi[i,64]\n\edbi[a,264]", "25～",
-             "New Imp Slayer",
-             "The \edb[e,5] of Timor Mountain are a challenge for everyone. Among them, it is believed that a higher-ranking species, the \eimp\edb[e,53], is leading them. We have been asked to subjugate six \edb[e,53]. They are often spotted in the \eimpcaves on the Dalia-side downhill path.\n\n\edb[e,53] Extermination　\e}Remaining \eqkm[53] bodies\e{",
+             {
+                "187 i": 3, "189 i": 3
+              },
+              {
+                "7 w": 1, "g": 1000
+              }
+              ],
+              
+              [26, 76, "Delivery", "Nawate Town Adventurers' Guild", "\emob[m13]", "\edbi[i,262]×2\n\edbi[i,20]×4", "--",
+              "Medicine Mixing",
+              "The doctor at the clinic requests you to deliver 5 of \edbi[i,29],\nand 3 of \edbi[i,35].\nBoth can be collected in the Sealing Cave.\n\n\edbi[i,29]  \e}Required Amount 5/ Owned Amount \eqin[i,29]\e{\n\edbi[i,35]  \e}Required Amount 3/ Owned Amount \eqin[i,35]\e{",
+              {
+                "29 i": 5, "35 i": 3
+              },
+              {
+                "262 i": 2, "20 i": 4
+              }
+              ],
+              
+              [27, 77, "Delivery", "Nawate Town Adventurers' Guild", "\eshop[we4]", "2000\eg", "--",
+              "Spirit Stone",
+              "\eshop[we4] would like to request 4 of \edbi[i,47] for a new weapon order for the blacksmith.\n\edbi[i,47] is an ore that can only be collected in Tokiwa.\n\n\edbi[i,47]  \e}Required Amount 4/ Owned Amount \eqin[i,47]\e{",
+              {
+                "47 i": 4
+              },
+              {
+                "g": 2000
+              }
+              ],
+              
+              [28, 78, "Delivery", "Nawate Town Tenement Houses", "\emob[f2]", "\edbi[i,283]×2", "--",
+              "Weaving Thread",
+              "A woman living in the tenement houses is in trouble because she has\nrun out of weaving thread. She says that \edbi[i,184] would be a good substitute,\nso let's deliver 5 of \edbi[i,184].\n\n\edbi[i,184]  \e}Required Amount 5/ Owned Amount \eqin[i,184]\e{",
+              {
+                "184 i": 5
+              },
+              {
+                "283 i": 2
+              }
+              ],
+              
+              #--------↓After defeating the Evil Dragon-----------------------------------------------------------------------------------
+              
+              [29, 79, "Errand", "In front of Nawate Town Bathhouse", "\eshop[hu1]", "\edbi[a,288], \edbi[a,258]", "--",
+              "Grand Reopening",
+              "According to Mr. \eshop[hu1] from the bathhouse, they lack stones for the bathhouse renovation.\nLet's go to the underground passage in Tokiwa and mine for \edbi[i,205].\nIt seems that \edbi[i,205] can be mined from places where water is falling\non both sides near the exit in Tokiwa.",
+              {},
+              {
+                "288 a": 1,"258 a": 1
+              }
+              ],
+              
+              #--------↓After arriving at Sakai-----------------------------------------------------------------------------------
+              
+              [30, 80, "Extermination", "Sakai Port Wharf", "\emob[f9]", "\edbi[i,97]", "24～",
+              "Peaceful Demise",
+              "At the port of Sakai, I met a melancholic nun.\nShe wants to give a peaceful sleep to the youkai called \edb[e,47].\nTo fulfill her wish, let's subjugate 8 \edb[e,47] wandering\nthe Kujo Labyrinth.\n\n\edb[e,47] Extermination  \e}Remaining \eqkm[47] bodies\e{",
+              {
+                47: 8
+              },
+              {
+                "97 i": 1
+              }
+              ],
+              
+              [31, 81, "Errand", "Furizenia Temple 4th Floor Small Room", "\esb[34]", "\edbi[i,56]", "--",
+              "Tokiwa's Food",
+              "When I went to see \esbt[34] after a long time, she seemed to envy me for going to Tokiwa.\nApparently, she admires Tokiwa and wants to at least taste the atmosphere of Tokiwa through its food.\nSo from the tea house near the northern ferry point,\nlet's buy rice balls and sweet dumplings for her.\ec[0]",
+              {},
+              {
+                "56 i": 1
+              },
+              {
+                "l": [38,41], "s": [127], "t": "You can accept this quest after clearing Quest No. 20"
+              }
+              ],
+              
+              #--------↓After receiving the pass-----------------------------------------------------------------------------------
+              
+              [32, 82, "Errand", "Sagittarius Castle Throne Room", "\ekp[3]", "\edbi[i,57]", "--",
+              "Hot Spring Essence",
+              "\ekpt[3] is having a break amidst the investigation of the mysterious man.\nShe seems tired because she's been investigating without much rest.\nTo relieve her fatigue, let's buy hot spring essence, which is said to have fatigue recovery effects,\nfrom the bathhouse in Nawate.",
+              {},
+              {
+                "57 i": 1
+              },
+              {
+                "l": [27,29], "v": [[79,6,0]], "t": "You can accept this quest after clearing Quest No. 29"
+              }
+              ],
+              
+              [33, 83, "Extermination", "Timor Mountain Dalia Direction Descent Path", "\emob[s1]", "\edbi[i,64]\n\edbi[a,264]", "25～",
+              "New Oni Slayer",
+              "Everyone is having trouble with the \edb[e,5] on Timor Mountain.\nAmong them, it is requested to subjugate 6 of the higher species thought to be leading them, the \edb[e,53].\nIt seems that \edb[e,53] frequently appears in the caves along the descent path\non the Dalia side of the mountain.\n\n\edb[e,53] Extermination  \e}Remaining \eqkm[53] bodies\e{",
              {53=>6},
              {"64 i"=>1, "264 a"=>1},
              {"v"=>[[62,6,0]], "t"=>"This quest can be accepted after completing Quest No. 12"}
