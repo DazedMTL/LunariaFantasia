@@ -39,7 +39,7 @@ module Quest
             {"294 a"=>1, "24 i"=>1},
             ],
             
-            [SUB.size + 6,   106,      "Major Extermination", "Forest Village Robe  Tavern and Inn Ground Floor", "\emob[m2]", "\edbi[i,256]", "56～", 
+            [SUB.size + 6,   106,      "Boss Hunt", "Forest Village Robe  Tavern and Inn Ground Floor", "\emob[m2]", "\edbi[i,256]", "56～", 
             "Queen Bee Invasion", 
             "A queen bee \eimp\edb[e,138]\ec[0] has appeared in the southern area of the Rizel Forest. For now, she remains\nwithin her territory, so no damage has been reported, but there's no telling when her mood may change\nand she attacks the village. Therefore, she needs to be taken out while there's still a chance. Her location\nis where the previous \edb[e,8] infestation happened, at a pond in the \eimp southern area.\ec[0]",
             #9-Completion condition hash
@@ -63,7 +63,7 @@ module Quest
             {"352 a"=>1},
             ],
             
-            [SUB.size + 9,   109,      "Major Extermination", "Commercial Town Lagras  Adventurer's Guild", "Guild Receptionist \emob[qp2]", "5000\eg,\edbi[i,195]", "55～", 
+            [SUB.size + 9,   109,      "Boss Hunt", "Commercial Town Lagras  Adventurer's Guild", "Guild Receptionist \emob[qp2]", "5000\eg,\edbi[i,195]", "55～", 
             "Mother Ant", 
             "A superior species to \edb[e,7], the \eimp\edb[e,139]\ec[0] has been spotted in Glear Cave.\nMother ants continuously produce offspring, leading to an overpopulation of \edb[e,7] in the cave.\nTo prevent this, please exterminate the \edb[e,139]. The location is on the western side of the middle\nslope with the \eimp teleportation circle.\ec[0]",
             {},
@@ -127,7 +127,7 @@ module Quest
             {"g"=>25000},
             ],
             
-            [SUB.size + 18,   118,      "Major Extermination", "Royal City Cactus  Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,302]", "75～", 
+            [SUB.size + 18,   118,      "Boss Hunt", "Royal City Cactus  Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,302]", "75～", 
             "Mascot Brigade", 
             "An allied army of Hare and Octo has appeared in Hydra Marsh. Despite their cute appearance,\neach is quite a strong individual, and average adventurers can't stand against them. Prepare thoroughly\nfor \eimpconsecutive battles\ec[0] before heading there. The location is past the \eimp royal side\ec[0] of\nthe marsh from the second area towards the west, crossing the stepping stones.\n",
             {},
@@ -141,7 +141,7 @@ module Quest
             {"357 a"=>1, "121 a"=>1},
             ],
             
-            [SUB.size + 20,   120,      "Major Extermination", "Resort Galadi West・In front of a Building", "\emob[m27]", "\edbi[i,347]", "75～", 
+            [SUB.size + 20,   120,      "Boss Hunt", "Resort Galadi West・In front of a Building", "\emob[m27]", "\edbi[i,347]", "75～", 
             "Monster of Riddles", 
             "A dual-wielding swordsman from Leon Tais Desert has requested that we defeat a monster known as\n\edb[e,140]. If we manage to take it down, he has promised to hand over a book on the\nultimate dual-wielding techniques. \edb[e,140] seems to appear in the \eimp graveyard of bones\ec[0]\nlocated southwest in the second area of the desert from Galadi.\n",
             {},

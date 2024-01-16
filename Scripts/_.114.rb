@@ -45,7 +45,7 @@ module Quest
                         
   #--------Only after clearing the ruins No.6-----------------------------------------------------------------------------------
   
-             [6,   56,         "Urgent",   "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "2000\eg", "11～", 
+             [6,   56,         "Boss Hunt",   "Sagittarius Town Adventurer's Guild", "Guild Receptionist \emob[qp2]", "2000\eg", "11～", 
              "Defeat the Giant Slime!", #7-Title
              #8-Details
              "\e}\e}We've received reports of a high-level giant slime\nappearing near the northern area water sites of Rizel Forest.\nPlease exterminate it. There's information that if a\n\eimp female adventurer confronts it alone and loses, she will be violated\ec[0].\nTake extra caution if you go alone. Reports suggest\nthat this creature is resistant to physical attacks.",
@@ -83,7 +83,7 @@ module Quest
              {"g"=>500}
              ],
   
-             [10,   60,      "Urgent", "Forest Village Robe Tavern/Inn 1st Floor", "\emob[m2]", "1000\eg、\edbi[i,93]", "7～", 
+             [10,   60,      "Boss Hunt", "Forest Village Robe Tavern/Inn 1st Floor", "\emob[m2]", "1000\eg、\edbi[i,93]", "7～", 
              "Bee Swarm", 
              "\e}\e}A huge swarm of \edb[e,8] has appeared at the\npond in the southern area of Rizel Forest. Moreover,\nthese are a bit higher level than others in the forest,\ncreating potential unknown damages if left unchecked. It's\nlikely to be a continuous battle, so prepare\nthoroughly and head to the southern area pond.",
              #9-Completion Condition Hash
@@ -275,7 +275,7 @@ module Quest
              {"v"=>[[62,6,0]], "t"=>"This quest can be accepted after completing Quest No. 12"}
              ],
   
-             [34, 84, "Extermination", "Ragras Commercial Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "5000\eg", "28～",
+             [34, 84, "Boss Hunt", "Ragras Commercial Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "5000\eg", "28～",
              "That Pig, Beware its Ferocity...",
              "An urgent request. A ferocious monster, the \eimp\edb[e,60], has appeared in Grea Cave. Already, several adventurers have been defeated, and one \eimpfemale adventurer was continuously violated by \edb[e,60] until it was satisfied. Please be aware of the danger and subjugate the \edb[e,60] residing in Grea Cave. It is said to be near the western water area immediately after entering from the Ragras side.",
              {},
@@ -333,7 +333,7 @@ module Quest
              {}
              ],
   
-             [41, 91, "Extermination", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "4000\eg\n\edbi[a,333]、\edbi[a,334]", "30～",
+             [41, 91, "Boss Hunt", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "4000\eg\n\edbi[a,333]、\edbi[a,334]", "30～",
              "Tentacle Squirming",
              "Monsters with tentacles, \eimp\edb[e,61], have appeared in the Hydra Marsh. \edb[e,61] uses its numerous tentacles to capture and violate \eimpfemale adventurers, so please be extra cautious, especially the ladies, while subjugating them. The location is the \eimpsecond area on the royal capital side of the marsh, just beyond the stepping stones to the west.\ec[0]",
              {},
@@ -385,7 +385,7 @@ module Quest
            {}
            ],
            
-           [47,   97,      "Extermination", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,261]×２", "40～", 
+           [47,   97,      "Boss Hunt", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,261]×２", "40～", 
            "Imp Slayer・Fierce Battle Edition", 
            "Please subjugate the swarms of \edb[e,5] that dwell in the desert caves. The enemies are numerous including mages, so prepare thoroughly before challenging them. Additionally, numerous adventurers have already attempted to subdue them but were outnumbered, and many female adventurers have been captured, so please rescue them as well.",
            {},
