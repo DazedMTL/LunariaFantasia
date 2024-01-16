@@ -206,11 +206,10 @@ module Quest
              [25, 75, "Delivery", "Nawate Town Adventurers' Guild", "Shrine Maiden \esb[14]", "\edbi[w,7], 1000\eg", "--",
              "Youkai Ecology",
              "To understand the ecology of youkai, please deliver three each of \edb[e,37] dropped \edbi[i,187] and\n\edb[e,44] dropped \edbi[i,189]. \edb[e,37] mainly inhabits the \eimpvillage surroundings\ec[0],\n\edb[e,44] dwells in the \eimpSealed Cave\ec[0].\n\n\edbi[i,187]　\e}Required Number 3/ Possessed Number \eqin[i,187]\e{\n\edbi[i,189]　\e}Required Number 3/ Possessed Number \eqin[i,189]\e{",
-             {
-                "187 i": 3, "189 i": 3
-              },
+
+             {"187 i"=>3, "189 i"=>3},
               {
-                "7 w": 1, "g": 1000
+                "7 w"=>1, "g"=>1000
               }
               ],
               
@@ -218,10 +217,10 @@ module Quest
               "Medicine Mixing",
               "The doctor at the clinic requests you to deliver 5 of \edbi[i,29],\nand 3 of \edbi[i,35].\nBoth can be collected in the Sealing Cave.\n\n\edbi[i,29]  \e}Required Amount 5/ Owned Amount \eqin[i,29]\e{\n\edbi[i,35]  \e}Required Amount 3/ Owned Amount \eqin[i,35]\e{",
               {
-                "29 i": 5, "35 i": 3
+                "29 i"=>5, "35 i"=>3
               },
               {
-                "262 i": 2, "20 i": 4
+                "262 i"=>2, "20 i"=>4
               }
               ],
               
@@ -229,10 +228,10 @@ module Quest
               "Spirit Stone",
               "\eshop[we4] would like to request 4 of \edbi[i,47] for a new weapon order for the blacksmith.\n\edbi[i,47] is an ore that can only be collected in Tokiwa.\n\n\edbi[i,47]  \e}Required Amount 4/ Owned Amount \eqin[i,47]\e{",
               {
-                "47 i": 4
+                "47 i"=>4
               },
               {
-                "g": 2000
+                "g"=>2000
               }
               ],
               
@@ -240,10 +239,10 @@ module Quest
               "Weaving Thread",
               "A woman living in the tenement houses is in trouble because she has\nrun out of weaving thread. She says that \edbi[i,184] would be a good substitute,\nso let's deliver 5 of \edbi[i,184].\n\n\edbi[i,184]  \e}Required Amount 5/ Owned Amount \eqin[i,184]\e{",
               {
-                "184 i": 5
+                "184 i"=>5
               },
               {
-                "283 i": 2
+                "283 i"=>2
               }
               ],
               
@@ -254,7 +253,7 @@ module Quest
               "According to Mr. \eshop[hu1] from the bathhouse, they lack stones for the bathhouse renovation.\nLet's go to the underground passage in Tokiwa and mine for \edbi[i,205].\nIt seems that \edbi[i,205] can be mined from places where water is falling\non both sides near the exit in Tokiwa.",
               {},
               {
-                "288 a": 1,"258 a": 1
+                "288 a"=>1,"258 a"=>1
               }
               ],
               
@@ -264,10 +263,10 @@ module Quest
               "Peaceful Demise",
               "At the port of Sakai, I met a melancholic nun.\nShe wants to give a peaceful sleep to the youkai called \edb[e,47].\nTo fulfill her wish, let's subjugate 8 \edb[e,47] wandering\nthe Kujo Labyrinth.\n\n\edb[e,47] Extermination  \e}Remaining \eqkm[47] bodies\e{",
               {
-                47: 8
+                47=>8
               },
               {
-                "97 i": 1
+                "97 i"=>1
               }
               ],
               
@@ -276,10 +275,10 @@ module Quest
               "When I went to see \esbt[34] after a long time, she seemed to envy me for going to Tokiwa.\nApparently, she admires Tokiwa and wants to at least taste the atmosphere of Tokiwa through its food.\nSo from the tea house near the northern ferry point,\nlet's buy rice balls and sweet dumplings for her.\ec[0]",
               {},
               {
-                "56 i": 1
+                "56 i"=>1
               },
               {
-                "l": [38,41], "s": [127], "t": "You can accept this quest after clearing Quest No. 20"
+                "l"=>[38,41], "s"=>[127], "t"=>"You can accept this quest after clearing Quest No. 20"
               }
               ],
               
@@ -290,10 +289,10 @@ module Quest
               "\ekpt[3] is having a break amidst the investigation of the mysterious man.\nShe seems tired because she's been investigating without much rest.\nTo relieve her fatigue, let's buy hot spring essence, which is said to have fatigue recovery effects,\nfrom the bathhouse in Nawate.",
               {},
               {
-                "57 i": 1
+                "57 i"=>1
               },
               {
-                "l": [27,29], "v": [[79,6,0]], "t": "You can accept this quest after clearing Quest No. 29"
+                "l"=>[27,29], "v"=>[[79,6,0]], "t"=>"You can accept this quest after clearing Quest No. 29"
               }
               ],
               
