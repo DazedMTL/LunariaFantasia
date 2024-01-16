@@ -99,21 +99,21 @@ class RPG::Class < RPG::BaseItem
   def param_change(param_id)
     case param_id
     when 0
-      return "ＨＰ"
+      return "HP"
     when 1
-      return "ＭＰ"
+      return "MP"
     when 2
-      return "攻撃力"
+      return "Attack"
     when 3
-      return "防御力"
+      return "Defense"
     when 4
-      return "魔力"
+      return "Magic"
     when 5
-      return "法力"
+      return "Mana"
     when 6
-      return "敏捷性"
+      return "Agility"
     else
-      return "心力"
+      return "Mind"
     end
   end
 end

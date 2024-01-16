@@ -106,7 +106,7 @@ class Game_Actor < Game_Battler
     #[[$game_variables[FAKEREAL::LIBERATE] + @pp, FAKEREAL::MAX_POTENTIAL].min, 0].max
   #end
   #--------------------------------------------------------------------------
-  # ○ 解放率による能力値の上昇　ＭＰ・魔力・魔法防御のみ
+  # ○ 解放率による能力値の上昇　MP・魔力・魔法防御のみ
   #--------------------------------------------------------------------------
   def liberate_point(param_id)
     case param_id

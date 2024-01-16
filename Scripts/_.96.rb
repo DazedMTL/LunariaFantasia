@@ -74,7 +74,7 @@ class RPG::Class < RPG::BaseItem
     @skill_ni ||= skill_name_id_set
   end
   def skill_name_id_set
-    return [$1, $2.to_i] if self.note =~ /\<スキル連結:(\D+?),(\d+)\>/
+    return [$1, $2.to_i] if self.note =~ /\<スキル連結:(.+),(\d+)\>/
     return ["", 0]
   end
 end

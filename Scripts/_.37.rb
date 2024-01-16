@@ -8,7 +8,7 @@ module FAKEREAL
   E_AURA   = "<雑魚避け>"
   ENCOUNT_TYPE = 1 #0だとデフォルト、1だとオリジナル
   
-  UNKNOWN_SWITCH = 14 # 敵ＨＰのハテナ表示判定
+  UNKNOWN_SWITCH = 14 # 敵HPのハテナ表示判定
 
   RANDOM = "Neighbor" # 
   

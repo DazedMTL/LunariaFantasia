@@ -354,9 +354,9 @@ module BattleManager
       text2 = ""
       $game_party.battle_eat.effects.each do |f|
         case f.code
-        when 11 ; text2 += "ＨＰ#{(f.value1 * 100).to_i}% "
-        when 12 ; text2 += "ＭＰ#{(f.value1 * 100).to_i}% "
-        when 13 ; text2 += "ＳＰ#{$game_party.battle_eat.note =~ /\<TP回復率:(\d+)\>/ ? $1 : ""}% " #if $game_party.battle_eat.note =~ /\<TP回復率:(\d+)\>/
+        when 11 ; text2 += "HP#{(f.value1 * 100).to_i}% "
+        when 12 ; text2 += "MP#{(f.value1 * 100).to_i}% "
+        when 13 ; text2 += "SP#{$game_party.battle_eat.note =~ /\<TP回復率:(\d+)\>/ ? $1 : ""}% " #if $game_party.battle_eat.note =~ /\<TP回復率:(\d+)\>/
         when 22 
           if f.data_id == 2
             text2 += "Poison "
