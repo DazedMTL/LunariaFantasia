@@ -175,7 +175,7 @@ module Quest
   
              [21,   71,      "Extermination", "Port Town Senessio Café with Ocean View", "\emob[p2_f]", "\edbi[i,54]", "--", 
              "Octopus Wiener", 
-             "\e}\e}A \emob[p2_f] at the port café has requested that we\nsubdue \edb[e,34] around \eimpSenessio\ec[0]. Apparently, it makes\nher hungry watching them and is quite bothersome…\n\n\edb[e,34] Extermination　\e}Remaining \eqkm[34]\e{",
+             "\e}\e}A \emob[p2_f] at the port cafe has requested that we\nsubdue \edb[e,34] around \eimpSenessio\ec[0]. Apparently, it makes\nher hungry watching them and is quite bothersome…\n\n\edb[e,34] Extermination　\e}Remaining \eqkm[34]\e{",
              {34=>5},
              {"54 i"=>1}
              ],
@@ -275,7 +275,7 @@ module Quest
              {"v"=>[[62,6,0]], "t"=>"This quest can be accepted after completing Quest No. 12"}
              ],
   
-             [34, 84, "Hunt", "Ragras Commercial Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "5000\eg", "28～",
+             [34, 84, "Extermination", "Ragras Commercial Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "5000\eg", "28～",
              "That Pig, Beware its Ferocity...",
              "An urgent request. A ferocious monster, the \eimp\edb[e,60], has appeared in Grea Cave. Already, several adventurers have been defeated, and one \eimpfemale adventurer was continuously violated by \edb[e,60] until it was satisfied. Please be aware of the danger and subjugate the \edb[e,60] residing in Grea Cave. It is said to be near the western water area immediately after entering from the Ragras side.",
              {},
@@ -333,7 +333,7 @@ module Quest
              {}
              ],
   
-             [41, 91, "Hunt", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "4000\eg\n\edbi[a,333]、\edbi[a,334]", "30～",
+             [41, 91, "Extermination", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "4000\eg\n\edbi[a,333]、\edbi[a,334]", "30～",
              "Tentacle Squirming",
              "Monsters with tentacles, \eimp\edb[e,61], have appeared in the Hydra Marsh. \edb[e,61] uses its numerous tentacles to capture and violate \eimpfemale adventurers, so please be extra cautious, especially the ladies, while subjugating them. The location is the \eimpsecond area on the royal capital side of the marsh, just beyond the stepping stones to the west.\ec[0]",
              {},
@@ -385,7 +385,7 @@ module Quest
            {}
            ],
            
-           [47,   97,      "Hunt", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,261]×２", "40～", 
+           [47,   97,      "Extermination", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,261]×２", "40～", 
            "Imp Slayer・Fierce Battle Edition", 
            "Please subjugate the swarms of \edb[e,5] that dwell in the desert caves. The enemies are numerous including mages, so prepare thoroughly before challenging them. Additionally, numerous adventurers have already attempted to subdue them but were outnumbered, and many female adventurers have been captured, so please rescue them as well.",
            {},
@@ -587,7 +587,7 @@ end
   # 討伐と納品のクエストクリア判定
   def self.cc(n)
     item = q_ary(n)
-    if item[2] == "Hunt"
+    if item[2] == "Extermination"
       key = item[9].keys
       key.all?{|id| $game_party.kill_list(id) == 0 }
     elsif item[2] == "Delivery"
@@ -601,7 +601,7 @@ end
   # 終了　総合
   def self.q_end(n)
     item = q_ary(n)
-    if item[2] == "Hunt"
+    if item[2] == "Extermination"
       kill_end(item)
     elsif item[2] == "Delivery"
       deliver_end(item)
