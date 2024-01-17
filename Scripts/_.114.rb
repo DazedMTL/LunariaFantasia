@@ -312,138 +312,138 @@ module Quest
              {"l"=>[37,40], "h"=>1}
              ],
   
-             [35, 85, "Extermination", "Border Checkpoint", "\emob[p6_m]", "\edbi[i,118]×2\n\edbi[i,70]×2", "26～",
-             "If One Must Be Poisoned",
-             "\e}\e}At the border checkpoint, I met \emob[p6_m] who said he is weak against poison attacks. Let's help him reduce the number of \edb[e,54] in the Hydra Marsh before crossing it by subjugating five \edb[e,54].\n\n\edb[e,54] Extermination　\e}Remaining \eqkm[54] bodies\e{",
+             [35,   85,      "Subjugation", "Border Checkpoint", "\emob[p6_m]", "\edbi[i,118]×2\n\edbi[i,70]×2", "26~", 
+             "If Poisoned, Make It Quick", 
+             "\e}\e}At the border checkpoint, I encountered a \emob[p6_m] who\nis weak against poison attacks. Before crossing the wetlands,\nhe wants to reduce the number of \edb[e,54] as much as possible.\nLet's subdue 5 \edb[e,54] for him in the Hydra Wetlands.\n\n\edb[e,54] Subjugation  \e}Remaining \eqkm[54]\e{",
              {54=>5},
              {"118 i"=>2, "70 i"=>2},
              {}
              ],
-  
-  #--------↓Arrival in Cactus-----------------------------------------------------------------------------------
-  
-             [36, 86, "Other", "Furisenia Temple 4th Floor Small Room", "\esb[34]", "???", "33～",
-             "Humans and Monsters",
-             "\e}\e}Anemone, a monster, says she would like to \eimptravel together one day. However, I can't take her, a monster, around, and because she herself does not enjoy fighting, she deems it best not to leave the temple. Her next request is to taste the apple manju from Ragras. Let's go to \eimpRagras\ec[0] and buy some \eimpapple manju\ec[0] from a street stall to give to her.",
+             
+  #--------↓Cactus Arrival-----------------------------------------------------------------------------------
+             
+             [36,   86,      "Other", "Frisenia Temple 4F Small Room", "\esb[34]", "???", "33~", 
+             "Humans and Monsters", 
+             "\e}\e}A \esbt[34] who says she wants to travel with me.\nHowever, as she is a monster, she can't easily accompany\nme outside, and since she dislikes fighting, she hesitates\nto leave the temple. Her next request was to try the\nLagrus specialty, apple manju. Let's go to Lagrus\nimmediately and buy some apple manju at the street stall.",
              {},
              {},
-             {"l"=>[38,41], "s"=>[128], "t"=>"This quest can be accepted after completing Quest No. 31"}
+             {"l"=>[38,41], "s"=>[128], "t"=>"This quest can be undertaken after clearing\nQuest No.31"}
              ],
-  
-             [37, 87, "Extermination", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "1000\eg、\edbi[a,289]", "28～",
-             "Ghostbusting",
-             "\e}\e}In \eimpFolia Ruins\ec[0], there are monsters that have left unfinished business in this world and cannot pass on peacefully. This request is to subjugate one such ghostly monster, \edb[e,55]. Please subjugate five \edb[e,55].\n\n\edb[e,55] Extermination　\e}Remaining \eqkm[55] bodies\e{",
+             
+             [37,   87,      "Subjugation", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "1000\eg, \edbi[a,289]", "28~", 
+             "Ghost Extermination", 
+             "\e}\e}At the Folia Ruins, the souls of monsters unable\nto pass on to the next world appear. This time, we are\nrequesting the subjugation of such ghostly monsters,\n\edb[e,55]. Please subdue 5 \edb[e,55].\n\n\edb[e,55] Subjugation  \e}Remaining \eqkm[55]\e{",
              {55=>5},
              {"g"=>1000, "289 a"=>1},
              {}
              ],
-  
-             [38, 88, "Extermination", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "1000\eg、\edbi[a,290]", "28～",
-             "Knight of the Shadows",
-             "\e}\e}There are monsters that lurk and merge with shadows. Please subjugate six shadow monsters, the \eimp\edb[e,12]. They mainly inhabit the \eimpFolia Ruins.\n\n\edb[e,12] Extermination　\e}Remaining \eqkm[12] bodies\e{",
+             
+             [38,   88,      "Subjugation", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "1000\eg, \edbi[a,290]", "28~", 
+             "Shadow Knight", 
+             "\e}\e}There exist monsters that lurk in shadows and become one\nwith them. Please subdue the shadowy monsters, \edb[e,12],\n6 bodies. They primarily inhabit the Folia Ruins.\n\n\edb[e,12] Subjugation  \e}Remaining \eqkm[12]\e{",
              {12=>6},
              {"g"=>1000, "290 a"=>1},
              {}
              ],
-  
-             [39, 89, "Delivery", "Cactus Royal Capital Adventurers' Guild", "Tool Shop", "2000\eg", "26～",
-             "Mysterious Plants",
-             "\e}\e}Plants that grow by absorbing mana from the atmosphere have mysterious magical powers. Among them, the plant \eimp\edbi[i,30], which is used in healing medications, is required. Please deliver four \edbi[i,30]. In this area, they can be collected in the \eimpHydra Marsh.\n\n\edbi[i,30]　\e}Required Number 4/ Possessed Number \eqin[i,30]\e{",
+             
+             [39,   89,      "Delivery", "Royal Capital Cactus Adventurers' Guild", "Tool Shop", "2000\eg", "26~", 
+             "Mysterious Plant", 
+             "\e}\e}Plants that grow by absorbing mana from the air\nharness mystical magical power. Among them, the plant\nused in healing potions called \edbi[i,30] must be delivered,\n4 pieces. You can gather them in the Hydra Wetlands nearby.\n\n\edbi[i,30]  \e}Required amount 4/ Amount owned \eqin[i,30]\e{",
              {"30 i"=>4},
              {"g"=>2000},
              {}
              ],
-  
-             [40, 90, "Delivery", "Cactus Royal Capital Adventurers' Guild", "\emob[m2]", "\edbi[i,64]", "26～",
-             "I Want to Sleep While Numb",
-             "\e}\e}A peculiar person―ahem, a person with unique tastes wants to sleep while feeling numb. Thus, please deliver \eimp\edbi[i,79] and \edbi[i,80]\ec[0], three of each.\n\n\edbi[i,79]　\e}Required Number 3/ Possessed Number \eqin[i,79]\e{\n\edbi[i,80]　\e}Required Number 3/ Possessed Number \eqin[i,80]\e{",
+             
+             [40,   90,      "Delivery", "Royal Capital Cactus Adventurers' Guild", "\emob[m2]", "\edbi[i,64]", "26~", 
+             "Sleep While Being Numb", 
+             "\e}\e}A request from a peculiar person—no, a person with\nunique tastes who wants to fall asleep while feeling numb.\nTherefore, please deliver \edbi[i,79] and \edbi[i,80],\n3 of each.\n\n\edbi[i,79]  \e}Required amount 3/ Amount owned \eqin[i,79]\e{\n\edbi[i,80]  \e}Required amount 3/ Amount owned \eqin[i,80]\e{",
              {"79 i"=>3, "80 i"=>3},
              {"64 i"=>1},
              {}
              ],
-  
-             [41, 91, "Boss Hunt", "Cactus Royal Capital Adventurers' Guild", "Guild Receptionist \emob[qp2]", "4000\eg\n\edbi[a,333]、\edbi[a,334]", "30～",
-             "Tentacle Squirming",
-             "\e}\e}Monsters with tentacles, \eimp\edb[e,61], have appeared in the Hydra Marsh. \edb[e,61] uses its numerous tentacles to capture and violate \eimpfemale adventurers, so please be extra cautious, especially the ladies, while subjugating them. The location is the \eimpsecond area on the royal capital side of the marsh, just beyond the stepping stones to the west.\ec[0]",
+             
+             [41,   91,      "Major Subjugation", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "4000\eg\n\edbi[a,333], \edbi[a,334]", "30~", 
+             "Wriggling Tentacles", 
+             "\e}\e}Multiple \edb[e,61] with tentacles have appeared\nin the Hydra Wetlands. \edb[e,61] captures\nfemale adventurers with its countless tentacles. Please be\nvery cautious, especially if you are a woman, as you carry\nout this subjugation. The location is through the western stepping stones in the\nsecond area after entering the wetlands from the royal capital side.",
              {},
              {"g"=>4000, "333 a"=>1, "334 a"=>1},
              {"l"=>[37,40], "h"=>1}
              ],
-  
-             [42, 92, "Errand", "Cactus Capital Wealthy District Brown-roofed House", "\esb[19]", "\edbi[i,98]\n\edbi[a,259]、\edbi[a,260]", "--",
-             "A Letter to Mother",
-             "\e}\e}In the royal capital of the Dalia Kingdom, I met \esb[32]'s mother, my colleague's mother. It seems that Eriora, of Dalia's nobility, became a court magician in Sagittarius against her father's wishes. Persuade her to write \eimpa letter destined for her mother and let's get it from her. \esb[32] is likely on the \eimpfirst floor of the magician's wing in Sagittarius Castle.\ec[0]",
+             
+             [42,   92,      "Errand", "Royal Capital Cactus Wealthy District, Brown-roofed House", "\esb[19]", "\edbi[i,98]\n\edbi[a,259], \edbi[a,260]", "--", 
+             "Letter to Mother", 
+             "\e}\e}I unexpectedly ran into the mother of my coworker \esb[32] in\nthe Royal Capital of the Dalia Kingdom. It turns out that\n\esbt[32], though born into Dalia nobility, defied her\nfather's opposition and became a court magician in the\nneighboring country of Sagittarius. Let's persuade her to\nwrite a letter to her mother.\n\esb[32] must be in the magicians' wing on the\nfirst floor of Sagittarius Castle.",
              {},
              {"98 i"=>1, "259 a"=>1, "260 a"=>1},
-             {"s"=>[132],"l"=>[38,50], "t"=>"This quest can be accepted if you have spoken to the court magician Eriora of Sagittarius at least once"}
+             {"s"=>[132],"l"=>[38,50], "t"=>"You can undertake this quest as long as you have\nspoken to the Sagittarius court magician \esbt[32] at least once"}
              ],
-           
-#--------↓After the Queen's Triumph-------------------------------------------------------------------------
-           # 43 is after the Kamala confrontation
-           [43,   93,      "Extermination", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,265]×２", "36～", 
-           "Skeletal Warriors", 
-           "\e}\e}I have heard that warriors who died in deserts or mines wander as skeletons. Please subjugate \eimp\edb[e,73]\ec[0] appearing in deserts and mines so they do not make the living join them. You need to defeat 6 of them.\n\edb[e,73]Extermination \e}Remaining \eqkm[73] units\e{",
-           {73=>6},
-           {"265 a"=>2},
-           {}
-           ],
-           
-           [44,   94,      "Search", "Mountain Village Biorsa, Lower House", "\esb[4]", "\edbi[i,9]×３", "32～", 
-           "Please Help My Son!", 
-           "\e}\e}A boy from Biorsa \esb[3] has not returned after going to the \eimpFolia Ruins\ec[0]. His life is in danger, so we must hurry to the ruins to search for the boy.",
-           {},
-           {"9 i"=>3},
-           {"h"=>1}
-           ],
-           
-#--------↓After confronting Kamala-------------------------------------------------------------------------------
-           
-           [45,   95,      "Delivery", "Royal Capital Cactus Adventurer's Guild", "Researcher", "\edbi[i,40]×２", "36～", 
-           "Suspicious Research", 
-           "\e}\e}A researcher from the castle is looking for materials for an experiment, hence please deliver 4 each of \edbi[i,191], \edbi[i,192], and \edbi[i,193].\n\n\edbi[i,191]　\e} Required amount 4/ Owned amount \eqin[i,191]\e{\n\edbi[i,192]　\e} Required amount 4/ Owned amount \eqin[i,192]\e{\n\edbi[i,193]　\e} Required amount 4/ Owned amount \eqin[i,193]\e{",
-           {"191 i"=>4, "192 i"=>4, "193 i"=>4},
-           {"40 i"=>2},
-           {}
-           ],
-           
-           [46,   96,      "Extermination", "Royal Capital Cactus Adventurer's Guild", "Women with Boyfriends", "\edbi[i,287]×５", "36～", 
-           "A Wish from Women", 
-           "\e}\e}There are successive reports of boyfriends being seduced by succubi. Men charmed by succubi become spineless and neglect their lovers or wives. A multitude of women are voicing their resentment, so please subjugate \eimp12 units of \edb[e,71] found in the Dark Mines and the Desert.\n\edb[e,71]Extermination \e}Remaining \eqkmk[SC] units\e{",
-           {"SC"=>12},
-           {"287 i"=>5},
-           {}
-           ],
-           
-           [47,   97,      "Boss Hunt", "Royal Capital Cactus Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,261]×２", "40～", 
-           "Imp Slayer・Fierce Battle Edition", 
-           "\e}\e}Please subjugate the swarms of \edb[e,5] that dwell in the desert caves. The enemies are numerous including mages, so prepare thoroughly before challenging them. Additionally, numerous adventurers have already attempted to subdue them but were outnumbered, and many female adventurers have been captured, so please rescue them as well.",
-           {},
-           {"261 a"=>2},
-           {"v"=>[[83,6,0]], "t"=>"This quest can be accepted after clearing Quest No.33"}
-           ],
-           
-#---------↓Chapter 8 Begins------------------------------------------------------------------------------
-
-           [48,   98,      "Delivery", "Desert Oasis", "\emob[pe_f]", "1000\eg\n\edbi[i,40]×４", "--", 
-           "Turtle Shell", 
-           "\e}\e}Met accidentally at the oasis with a merchant whom I saved from thieves in Lagras. It seems she is collecting \eimp\edbi[i,185]\ec[0] dropped by \eimp\edb[e,79]. She needs about 5, so let's bring them to her once we've gathered enough.\n\n\edbi[i,185]　\e} Required amount 5/ Owned amount \eqin[i,185]\e{",
-           {"185 i"=>5},
-           {"40 i"=>4, "g"=>1000},
-           {}
-           ],
-           
-           
-           [49,   99,      "Delivery", "Resort Area Galadi Beach", "\emob[f7s]", "\edbi[i,64]×２", "--", 
-           "Boosting Charm!",
-           "\e}\e}A woman at Galadi Beach asked for a \edbi[i,325] because she can't get the ingredients on her own. She says that with this, she can swoon the beachgoers...? Let's gather the ingredients, cook it at the shop, and deliver it to her.\n\n\edbi[i,325]　\e} Required amount 1/ Owned amount \eqin[i,325]\e{",
-           {"325 i"=>1},
-           {"64 i"=>2},
-           {}
-           ],
-           
-           [50,   100,      "Extermination", "Resort Area Galadi East Cliff", "\emob[ex]", "\edbi[a,114]", "44～", 
-           "Grudge Against the Mermaid", 
-           "\e}\e}A man looking out to sea from the cliff top in Galadi. He was dumped by his girlfriend and blames the creature \edb[e,84] for causing it. To clear his grudge, let us go and subjugate \eimp6 units of \edb[e,84]\ec[0] that inhabit the \eimpFourth-floor and above of the Demon's Tower.\n\n\edb[e,84]Extermination　\e}Remaining \eqkm[84] units\e{",
+             
+  #--------↓After the Queen's Triumph-------------------------------------------------------------------------
+             # 43 is after the confrontation with Kamala
+             [43,   93,      "Subjugation", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "\edbi[a,265]×2", "36~", 
+             "Skeleton Warrior", 
+             "\e}\e}It's said that warriors died in the desert or mine\nwander as skeletons. To prevent them from taking the living\nwith them, please subdue 6 \edb[e,73] that appear\nin the desert or the mine.\n\n\edb[e,73] Subjugation  \e}Remaining \eqkm[73]\e{",
+             {73=>6},
+             {"265 a"=>2},
+             {}
+             ],
+             
+             [44,   94,      "Search", "Mountain Village Bioosa House (bottom)", "\esb[4]", "\edbi[i,9]×3", "32~", 
+             "Please Help My Son!", 
+             "\e}\e}A young boy \esb[3] from Bioosa went to the\nFolia Ruins and has not returned. His life may be in\ndanger, so let's rush to the ruins to look for the boy.",
+             {},
+             {"9 i"=>3},
+             {"h"=>1}
+             ],
+             
+  #--------↓After the Confrontation with Kamala-------------------------------------------------------------------------------
+             
+             [45,   95,      "Delivery", "Royal Capital Cactus Adventurers' Guild", "Researcher", "\edbi[i,40]×2", "36~", 
+             "Suspicious Research", 
+             "\e}\e}A researcher from the castle is looking for\nexperimental materials. Please deliver 4 pieces each of\n\edbi[i,191], \edbi[i,192],\nand \edbi[i,193].\n\n\edbi[i,191]  \e}Required amount 4/ Amount owned \eqin[i,191]\e{\n\edbi[i,192]  \e}Required amount 4/ Amount owned \eqin[i,192]\e{\n\edbi[i,193]  \e}Required amount 4/ Amount owned \eqin[i,193]\e{",
+             {"191 i"=>4, "192 i"=>4, "193 i"=>4},
+             {"40 i"=>2},
+             {}
+             ],
+             
+             [46,   96,      "Subjugation", "Royal Capital Cactus Adventurers' Guild", "Women with Boyfriends", "\edbi[i,287]×5", "36~", 
+             "Women's Wishes", 
+             "\e}\e}There have been numerous reports of boyfriends being\ntempted by succubi. Men bewitched by succubi become\nboneless and neglect their lovers or wives...\nAs such, there have been numerous grievances from women.\nPlease subdue 12 \edb[e,71] that appear in the Dark\nMine or the Desert.\n\n\edb[e,71] Subjugation  \e}Remaining \eqkmk[SC]\e{",
+             {"SC"=>12},
+             {"287 i"=>5},
+             {}
+             ],
+             
+             [47,   97,      "Major Subjugation", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "\edbi[a,261]×2", "40~", 
+             "Goblin Slayer - Fierce Battle Edition", 
+             "\e}\e}We are requesting the subjugation of a swarm of\n\edb[e,5] that have taken up residence in the desert cave.\nSince there are also mages among the large numbers,\nplease thoroughly prepare for the battle. Many adventurers\nhave already faced defeat attempting to subdue them, and\nnumerous female adventurers have been captured,\nso rescuing them is also a part of this request.",
+             {},
+             {"261 a"=>2},
+             {"v"=>[[83,6,0]], "t"=>"You can undertake this quest after clearing\nQuest No.33"}
+             ],
+             
+  #---------↓After Chapter Eight Begins------------------------------------------------------------------------------
+  
+             [48,   98,      "Delivery", "Desert Oasis", "\emob[pe_f]", "1000\eg\n\edbi[i,40]×4", "--", 
+             "Tortoise Shell", 
+             "\e}\e}I ran into the merchant I saved from thieves in Lagrus\nby chance at the oasis. Apparently, she is collecting\n\edbi[i,185] that \edb[e,79] and others drop.\nShe needs about five, so let's deliver them to her once we\nhave enough.\n\n\edbi[i,185]  \e}Required amount 5/ Amount owned \eqin[i,185]\e{",
+             {"185 i"=>5},
+             {"40 i"=>4, "g"=>1000},
+             {}
+             ],
+             
+             
+             [49,   99,      "Delivery", "Resort Garadi Beach", "\emob[f7s]", "\edbi[i,64]×2", "--", 
+             "Boost Your Charm!",
+             "\e}\e}A woman at the beach in Garadi has asked me to make a\n\edbi[i,325] because she cannot obtain the materials\nherself. She claims that after eating it, she can make any\nmen at the beach head over heels...? Let's gather the\ningredients, cook them, and deliver the dish to her.\n\n\edbi[i,325]  \e}Required amount 1/ Amount owned \eqin[i,325]\e{",
+             {"325 i"=>1},
+             {"64 i"=>2},
+             {}
+             ],
+             
+             [50,   100,      "Subjugation", "Resort Garadi East Cliff", "\emob[ex]", "\edbi[a,114]", "44~", 
+             "Mermaid's Grudge",
+             "\e}\e}A man gazing at the sea from the cliffs of Garadi.\nAfter being rejected by his girlfriend, he (seemingly)\nblames the \edb[e,84] for causing it. To settle his grudge,\nlet's subdue 6 \edb[e,84] inhabiting\nthe Tower of All Demons from floor 4 upwards.\n\n\edb[e,84] Subjugation  \e}Remaining \eqkm[84]\e{",
            {84=>6},
            {"114 a"=>1},
            {}
