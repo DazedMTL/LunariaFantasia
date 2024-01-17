@@ -69,7 +69,7 @@ module Quest
              
              [8,   58,      "Delivery", "Sagittarius Town In front of the Restaurant", "\emob[a1_f1]", "\edbi[a,22]", "--", 
              "In Search of Ingredients?", 
-             "The restaurant wants to use \edbi[i,75], which grows in forests,\nfor their dishes. Apparently, \edbi[i,75] becomes very\ntasty after detoxifying… Let's collect \edbi[i,75] from\nRizel Forest and give it to \emob[a1_f1].\n\n\edbi[i,75]　Needed 5/ In Possession \eqin[i,75]",
+             "The restaurant wants to use \edbi[i,75], which grows in \nforests, for their dishes. Apparently, \edbi[i,75] \nbecomes very tasty after detoxifying… Let's collect \n\edbi[i,75] from Rizel Forest and give it to \emob[a1_f1].\n\n\edbi[i,75]　Needed 5/ In Possession \eqin[i,75]",
              {"75 i"=>5},
              {"22 a"=>1}
              ],
@@ -127,7 +127,7 @@ module Quest
   
              [15,   65,      "Extermination", "Commercial Town Ragras Adventurer's Guild", "Guild Receptionist \emob[qp2]", "\edbi[a,84]、\edbi[a,106]", "13～", 
              "Snake Hunt", 
-             "Timor Mountain is an important route for traffic between Dalia.\nHowever, the mountain path is dangerous due to numerous\nsnake monsters 'edb[e,23]' living there. For\nthe sake of those who travel between the two countries,\nplease subjugate six \eimp\edb[e,23].\n\n\edb[e,23] Extermination　Remaining \eqkm[23]",
+             "Timor Mountain is an important route for traffic between Dalia.\nHowever, the mountain path is dangerous due to numerous\nsnake monsters '\edb[e,23]' living there. For\nthe sake of those who travel between the two countries,\nplease subjugate six \eimp\edb[e,23].\n\n\edb[e,23] Extermination　Remaining \eqkm[23]",
              {23=>6},
              {"84 a"=>1, "106 a"=>1}
              ],
@@ -156,7 +156,7 @@ module Quest
   
              [19,   69,      "Errand", "Timor Mountain Cave Entrance", "\emob[p1_f]", "\edbi[i,2]×２、\n\edbi[i,8]", "--", 
              "Lower the Rope Ladder", 
-             "\emob[p1_f] en route over the mountain fears goblins and can't enter\nthe cave leading to the cliff. Without passing through the cave,\nthe mountain cannot be crossed… So he asked us to\ngo through the cave on his behalf and drop the rope ladder\non the other side. Let's complete the mountain path\nby lowering the rope ladder from the cliff on his behalf.",
+             "\emob[p1_f] en route over the mountain fears goblins and \ncan't enter the cave leading to the cliff. Without passing through \nthe cave, the mountain cannot be crossed… So he asked us to\ngo through the cave on his behalf and drop the rope ladder\non the other side. Let's complete the mountain path\nby lowering the rope ladder from the cliff on his behalf.",
              {},
              {"2 i"=>2, "8 i"=>1}
              ],
@@ -191,21 +191,21 @@ module Quest
              
              [23,   73,      "Extermination", "Town of Nawate Adventurers' Association", "Guild Receptionist \emob[qp2]", "\edbi[i,123]、\edbi[i,124]\n\edbi[i,125]、\edbi[i,126]", "20～", 
              "Foreign Goblin Slayer", 
-             "The 'edb[e,41]' yokai, who turns pillows to\nconfuse sleeping people, have been spotted\n\eimparound and inside the Sealing Cave\ec[0].\nPlease subjugate five \eimp\edb[e,41].\n\n\edb[e,41] Extermination　Remaining \eqkm[41]",
+             "The '\edb[e,41]' yokai, who turns pillows to\nconfuse sleeping people, have been spotted\n\eimparound and inside the Sealing Cave\ec[0].\nPlease subjugate five \eimp\edb[e,41].\n\n\edb[e,41] Extermination　Remaining \eqkm[41]",
              {41=>5},
              {"123 i"=>1, "124 i"=>1, "125 i"=>1, "126 i"=>1}
              ],
            
              [24, 74, "Extermination", "Nawate Town Adventurers' Guild", "Guild Receptionist \emob[qp2]", "\edbi[i,64]×2\n1000\eg", "20～",
              "Demonic Youkai",
-             "In Tokiwa, there exist demonic youkai that seduce men, kidnap, and consume them. Please subjugate four of each of these youkai \eimp\edb[e,42] and\n\edb[e,43](Jorougumo). Both inhabit the Sealed Cave from the midway point onwards.\n\n\edb[e,42] Extermination　Remaining \eqkm[42] bodies\n\edb[e,43] Extermination　Remaining \eqkm[43] bodies",
+             "In Tokiwa, there exist demonic youkai that seduce men, \nkidnap, and consume them. Please subjugate four of each of these \nyoukai \eimp\edb[e,42] and \edb[e,43](Jorougumo). Both inhabit the \nSealed Cave from the midway point onwards.\n\n\edb[e,42] Extermination　Remaining \eqkm[42] bodies\n\edb[e,43] Extermination　Remaining \eqkm[43] bodies",
              {42=>4, 43=>4},
              {"64 i"=>2, "g"=>1000}
              ],
   
              [25, 75, "Delivery", "Nawate Town Adventurers' Guild", "Shrine Maiden \esb[14]", "\edbi[w,7], 1000\eg", "--",
              "Youkai Ecology",
-             "To understand the ecology of youkai, please deliver three each of \edb[e,37] dropped \edbi[i,187] and\n\edb[e,44] dropped \edbi[i,189]. \edb[e,37] mainly inhabits the \eimpvillage surroundings\ec[0],\n\edb[e,44] dwells in the \eimpSealed Cave\ec[0].\n\n\edbi[i,187]　Required Number 3/ Possessed Number \eqin[i,187]\n\edbi[i,189]　Required Number 3/ Possessed Number \eqin[i,189]",
+             "To understand the ecology of youkai, please deliver three \neach of \edb[e,37] dropped \edbi[i,187] and\n\edb[e,44] dropped \edbi[i,189]. \edb[e,37] inhabits \nthe \eimpvillage surroundings\ec[0],\edb[e,44] dwells in the \eimpSealed Cave\ec[0].\n\n\edbi[i,187]　Required Number 3/ Possessed Number \eqin[i,187]\n\edbi[i,189]　Required Number 3/ Possessed Number \eqin[i,189]",
 
              {"187 i"=>3, "189 i"=>3},
               {
@@ -226,7 +226,7 @@ module Quest
               
               [27, 77, "Delivery", "Nawate Town Adventurers' Guild", "\eshop[we4]", "2000\eg", "--",
               "Spirit Stone",
-              "\eshop[we4] would like to request 4 of \edbi[i,47] for a new weapon order for the blacksmith.\n\edbi[i,47] is an ore that can only be collected in Tokiwa.\n\n\edbi[i,47]  Required Amount 4/ Owned Amount \eqin[i,47]",
+              "\eshop[we4] would like to request 4 of \edbi[i,47] for a \nnew weapon order for the blacksmith.\n\edbi[i,47] is an ore that can only be collected in Tokiwa.\n\n\edbi[i,47]  Required Amount 4/ Owned Amount \eqin[i,47]",
               {
                 "47 i"=>4
               },
@@ -237,7 +237,7 @@ module Quest
               
               [28, 78, "Delivery", "Nawate Town Tenement Houses", "\emob[f2]", "\edbi[i,283]×2", "--",
               "Weaving Thread",
-              "A woman living in the tenement houses is in trouble because she has\nrun out of weaving thread. She says that \edbi[i,184] would be a good substitute,\nso let's deliver 5 of \edbi[i,184].\n\n\edbi[i,184]  Required Amount 5/ Owned Amount \eqin[i,184]",
+              "A woman living in the tenement houses is in trouble because she has\nrun out of weaving thread. She says that \edbi[i,184] \nwould be a good substitute,\nso let's deliver 5 of \edbi[i,184].\n\n\edbi[i,184]  Required Amount 5/ Owned Amount \eqin[i,184]",
               {
                 "184 i"=>5
               },
@@ -250,7 +250,7 @@ module Quest
               
               [29, 79, "Errand", "In front of Nawate Town Bathhouse", "\eshop[hu1]", "\edbi[a,288], \edbi[a,258]", "--",
               "Grand Reopening",
-              "According to Mr. \eshop[hu1] from the bathhouse, they lack stones for the bathhouse renovation.\nLet's go to the underground passage in Tokiwa and mine for \edbi[i,205].\nIt seems that \edbi[i,205] can be mined from places where water is falling\non both sides near the exit in Tokiwa.",
+              "According to Mr. \eshop[hu1] from the bathhouse, \nthey lack stones for the bathhouse renovation.\nLet's go to the underground passage in \nTokiwa and mine for \edbi[i,205].\nIt seems that \edbi[i,205] can be mined from places \nwhere water is falling\non both sides near the exit in Tokiwa.",
               {},
               {
                 "288 a"=>1,"258 a"=>1

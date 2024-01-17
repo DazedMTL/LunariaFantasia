@@ -392,6 +392,7 @@ class Window_BookDetail < Window_Base
   # 〇 通常文字の処理　
   #--------------------------------------------------------------------------
   def process_normal_character(c, pos)
+    contents.font.size = 14
     text_width = text_size(c).width
     th = text_size(c).height
     ty = 24 > th ? 24 - th - 2 : 0

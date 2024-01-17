@@ -489,7 +489,7 @@ class Window_QuestDetail < Window_Base
     text_width = text_size(c).width
     th = text_size(c).height
     ty = 24 > th ? 24 - th - 2 : 0
-    draw_text(pos[:x], pos[:y] + ty, text_width * 2, pos[:height], c)
+    draw_text(pos[:x], pos[:y] - 15 + ty, text_width * 2, pos[:height], c)
     pos[:x] += text_width
   end
   #--------------------------------------------------------------------------
