@@ -65,7 +65,7 @@ module Quest
             
             [SUB.size + 9,   109,      "Boss Hunt", "Commercial Town Lagras  Adventurer's Guild", "Guild Receptionist \emob[qp2]", "5000\eg,\edbi[i,195]", "55～", 
             "Mother Ant", 
-            "A superior species to \edb[e,7], the \eimp\edb[e,139]\ec[0] has been spotted in Glear Cave.\nMother ants continuously produce offspring, leading to an overpopulation of \edb[e,7] in the cave.\nTo prevent this, please exterminate the \edb[e,139]. The location is on the western side of the middle\nslope with the \eimp teleportation circle.\ec[0]",
+            "A superior species to \edb[e,7], the \eimp\edb[e,139]\ec[0] has been spotted \nin Glear Cave. Mother ants continuously produce offspring, leading to an \noverpopulation of \edb[e,7] in the cave.\nTo prevent this, please exterminate the \edb[e,139]. \nThe location is on the western side of the middle\nslope with the \eimp teleportation circle.\ec[0]",
             {},
             {"g"=>5000, "195 i"=>1},
             ],
