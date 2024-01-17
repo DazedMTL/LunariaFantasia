@@ -224,7 +224,7 @@ class Window_BookHelp < Window_Help
   # ○ 文字の大きさを設定
   #--------------------------------------------------------------------------
   def font_size
-    return 20
+    return 14
   end
   #--------------------------------------------------------------------------
   # ● 行の高さを取得
@@ -262,7 +262,7 @@ class Window_BookHelp < Window_Help
   # ● 制御文字つきテキストの描画
   #--------------------------------------------------------------------------
   def draw_text_ex(x, y, text)
-    contents.font.size = 14
+    
     text = convert_escape_characters(text)
     pos = {:x => x, :y => y, :new_x => x, :height => calc_line_height(text)}
     process_character(text.slice!(0, 1), text, pos) until text.empty?
@@ -272,7 +272,7 @@ class Window_BookHelp < Window_Help
   #--------------------------------------------------------------------------
   def refresh
     contents.clear
-    contents.font.size = 14
+    
     if @category == :character 
       self.visible = @flag
       draw_background(contents.rect)
@@ -392,7 +392,7 @@ class Window_BookDetail < Window_Base
   # 〇 通常文字の処理　
   #--------------------------------------------------------------------------
   def process_normal_character(c, pos)
-    contents.font.size = 14
+    
     text_width = text_size(c).width
     th = text_size(c).height
     ty = 24 > th ? 24 - th - 2 : 0
