@@ -362,7 +362,7 @@ module Quest
              {}
              ],
              
-             [41,   91,      "Major Extermination", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "4000\eg\n\edbi[a,333], \edbi[a,334]", "30~", 
+             [41,   91,      "Boss Hunt", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "4000\eg\n\edbi[a,333], \edbi[a,334]", "30~", 
              "Wriggling Tentacles", 
              "Multiple \edb[e,61] with tentacles have appeared\nin the Hydra Wetlands. \edb[e,61] captures\nfemale adventurers with its countless tentacles. Please be\nvery cautious, especially if you are a woman, as you carry\nout this Extermination. The location is through the western stepping stones in the\nsecond area after entering the wetlands from the royal capital side.",
              {},
@@ -414,7 +414,7 @@ module Quest
              {}
              ],
              
-             [47,   97,      "Major Extermination", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "\edbi[a,261]×2", "40~", 
+             [47,   97,      "Boss Hunt", "Royal Capital Cactus Adventurers' Guild", "Guild Reception \emob[qp2]", "\edbi[a,261]×2", "40~", 
              "Goblin Slayer - Fierce Battle Edition", 
              "We are requesting the Extermination of a swarm of\n\edb[e,5] that have taken up residence in the desert cave.\nSince there are also mages among the large numbers,\nplease thoroughly prepare for the battle. Many adventurers\nhave already faced defeat attempting to subdue them, and\nnumerous female adventurers have been captured,\nso rescuing them is also a part of this request.",
              {},
