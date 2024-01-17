@@ -316,7 +316,7 @@ across the \eC[8]Hydra Marsh\ec[0],
 and beyond that lies the \eC[8]capital, Cactus\ec[0].
 
 On the way from the checkpoint to the marsh there is 
-a town called \eC[8]Nemecia\ec[0], but it seems the 
+a town called \eC[8]Nemesia\ec[0], but it seems the 
 \eC[8]public order is not very good\ec[0].
 
 It would be wise not to stop there unless absolutely 
