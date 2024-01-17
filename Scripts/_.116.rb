@@ -409,10 +409,10 @@ class Window_QuestDetail < Window_Base
       half = line_height / 2
       #サブクエスト処理
       change_color(system_color)
-      draw_text(16, line_height * 2 + half, window_width, line_height, "Quest")
+      draw_text(16, line_height * 2 + half, window_width, line_height, "Quest:")
       draw_text(16, line_height * 5, window_width, line_height, "Client:")
       draw_text(16, line_height * 6 + half, window_width, line_height, "Reward:")
-      draw_text(16, line_height * 9, window_width, line_height, "Details")
+      draw_text(16, line_height * 8, window_width, line_height, "Details")
       pr = progress(item)
       title  = pr < 2 ? item[7].gsub(/./) {"？"} : item[7]
       lv     = pr < 1 ? "？？" : item[6]
@@ -431,7 +431,7 @@ class Window_QuestDetail < Window_Base
       draw_text(4, line_height * 0, window_width, line_height, title)
       change_color(normal_color)
       #依頼種別
-      draw_text(16, line_height * 1, window_width, line_height, "Quest: #{item[2]}")
+      draw_text(16, line_height * 1, window_width, line_height, "Type: #{item[2]}")
       #推奨Lv
       draw_text(180, line_height * 1, window_width, line_height, "Advised LV:#{lv}")
       l_text = ""
@@ -462,7 +462,7 @@ class Window_QuestDetail < Window_Base
         when 4; text = "Cleared"
         end
       end
-      draw_text(320, line_height * 1, window_width, line_height, text)
+      draw_text(320, line_height, window_width, line_height, text)
       #場所
       draw_text(28, line_height * 3 + half, window_width, line_height, place)
       #依頼人
@@ -470,7 +470,7 @@ class Window_QuestDetail < Window_Base
       #報酬
       draw_text_ex(66, line_height * 6 + half, reword)
       #詳細
-      draw_text_ex(28, line_height * 10, detail) unless l_text == "Expired"
+      draw_text_ex(28, line_height * 9, detail) unless l_text == "Expired"
     elsif item[0].is_a?(String)
       #メインストーリー処理
       change_color(system_color)
@@ -485,6 +485,7 @@ class Window_QuestDetail < Window_Base
   # 〇 通常文字の処理　
   #--------------------------------------------------------------------------
   def process_normal_character(c, pos)
+    contents.font.size = 14
     text_width = text_size(c).width
     th = text_size(c).height
     ty = 24 > th ? 24 - th - 2 : 0
@@ -514,6 +515,7 @@ class Window_QuestDetail < Window_Base
   #--------------------------------------------------------------------------
   def refresh
     contents.clear
+    contents.font.size = 14
     draw_quest(@item)
   end
 end

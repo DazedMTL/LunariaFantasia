@@ -262,6 +262,7 @@ class Window_BookHelp < Window_Help
   # ● 制御文字つきテキストの描画
   #--------------------------------------------------------------------------
   def draw_text_ex(x, y, text)
+    contents.font.size = 14
     text = convert_escape_characters(text)
     pos = {:x => x, :y => y, :new_x => x, :height => calc_line_height(text)}
     process_character(text.slice!(0, 1), text, pos) until text.empty?
@@ -271,7 +272,7 @@ class Window_BookHelp < Window_Help
   #--------------------------------------------------------------------------
   def refresh
     contents.clear
-    contents.font.size = font_size
+    contents.font.size = 14
     if @category == :character 
       self.visible = @flag
       draw_background(contents.rect)
@@ -862,7 +863,7 @@ class Window_BookDetail < Window_Base
       draw_text(16, line_height * 2 + half, window_width, line_height, "Location")
       draw_text(16, line_height * 5, window_width, line_height, "Client:")
       draw_text(16, line_height * 6 + half, window_width, line_height, "Reward:")
-      draw_text(16, line_height * 9, window_width, line_height, "Details")
+      draw_text(16, line_height * 8, window_width, line_height, "Details")
       pr = $game_system.book["quest"][item[1]]
       title  = pr ? item[7] : item[7].gsub(/./) {"？"}
       lv     = pr ? item[6] : "？？"
@@ -879,7 +880,7 @@ class Window_BookDetail < Window_Base
       draw_text(4, line_height * 0, window_width, line_height, title)
       change_color(normal_color)
       #依頼種別
-      draw_text(16, line_height * 1, window_width, line_height, "Request: #{item[2]}")
+      draw_text(16, line_height * 1, window_width, line_height, "Type: #{item[2]}")
       #推奨Lv
       draw_text(180, line_height * 1, window_width, line_height, "Advised LV:#{lv}")
       l_text = ""
@@ -898,7 +899,7 @@ class Window_BookDetail < Window_Base
       #報酬
       draw_text_ex(66, line_height * 6 + half, reword)
       #詳細
-      draw_text_ex(28, line_height * 10, detail)
+      draw_text_ex(28, line_height * 9, detail)
   end
   
 end
