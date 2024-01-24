@@ -131,9 +131,9 @@ class Window_GOChoice < Window_Command
   # ● コマンドリストの作成
   #--------------------------------------------------------------------------
   def make_command_list
-    add_command("そのままリトライ",      :retry)
-    add_command("イージーでリトライ",      :easy, easy_enabled)
-    add_command("ロード", :continue, continue_enabled)
+    add_command("Retry",      :retry)
+    add_command("Retry on Easy",      :easy, easy_enabled)
+    add_command("Load", :continue, continue_enabled)
     add_command(Vocab::to_title, :to_title)
   end
   #--------------------------------------------------------------------------
@@ -184,12 +184,12 @@ class Window_GOHelp < Window_Base
   def refresh
     contents.clear
     gold = $game_actors[1].level * 10
-    draw_text_ex(4, line_height * 0, "#{gold}\eg（Lunariaのレベル×10）支払ってリトライ可能です。")
-    draw_text_ex(4, line_height * 1, "リトライすると全キャラが完全回復した状態で今の戦闘の最初から")
-    draw_text_ex(4, line_height * 2, "始められます。また、使用したアイテムも戻ります。")
-    draw_text_ex(4, line_height * 3, "武器変更を行った場合は変更後の状態になります。")
-    draw_text_ex(4, line_height * 4, "金額が足りない場合もリトライは可能です(所持金は0以下にはなりません)")
-    draw_text_ex(4, line_height * 5, "（イージーでリトライした場合、この戦闘以降もイージーは維持されます）")
+    draw_text_ex(4, line_height * 0, "#{gold} (Cost to retry is Lunaria's level × 10).")
+    draw_text_ex(4, line_height * 1, "All characters will be fully healed.")
+    draw_text_ex(4, line_height * 2, "Any items used will be returned.")
+    draw_text_ex(4, line_height * 3, "If you've changed weapons, it will remain that way")
+    draw_text_ex(4, line_height * 4, "You can still retry even if no gold.")
+    draw_text_ex(4, line_height * 5, "(If you retry on easy mode, easy mode will be maintained.)")
   end
 end
 
